@@ -60,9 +60,4 @@ echo 'This revision is logged to '${RELEASEBRANCH}'/gitparent.log'
 echo 'Removing .git* files and .git directory'
 rm -rf ${DISTNAME}/.git*
 
-echo 'Copying file classification tools to etc'
-cp ${DISTNAME}/dev/DistributionUpdate/dist45/classifyfiles.py ${DISTNAME}/etc/classifyfiles.py
-cp ${DISTNAME}/dev/DistributionUpdate/dist45/patternscolorpkg.txt ${DISTNAME}/etc/patternscolor.txt 
-cp ${DISTNAME}/dev/DistributionUpdate/dist45/patternstextbinary.txt ${DISTNAME}/etc/patternstextbinary.txt 
-
 exit 0
