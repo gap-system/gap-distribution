@@ -28,7 +28,7 @@ export DISTNAME="gap4r$MAJORVERSION"
 export ARCHNAME="gap4r${MAJORVERSION}p${MINORVERSION}"
 
 # location of the merged packages archive (assumed to be on the same machine)
-export MERGEDPKGLOC="/mnt/raid/hudson-slave/workspace/GAP-pkg-merge-master/dev/DistributionUpdate/dist45/pkgupdate"
+export MERGEDPKGLOC="/mnt/raid/hudson-slave/workspace/GAP-pkg-merge-master/DistributionUpdate/PackageUpdate"
 
 # Where to put the temporary export tree and archives. The path
 # "/mnt/raid/hudson-slave/..." is used by Jenkins continuous build system.
