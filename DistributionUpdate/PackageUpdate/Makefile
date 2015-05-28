@@ -1,19 +1,16 @@
 #
 # Makefile for wrapping the merged archive of GAP packages
 #
-# update: to test with the last release in the stable branch
-# minor : to test with the tip of the stable branch
-# major : to test with the tip of the default branch
-# integration : to test with the tip of the integration branch
+# update : to test with the last release in the stable branch
+# stable : to test with the tip of the stable branch
+# master : to test with the tip of the master branch
 
 pkg-update:
-	./mergePackages tip matgrp=no citrus=no
+	./mergePackages semigroups=stable convex=stable matgrp=no
 
-pkg-minor:
-	./mergePackages tip matgrp=no citrus=no
+pkg-stable:
+	./mergePackages simpcomp=stable convex=stable matgrp=no
 
-pkg-major:
-	./mergePackages tip citrus=no
+pkg-master:
+	./mergePackages convex=stable wedderga=no liealgdb=no
 
-pkg-integration:
-	./mergePackages tip citrus=no
