@@ -101,6 +101,7 @@ Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 qaos        http://www.math.tu-berlin.de/~kant/download/gap/qaos.PackageInfo.g
+QPA         http://www.math.ntnu.no/~oyvinso/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
 RCWA        http://www.gap-system.org/DevelopersPages/StefanKohl/rcwa/PackageInfo.g
