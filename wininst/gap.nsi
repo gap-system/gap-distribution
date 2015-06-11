@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.7.7"
+StrCpy $GAP_VER "4.7.8"
 SectionEnd
 
 #Name and file
-Name "GAP 4.7.7"
-OutFile "gap4r7p7_2015_02_13-15_29.exe"
+Name "GAP 4.7.8"
+OutFile "gap4r7p8_2015_06_09-20_27.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r7"
@@ -840,8 +840,8 @@ SectionEnd
 Section "FR" SecGAPpkg_fr 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.fr
-SetOutPath $INSTDIR\pkg\fr-2.1.1
-File /r gap4r7\pkg\fr-2.1.1\*.* 
+SetOutPath $INSTDIR\pkg\fr-2.2.1
+File /r gap4r7\pkg\fr-2.2.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -876,8 +876,8 @@ SectionEnd
 Section "gpd" SecGAPpkg_gpd 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.gpd
-SetOutPath $INSTDIR\pkg\gpd-1.31
-File /r gap4r7\pkg\gpd-1.31\*.* 
+SetOutPath $INSTDIR\pkg\gpd-1.34
+File /r gap4r7\pkg\gpd-1.34\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1008,8 +1008,8 @@ SectionEnd
 Section "idrel" SecGAPpkg_idrel 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.idrel
-SetOutPath $INSTDIR\pkg\idrel-2.21
-File /r gap4r7\pkg\idrel-2.21\*.* 
+SetOutPath $INSTDIR\pkg\idrel-2.31
+File /r gap4r7\pkg\idrel-2.31\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1056,8 +1056,8 @@ SectionEnd
 Section "kan" SecGAPpkg_kan 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.kan
-SetOutPath $INSTDIR\pkg\kan-1.11
-File /r gap4r7\pkg\kan-1.11\*.* 
+SetOutPath $INSTDIR\pkg\kan-1.21
+File /r gap4r7\pkg\kan-1.21\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1219,6 +1219,18 @@ SectionEnd
 
 #######################################################################
 #
+# PatternClass
+#
+Section "PatternClass" SecGAPpkg_patternclass 
+SetOutPath $INSTDIR\pkg 
+File gap4r7\pkg\README.patternclass
+SetOutPath $INSTDIR\pkg\PatternClass
+File /r gap4r7\pkg\PatternClass\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
 # permut
 #
 Section "permut" SecGAPpkg_permut 
@@ -1250,6 +1262,18 @@ SetOutPath $INSTDIR\pkg
 File gap4r7\pkg\README.qaos
 SetOutPath $INSTDIR\pkg\qaos
 File /r gap4r7\pkg\qaos\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# QPA
+#
+Section "QPA" SecGAPpkg_qpa 
+SetOutPath $INSTDIR\pkg 
+File gap4r7\pkg\README.qpa
+SetOutPath $INSTDIR\pkg\qpa
+File /r gap4r7\pkg\qpa\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1368,8 +1392,8 @@ SectionEnd
 Section "Semigroups" SecGAPpkg_semigroups 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.semigroups
-SetOutPath $INSTDIR\pkg\semigroups-2.2
-File /r gap4r7\pkg\semigroups-2.2\*.* 
+SetOutPath $INSTDIR\pkg\semigroups-2.5
+File /r gap4r7\pkg\semigroups-2.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1536,8 +1560,8 @@ SectionEnd
 Section "XMod" SecGAPpkg_xmod 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.xmod
-SetOutPath $INSTDIR\pkg\xmod-2.31
-File /r gap4r7\pkg\xmod-2.31\*.* 
+SetOutPath $INSTDIR\pkg\xmod-2.41
+File /r gap4r7\pkg\xmod-2.41\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1836,12 +1860,14 @@ LangString DESC_SecGAPpkg_numericalsgps ${LANG_ENGLISH} "A package for numerical
 LangString DESC_SecGAPpkg_openmath ${LANG_ENGLISH} "OpenMath functionality in GAP"
 LangString DESC_SecGAPpkg_orb ${LANG_ENGLISH} "Methods to enumerate Orbits"
 LangString DESC_SecGAPpkg_pargap ${LANG_ENGLISH} "Parallel GAP"
+LangString DESC_SecGAPpkg_patternclass ${LANG_ENGLISH} "A permutation pattern class package"
 LangString DESC_SecGAPpkg_permut ${LANG_ENGLISH} "A package to deal with permutability in finite groups"
 LangString DESC_SecGAPpkg_polenta ${LANG_ENGLISH} "Polycyclic presentations for matrix groups"
 LangString DESC_SecGAPpkg_polycyclic ${LANG_ENGLISH} "Computation with polycyclic groups"
 LangString DESC_SecGAPpkg_polymakeinterface ${LANG_ENGLISH} "A package to provide algorithms for fans and cones of polymake to other packages"
 LangString DESC_SecGAPpkg_polymaking ${LANG_ENGLISH} "Interfacing the geometry software polymake"
 LangString DESC_SecGAPpkg_qaos ${LANG_ENGLISH} "Interfacing the QaoS database from GAP"
+LangString DESC_SecGAPpkg_qpa ${LANG_ENGLISH} "Quivers and Path Algebras"
 LangString DESC_SecGAPpkg_quagroup ${LANG_ENGLISH} "a package for doing computations with quantum groups"
 LangString DESC_SecGAPpkg_radiroot ${LANG_ENGLISH} "Roots of a Polynomial as Radicals"
 LangString DESC_SecGAPpkg_rcwa ${LANG_ENGLISH} "Residue-Class-Wise Affine Groups"
@@ -1963,12 +1989,14 @@ LangString DESC_SecGAPpkg_xmod ${LANG_ENGLISH} "Crossed Modules and Cat1-Groups"
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_openmath} $(DESC_SecGAPpkg_openmath)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_orb} $(DESC_SecGAPpkg_orb)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_pargap} $(DESC_SecGAPpkg_pargap)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_patternclass} $(DESC_SecGAPpkg_patternclass)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_permut} $(DESC_SecGAPpkg_permut)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_polenta} $(DESC_SecGAPpkg_polenta)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_polycyclic} $(DESC_SecGAPpkg_polycyclic)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_polymakeinterface} $(DESC_SecGAPpkg_polymakeinterface)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_polymaking} $(DESC_SecGAPpkg_polymaking)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_qaos} $(DESC_SecGAPpkg_qaos)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_qpa} $(DESC_SecGAPpkg_qpa)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_quagroup} $(DESC_SecGAPpkg_quagroup)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_radiroot} $(DESC_SecGAPpkg_radiroot)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_rcwa} $(DESC_SecGAPpkg_rcwa)

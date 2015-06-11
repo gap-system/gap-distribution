@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.7.6"
+StrCpy $GAP_VER "4.7.8"
 SectionEnd
 
 #Name and file
-Name "GAP 4.7.6"
-OutFile "gap4r7p6_2014_11_15-20_02.exe"
+Name "GAP 4.7.8"
+OutFile "gap4r7p8_2015_06_09-20_27.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r7"
