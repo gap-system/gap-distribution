@@ -44,6 +44,7 @@ Example     http://www.cs.st-andrews.ac.uk/~alexk/example/PackageInfo.g
 ExamplesForHomalg http://homalg.math.rwth-aachen.de/~barakat/homalg-project/ExamplesForHomalg/PackageInfo.g
 FactInt     http://www.gap-system.org/DevelopersPages/StefanKohl/factint/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
+FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       http://laurentbartholdi.github.com/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
