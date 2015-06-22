@@ -498,27 +498,30 @@ one has to do the following things to properly publish the release:
     source distribution archives (one needs to have this during the 
     next few steps). The archive will already have documentation created
     and will contain latest released versions of all currently 
-    redistributed packages. \textbf{Do not use} any versions of packages 
+    redistributed packages. DO NOT USE any versions of packages 
     from other sources! 
 </Item>
 <Item>
-    Copy <F>.tar.bz2</F> <F>.tar.gz</F>, <F>.zip</F> and <F>-win.zip</F>
-    (with binaries) archives to the ftp server, distributed into directories 
-    by the archive type. From this point, the release is considered to be
-    published, since the archives are now publicly available.
-    <P/>
+    Copy <F>.tar.bz2</F> <F>.tar.gz</F>, <F>.zip</F> archives, <F>-win.zip</F> 
+    and  <F>-noreadline-win.zip</F> archives (with Windows binaries), and also 
+    <F>.exe</F> Windows installer to the ftp server, distributed into directories 
+    by the archive type.  
     Also, place the archive of the core &GAP; system without packages into
     <F>ftp://ftp.gap-system.org/pub/gap/gap4core/</F> for developers.
+    <P/>
+    From this point, the release is considered to be published, 
+    since the archives are now publicly available.
 </Item>
 <Item>
     Prepare individual archives for the same versions of &GAP; packages
     that were included in the release and copy them to the ftp server.
     The procedure should be explained in more details in Chapter 
     <Ref Label="Chap-PkgDist"/> (while this chapter is empty, see the
-    <F>dev/DistributionUpdate/dist45/pkgupdate</F> directory for more
+    <F>DistributionUpdate/PackageUpdate</F> directory from the 
+    <URL>https://github.com/gap-system/gap-distribution</URL> repository for more
     details). In brief, you should change to the 
-    <F>dev/DistributionUpdate/dist45/pkgupdate</F> directory of the
-    &stable; branch of the &GAP; Mercurial repository and do the following:
+    <F>DistributionUpdate/PackageUpdate</F> directory of the mentioned 
+    repository and do the following:
     <List>
     <Item>
     mark those versions of packages which are included in the release
@@ -643,7 +646,7 @@ as necessary:
      <C>tag</C> command has the format
 
      <Listing>
-     hg tag [-r REV] TAGNAME
+     git tag TAGNAME REVISION
      </Listing>
      
      and the revision that should be tagged should be determined 
