@@ -96,7 +96,7 @@ NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
 OpenMath    http://www.cs.st-andrews.ac.uk/~alexk/openmath/PackageInfo.g
 orb         http://gap-system.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
-PatternClass http://ruthh.host.cs.st-andrews.ac.uk/pkg/PatternClass/PackageInfo.g
+PatternClass MOVE http://ruthhoffmann.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
 Polenta     http://gap-system.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
