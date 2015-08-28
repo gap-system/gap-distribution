@@ -56,7 +56,7 @@ Gauss       http://wwwb.math.rwth-aachen.de/goertzen/Gauss/PackageInfo.g
 GaussForHomalg http://wwwb.math.rwth-aachen.de/goertzen/GaussForHomalg/PackageInfo.g
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
 genss       http://gap-system.github.io/genss/PackageInfo.g
-gpd MOVE    http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
+gpd         http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
 GradedModules http://homalg.math.rwth-aachen.de/~barakat/homalg-project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg.math.rwth-aachen.de/~barakat/homalg-project/GradedRingForHomalg/PackageInfo.g
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r6/PackageInfo.g
@@ -69,14 +69,14 @@ HAPprime    http://www.cs.st-andrews.ac.uk/~pas/HAPprime/PackageInfo.g
 hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
 homalg      http://homalg.math.rwth-aachen.de/~barakat/homalg-project/homalg/PackageInfo.g
 HomalgToCAS http://homalg.math.rwth-aachen.de/~barakat/homalg-project/HomalgToCAS/PackageInfo.g
-idrel MOVE  http://pages.bangor.ac.uk/~mas023/chda/idrel/PackageInfo.g
+idrel       http://pages.bangor.ac.uk/~mas023/chda/idrel/PackageInfo.g
 IntPic      http://www.fc.up.pt/cmup/mdelgado/intpic/PackageInfo.g
-IO MOVE         http://gap-system.github.io/io/PackageInfo.g
+IO          http://gap-system.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg.math.rwth-aachen.de/~barakat/homalg-project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        http://gap-system.github.io/json/PackageInfo.g
-kan MOVE    http://pages.bangor.ac.uk/~mas023/chda/kan/PackageInfo.g
+kan         http://pages.bangor.ac.uk/~mas023/chda/kan/PackageInfo.g
 kbmag       http://www.warwick.ac.uk/~mareg/kbmag/PackageInfo.g
 LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
@@ -96,14 +96,14 @@ NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
 OpenMath    http://www.cs.st-andrews.ac.uk/~alexk/openmath/PackageInfo.g
 orb         http://gap-system.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
-PatternClass MOVE http://ruthhoffmann.github.io/PatternClass/PackageInfo.g
+PatternClass http://ruthhoffmann.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
 Polenta     http://gap-system.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 qaos        http://www.math.tu-berlin.de/~kant/download/gap/qaos.PackageInfo.g
-QPA MOVE    http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
+QPA         http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
 RCWA        http://www.gap-system.org/DevelopersPages/StefanKohl/rcwa/PackageInfo.g
@@ -118,7 +118,7 @@ SCSCP       http://www.cs.st-andrews.ac.uk/~alexk/scscp/PackageInfo.g
 Semigroups  http://www-groups.mcs.st-andrews.ac.uk/~jamesm/semigroups/PackageInfo.g
 SglPPow     http://www.icm.tu-bs.de/~beick/soft/sglppow/PackageInfo.g
 SgpViz      http://www.fc.up.pt/cmup/mdelgado/sgpviz/PackageInfo.g
-simpcomp    http://simpcomp.googlecode.com/git/web/PackageInfo.g
+simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
 singular    http://www.gap-system.org/HostedGapPackages/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
@@ -134,5 +134,5 @@ unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        http://www-groups.mcs.st-and.ac.uk/~neunhoef/Computer/Software/Gap/xgap4/PackageInfo.g
-XMod MOVE   http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
+XMod        http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
 
