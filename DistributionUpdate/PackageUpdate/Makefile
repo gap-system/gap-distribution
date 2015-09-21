@@ -12,5 +12,5 @@ pkg-stable:
 	./mergePackages hap=stable convex=stable matgrp=no
 
 pkg-master:
-	./mergePackages hap=stable convex=stable liealgdb=no
+	./mergePackages hap=stable convex=stable fining=no liealgdb=no
 
