@@ -6,11 +6,11 @@
 # master : to test with the tip of the master branch
 
 pkg-update:
-	./mergePackages hap=stable convex=stable semigroups=stable fining=no matgrp=no
+	./mergePackages hap=stable convex=stable semigroups=stable matgrp=no
 
 pkg-stable:
-	./mergePackages hap=stable convex=stable semigroups=stable fining=no matgrp=no
+	./mergePackages convex=stable semigroups=stable fining=no matgrp=no
 
 pkg-master:
-	./mergePackages hap=stable convex=stable semigroups=stable fining=no liealgdb=no
+	./mergePackages convex=stable semigroups=stable fining=no liealgdb=no
 
