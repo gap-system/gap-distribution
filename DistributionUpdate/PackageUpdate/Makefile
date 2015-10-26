@@ -9,8 +9,8 @@ pkg-update:
 	./mergePackages hap=stable convex=stable semigroups=stable matgrp=no
 
 pkg-stable:
-	./mergePackages convex=stable semigroups=stable fining=no matgrp=no
+	./mergePackages hap=stable convex=stable semigroups=stable matgrp=no
 
 pkg-master:
-	./mergePackages convex=stable semigroups=stable fining=no liealgdb=no
+	./mergePackages hap=stable convex=stable semigroups=stable liealgdb=no
 
