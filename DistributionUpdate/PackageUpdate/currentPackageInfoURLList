@@ -25,6 +25,7 @@ Automata    http://www.fc.up.pt/cmup/mdelgado/automata/PackageInfo.g
 AutomGrp    http://finautom.sourceforge.net/automgrp/PackageInfo.g
 AutPGrp     http://www.icm.tu-bs.de/~beick/soft/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
+CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 Carat       http://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
 Circle      http://www.cs.st-andrews.ac.uk/~alexk/circle/PackageInfo.g
 cohomolo    http://www.warwick.ac.uk/staff/D.F.Holt/cohomolo/PackageInfo.g
@@ -55,6 +56,7 @@ GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://wwwb.math.rwth-aachen.de/goertzen/Gauss/PackageInfo.g
 GaussForHomalg http://wwwb.math.rwth-aachen.de/goertzen/GaussForHomalg/PackageInfo.g
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
+GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       http://gap-system.github.io/genss/PackageInfo.g
 gpd         http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
 GradedModules http://homalg.math.rwth-aachen.de/~barakat/homalg-project/GradedModules/PackageInfo.g
@@ -83,6 +85,7 @@ liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
 LiePRing    http://www.icm.tu-bs.de/~beick/soft/liepring/PackageInfo.g
 LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
 linboxing   http://www.cs.st-andrews.ac.uk/~pas/linboxing/PackageInfo.g
+LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg http://homalg.math.rwth-aachen.de/~barakat/homalg-project/LocalizeRingForHomalg/PackageInfo.g
 loops       http://www.math.du.edu/loops/PackageInfo.g
 MapClass    http://web.mat.bham.ac.uk/~jamesa/mapclass/PackageInfo.g 
@@ -90,6 +93,7 @@ Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg http://homalg.math.rwth-aachen.de/~barakat/homalg-project/MatricesForHomalg/PackageInfo.g
 ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
 Modules     http://homalg.math.rwth-aachen.de/~barakat/homalg-project/Modules/PackageInfo.g
+ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 Nilmat      http://larmor.nuigalway.ie/~dane/nilmat/PackageInfo.g
 nq          http://gap-system.github.io/nq/PackageInfo.g
 NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
