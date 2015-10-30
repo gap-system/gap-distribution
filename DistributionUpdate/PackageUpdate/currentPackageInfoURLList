@@ -106,6 +106,7 @@ Polenta     http://gap-system.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
+profiling   http://gap-packages.github.io/profiling/PackageInfo.g
 qaos        http://www.math.tu-berlin.de/~kant/download/gap/qaos.PackageInfo.g
 QPA         http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
