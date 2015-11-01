@@ -52,8 +52,7 @@ sed -i -e "s/gap4dev/$DISTNAME/g" versiondata
 cd ../cnf/
 sed -i -e "s/4.dev/4.$FULLVERSION/g" configure.in
 sed -i -e "s/4.dev/4.$FULLVERSION/g" configure.out
-sed -i -e 's/unknown/"unknown"/g' mkversionheader.sh
-sed -i -e 's/unknown/4.$FULLVERSION, $COREDATE, build/g' mkversionheader.sh
+sed -i -e "s/unknown/4.$FULLVERSION, $COREDATE, build/g" mkversionheader.sh
 
 cd ../bin/
 sed -i -e "s/gap4dev/$DISTNAME/g" gap.bat
