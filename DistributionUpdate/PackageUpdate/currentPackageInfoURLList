@@ -14,7 +14,7 @@
 # The URL must be started with "http". The option "MOVE" is used to enforce
 # the change of the URL in case if the stored URL is different.
 
-4ti2Interface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/4ti2Interface/PackageInfo.g
+4ti2Interface http://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
 ACE         http://school.maths.uwa.edu.au/~gregg/ACE/PackageInfo.g
 AClib       http://www.icm.tu-bs.de/~beick/soft/aclib/PackageInfo.g
 Alnuth      http://www.icm.tu-bs.de/ag_algebra/software/Alnuth/PackageInfo.g
