@@ -6,7 +6,7 @@ mypath=`dirname  $0`/
 
 source ${mypath}setvarpkg
 
-$GAP -r -b -q  ${mypath}PackageInfoTools.g  << EOI
+$GAP -r -b -q -x 100 ${mypath}PackageInfoTools.g  << EOI
 ANSI_COLORS := false;;
 Unbind(PrintPromptHook);
 Print("\n");
