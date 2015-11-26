@@ -14,6 +14,5 @@ pkg-stable:
 	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-master:
-	./mergePackages convex=stable semigroups=stable liealgdb=no \
-	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
+	./mergePackages convex=stable semigroups=stable liealgdb=no
 
