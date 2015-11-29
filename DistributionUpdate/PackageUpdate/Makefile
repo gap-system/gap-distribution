@@ -6,11 +6,11 @@
 # master : to test with the tip of the master branch
 
 pkg-update:
-	./mergePackages convex=stable semigroups=stable matgrp=no \
+	./mergePackages convex=stable gpd=stable semigroups=stable matgrp=no \
 	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-stable:
-	./mergePackages convex=stable semigroups=stable matgrp=no \
+	./mergePackages convex=stable gpd=stable semigroups=stable matgrp=no \
 	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-master:
