@@ -936,8 +936,8 @@ SectionEnd
 Section "HAP" SecGAPpkg_hap 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.hap
-SetOutPath $INSTDIR\pkg\Hap1.10
-File /r gap4r7\pkg\Hap1.10\*.* 
+SetOutPath $INSTDIR\pkg\Hap1.11
+File /r gap4r7\pkg\Hap1.11\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1272,8 +1272,8 @@ SectionEnd
 Section "QPA" SecGAPpkg_qpa 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.qpa
-SetOutPath $INSTDIR\pkg\qpa
-File /r gap4r7\pkg\qpa\*.* 
+SetOutPath $INSTDIR\pkg\QPA-1.23
+File /r gap4r7\pkg\QPA-1.23\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1560,8 +1560,8 @@ SectionEnd
 Section "XMod" SecGAPpkg_xmod 
 SetOutPath $INSTDIR\pkg 
 File gap4r7\pkg\README.xmod
-SetOutPath $INSTDIR\pkg\xmod-2.41
-File /r gap4r7\pkg\xmod-2.41\*.* 
+SetOutPath $INSTDIR\pkg\xmod-2.44
+File /r gap4r7\pkg\xmod-2.44\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
