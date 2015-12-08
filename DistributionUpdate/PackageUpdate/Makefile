@@ -14,5 +14,5 @@ pkg-stable:
 	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-master:
-	./mergePackages convex=stable liealgdb=no
+	./mergePackages convex=stable
 
