@@ -69,6 +69,7 @@ HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 HAPprime    http://www.cs.st-andrews.ac.uk/~pas/HAPprime/PackageInfo.g
 hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
+HeLP        http://homepages.vub.ac.be/~abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       http://pages.bangor.ac.uk/~mas023/chda/idrel/PackageInfo.g
