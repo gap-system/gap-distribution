@@ -633,8 +633,8 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
       
       if IsBound( info.Dependencies ) then
         Print("  Package ", info.PackageName, 
-              " (version ", info.Version, 
-              " from ", info.Date, ") has dependencies:\n");
+              " ", info.Version,
+              " from ", info.Date, " has dependencies:\n");
         for a in RecNames( info.Dependencies ) do
           if Length( info.Dependencies.(a) ) > 0 then
             Print("  * ", a, " ", info.Dependencies.(a), "\n");
