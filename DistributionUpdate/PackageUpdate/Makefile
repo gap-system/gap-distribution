@@ -7,12 +7,12 @@
 
 pkg-update:
 	./mergePackages convex=stable fining=no gpd=stable profiling=no semigroups=stable smallsemi=stable matgrp=no \
-	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
+	HeLP=no CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-stable:
 	./mergePackages convex=stable fining=no gpd=stable profiling=no semigroups=stable smallsemi=stable matgrp=no \
-	CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
+	HeLP=no CAP=no GeneralizedMorphismsForCAP=no LinearAlgebraForCAP=no ModulePresentationsForCAP=no
 
 pkg-master:
-	./mergePackages convex=stable
+	./mergePackages convex=stable HeLP=no
 
