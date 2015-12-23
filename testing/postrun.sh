@@ -32,24 +32,24 @@ wc -l `ls dev/log/testinstall2_*|tail -1` | cut -f $CUTWIDTH -d ' ' >> dev/log/p
 /bin/echo -n "URL=" >> dev/log/plotinstall2_count.txt
 /bin/echo -n $BUILD_URL >> dev/log/plotinstall2_count.txt
 #
-cat `ls dev/log/testinstall1_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotinstall1_total.txt
+cat `ls dev/log/testinstall1_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotinstall1_total.txt
 export GAPTOTAL=`cat dev/log/plotinstall1_total.txt `
 if [ $GAPTOTAL = 'total' ]
 then
 /bin/echo -n "YVALUE=" > dev/log/plotinstall1_time.txt
-cat `ls dev/log/testinstall1_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotinstall1_time.txt
+cat `ls dev/log/testinstall1_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotinstall1_time.txt
 /bin/echo -n "URL=" >> dev/log/plotinstall1_time.txt
 /bin/echo -n $BUILD_URL >> dev/log/plotinstall1_time.txt
 else
 /bin/echo "test was not completed"
 exit 1
 fi
-cat `ls dev/log/testinstall2_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotinstall2_total.txt
+cat `ls dev/log/testinstall2_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotinstall2_total.txt
 export GAPTOTAL=`cat dev/log/plotinstall2_total.txt`
 if [ $GAPTOTAL = 'total' ]
 then
 /bin/echo -n "YVALUE=" > dev/log/plotinstall2_time.txt
-cat `ls dev/log/testinstall2_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotinstall2_time.txt
+cat `ls dev/log/testinstall2_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotinstall2_time.txt
 /bin/echo -n "URL=" >> dev/log/plotinstall2_time.txt
 /bin/echo -n $BUILD_URL >> dev/log/plotinstall2_time.txt
 else
@@ -97,24 +97,24 @@ grep "^${GTEST}" `ls dev/log/teststandard2_*` | sed -e 's/  */ /g' | cut -f 3 -d
 #
 done
 #
-cat `ls dev/log/teststandard1_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotstandard1_total.txt
+cat `ls dev/log/teststandard1_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotstandard1_total.txt
 export GAPTOTAL=`cat dev/log/plotstandard1_total.txt`
 if [ $GAPTOTAL = 'total' ]
 then
 /bin/echo -n "YVALUE=" > dev/log/plotstandard1_time.txt
-cat `ls dev/log/teststandard1_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotstandard1_time.txt
+cat `ls dev/log/teststandard1_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotstandard1_time.txt
 /bin/echo -n "URL=" >> dev/log/plotstandard1_time.txt
 /bin/echo -n $BUILD_URL >> dev/log/plotstandard1_time.txt
 else
 /bin/echo "test was not completed"
 exit 1
 fi
-cat `ls dev/log/teststandard2_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotstandard2_total.txt
+cat `ls dev/log/teststandard2_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotstandard2_total.txt
 export GAPTOTAL=`cat dev/log/plotstandard2_total.txt`
 if [ $GAPTOTAL = 'total' ]
 then
 /bin/echo -n "YVALUE=" > dev/log/plotstandard2_time.txt
-cat `ls dev/log/teststandard2_*|tail -1` | tail -2 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotstandard2_time.txt
+cat `ls dev/log/teststandard2_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotstandard2_time.txt
 /bin/echo -n "URL=" >> dev/log/plotstandard2_time.txt
 /bin/echo -n $BUILD_URL >> dev/log/plotstandard2_time.txt
 else
