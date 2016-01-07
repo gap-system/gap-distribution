@@ -18,7 +18,7 @@
 ACE         http://school.maths.uwa.edu.au/~gregg/ACE/PackageInfo.g
 AClib       http://www.icm.tu-bs.de/~beick/soft/aclib/PackageInfo.g
 Alnuth      http://www.icm.tu-bs.de/ag_algebra/software/Alnuth/PackageInfo.g
-ANUPQ       http://gap-system.github.io/anupq/PackageInfo.g
+ANUPQ MOVE  http://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
 AutoDoc     http://gap-packages.github.io/AutoDoc/PackageInfo.g
 Automata    http://www.fc.up.pt/cmup/mdelgado/automata/PackageInfo.g
@@ -38,7 +38,7 @@ Cryst       http://www.math.uni-bielefeld.de/~gaehler/gap45/Cryst/PackageInfo.g
 CrystCat    http://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInfo.g
 CTblLib     http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g
 Cubefree    http://users.monash.edu.au/~heikod/cubefree/PackageInfo.g
-cvec        http://gap-system.github.io/cvec/PackageInfo.g
+cvec MOVE   http://gap-packages.github.io/cvec/PackageInfo.g
 DESIGN      http://www.maths.qmul.ac.uk/~leonard/design/design1r6/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     http://www.cs.st-andrews.ac.uk/~alexk/example/PackageInfo.g
@@ -57,7 +57,7 @@ Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
 GaussForHomalg http://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
 GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
-genss       http://gap-system.github.io/genss/PackageInfo.g
+genss MOVE  http://gap-packages.github.io/genss/PackageInfo.g
 gpd         http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
@@ -74,7 +74,7 @@ homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       http://pages.bangor.ac.uk/~mas023/chda/idrel/PackageInfo.g
 IntPic      http://www.fc.up.pt/cmup/mdelgado/intpic/PackageInfo.g
-IO          http://gap-system.github.io/io/PackageInfo.g
+IO MOVE     http://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
@@ -96,14 +96,14 @@ ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
 Modules     http://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 Nilmat      http://larmor.nuigalway.ie/~dane/nilmat/PackageInfo.g
-nq          http://gap-system.github.io/nq/PackageInfo.g
+nq MOVE     http://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
 OpenMath    http://www.cs.st-andrews.ac.uk/~alexk/openmath/PackageInfo.g
-orb         http://gap-system.github.io/orb/PackageInfo.g
+orb MOVE    http://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
 PatternClass http://ruthhoffmann.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
-Polenta     http://gap-system.github.io/polenta/PackageInfo.g
+Polenta MOVE http://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
@@ -114,8 +114,8 @@ QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
 RCWA        http://www.gap-system.org/DevelopersPages/StefanKohl/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
-recog       http://gap-system.github.io/recog/PackageInfo.g
-recogbase   http://gap-system.github.io/recogbase/PackageInfo.g
+recog MOVE  http://gap-packages.github.io/recog/PackageInfo.g
+recogbase MOVE http://gap-packages.github.io/recogbase/PackageInfo.g
 Repsn       http://www.sfu.ca/~vdabbagh/gap/PackageInfo.g
 ResClasses  http://www.gap-system.org/DevelopersPages/StefanKohl/resclasses/PackageInfo.g
 RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
