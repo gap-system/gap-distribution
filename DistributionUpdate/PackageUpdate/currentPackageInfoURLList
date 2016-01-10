@@ -96,6 +96,7 @@ ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
 Modules     http://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 Nilmat      http://larmor.nuigalway.ie/~dane/nilmat/PackageInfo.g
+NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
 nq          http://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
 OpenMath    http://www.cs.st-andrews.ac.uk/~alexk/openmath/PackageInfo.g
