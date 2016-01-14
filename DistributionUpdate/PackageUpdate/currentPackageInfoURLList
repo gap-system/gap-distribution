@@ -28,7 +28,7 @@ Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 Carat       http://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
 Circle      http://www.cs.st-andrews.ac.uk/~alexk/circle/PackageInfo.g
-cohomolo    http://www.warwick.ac.uk/staff/D.F.Holt/cohomolo/PackageInfo.g
+cohomolo MOVE http://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  http://www.cs.st-andrews.ac.uk/~alexk/congruence/PackageInfo.g
 Convex      http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Convex/PackageInfo.g
 CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
@@ -80,7 +80,7 @@ IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        http://gap-system.github.io/json/PackageInfo.g
 kan         http://pages.bangor.ac.uk/~mas023/chda/kan/PackageInfo.g
-kbmag       http://www.warwick.ac.uk/~mareg/kbmag/PackageInfo.g
+kbmag MOVE  http://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
 LiePRing    http://www.icm.tu-bs.de/~beick/soft/liepring/PackageInfo.g
