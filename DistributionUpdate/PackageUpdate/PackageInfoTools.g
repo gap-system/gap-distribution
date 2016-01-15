@@ -2073,15 +2073,15 @@ while true do
   if Length(line) = 2 then
     pkgname := line[1];
     pkginfourl := line[2];
-    if pkginfourl{[1..7]} <> "http://" then
-      Print("Error: misformatted line\n", line, "\n");
+    if pkginfourl{[1..4]} <> "http" then
+      Print("Error: misformatted line - the URL should start with http\n", line, "\n");
       continue;
     fi;
   elif Length(line) = 3 then
     pkgname := line[1];
     pkginfourl := line[3];
-    if pkginfourl{[1..7]} <> "http://" then
-      Print("Error: misformatted line\n", line, "\n");
+    if pkginfourl{[1..4]} <> "http" then
+      Print("Error: misformatted line - the URL should start with http\n", line, "\n");
       continue;
     fi;  
     if line[2]="MOVE" then   
