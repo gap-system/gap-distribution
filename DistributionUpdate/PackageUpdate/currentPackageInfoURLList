@@ -61,7 +61,7 @@ genss       http://gap-packages.github.io/genss/PackageInfo.g
 gpd         http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
-GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r6/PackageInfo.g
+GRAPE MOVE  http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
 GrpConst    http://www.icm.tu-bs.de/~beick/soft/grpconst/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
 GUAVA       http://www.southernct.edu/~fields/Guava/PackageInfo.g
