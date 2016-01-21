@@ -6,11 +6,11 @@
 # master : to test with the tip of the master branch
 
 pkg-update:
-	./mergePackages
+	./mergePackages anupq=stable
 
 pkg-stable:
-	./mergePackages
+	./mergePackages anupq=stable
 
 pkg-master:
-	./mergePackages
+	./mergePackages anupq=stable
 
