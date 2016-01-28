@@ -435,25 +435,6 @@ AddpackageLinesCurrent := function(pkgdir)
   return resstr;
 end;
 
-TextFilesInZooArchive := function(zoofile)
-  local lines, tfiles, l, ll, p;
-  Exec(Concatenation("rm -f tmpzoocomm; zoo lc ", zoofile, " > tmpzoocomm"));
-  lines := SplitString(StringFile("tmpzoocomm"), "", "\n");
-  tfiles := [];
-  for p in [1..Length(lines)] do
-    if Length(lines[p]) >= 8  and lines[p]{[1..8]} = " |!TEXT!" then
-      l := lines[p-1];
-      ll := Length(l);
-      while ll > 0 and l[ll] <> ' ' do
-        ll := ll - 1;
-      od;
-      Add(tfiles, l{[ll+1..Length(l)]});
-    fi;
-  od;
-  Exec("rm -f tmpzoocomm");
-  return tfiles;
-end;
-
 # returns list of dirs with updated archives
 UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
   local pkgs, res, nam, info, infostored, infoarchive, url, pos, fname, 
@@ -672,11 +653,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
         for a in info.TextBinaryFilesPatterns do
           AppendTo( Concatenation(pkgtmp, "patternstextbinary.txt" ), a, "\n" );
         od;  
-      #elif not ".zoo" in missing then
-        #  tfiles := TextFilesInZooArchive(Concatenation(pkgtmp, fname, ".zoo"));
-        # we could also use the  -win.zip format here, with 'unzip -Z -v'
-        # the text files can be found
-        # elif not -win.zip in missing then .....
       fi;
       
       # classify text/binary files with Max's script classifyfiles.py
