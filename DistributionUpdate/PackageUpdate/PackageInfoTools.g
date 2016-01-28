@@ -16,35 +16,6 @@
 ##       - if a documentation archive for the online manual has changed, it is
 ##         fetched from the Web and unpacked
 
-#DeclareInfoClass( "InfoExec" );
-#SetInfoLevel(InfoExec,1);
-# 
-#MakeReadWriteGlobal("Exec");       
-#UnbindGlobal("Exec");
-#BindGlobal("Exec",
-#function ( arg )
-#    local  cmd, i, shell, cs, dir;
-#    cmd := ShallowCopy( arg[1] );
-#    Info( InfoExec, 1, cmd );
-#    if not IsString( cmd )  then
-#      Error( "the command ", cmd, " is not a name.\n", 
-#      "possibly a binary is missing or has not been compiled." );
-#    fi;
-#    for i  in [ 2 .. Length( arg ) ]  do
-#      Append( cmd, " " );
-#      Append( cmd, arg[i] );
-#    od;
-#    shell := Filename( DirectoriesSystemPrograms(  ), "sh" );
-#    cs := "-c";
-#    if shell = fail and ARCH_IS_WINDOWS(  )  then
-#      shell := Filename( DirectoriesSystemPrograms(  ), "cmd.exe" );
-#      cs := "/C";
-#    fi;
-#    dir := DirectoryCurrent(  );
-#    Process( dir, shell, InputTextUser(  ), OutputTextUser(  ), [ cs, cmd ] );
-#    return;
-#end);
-
 ## setting global variable to store package infos
 PACKAGE_INFOS := rec();
 
@@ -696,11 +667,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
         if IsExistingFile(Concatenation(pkgtmp, "/", bname)) then
           Exec( Concatenation( "cp -p -r ", pkgtmp, "/", bname, " ", 
                                 pkgreposdir, "/", pkgdirname, "/README.", nam ) );
-#        Exec(Concatenation("cd ", pkgtmp,"; mkdir -p ", webdir,
-#               "/Packages/pkg/",
-#               nam, "; cp -p -f ", bname, 
-#               " ", webdir, "/Packages/pkg/", nam, "/README.", nam, "; mv -f ", 
-#               bname, " ../README.", nam));
         else
           Print("#   Error (", info.PackageName, "): could not get README file from\n   ", info.README_URL, "\n");
         fi;
@@ -1095,32 +1061,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     ## local allfiles;
     Exec(Concatenation("cd ", dir, "; tar cpf ../", fn, ".tar * ; cd .. ; ",
          " gzip -9 ", fn, ".tar ; " ));
-    #Exec(Concatenation("cd ", dir, "; tar cpf ../", fn, ".tar * ; cd .. ; ",
-    #     "cp ", fn, ".tar ", fn, ".tar.X; gzip -9 ", fn, ".tar ; ",
-    #     "mv -f ", fn, ".tar.X ", fn, ".tar; bzip2 -9 ", fn, ".tar ; "
-    #     ));
-    # then zoo it
-    #Exec(Concatenation("cd ", dir, "; ",
-    #     "find * -print | zoo ahIq ../", fn, ".zoo "));
-    # add !TEXT! comments to zoo archive
-    #for a in textfiles do
-    #  Exec(Concatenation("cd ", dir, "/.. ; (echo '!TEXT!'; echo '/END')", 
-    #       "| zoo c ", fn, ".zoo \"", a, "\""));
-    #od;
-    # adjust time stamp
-    #Exec(Concatenation("cd ", dir, "/.. ; zoo Tq ", fn, ".zoo"));
-
-    # and finally zip it 
-    #FileString(Concatenation(dir, "/../tmptfiles"),
-    #                          JoinStringsWithSeparator(textfiles, "\n"));
-    #Exec(Concatenation("cd ", dir,"; find * ", " -print > ../allfiles"));
-    #allfiles := SplitString(StringFile(Concatenation(dir, "/../allfiles")), 
-    #                        "", "\n");
-    #FileString(Concatenation(dir, "/../tmpbfiles"), 
-    #        JoinStringsWithSeparator(Difference(allfiles, textfiles), "\n"));
-    #Exec(Concatenation("cd ", dir,"; ",
-    #     "cat ../tmpbfiles | zip -9 ../", fn, "-win.zip -@ > /dev/null ; ",
-    #     "cat ../tmptfiles | zip -9 -l ../", fn, "-win.zip -@ > /dev/null "));
   end; 
 
   timestamp := StringCurrentTime();
@@ -1149,15 +1089,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
   Print("Wrapping merged packages archive ...\n");
   fun(pkgdir, mergedir, Concatenation("packages-", timestamp), textfilesmerge);
 
-  # cp merged to archive collection and ftp directory
-##    Exec(Concatenation("cd ", pkgdir, "/../archives; mkdir -p old; ",
-##         "touch packages-*; mv packages-* old; cp -f ", tmpdir, "/packages-* ",
-##         pkgdir, "/../archives; rm -f ", pkgdir, "/../web/ftpdir/*/packages-*"));
-##    for fmt in [".zoo", ".tar.gz", ".tar.bz2", "-win.zip"] do
-##      Exec(Concatenation("mv -f ", tmpdir, "/packages-*", fmt, " ", pkgdir, 
-##           "/../web/ftpdir/", fmt{[2..Length(fmt)]}, "/"));
-##    od;
-
   # TODO: change the location of the merged archive - it's not going public
 
   Exec(Concatenation("cd ", archdir, "; mkdir -p old; ",
@@ -1167,12 +1098,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     Exec(Concatenation("mv -f ", tmpdir, "/packages-*", fmt, " ", webdir, 
          "/ftpdir/", fmt{[2..Length(fmt)]}, "/"));
   od;
-
-  # repack archives with Frank's script repack.py
-  #fn_targzArch := Concatenation("packages-", str, ".tar.gz");
-  #Exec(Concatenation("cd ", archdir, 
-  #"; /Users/alexk/CVSREPS/GAPDEV/dev/DistributionUpdate/dist45/repack.py ",
-  #fn_targzArch, " -all ;" )); 
        
 end;
 
@@ -1842,36 +1767,7 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
   end;
   treelines := [];
   pi := PACKAGE_INFOS;
-# find combined package files
-#  fl := SplitString(StringSystem("ls", 
-#           Concatenation(webdir, "/ftpdir/tar.gz/")), "", "\n");
-#  fn := First(fl, a-> Length(a)>8 and a{[1..9]} = "packages-" and 
-#        a{[Length(a)-6..Length(a)]} = ".tar.gz");
-#  if fn <> fail then
-#    fn := fn{[1..Length(fn)-7]};
-#  else
-#    Print("No merged package-*.tar.gz\n");
-#    fn := "nopackage";
-#  fi;
-  # can be used in several places
-#  mergedarchivelinks := 
-#     Concatenation(fn,
-#          "[<a href=\"{{gap4ftp}}zoo/",fn,".zoo\">.zoo (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/zoo/",fn,".zoo")),
-#          ")</a>]\n",
-#          "[<a href=\"{{gap4ftp}}tar.gz/",fn,".tar.gz\">.tar.gz (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/tar.gz/",
-#          fn,".tar.gz")), ")</a>]\n"#,
-#          "[<a href=\"{{gap4ftp}}tar.bz2/",fn,".tar.bz2\">.tar.bz2 (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/tar.bz2/",
-#          fn,".tar.bz2")), ")</a>]\n",
-#          "[<a href=\"{{gap4ftp}}win.zip/",fn,"-win.zip\">-win.zip (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/win.zip/",
-#          fn,"-win.zip")), ")</a>]\n"
-#          );
-#  AppendTo(pkgconffile, "PKG_mergedarchivelinks = r'''", 
-#          esc(mergedarchivelinks), "'''\n\n");
-  
+
   Print("Enumerating packages ...\n");
   # write the <pkgname>.mixer files and fill the package.mixer entries and
   # the 'tree' file and manual overview lines and SuggestUpgrade args
