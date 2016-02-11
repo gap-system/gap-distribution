@@ -140,6 +140,7 @@ toric       http://www.opensourcemath.org/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
+Utils       http://pages.bangor.ac.uk/~mas023/chda/utils/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        http://www-groups.mcs.st-and.ac.uk/~neunhoef/Computer/Software/Gap/xgap4/PackageInfo.g
 XMod        http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
