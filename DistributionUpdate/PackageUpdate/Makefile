@@ -6,10 +6,10 @@
 # master : to test with the tip of the master branch
 
 pkg-update:
-	./mergePackages
+	./mergePackages semigroups=2.7.2
 
 pkg-stable:
-	./mergePackages
+	./mergePackages semigroups=2.7.2
 
 pkg-master:
 	./mergePackages
