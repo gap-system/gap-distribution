@@ -65,7 +65,7 @@ GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingFor
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
 GrpConst    http://www.icm.tu-bs.de/~beick/soft/grpconst/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
-GUAVA       http://www.southernct.edu/~fields/Guava/PackageInfo.g
+GUAVA MOVE  http://osj1961.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 HAPprime    http://www.cs.st-andrews.ac.uk/~pas/HAPprime/PackageInfo.g
