@@ -65,7 +65,7 @@ GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingFor
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
 GrpConst    http://www.icm.tu-bs.de/~beick/soft/grpconst/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
-GUAVA MOVE  http://osj1961.github.io/guava/PackageInfo.g
+GUAVA       http://osj1961.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 HAPprime    http://www.cs.st-andrews.ac.uk/~pas/HAPprime/PackageInfo.g
@@ -79,7 +79,7 @@ IO          http://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
-json        http://gap-system.github.io/json/PackageInfo.g
+json MOVE   http://gap-packages.github.io/json/PackageInfo.g
 kan         http://pages.bangor.ac.uk/~mas023/chda/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
