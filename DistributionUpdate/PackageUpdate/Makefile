@@ -12,5 +12,5 @@ pkg-stable:
 	./mergePackages semigroups=2.7.2
 
 pkg-master:
-	./mergePackages
+	./mergePackages semigroups=2.7.2
 
