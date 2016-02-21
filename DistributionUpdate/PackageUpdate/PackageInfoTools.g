@@ -1760,24 +1760,25 @@ AddHTMLPackageInfo := function(arg)
 
   if IsBound(info.SourceRepository) then
     Append(res, "<h4>Source code repository</h4>\n<p>");
-    if Length(info.SourceRepository) > 4 and info.SourceRepository{[1..4]}="http" then
-      Append(res, Concatenation( "<a href=\"", info.SourceRepository, "\">",
-                                               info.SourceRepository, "</a><br />\n"));
+    Append(res, Concatenation( info.SourceRepository.Type, " : " ) );
+    if Length(info.SourceRepository.URL) > 4 and info.SourceRepository.URL{[1..4]}="http" then
+      Append(res, Concatenation( "<a href=\"", info.SourceRepository.URL, "\">",
+                                               info.SourceRepository.URL, "</a><br />\n"));
     else
-      Append(res, Concatenation( info.SourceRepository, "<br />\n"));
+      Append(res, Concatenation( info.SourceRepository, "</p>\n"));
     fi;
   fi;
 
-  if IsBound(info.SourceRepository) then
+  if IsBound(info.IssueTrackerURL) then
     Append(res, "<h4>Issue tracker</h4>\n<p>");
     Append(res, Concatenation( "<a href=\"", info.IssueTrackerURL, "\">",
-                                             info.IssueTrackerURL, "</a><br />\n"));
+                                             info.IssueTrackerURL, "</a></p>\n"));
   fi;
 
   if IsBound(info.SupportEmail) then
     Append(res, "<h4>Support email address</h4>\n<p>");
     Append(res, Concatenation( "<a href=\"mailto:", info.SupportEmail, "\">",
-                                                    info.SupportEmail, "</a><br />\n"));
+                                                    info.SupportEmail, "</a></p>\n"));
   fi;
 
   # full given contact information
