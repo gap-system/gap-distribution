@@ -1758,6 +1758,28 @@ AddHTMLPackageInfo := function(arg)
   Append(res, "\n");
   Append(res, "</p>\n\n");
 
+  if IsBound(info.SourceRepository) then
+    Append(res, "<h4>Source code repository</h4>\n<p>");
+    if Length(info.SourceRepository) > 4 and info.SourceRepository{[1..4]}="http" then
+      Append(res, Concatenation( "<a href=\"", info.SourceRepository, "\">",
+                                               info.SourceRepository, "</a><br />\n"));
+    else
+      Append(res, Concatenation( info.SourceRepository, "<br />\n"));
+    fi;
+  fi;
+
+  if IsBound(info.SourceRepository) then
+    Append(res, "<h4>Issue tracker</h4>\n<p>");
+    Append(res, Concatenation( "<a href=\"", info.IssueTrackerURL, "\">",
+                                             info.IssueTrackerURL, "</a><br />\n"));
+  fi;
+
+  if IsBound(info.SupportEmail) then
+    Append(res, "<h4>Support email address</h4>\n<p>");
+    Append(res, Concatenation( "<a href=\"mailto:", info.SupportEmail, "\">",
+                                                    info.SupportEmail, "</a><br />\n"));
+  fi;
+
   # full given contact information
   Append(res, "<h4>Contact</h4>\n<p>\n");
   if not IsBound(info.Persons) then
