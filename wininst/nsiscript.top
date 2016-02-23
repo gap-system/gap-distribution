@@ -25,7 +25,7 @@
 # Declaring user variables - 
 #
 var GAP_VER       # GAP version in format 4.7.2
-var RXVT_PATH     # Install path in the form C/gap4r7
+var RXVT_PATH     # Install path in the form C/gap4r8
 var GAP_BAT       # to write gap.bat file
 var GAPRXVT_BAT   # to write gaprxvt.bat file
 var GAPCMD_BAT   # to write gapmintty.bat file
@@ -42,10 +42,10 @@ SectionEnd
 
 #Name and file
 Name "GAP 4.7.8"
-OutFile "gap4r7p8_2015_06_09-20_27.exe"
+OutFile "gap4r8p8_2015_06_09-20_27.exe"
 
 #Default installation folder
-InstallDir "C:\gap4r7"
+InstallDir "C:\gap4r8"
 
 #######################################################################
 # Get installation folder from registry if available
@@ -112,47 +112,47 @@ Section "Core GAP system" SecGAPcore
   # Set output path to the installation directory
   SetOutPath $INSTDIR
   # Put files there
-  File gap4r7\*.*
+  File gap4r8\*.*
 
   SetOutPath $INSTDIR\bin
-  File /r gap4r7\bin\*.*
+  File /r gap4r8\bin\*.*
   File gapicon.ico
 
   SetOutPath $INSTDIR\cnf
-  File /r gap4r7\cnf\*.*
+  File /r gap4r8\cnf\*.*
 
   SetOutPath $INSTDIR\doc
-  File /r gap4r7\doc\*.*
+  File /r gap4r8\doc\*.*
 
   SetOutPath $INSTDIR\etc
-  File /r gap4r7\etc\*.*
+  File /r gap4r8\etc\*.*
 
   SetOutPath $INSTDIR\extern
-  File /r gap4r7\extern\*.*
+  File /r gap4r8\extern\*.*
 
   SetOutPath $INSTDIR\grp
-  File /r gap4r7\grp\*.*
+  File /r gap4r8\grp\*.*
 
   SetOutPath $INSTDIR\lib
-  File /r gap4r7\lib\*.*
+  File /r gap4r8\lib\*.*
 
   SetOutPath $INSTDIR\prim
-  File /r gap4r7\prim\*.*
+  File /r gap4r8\prim\*.*
 
   SetOutPath $INSTDIR\small
-  File /r gap4r7\small\*.*
+  File /r gap4r8\small\*.*
 
   SetOutPath $INSTDIR\src
-  File /r gap4r7\src\*.*
+  File /r gap4r8\src\*.*
 
   SetOutPath $INSTDIR\trans
-  File /r gap4r7\trans\*.*
+  File /r gap4r8\trans\*.*
 
   SetOutPath $INSTDIR\terminfo
-  File /r gap4r7\terminfo\*.*
+  File /r gap4r8\terminfo\*.*
 
   SetOutPath $INSTDIR\tst
-  File /r gap4r7\tst\*.*
+  File /r gap4r8\tst\*.*
 
   # restore initial output path
   SetOutPath $INSTDIR 
@@ -163,18 +163,18 @@ Section "Core GAP system" SecGAPcore
   # Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  # rewriting install path in format /cygdrive/c/gap4r7
+  # rewriting install path in format /cygdrive/c/gap4r8
   StrCpy $RXVT_PATH $INSTDIR
   ${WordReplace} $RXVT_PATH ":" ""  "+" $RXVT_PATH
   ${WordReplace} $RXVT_PATH "\" "/" "+" $RXVT_PATH
 
   # Write gap.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r7/terminfo
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
   # cd %HOME%
-  # start "GAP" C:\gap4r7\bin\mintty.exe -s 120,40 /cygdrive/c/gap4r7/bin/gapw95.exe -l /cygdrive/c/gap4r7 %*
+  # start "GAP" C:\gap4r8\bin\mintty.exe -s 120,40 /cygdrive/c/gap4r8/bin/gapw95.exe -l /cygdrive/c/gap4r8 %*
   # exit
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
@@ -211,12 +211,12 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gaprxvt.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r7/terminfo
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.ISO-8859-1
   # set HOME=%HOMEDRIVE%%HOMEPATH%
   # cd %HOME%
-  # start "GAP" C:\gap4r7\bin\rxvt.exe -fn fixedsys -sl 1000 -e /cygdrive/c/gap4r7/bin/gapw95.exe -l /cygdrive/c/gap4r7 %*
+  # start "GAP" C:\gap4r8\bin\rxvt.exe -fn fixedsys -sl 1000 -e /cygdrive/c/gap4r8/bin/gapw95.exe -l /cygdrive/c/gap4r8 %*
   # exit
 
   FileOpen $GAPRXVT_BAT $INSTDIR\bin\gaprxvt.bat w
@@ -253,12 +253,12 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gapcmd.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r7/terminfo
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
   # cd %HOME%
-  # C:\gap4r7\bin\gapw95.exe -l /cygdrive/c/gap4r7 %*
+  # C:\gap4r8\bin\gapw95.exe -l /cygdrive/c/gap4r8 %*
   # exit
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
