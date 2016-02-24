@@ -169,7 +169,7 @@ Section "Core GAP system" SecGAPcore
   ${WordReplace} $RXVT_PATH "\" "/" "+" $RXVT_PATH
 
   # Write gap.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
@@ -181,8 +181,8 @@ Section "Core GAP system" SecGAPcore
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
 
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
-  FileWrite $GAP_BAT "set TERMINFO=/cygdrive/"
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
+  FileWrite $GAP_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT "/terminfo"
     FileWriteByte $GAP_BAT "13"
@@ -238,7 +238,7 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gaprxvt.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.ISO-8859-1
   # set HOME=%HOMEDRIVE%%HOMEPATH%
@@ -250,8 +250,8 @@ Section "Core GAP system" SecGAPcore
 
   FileOpen $GAPRXVT_BAT $INSTDIR\bin\gaprxvt.bat w
 
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
-  FileWrite $GAPRXVT_BAT "set TERMINFO=/cygdrive/"
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
+  FileWrite $GAPRXVT_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
   FileWrite $GAPRXVT_BAT "/terminfo"
     FileWriteByte $GAPRXVT_BAT "13"
@@ -306,7 +306,7 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gapcmd.bat file as follows:
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
@@ -318,8 +318,8 @@ Section "Core GAP system" SecGAPcore
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
 
-  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
-  FileWrite $GAPCMD_BAT "set TERMINFO=/cygdrive/"
+  # set TERMINFO=/proc/cygdrive/c/gap4r8/terminfo
+  FileWrite $GAPCMD_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH
   FileWrite $GAPCMD_BAT "/terminfo"
     FileWriteByte $GAPCMD_BAT "13"
