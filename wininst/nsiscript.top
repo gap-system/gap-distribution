@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.7.8"
+StrCpy $GAP_VER "4.8.2"
 SectionEnd
 
 #Name and file
-Name "GAP 4.7.8"
-OutFile "gap4r8p8_2015_06_09-20_27.exe"
+Name "GAP 4.8.2"
+OutFile "gap4r8p2_2016_02_20-18_51.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -173,40 +173,67 @@ Section "Core GAP system" SecGAPcore
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap4r8\bin\mintty.exe -s 120,40 /cygdrive/c/gap4r8/bin/gapw95.exe -l /cygdrive/c/gap4r8 %*
+  # start "GAP" C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap4r8/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/C/gap4r8 %*
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
+
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   FileWrite $GAP_BAT "set TERMINFO=/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT "/terminfo"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
+  # set CYGWIN=nodosfilewarning
   FileWrite $GAP_BAT "set CYGWIN=nodosfilewarning"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
+  # set LANG=en_US.UTF-8
   FileWrite $GAP_BAT "set LANG=en_US.UTF-8"
     FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"    
+    FileWriteByte $GAP_BAT "10"
+
+  # set HOME=%HOMEDRIVE%%HOMEPATH%
   FileWrite $GAP_BAT "set HOME=%HOMEDRIVE%%HOMEPATH%"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
+  FileWrite $GAP_BAT "set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # cd %HOME%
   FileWrite $GAP_BAT "cd %HOME%"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
+  # start "GAP" C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap4r8/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/C/gap4r8 %*
   FileWrite $GAP_BAT "start $\"GAP$\" " 
   FileWrite $GAP_BAT $INSTDIR
-  FileWrite $GAP_BAT "\bin\mintty.exe -s 120,40 /cygdrive/"
+  FileWrite $GAP_BAT "\bin\i686-pc-cygwin-gcc-default32\mintty.exe -s 120,40 /proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
-  FileWrite $GAP_BAT "/bin/gapw95.exe -l /cygdrive/"
+  FileWrite $GAP_BAT "/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT " %*"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
+  FileWrite $GAP_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # exit
   FileWrite $GAP_BAT "exit"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
+
   FileClose $GAP_BAT
 
 
@@ -215,37 +242,63 @@ Section "Core GAP system" SecGAPcore
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.ISO-8859-1
   # set HOME=%HOMEDRIVE%%HOMEPATH%
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap4r8\bin\rxvt.exe -fn fixedsys -sl 1000 -e /cygdrive/c/gap4r8/bin/gapw95.exe -l /cygdrive/c/gap4r8 %*
+  # start "GAP" C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap4r8/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/C/gap4r8 %*
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPRXVT_BAT $INSTDIR\bin\gaprxvt.bat w
+
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   FileWrite $GAPRXVT_BAT "set TERMINFO=/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
   FileWrite $GAPRXVT_BAT "/terminfo"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
+
+  # set CYGWIN=nodosfilewarning
   FileWrite $GAPRXVT_BAT "set CYGWIN=nodosfilewarning"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
+
+  # set LANG=en_US.ISO-8859-1
   FileWrite $GAP_BAT "set LANG=en_US.ISO-8859-1"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"     
+
+  # set HOME=%HOMEDRIVE%%HOMEPATH%
   FileWrite $GAPRXVT_BAT "set HOME=%HOMEDRIVE%%HOMEPATH%"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
+
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
+  FileWrite $GAP_BAT "set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # cd %HOME%
   FileWrite $GAPRXVT_BAT "cd %HOME%"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
+
+  # start "GAP" C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap4r8/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/C/gap4r8 %*
   FileWrite $GAPRXVT_BAT "start $\"GAP$\" " 
   FileWrite $GAPRXVT_BAT $INSTDIR
-  FileWrite $GAPRXVT_BAT "\bin\rxvt.exe -fn fixedsys -sl 1000 -e /cygdrive/"
+  FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-gcc-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
-  FileWrite $GAPRXVT_BAT "/BIN/gapw95.exe -l /cygdrive/"
+  FileWrite $GAPRXVT_BAT "/bin/i686-pc-cygwin-gcc-default32/gap.exe -l /proc/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
   FileWrite $GAPRXVT_BAT " %*"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
+
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
+  FileWrite $GAP_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # exit
   FileWrite $GAPRXVT_BAT "exit"
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
@@ -257,34 +310,61 @@ Section "Core GAP system" SecGAPcore
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
   # cd %HOME%
-  # C:\gap4r8\bin\gapw95.exe -l /cygdrive/c/gap4r8 %*
+  # C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\gap.exe -l /proc/cygdrive/C/gap4r8 %*
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
+
+  # set TERMINFO=/cygdrive/c/gap4r8/terminfo
   FileWrite $GAPCMD_BAT "set TERMINFO=/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH
   FileWrite $GAPCMD_BAT "/terminfo"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
+
+  # set CYGWIN=nodosfilewarning
   FileWrite $GAPCMD_BAT "set CYGWIN=nodosfilewarning"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
+
+  # set LANG=en_US.UTF-8
   FileWrite $GAP_BAT "set LANG=en_US.UTF-8"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"   
+
+  # set HOME=%HOMEDRIVE%%HOMEPATH%
   FileWrite $GAPCMD_BAT "set HOME=%HOMEDRIVE%%HOMEPATH%"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
+
+  # set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%
+  FileWrite $GAP_BAT "set PATH=C:\gap4r8\bin\i686-pc-cygwin-gcc-default32;%PATH%"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # cd %HOME%
   FileWrite $GAPCMD_BAT "cd %HOME%"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
+
+  # C:\gap4r8\bin\i686-pc-cygwin-gcc-default32\gap.exe -l /proc/cygdrive/C/gap4r8 %*
   FileWrite $GAPCMD_BAT $INSTDIR
-  FileWrite $GAPCMD_BAT "\bin\gapw95.exe -l /cygdrive/"
+  FileWrite $GAPCMD_BAT "\bin\i686-pc-cygwin-gcc-default32\gap.exe -l /proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH 
   FileWrite $GAPCMD_BAT " %*"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
+
+
+  # if NOT ["%errorlevel%"]==["0"] timeout 15
+  FileWrite $GAP_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
+    FileWriteByte $GAP_BAT "13"
+    FileWriteByte $GAP_BAT "10"
+
+  # exit
   FileWrite $GAPCMD_BAT "exit"
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
