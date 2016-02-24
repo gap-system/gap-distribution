@@ -11,8 +11,8 @@ line='cd '${DISTROOT}'/gapsourcedistro/'${DISTNAME}''
 echo $line
 $line 
 
-# build the documentation (to speed up things, without GMP)
-./configure --with-gmp=no
+# build the documentation
+./configure
 make
 make manuals
 make clean
