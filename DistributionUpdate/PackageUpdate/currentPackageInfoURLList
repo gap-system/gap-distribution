@@ -11,8 +11,19 @@
 # <package-name> <PackageInfoURL>
 # or
 # <package-name> MOVE <PackageInfoURL>
-# The URL must be started with "http". The option "MOVE" is used to enforce
-# the change of the URL in case if the stored URL is different.
+#
+# The URL must be started with "http" or "https".
+#
+# When a GAP package changes the URL of its PackageInfo.g file, its
+# maintainer should put a copy of the new PackageInfo.g at the old URL.
+# In this case, the check for package updates will be redirected to the
+# new location automatically, and the URL in this file should be updated
+# *after* the move.
+#
+# In case there is no (easy) way to change PackageInfo.g at the old
+# location, package update system may be forced to use the new location
+# by using the MOVE command. You can subsequently remove MOVE after the
+# new release of the package will be picked up from a new location.
 
 4ti2Interface http://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
 ACE         http://school.maths.uwa.edu.au/~gregg/ACE/PackageInfo.g
