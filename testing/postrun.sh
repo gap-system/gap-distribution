@@ -194,6 +194,51 @@ done
 fi
 /bin/echo '=========OUTPUT END: testpackages========='
 #
+/bin/echo 'Package name | default | no packages | all packages'
+for PKGNAME in `find . -type f | sed 's|.*\.||' | sort -u`
+do
+    for TESTCASE in A 1 2
+    do
+        export TESTRESULT=`cat dev/log/testpackages${TESTCASE}*.$PKGNAME | grep -c "#I  No errors detected while testing"`
+        if [ $TESTRESULT = '1' ]
+        then
+            # info message is there - this is a clear PASS
+            export PASS$TESTCASE=PASS
+        else
+            export NUMFAILS=`cat dev/log/testpackages${TESTCASE}*.$PKGNAME | grep -c "########> Diff"`
+            if [ $NUMFAILS = '0' ]
+            then
+                # zero diffs, but no info message - what could that mean?
+                export TESTCOMPLETED=`cat dev/log/testpackages${TESTCASE}*.$PKGNAME | grep -c "#I  RunPackageTests"`
+                if [ $TESTCOMPLETED = '2' ]
+                then
+                    # still there are two "RunPackageTests" (one at the beginning of the test, one at the end)
+                    # This means that at least the test did not crash
+                    export PASS$TESTCASE="UNCLEAR"
+                elif [ $TESTCOMPLETED = '1' ]
+                # only one "RunPackageTests": either a crash or LoadPackage returned 'fail'
+                then
+                    if [ `cat dev/log/testpackages${TESTCASE}*.$PKGNAME | grep "#I  RunPackageTests" | grep -c "not loadable"` = '1' ]
+                    then
+                        # if LoadPackage returned fail, this will be clearly indicated in the log
+                        export PASS$TESTCASE="NOT LOADED"
+                    else
+                        # otherwise, log has initial RunPackageTests, package was loaded and then crashed
+                        export PASS$TESTCASE="CRASH"
+                    fi
+                else
+                    # The log does not contain "RunPackageTests" at all
+                    export PASS$TESTCASE="NOT STARTED"
+                fi
+            else
+                # one of more diffs - this is a clear FAIL
+                export PASS$TESTCASE="${NUMFAILS} DIFFS"
+            fi
+        fi
+    done
+/bin/echo $PKGNAME '|' $PASSA '|' $PASS1 '|' $PASS2
+done
+#
 /bin/echo -n "YVALUE=" > dev/log/plotpackages1_count.txt
 wc -l dev/log/testpackages1_*| tail -1 | cut -f 1 -d 't' >> dev/log/plotpackages1_count.txt
 /bin/echo -n "URL=" >> dev/log/plotpackages1_count.txt
