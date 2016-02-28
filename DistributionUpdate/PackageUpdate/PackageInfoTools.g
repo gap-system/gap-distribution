@@ -9,41 +9,12 @@
 ##     - current PackageInfo.g files are fetched from the Web
 ##     - if something is new, the following files are updated:
 ##       - changed archives are downloaded, if any of the formats
-##         .zoo, .tar.gz, -win.zip or .tar.bz2 is not provided these
+##         .zip, .tar.gz, -win.zip or .tar.bz2 is not provided these
 ##         are automatically generated
 ##       - if  package archives have changed, the  merged archives 
 ##         (in the formats mentioned above) are newly generated
 ##       - if a documentation archive for the online manual has changed, it is
 ##         fetched from the Web and unpacked
-
-#DeclareInfoClass( "InfoExec" );
-#SetInfoLevel(InfoExec,1);
-# 
-#MakeReadWriteGlobal("Exec");       
-#UnbindGlobal("Exec");
-#BindGlobal("Exec",
-#function ( arg )
-#    local  cmd, i, shell, cs, dir;
-#    cmd := ShallowCopy( arg[1] );
-#    Info( InfoExec, 1, cmd );
-#    if not IsString( cmd )  then
-#      Error( "the command ", cmd, " is not a name.\n", 
-#      "possibly a binary is missing or has not been compiled." );
-#    fi;
-#    for i  in [ 2 .. Length( arg ) ]  do
-#      Append( cmd, " " );
-#      Append( cmd, arg[i] );
-#    od;
-#    shell := Filename( DirectoriesSystemPrograms(  ), "sh" );
-#    cs := "-c";
-#    if shell = fail and ARCH_IS_WINDOWS(  )  then
-#      shell := Filename( DirectoriesSystemPrograms(  ), "cmd.exe" );
-#      cs := "/C";
-#    fi;
-#    dir := DirectoryCurrent(  );
-#    Process( dir, shell, InputTextUser(  ), OutputTextUser(  ), [ cs, cmd ] );
-#    return;
-#end);
 
 ## setting global variable to store package infos
 PACKAGE_INFOS := rec();
@@ -208,8 +179,7 @@ end;
 
 # checks if an archive file doesn't contain path with ".." in them or
 # starting with "/".
-# assuming that fname ends in one of:  ".zoo", ".zip", ".tar.gz" or
-# ".tar.bz2"
+# assuming that fname ends in one of:  ".zip", ".tar.gz" or ".tar.bz2"
 IsLocalArchive := function(fname)
   local ext, s;
   ext := fname{[Length(fname)-3..Length(fname)]};
@@ -217,8 +187,6 @@ IsLocalArchive := function(fname)
     s := StringSystem("tar", "tzf", fname);
   elif ext = ".bz2" then
     s := StringSystem("tar", "tf", fname, "--bzip2");
-  elif ext = ".zoo" then
-    s := StringSystem("unzoo", "-l", fname);
   elif ext = ".zip" then
     s := StringSystem("unzip", "-qql", fname);
   else
@@ -435,25 +403,6 @@ AddpackageLinesCurrent := function(pkgdir)
   return resstr;
 end;
 
-TextFilesInZooArchive := function(zoofile)
-  local lines, tfiles, l, ll, p;
-  Exec(Concatenation("rm -f tmpzoocomm; zoo lc ", zoofile, " > tmpzoocomm"));
-  lines := SplitString(StringFile("tmpzoocomm"), "", "\n");
-  tfiles := [];
-  for p in [1..Length(lines)] do
-    if Length(lines[p]) >= 8  and lines[p]{[1..8]} = " |!TEXT!" then
-      l := lines[p-1];
-      ll := Length(l);
-      while ll > 0 and l[ll] <> ' ' do
-        ll := ll - 1;
-      od;
-      Add(tfiles, l{[ll+1..Length(l)]});
-    fi;
-  od;
-  Exec("rm -f tmpzoocomm");
-  return tfiles;
-end;
-
 # returns list of dirs with updated archives
 UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
   local pkgs, res, nam, info, infostored, infoarchive, url, pos, fname, 
@@ -522,7 +471,7 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
       formats := SplitString(info.ArchiveFormats,""," \n\r\t,");
       # use only acceptable formats here
       formats := Intersection( 
-                   formats, [ ".tar.gz", ".tar.bz2", ".zip", "-win.zip", ".zoo" ]);
+                   formats, [ ".tar.gz", ".tar.bz2", ".zip", "-win.zip" ]);
       Print("  Getting new archives from \n  ", url, formats, "\n");
       Exec(Concatenation("rm -rf ", pkgtmp));
       Exec(Concatenation("mkdir -p ", pkgtmp));
@@ -532,8 +481,8 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
              fname, fmt, " ", url, fmt, " 2>> wgetlog"));
       od;
 
-      # which acceptable formats are available? (".zoo" is to be retired soon)
-      available := Filtered([ ".tar.gz", ".tar.bz2", ".zip", "-win.zip", ".zoo" ], 
+      # which acceptable formats are available?
+      available := Filtered([ ".tar.gz", ".tar.bz2", ".zip", "-win.zip" ],
                      fmt -> IsExistingFile(Concatenation(pkgtmp, fname, fmt)));
 
       # which acceptable formats were promised as available but in fact are not?
@@ -553,10 +502,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
       
       fmt:=available[1];
       
-      if fmt=".zoo" then
-        Print("  WARNING: ", info.PackageName, " is distributed only in zoo format\n"); 
-      fi;
-
       if not IsLocalArchive(Concatenation(pkgtmp, fname, fmt)) then
         Print("   archive rejected: it has a path starting with '/' or containing '..'\n");
         continue;
@@ -572,9 +517,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
                            ".tar.bz2 |tar xpf - "));
       elif fmt = "-win.zip" then
         Exec(Concatenation("cd ", pkgtmp, ";unzip -a ", fname, "-win.zip"));
-      elif fmt = ".zoo" then
-        Exec(Concatenation("cd ", pkgtmp, ";unzoo -x ", fname, 
-             ".zoo > /dev/null 2>&1"));
       else
         Print("ERROR (", info.PackageName, "): no recognized archive format ", fmt, "\n");
         continue;
@@ -672,11 +614,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
         for a in info.TextBinaryFilesPatterns do
           AppendTo( Concatenation(pkgtmp, "patternstextbinary.txt" ), a, "\n" );
         od;  
-      #elif not ".zoo" in missing then
-        #  tfiles := TextFilesInZooArchive(Concatenation(pkgtmp, fname, ".zoo"));
-        # we could also use the  -win.zip format here, with 'unzip -Z -v'
-        # the text files can be found
-        # elif not -win.zip in missing then .....
       fi;
       
       # classify text/binary files with Max's script classifyfiles.py
@@ -720,11 +657,6 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
         if IsExistingFile(Concatenation(pkgtmp, "/", bname)) then
           Exec( Concatenation( "cp -p -r ", pkgtmp, "/", bname, " ", 
                                 pkgreposdir, "/", pkgdirname, "/README.", nam ) );
-#        Exec(Concatenation("cd ", pkgtmp,"; mkdir -p ", webdir,
-#               "/Packages/pkg/",
-#               nam, "; cp -p -f ", bname, 
-#               " ", webdir, "/Packages/pkg/", nam, "/README.", nam, "; mv -f ", 
-#               bname, " ../README.", nam));
         else
           Print("#   Error (", info.PackageName, "): could not get README file from\n   ", info.README_URL, "\n");
         fi;
@@ -783,8 +715,6 @@ if ext = "r.gz" then
   Exec(Concatenation("cd ", pkgtmp, ";gzip -dc ", fname, "|tar xpf - "));
 elif ext = ".bz2" then
   Exec(Concatenation("cd ", pkgtmp, ";bzip2 -dc ", fname, "|tar xpf - "));
-elif ext = ".zoo" then
-  Exec(Concatenation("cd ", pkgtmp, ";unzoo -x ", fname, " > /dev/null 2>&1"));
 elif ext = ".zip" then
   Exec(Concatenation("cd ", pkgtmp, ";unzip -a ", fname ));
 else
@@ -1083,7 +1013,7 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
             "bzip2 -9 ", fname, ".tar" ));
                
       # copy to Web and move archives
-      for fmt in [ ".tar.gz", ".tar.bz2", "-win.zip", ".zip" ] do # removed .zoo
+      for fmt in [ ".tar.gz", ".tar.bz2", "-win.zip", ".zip" ] do
         if not IsExistingFile(Concatenation(webdir, "/ftpdir/",
           fmt{[2..Length(fmt)]}, "/packages/", fname, fmt)) then
           # first delete old ones from ftp dir
@@ -1119,32 +1049,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     ## local allfiles;
     Exec(Concatenation("cd ", dir, "; tar cpf ../", fn, ".tar * ; cd .. ; ",
          " gzip -9 ", fn, ".tar ; " ));
-    #Exec(Concatenation("cd ", dir, "; tar cpf ../", fn, ".tar * ; cd .. ; ",
-    #     "cp ", fn, ".tar ", fn, ".tar.X; gzip -9 ", fn, ".tar ; ",
-    #     "mv -f ", fn, ".tar.X ", fn, ".tar; bzip2 -9 ", fn, ".tar ; "
-    #     ));
-    # then zoo it
-    #Exec(Concatenation("cd ", dir, "; ",
-    #     "find * -print | zoo ahIq ../", fn, ".zoo "));
-    # add !TEXT! comments to zoo archive
-    #for a in textfiles do
-    #  Exec(Concatenation("cd ", dir, "/.. ; (echo '!TEXT!'; echo '/END')", 
-    #       "| zoo c ", fn, ".zoo \"", a, "\""));
-    #od;
-    # adjust time stamp
-    #Exec(Concatenation("cd ", dir, "/.. ; zoo Tq ", fn, ".zoo"));
-
-    # and finally zip it 
-    #FileString(Concatenation(dir, "/../tmptfiles"),
-    #                          JoinStringsWithSeparator(textfiles, "\n"));
-    #Exec(Concatenation("cd ", dir,"; find * ", " -print > ../allfiles"));
-    #allfiles := SplitString(StringFile(Concatenation(dir, "/../allfiles")), 
-    #                        "", "\n");
-    #FileString(Concatenation(dir, "/../tmpbfiles"), 
-    #        JoinStringsWithSeparator(Difference(allfiles, textfiles), "\n"));
-    #Exec(Concatenation("cd ", dir,"; ",
-    #     "cat ../tmpbfiles | zip -9 ../", fn, "-win.zip -@ > /dev/null ; ",
-    #     "cat ../tmptfiles | zip -9 -l ../", fn, "-win.zip -@ > /dev/null "));
   end; 
 
   timestamp := StringCurrentTime();
@@ -1173,30 +1077,15 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
   Print("Wrapping merged packages archive ...\n");
   fun(pkgdir, mergedir, Concatenation("packages-", timestamp), textfilesmerge);
 
-  # cp merged to archive collection and ftp directory
-##    Exec(Concatenation("cd ", pkgdir, "/../archives; mkdir -p old; ",
-##         "touch packages-*; mv packages-* old; cp -f ", tmpdir, "/packages-* ",
-##         pkgdir, "/../archives; rm -f ", pkgdir, "/../web/ftpdir/*/packages-*"));
-##    for fmt in [".zoo", ".tar.gz", ".tar.bz2", "-win.zip"] do
-##      Exec(Concatenation("mv -f ", tmpdir, "/packages-*", fmt, " ", pkgdir, 
-##           "/../web/ftpdir/", fmt{[2..Length(fmt)]}, "/"));
-##    od;
-
   # TODO: change the location of the merged archive - it's not going public
 
   Exec(Concatenation("cd ", archdir, "; mkdir -p old; ",
        "touch packages-*; mv packages-* old; cp -f ", tmpdir, "/packages-* ",
        archdir, "; rm -f ", webdir, "/ftpdir/*/packages-*"));
-  for fmt in [ ".tar.gz" ] do # no merged ".tar.bz2", "-win.zip", and retired ".zoo"
+  for fmt in [ ".tar.gz" ] do # no merged ".tar.bz2", "-win.zip"
     Exec(Concatenation("mv -f ", tmpdir, "/packages-*", fmt, " ", webdir, 
          "/ftpdir/", fmt{[2..Length(fmt)]}, "/"));
   od;
-
-  # repack archives with Frank's script repack.py
-  #fn_targzArch := Concatenation("packages-", str, ".tar.gz");
-  #Exec(Concatenation("cd ", archdir, 
-  #"; /Users/alexk/CVSREPS/GAPDEV/dev/DistributionUpdate/dist45/repack.py ",
-  #fn_targzArch, " -all ;" )); 
        
 end;
 
@@ -1491,9 +1380,7 @@ UpdatePackageDoc := function(pkgdir, pkgdocdir)
                 "of non-allowed paths!!!\n");
         fi;
         Print("  unpacking new documentation ", fname, "\n");
-        if fmt = ".zoo" then
-          Exec(Concatenation("cd ", pkgtmp, ";unzoo -x ", fname, " > /dev/null 2>&1"));
-        elif fmt = "r.gz" then
+        if fmt = "r.gz" then
           Exec(Concatenation("cd ", pkgtmp, ";gzip -dc ", fname, " |tar xpf - "));
         elif fmt = ".bz2" then
           Exec(Concatenation("cd ", pkgtmp, ";bzip2 -dc ", fname, " |tar xpf - "));
@@ -1747,7 +1634,7 @@ AddHTMLPackageInfo := function(arg)
   Append(res, Concatenation("[<a href='{{GAPManualLink}}/pkg/", 
           dname, "/README.", nam, 
           "'>README</a>]&nbsp;&nbsp;&nbsp;&nbsp;",bnam));
-  for ext in [ ".tar.gz", ".tar.bz2", "-win.zip", ".zip" ] do # retired ".zoo",
+  for ext in [ ".tar.gz", ".tar.bz2", "-win.zip", ".zip" ] do
     fn := Concatenation(webdir, "/ftpdir/", ext{[2..Length(ext)]}, 
           "/packages/", bnam, ext);
     s := StringSizeFilename(fn);
@@ -1889,36 +1776,7 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
   end;
   treelines := [];
   pi := PACKAGE_INFOS;
-# find combined package files
-#  fl := SplitString(StringSystem("ls", 
-#           Concatenation(webdir, "/ftpdir/tar.gz/")), "", "\n");
-#  fn := First(fl, a-> Length(a)>8 and a{[1..9]} = "packages-" and 
-#        a{[Length(a)-6..Length(a)]} = ".tar.gz");
-#  if fn <> fail then
-#    fn := fn{[1..Length(fn)-7]};
-#  else
-#    Print("No merged package-*.tar.gz\n");
-#    fn := "nopackage";
-#  fi;
-  # can be used in several places
-#  mergedarchivelinks := 
-#     Concatenation(fn,
-#          "[<a href=\"{{gap4ftp}}zoo/",fn,".zoo\">.zoo (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/zoo/",fn,".zoo")),
-#          ")</a>]\n",
-#          "[<a href=\"{{gap4ftp}}tar.gz/",fn,".tar.gz\">.tar.gz (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/tar.gz/",
-#          fn,".tar.gz")), ")</a>]\n"#,
-#          "[<a href=\"{{gap4ftp}}tar.bz2/",fn,".tar.bz2\">.tar.bz2 (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/tar.bz2/",
-#          fn,".tar.bz2")), ")</a>]\n",
-#          "[<a href=\"{{gap4ftp}}win.zip/",fn,"-win.zip\">-win.zip (", 
-#          StringSizeFilename(Concatenation(webdir,"/ftpdir/win.zip/",
-#          fn,"-win.zip")), ")</a>]\n"
-#          );
-#  AppendTo(pkgconffile, "PKG_mergedarchivelinks = r'''", 
-#          esc(mergedarchivelinks), "'''\n\n");
-  
+
   Print("Enumerating packages ...\n");
   # write the <pkgname>.mixer files and fill the package.mixer entries and
   # the 'tree' file and manual overview lines and SuggestUpgrade args
