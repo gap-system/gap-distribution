@@ -195,7 +195,7 @@ fi
 /bin/echo '=========OUTPUT END: testpackages========='
 #
 /bin/echo 'Package name | default | no packages | all packages'
-for PKGNAME in `find . -type f | sed 's|.*\.||' | sort -u`
+for PKGNAME in `find dev/log -type f | sed 's|.*\.||' | sort -u`
 do
     for TESTCASE in A 1 2
     do
