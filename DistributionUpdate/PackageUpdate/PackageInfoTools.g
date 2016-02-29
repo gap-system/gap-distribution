@@ -974,8 +974,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     Exec(Concatenation("cd ", pkg, " ; cp -p -r pkg/* ", mergedir ));
     # TODO: on Linux, use hard links instead of copying all files
     
-    # and copy the README file
-    Exec(Concatenation("cp -p ", pkg, "/README.", nam, " ", mergedir ));
     # and copy files with lists of text files and binary files
     Exec( Concatenation("cp -p ", pkg, "/listtextfiles.txt ", mergedir, nam, ".txtfiles"));
     Exec( Concatenation("cp -p ", pkg, "/listbinaryfiles.txt ", mergedir, nam, ".binfiles"));
@@ -1064,7 +1062,6 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     "rm *.txtfiles ; ",
     "rm *.binfiles ; ",
     "rm -rf *.tar.gz *.tar.bz2 *.zip ; ",
-    "ls README.* >> metainfotxtfiles-", timestamp, ".txt ; ",
     "ls metainfo* | zip -q metainfopackages", timestamp, " -@" ) );  
     
   # move metainfo archive to the archive collection and then cleanup
