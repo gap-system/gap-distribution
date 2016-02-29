@@ -34,7 +34,7 @@ export MERGEDPKGLOC="/mnt/raid/hudson-slave/workspace/GAP-pkg-merge-stable/Distr
 # "/mnt/raid/hudson-slave/..." is used by Jenkins continuous build system.
 export DISTROOT="/mnt/raid/hudson-slave/workspace/GAP-minor-release/wrap/$DISTNAME"
 
-# the Mercurial repository (access must be configured in advance)
+# the source repository (access must be configured in advance)
 export GITROOT="https://github.com/gap-system/gap.git"
 
 #-----------------------------------------------------------------------------
