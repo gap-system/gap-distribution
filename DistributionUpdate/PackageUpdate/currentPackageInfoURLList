@@ -62,7 +62,7 @@ Float       http://laurentbartholdi.github.com/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       http://www.math.rwth-aachen.de/~Thomas.Breuer/fplsa/PackageInfo.g
-FR MOVE     http://gap-packages.github.io/fr/PackageInfo.g
+FR          http://gap-packages.github.io/fr/PackageInfo.g
 fwtree      http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
@@ -121,7 +121,7 @@ Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 profiling   http://gap-packages.github.io/profiling/PackageInfo.g
-qaos MOVE   https://gap-packages.github.io/qaos/PackageInfo.g
+qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
@@ -151,9 +151,9 @@ toric       http://www.opensourcemath.org/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
-Utils       http://pages.bangor.ac.uk/~mas023/chda/utils/PackageInfo.g
+Utils MOVE  http://gap-packages.github.io/utils/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
-XGAP MOVE   https://gap-packages.github.io/xgap/PackageInfo.g
+XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
 
