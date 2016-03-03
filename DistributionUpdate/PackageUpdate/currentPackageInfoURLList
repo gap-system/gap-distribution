@@ -151,7 +151,7 @@ toric       http://www.opensourcemath.org/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
-Utils MOVE  http://gap-packages.github.io/utils/PackageInfo.g
+Utils       https://gap-packages.github.io/utils/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
