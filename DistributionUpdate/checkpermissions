@@ -31,6 +31,9 @@ echo "======================================================================"
 echo "Files not having 644 or 755 permissions:"
 echo "trying Mac OS X find ..."
 find . -type f -exec stat -f "%p %N" \{\} \; | grep -v "644" | grep -v "755" | cat
+echo "======================================================================"
+echo "Files which are not world readable:"
+find . -type f ! -perm -004 -exec stat -f "%p %N" \{\} \;
 else
 #############################################################################
 #
@@ -44,6 +47,9 @@ echo "======================================================================"
 echo "Files not having 644 or 755 permissions:"
 echo "trying GNU find ..."
 find . -type f -printf "%m %p\n" | grep -v "^644" | grep -v "^755" | cat
+echo "======================================================================"
+echo "Files which are not world readable:"
+find . -type f ! -perm -004 -printf "%m %p\n"
 fi
 
 #############################################################################
