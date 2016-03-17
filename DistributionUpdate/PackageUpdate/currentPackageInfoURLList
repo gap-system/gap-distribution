@@ -26,7 +26,7 @@
 # new release of the package will be picked up from a new location.
 
 4ti2Interface http://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
-ACE         http://school.maths.uwa.edu.au/~gregg/ACE/PackageInfo.g
+ACE         https://gap-packages.github.io/ace/PackageInfo.g
 AClib       http://www.icm.tu-bs.de/~beick/soft/aclib/PackageInfo.g
 Alnuth      http://www.icm.tu-bs.de/ag_algebra/software/Alnuth/PackageInfo.g
 ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
@@ -62,7 +62,7 @@ Float       http://laurentbartholdi.github.com/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       http://www.math.rwth-aachen.de/~Thomas.Breuer/fplsa/PackageInfo.g
-FR          http://gap-packages.github.io/fr/PackageInfo.g
+FR          https://gap-packages.github.io/fr/PackageInfo.g
 fwtree      http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
