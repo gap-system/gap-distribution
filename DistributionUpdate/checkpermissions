@@ -60,5 +60,11 @@ echo "======================================================================"
 echo "Files with 755 permission, not recognized as executables by 'file':"
 find . -type f -perm 755 -exec file \{\} \; | grep -v executable | cat
 echo "======================================================================"
+echo "Making all files in 'pkg' directory world-readable"
+chmod -R a+r ${DISTNAME}/pkg
+echo "======================================================================"
+echo "Setting timestamps for all files in 'pkg' directory to the release time"
+find ${DISTNAME}/pkg -exec touch -r "core_checkout_time.txt" {} \;
+echo "======================================================================"
 
 exit 0
