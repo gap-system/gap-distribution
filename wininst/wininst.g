@@ -126,9 +126,7 @@ PrintHeader( pkgname );
 AppendTo(nsisout,"Section \"", pkgname, "\" SecGAPpkg_", pkg," \n");
 if mandatory then
   AppendTo(nsisout,"SectionIn RO \n");
-fi;  
-AppendTo(nsisout,"SetOutPath $INSTDIR\\pkg \n");
-AppendTo(nsisout,"File ", gappath, "\\pkg\\README.", pkg, "\n");
+fi;
 AppendTo(nsisout,"SetOutPath $INSTDIR\\pkg\\", dirname, "\n");
 AppendTo(nsisout,"File /r ", gappath, "\\pkg\\", dirname, "\\*.* \n");
 AppendTo(nsisout,"SetOutPath $INSTDIR \n");
