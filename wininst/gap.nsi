@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.2"
+StrCpy $GAP_VER "4.8.3"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.2"
-OutFile "gap4r8p2_2016_02_20-18_51.exe"
+Name "GAP 4.8.3"
+OutFile "gap4r8p3_2016_03_19-22_17.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -479,8 +479,8 @@ SectionEnd
 Section "CRISP" SecGAPpkg_crisp 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.crisp
-SetOutPath $INSTDIR\pkg\crisp
-File /r gap4r8\pkg\crisp\*.* 
+SetOutPath $INSTDIR\pkg\crisp-1.4.3
+File /r gap4r8\pkg\crisp-1.4.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -587,8 +587,8 @@ SectionEnd
 Section "GUAVA" SecGAPpkg_guava 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.guava
-SetOutPath $INSTDIR\pkg\guava-3.12
-File /r gap4r8\pkg\guava-3.12\*.* 
+SetOutPath $INSTDIR\pkg\guava-3.13
+File /r gap4r8\pkg\guava-3.13\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -599,8 +599,8 @@ SectionEnd
 Section "IO" SecGAPpkg_io 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.io
-SetOutPath $INSTDIR\pkg\io-4.4.5
-File /r gap4r8\pkg\io-4.4.5\*.* 
+SetOutPath $INSTDIR\pkg\io-4.4.6
+File /r gap4r8\pkg\io-4.4.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -635,8 +635,8 @@ SectionEnd
 Section "Polenta" SecGAPpkg_polenta 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.polenta
-SetOutPath $INSTDIR\pkg\polenta-1.3.5
-File /r gap4r8\pkg\polenta-1.3.5\*.* 
+SetOutPath $INSTDIR\pkg\polenta-1.3.6
+File /r gap4r8\pkg\polenta-1.3.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -671,8 +671,8 @@ SectionEnd
 Section "ResClasses" SecGAPpkg_resclasses 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.resclasses
-SetOutPath $INSTDIR\pkg\resclasses
-File /r gap4r8\pkg\resclasses\*.* 
+SetOutPath $INSTDIR\pkg\resclasses-4.4.2
+File /r gap4r8\pkg\resclasses-4.4.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -724,6 +724,18 @@ File /r gap4r8\pkg\tomlib\*.*
 SetOutPath $INSTDIR 
 SectionEnd 
 
+#######################################################################
+#
+# Utils
+#
+Section "Utils" SecGAPpkg_utils 
+SetOutPath $INSTDIR\pkg 
+File gap4r8\pkg\README.utils
+SetOutPath $INSTDIR\pkg\utils-0.39
+File /r gap4r8\pkg\utils-0.39\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
 SectionGroupEnd 
 # Default packages end here
 
@@ -752,8 +764,8 @@ SectionEnd
 Section "AutoDoc" SecGAPpkg_autodoc 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.autodoc
-SetOutPath $INSTDIR\pkg\AutoDoc-2016.02.16
-File /r gap4r8\pkg\AutoDoc-2016.02.16\*.* 
+SetOutPath $INSTDIR\pkg\AutoDoc-2016.03.08
+File /r gap4r8\pkg\AutoDoc-2016.03.08\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -872,8 +884,8 @@ SectionEnd
 Section "cvec" SecGAPpkg_cvec 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.cvec
-SetOutPath $INSTDIR\pkg\cvec-2.5.4
-File /r gap4r8\pkg\cvec-2.5.4\*.* 
+SetOutPath $INSTDIR\pkg\cvec-2.5.5
+File /r gap4r8\pkg\cvec-2.5.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -939,13 +951,13 @@ SectionEnd
 
 #######################################################################
 #
-# FR
+# fr
 #
-Section "FR" SecGAPpkg_fr 
+Section "fr" SecGAPpkg_fr 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.fr
-SetOutPath $INSTDIR\pkg\fr-2.2.1
-File /r gap4r8\pkg\fr-2.2.1\*.* 
+SetOutPath $INSTDIR\pkg\fr-2.3.3
+File /r gap4r8\pkg\fr-2.3.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -980,8 +992,8 @@ SectionEnd
 Section "genss" SecGAPpkg_genss 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.genss
-SetOutPath $INSTDIR\pkg\genss-1.6.3
-File /r gap4r8\pkg\genss-1.6.3\*.* 
+SetOutPath $INSTDIR\pkg\genss-1.6.4
+File /r gap4r8\pkg\genss-1.6.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1340,8 +1352,8 @@ SectionEnd
 Section "NormalizInterface" SecGAPpkg_normalizinterface 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.normalizinterface
-SetOutPath $INSTDIR\pkg\NormalizInterface-0.9.5
-File /r gap4r8\pkg\NormalizInterface-0.9.5\*.* 
+SetOutPath $INSTDIR\pkg\NormalizInterface-0.9.7
+File /r gap4r8\pkg\NormalizInterface-0.9.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1376,8 +1388,8 @@ SectionEnd
 Section "orb" SecGAPpkg_orb 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.orb
-SetOutPath $INSTDIR\pkg\orb-4.7.5
-File /r gap4r8\pkg\orb-4.7.5\*.* 
+SetOutPath $INSTDIR\pkg\orb-4.7.6
+File /r gap4r8\pkg\orb-4.7.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1424,8 +1436,8 @@ SectionEnd
 Section "qaos" SecGAPpkg_qaos 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.qaos
-SetOutPath $INSTDIR\pkg\qaos
-File /r gap4r8\pkg\qaos\*.* 
+SetOutPath $INSTDIR\pkg\qaos-1.2
+File /r gap4r8\pkg\qaos-1.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1436,8 +1448,8 @@ SectionEnd
 Section "QPA" SecGAPpkg_qpa 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.qpa
-SetOutPath $INSTDIR\pkg\QPA-1.23
-File /r gap4r8\pkg\QPA-1.23\*.* 
+SetOutPath $INSTDIR\pkg\QPA-1.24
+File /r gap4r8\pkg\QPA-1.24\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1460,8 +1472,8 @@ SectionEnd
 Section "RCWA" SecGAPpkg_rcwa 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.rcwa
-SetOutPath $INSTDIR\pkg\rcwa
-File /r gap4r8\pkg\rcwa\*.* 
+SetOutPath $INSTDIR\pkg\rcwa-4.3.1
+File /r gap4r8\pkg\rcwa-4.3.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1484,8 +1496,8 @@ SectionEnd
 Section "recog" SecGAPpkg_recog 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.recog
-SetOutPath $INSTDIR\pkg\recog-1.2.4
-File /r gap4r8\pkg\recog-1.2.4\*.* 
+SetOutPath $INSTDIR\pkg\recog-1.2.5
+File /r gap4r8\pkg\recog-1.2.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1496,8 +1508,8 @@ SectionEnd
 Section "recogbase" SecGAPpkg_recogbase 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.recogbase
-SetOutPath $INSTDIR\pkg\recogbase-1.2.4
-File /r gap4r8\pkg\recogbase-1.2.4\*.* 
+SetOutPath $INSTDIR\pkg\recogbase-1.2.5
+File /r gap4r8\pkg\recogbase-1.2.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1556,8 +1568,8 @@ SectionEnd
 Section "Semigroups" SecGAPpkg_semigroups 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.semigroups
-SetOutPath $INSTDIR\pkg\semigroups-2.7.2
-File /r gap4r8\pkg\semigroups-2.7.2\*.* 
+SetOutPath $INSTDIR\pkg\semigroups-2.7.4
+File /r gap4r8\pkg\semigroups-2.7.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1707,18 +1719,6 @@ SectionEnd
 
 #######################################################################
 #
-# Utils
-#
-Section "Utils" SecGAPpkg_utils 
-SetOutPath $INSTDIR\pkg 
-File gap4r8\pkg\README.utils
-SetOutPath $INSTDIR\pkg\utils-0.25
-File /r gap4r8\pkg\utils-0.25\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
 # Wedderga
 #
 Section "Wedderga" SecGAPpkg_wedderga 
@@ -1736,8 +1736,8 @@ SectionEnd
 Section "XMod" SecGAPpkg_xmod 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.xmod
-SetOutPath $INSTDIR\pkg\xmod-2.51
-File /r gap4r8\pkg\xmod-2.51\*.* 
+SetOutPath $INSTDIR\pkg\xmod-2.56
+File /r gap4r8\pkg\xmod-2.56\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1769,8 +1769,8 @@ SectionGroup "Packages requiring UNIX/Linux" SecGAPpkgsNoWindows
 Section "ACE" SecGAPpkg_ace 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.ace
-SetOutPath $INSTDIR\pkg\ace
-File /r gap4r8\pkg\ace\*.* 
+SetOutPath $INSTDIR\pkg\ace-5.2
+File /r gap4r8\pkg\ace-5.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1781,8 +1781,8 @@ SectionEnd
 Section "ANUPQ" SecGAPpkg_anupq 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.anupq
-SetOutPath $INSTDIR\pkg\anupq-3.1.3
-File /r gap4r8\pkg\anupq-3.1.3\*.* 
+SetOutPath $INSTDIR\pkg\anupq-3.1.4
+File /r gap4r8\pkg\anupq-3.1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1817,8 +1817,8 @@ SectionEnd
 Section "Digraphs" SecGAPpkg_digraphs 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.digraphs
-SetOutPath $INSTDIR\pkg\digraphs-0.4.2
-File /r gap4r8\pkg\digraphs-0.4.2\*.* 
+SetOutPath $INSTDIR\pkg\digraphs-0.5
+File /r gap4r8\pkg\digraphs-0.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1937,8 +1937,8 @@ SectionEnd
 Section "nq" SecGAPpkg_nq 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.nq
-SetOutPath $INSTDIR\pkg\nq-2.5.2
-File /r gap4r8\pkg\nq-2.5.2\*.* 
+SetOutPath $INSTDIR\pkg\nq-2.5.3
+File /r gap4r8\pkg\nq-2.5.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1973,8 +1973,8 @@ SectionEnd
 Section "profiling" SecGAPpkg_profiling 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.profiling
-SetOutPath $INSTDIR\pkg\profiling-0.5.0
-File /r gap4r8\pkg\profiling-0.5.0\*.* 
+SetOutPath $INSTDIR\pkg\profiling-0.5.1
+File /r gap4r8\pkg\profiling-0.5.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1985,8 +1985,8 @@ SectionEnd
 Section "XGAP" SecGAPpkg_xgap 
 SetOutPath $INSTDIR\pkg 
 File gap4r8\pkg\README.xgap
-SetOutPath $INSTDIR\pkg\xgap
-File /r gap4r8\pkg\xgap\*.* 
+SetOutPath $INSTDIR\pkg\xgap-4.24
+File /r gap4r8\pkg\xgap-4.24\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
