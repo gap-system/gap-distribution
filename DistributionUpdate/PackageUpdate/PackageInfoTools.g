@@ -1647,7 +1647,7 @@ AddHTMLPackageInfo := function(arg)
     Append(res, Concatenation( info.SourceRepository.Type, " : " ) );
     if Length(info.SourceRepository.URL) > 4 and info.SourceRepository.URL{[1..4]}="http" then
       Append(res, Concatenation( "<a href=\"", info.SourceRepository.URL, "\">",
-                                               info.SourceRepository.URL, "</a><br />\n"));
+                                               info.SourceRepository.URL, "</a></p>\n"));
     else
       Append(res, Concatenation( info.SourceRepository, "</p>\n"));
     fi;
