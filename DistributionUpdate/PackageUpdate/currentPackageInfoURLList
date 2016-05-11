@@ -58,7 +58,7 @@ ExamplesForHomalg http://homalg-project.github.io/homalg_project/ExamplesForHoma
 FactInt     http://www.gap-system.org/DevelopersPages/StefanKohl/factint/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
-Float MOVE  http://gap-packages.github.io/float/PackageInfo.g
+Float       http://gap-packages.github.io/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       http://www.math.rwth-aachen.de/~Thomas.Breuer/fplsa/PackageInfo.g
