@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.3"
+StrCpy $GAP_VER "4.8.4"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.3"
-OutFile "gap4r8p3_2016_03_19-22_17.exe"
+Name "GAP 4.8.4"
+OutFile "gap4r8p4_2016_06_04-12_41.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -465,8 +465,8 @@ SectionEnd
 # CRISP
 #
 Section "CRISP" SecGAPpkg_crisp 
-SetOutPath $INSTDIR\pkg\crisp-1.4.3
-File /r gap4r8\pkg\crisp-1.4.3\*.* 
+SetOutPath $INSTDIR\pkg\crisp-1.4.4
+File /r gap4r8\pkg\crisp-1.4.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -575,8 +575,8 @@ SectionEnd
 # IRREDSOL
 #
 Section "IRREDSOL" SecGAPpkg_irredsol 
-SetOutPath $INSTDIR\pkg\irredsol
-File /r gap4r8\pkg\irredsol\*.* 
+SetOutPath $INSTDIR\pkg\irredsol-1.3.1
+File /r gap4r8\pkg\irredsol-1.3.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -625,8 +625,8 @@ SectionEnd
 # ResClasses
 #
 Section "ResClasses" SecGAPpkg_resclasses 
-SetOutPath $INSTDIR\pkg\resclasses-4.4.2
-File /r gap4r8\pkg\resclasses-4.4.2\*.* 
+SetOutPath $INSTDIR\pkg\resclasses-4.5.0
+File /r gap4r8\pkg\resclasses-4.5.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -675,8 +675,8 @@ SectionEnd
 # Utils
 #
 Section "Utils" SecGAPpkg_utils 
-SetOutPath $INSTDIR\pkg\utils-0.39
-File /r gap4r8\pkg\utils-0.39\*.* 
+SetOutPath $INSTDIR\pkg\utils-0.40
+File /r gap4r8\pkg\utils-0.40\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -864,8 +864,8 @@ SectionEnd
 # fr
 #
 Section "fr" SecGAPpkg_fr 
-SetOutPath $INSTDIR\pkg\fr-2.3.3
-File /r gap4r8\pkg\fr-2.3.3\*.* 
+SetOutPath $INSTDIR\pkg\fr-2.3.6
+File /r gap4r8\pkg\fr-2.3.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -904,8 +904,8 @@ SectionEnd
 # gpd
 #
 Section "gpd" SecGAPpkg_gpd 
-SetOutPath $INSTDIR\pkg\gpd-1.42
-File /r gap4r8\pkg\gpd-1.42\*.* 
+SetOutPath $INSTDIR\pkg\gpd-1.43
+File /r gap4r8\pkg\gpd-1.43\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1194,8 +1194,8 @@ SectionEnd
 # NormalizInterface
 #
 Section "NormalizInterface" SecGAPpkg_normalizinterface 
-SetOutPath $INSTDIR\pkg\NormalizInterface-0.9.7
-File /r gap4r8\pkg\NormalizInterface-0.9.7\*.* 
+SetOutPath $INSTDIR\pkg\NormalizInterface-0.9.8
+File /r gap4r8\pkg\NormalizInterface-0.9.8\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1294,8 +1294,8 @@ SectionEnd
 # RCWA
 #
 Section "RCWA" SecGAPpkg_rcwa 
-SetOutPath $INSTDIR\pkg\rcwa-4.3.1
-File /r gap4r8\pkg\rcwa-4.3.1\*.* 
+SetOutPath $INSTDIR\pkg\rcwa-4.4.1
+File /r gap4r8\pkg\rcwa-4.4.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1374,8 +1374,8 @@ SectionEnd
 # Semigroups
 #
 Section "Semigroups" SecGAPpkg_semigroups 
-SetOutPath $INSTDIR\pkg\semigroups-2.7.4
-File /r gap4r8\pkg\semigroups-2.7.4\*.* 
+SetOutPath $INSTDIR\pkg\semigroups-2.8.0
+File /r gap4r8\pkg\semigroups-2.8.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1590,11 +1590,11 @@ SectionEnd
 
 #######################################################################
 #
-# Float
+# float
 #
-Section "Float" SecGAPpkg_float 
-SetOutPath $INSTDIR\pkg\float-0.6.2
-File /r gap4r8\pkg\float-0.6.2\*.* 
+Section "float" SecGAPpkg_float 
+SetOutPath $INSTDIR\pkg\float-0.7.3
+File /r gap4r8\pkg\float-0.7.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1805,7 +1805,7 @@ LangString DESC_SecGAPpkg_idrel ${LANG_ENGLISH} "Identities among relations"
 LangString DESC_SecGAPpkg_intpic ${LANG_ENGLISH} "A package for drawing integers"
 LangString DESC_SecGAPpkg_io ${LANG_ENGLISH} "Bindings for low level C library I/O routines"
 LangString DESC_SecGAPpkg_io_forhomalg ${LANG_ENGLISH} "IO capabilities for the homalg project"
-LangString DESC_SecGAPpkg_irredsol ${LANG_ENGLISH} "A Library of irreducible solvable linear groups over finite fields and of finite primivite soluble groups"
+LangString DESC_SecGAPpkg_irredsol ${LANG_ENGLISH} "A library of irreducible soluble linear groups over finite fields and of finite primivite soluble groups"
 LangString DESC_SecGAPpkg_itc ${LANG_ENGLISH} "Interactive Todd-Coxeter"
 LangString DESC_SecGAPpkg_json ${LANG_ENGLISH} "Reading and Writing JSON"
 LangString DESC_SecGAPpkg_kan ${LANG_ENGLISH} "including double coset rewriting systems"
