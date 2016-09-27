@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.4"
+StrCpy $GAP_VER "4.8.5"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.4"
-OutFile "gap4r8p4_2016_06_04-12_41.exe"
+Name "GAP 4.8.5"
+OutFile "gap4r8p5_2016_09_25-11_49.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -1583,8 +1583,8 @@ SectionEnd
 # Digraphs
 #
 Section "Digraphs" SecGAPpkg_digraphs 
-SetOutPath $INSTDIR\pkg\digraphs-0.5
-File /r gap4r8\pkg\digraphs-0.5\*.* 
+SetOutPath $INSTDIR\pkg\digraphs-0.5.2
+File /r gap4r8\pkg\digraphs-0.5.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1593,8 +1593,8 @@ SectionEnd
 # float
 #
 Section "float" SecGAPpkg_float 
-SetOutPath $INSTDIR\pkg\float-0.7.3
-File /r gap4r8\pkg\float-0.7.3\*.* 
+SetOutPath $INSTDIR\pkg\float-0.7.4
+File /r gap4r8\pkg\float-0.7.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
