@@ -84,14 +84,14 @@ hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
 HeLP        http://homepages.vub.ac.be/abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
-idrel       http://pages.bangor.ac.uk/~mas023/chda/idrel/PackageInfo.g
+idrel MOVE  https://gap-packages.github.io/idrel/PackageInfo.g
 IntPic      http://www.fc.up.pt/cmup/mdelgado/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        http://gap-packages.github.io/json/PackageInfo.g
-kan         http://pages.bangor.ac.uk/~mas023/chda/kan/PackageInfo.g
+kan MOVE    https://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
