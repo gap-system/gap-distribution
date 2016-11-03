@@ -70,7 +70,7 @@ GaussForHomalg http://homalg-project.github.io/homalg_project/GaussForHomalg/Pac
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
 GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       https://gap-packages.github.io/genss/PackageInfo.g
-gpd         http://pages.bangor.ac.uk/~mas023/chda/gpd/PackageInfo.g
+gpd MOVE    https://gap-packages.github.io/gpd/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
@@ -84,14 +84,14 @@ hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
 HeLP        http://homepages.vub.ac.be/abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
-idrel MOVE  https://gap-packages.github.io/idrel/PackageInfo.g
+idrel       https://gap-packages.github.io/idrel/PackageInfo.g
 IntPic      http://www.fc.up.pt/cmup/mdelgado/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        http://gap-packages.github.io/json/PackageInfo.g
-kan MOVE    https://gap-packages.github.io/kan/PackageInfo.g
+kan         https://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
@@ -154,6 +154,6 @@ UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
-XMod        http://pages.bangor.ac.uk/~mas023/chda/xmod/PackageInfo.g
+XMod MOVE   https://gap-packages.github.io/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
 
