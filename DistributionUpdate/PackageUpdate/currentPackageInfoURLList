@@ -70,7 +70,7 @@ GaussForHomalg http://homalg-project.github.io/homalg_project/GaussForHomalg/Pac
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
 GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       https://gap-packages.github.io/genss/PackageInfo.g
-gpd MOVE    https://gap-packages.github.io/gpd/PackageInfo.g
+gpd         https://gap-packages.github.io/gpd/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
@@ -154,6 +154,6 @@ UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
-XMod MOVE   https://gap-packages.github.io/xmod/PackageInfo.g
+XMod        https://gap-packages.github.io/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
 
