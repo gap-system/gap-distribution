@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.5"
+StrCpy $GAP_VER "4.8.6"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.5"
-OutFile "gap4r8p5_2016_09_25-11_49.exe"
+Name "GAP 4.8.6"
+OutFile "gap4r8p6_2016_11_12-14_25.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -595,8 +595,8 @@ SectionEnd
 # Polenta
 #
 Section "Polenta" SecGAPpkg_polenta 
-SetOutPath $INSTDIR\pkg\polenta-1.3.6
-File /r gap4r8\pkg\polenta-1.3.6\*.* 
+SetOutPath $INSTDIR\pkg\polenta-1.3.7
+File /r gap4r8\pkg\polenta-1.3.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -675,8 +675,8 @@ SectionEnd
 # Utils
 #
 Section "Utils" SecGAPpkg_utils 
-SetOutPath $INSTDIR\pkg\utils-0.40
-File /r gap4r8\pkg\utils-0.40\*.* 
+SetOutPath $INSTDIR\pkg\utils-0.43
+File /r gap4r8\pkg\utils-0.43\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -804,8 +804,8 @@ SectionEnd
 # cvec
 #
 Section "cvec" SecGAPpkg_cvec 
-SetOutPath $INSTDIR\pkg\cvec-2.5.5
-File /r gap4r8\pkg\cvec-2.5.5\*.* 
+SetOutPath $INSTDIR\pkg\cvec-2.5.6
+File /r gap4r8\pkg\cvec-2.5.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -904,8 +904,8 @@ SectionEnd
 # gpd
 #
 Section "gpd" SecGAPpkg_gpd 
-SetOutPath $INSTDIR\pkg\gpd-1.43
-File /r gap4r8\pkg\gpd-1.43\*.* 
+SetOutPath $INSTDIR\pkg\gpd-1.45
+File /r gap4r8\pkg\gpd-1.45\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1024,8 +1024,8 @@ SectionEnd
 # idrel
 #
 Section "idrel" SecGAPpkg_idrel 
-SetOutPath $INSTDIR\pkg\idrel-2.31
-File /r gap4r8\pkg\idrel-2.31\*.* 
+SetOutPath $INSTDIR\pkg\idrel-2.34
+File /r gap4r8\pkg\idrel-2.34\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1054,8 +1054,8 @@ SectionEnd
 # kan
 #
 Section "kan" SecGAPpkg_kan 
-SetOutPath $INSTDIR\pkg\kan-1.25
-File /r gap4r8\pkg\kan-1.25\*.* 
+SetOutPath $INSTDIR\pkg\kan-1.27
+File /r gap4r8\pkg\kan-1.27\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1274,8 +1274,8 @@ SectionEnd
 # QPA
 #
 Section "QPA" SecGAPpkg_qpa 
-SetOutPath $INSTDIR\pkg\QPA-1.24
-File /r gap4r8\pkg\QPA-1.24\*.* 
+SetOutPath $INSTDIR\pkg\QPA-1.25
+File /r gap4r8\pkg\QPA-1.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1514,8 +1514,8 @@ SectionEnd
 # XMod
 #
 Section "XMod" SecGAPpkg_xmod 
-SetOutPath $INSTDIR\pkg\xmod-2.56
-File /r gap4r8\pkg\xmod-2.56\*.* 
+SetOutPath $INSTDIR\pkg\XMod-2.58
+File /r gap4r8\pkg\XMod-2.58\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1653,8 +1653,8 @@ SectionEnd
 # json
 #
 Section "json" SecGAPpkg_json 
-SetOutPath $INSTDIR\pkg\json-1.0.1
-File /r gap4r8\pkg\json-1.0.1\*.* 
+SetOutPath $INSTDIR\pkg\json-1.1.0
+File /r gap4r8\pkg\json-1.1.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1713,8 +1713,8 @@ SectionEnd
 # profiling
 #
 Section "profiling" SecGAPpkg_profiling 
-SetOutPath $INSTDIR\pkg\profiling-0.5.1
-File /r gap4r8\pkg\profiling-0.5.1\*.* 
+SetOutPath $INSTDIR\pkg\profiling-1.1.0
+File /r gap4r8\pkg\profiling-1.1.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1723,8 +1723,8 @@ SectionEnd
 # XGAP
 #
 Section "XGAP" SecGAPpkg_xgap 
-SetOutPath $INSTDIR\pkg\xgap-4.24
-File /r gap4r8\pkg\xgap-4.24\*.* 
+SetOutPath $INSTDIR\pkg\xgap-4.26
+File /r gap4r8\pkg\xgap-4.26\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 

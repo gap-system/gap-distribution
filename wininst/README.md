@@ -34,8 +34,9 @@ This directory contains the following files:
 
 The gap.nsi sctipt may be updated on any machine. Install there the GAP
 release which you would like to wrap into the Windows installer, and read
-`wininst.g` using this GAP installation. This will produce `nsiscript.mid`
-file. Now call
+`wininst.g` using this GAP installation (remember to call GAP with `-r`
+option to avoid adding locally installed packages from your `.gap/pkg`
+directory). This will produce `nsiscript.mid` file. Now call
 ```
 cat nsiscript.top nsiscript.mid nsiscript.bottom > gap.nsi
 ```
