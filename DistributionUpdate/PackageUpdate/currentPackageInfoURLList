@@ -53,7 +53,7 @@ cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 DESIGN      http://www.maths.qmul.ac.uk/~leonard/design/design1r6/PackageInfo.g
 Digraphs    https://gap-packages.github.io/Digraphs/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
-Example     http://www.cs.st-andrews.ac.uk/~alexk/example/PackageInfo.g
+Example MOVE https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg http://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
 FactInt     http://www.gap-system.org/DevelopersPages/StefanKohl/factint/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
@@ -147,7 +147,7 @@ SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/PackageInfo.g
 TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
-toric MOVE  https://gap-packages.github.io/toric/PackageInfo.g
+toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
