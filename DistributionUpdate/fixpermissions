@@ -20,11 +20,11 @@ find ${DISTNAME} -type f -exec chmod 644 {} ";"
 
 echo 'and there are a few executables ...' 
 find \
-  ${DISTNAME}/{bin/BuildPackages.sh,configure,gap.shi,tst/remake.sh} \
+  ${DISTNAME}/{bin/BuildPackages.sh,configure,gap.shi} \
   ${DISTNAME}/bin/*.bat \
   ${DISTNAME}/cnf/{config.guess,config.sub,configure.out,install-sh,mkversionheader.sh} \
   ${DISTNAME}/doc/manualindex \
-  ${DISTNAME}/etc/{buildman.pe,convert.pl,install-tools.sh,packpack} \
+  ${DISTNAME}/etc/{convert.pl,install-tools.sh} \
   -exec chmod 755 {} ";"
 
 exit 0
