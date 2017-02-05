@@ -1,9 +1,9 @@
 #
 # Makefile for wrapping the GAP release
 #
-# update: bases on the tag of the last release in the stable branch
-# minor : based on the tip of the stable branch
-# major : based on the tip of the default branch
+# update: based on the tag of the last release in the corresponding stable branch
+# minor : based on the head of the corresponding stable branch
+# major : based on the head of the master branch
 
 update:
 	cp setvarupdate setvar

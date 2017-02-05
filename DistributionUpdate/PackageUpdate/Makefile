@@ -1,9 +1,9 @@
 #
 # Makefile for wrapping the merged archive of GAP packages
 #
-# update : to test with the last release in the stable branch
-# stable : to test with the tip of the stable branch
-# master : to test with the tip of the master branch
+# update : to test with the last release in the corresponding stable branch
+# stable : to test with the head of the corresponding stable branch
+# master : to test with the head of the master branch
 
 pkg-update:
 	./mergePackages
@@ -13,4 +13,3 @@ pkg-stable:
 
 pkg-master:
 	./mergePackages semigroups=stable
-

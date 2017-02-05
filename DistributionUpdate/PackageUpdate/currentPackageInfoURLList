@@ -5,7 +5,7 @@
 # scripts to get notification about any new packages or changed URLs.
 # Before changing URLs, validates them using the form available here:
 #
-# http://www.gap-system.org/Packages/Authors/authors.html
+# https://www.gap-system.org/Packages/validator.html
 #
 # Each non commented out line of this file must have format
 # <package-name> <PackageInfoURL>
@@ -101,7 +101,7 @@ linboxing   http://www.cs.st-andrews.ac.uk/~pas/linboxing/PackageInfo.g
 LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       http://www.math.du.edu/loops/PackageInfo.g
-MapClass    http://web.mat.bham.ac.uk/~jamesa/mapclass/PackageInfo.g 
+MapClass    http://web.mat.bham.ac.uk/~jamesa/mapclass/PackageInfo.g
 Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg http://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g
 ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
@@ -156,4 +156,3 @@ Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
-
