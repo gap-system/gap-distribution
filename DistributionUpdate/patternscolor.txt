@@ -13,8 +13,6 @@
 # with the tools archive. The first match decides about the class.
 #
 # files and directories we never include
--*.cvsignore*
--*CVS/*
 -*.git/*
 -*.DS_Store
 # some problematic files which we need:
@@ -23,21 +21,8 @@
 # files we never include
 -*.o
 # excluded directories
--alpha/*
 -benchmark/*
--beta/*
 -dev/*
--HOWTOS/*
--macbinaries/*
--macgac/*
--macsrc/*
--macunzoo/*
--mkdistrib/*
--oldprim/*
--tbl/*
--thr/*
--tmp/*
--two/*
 #
 # *** TOOLS ***
 #
@@ -61,14 +46,10 @@ Tetc/patternstextbinary.txt
 +doc/manual.css
 +doc/test/mktestx.sh
 -doc/*
-+etc/debug.vim
-+etc/debugvim.txt
 +etc/emacs/*
-+etc/gap_indent.vim
-+etc/gap.vim
++etc/vim/*
 +etc/GPL
 +etc/install-tools.sh
-+etc/README.vim-utils
 -etc/*
 # everything else is included
 +*
