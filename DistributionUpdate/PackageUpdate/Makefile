@@ -12,4 +12,4 @@ pkg-stable:
 	./mergePackages
 
 pkg-master:
-	./mergePackages semigroups=stable
+	./mergePackages semigroups=no
