@@ -53,9 +53,9 @@ cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 DESIGN      http://www.maths.qmul.ac.uk/~leonard/design/design1r6/PackageInfo.g
 Digraphs    https://gap-packages.github.io/Digraphs/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
-Example MOVE https://gap-packages.github.io/example/PackageInfo.g
+Example     https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg http://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
-FactInt     http://www.gap-system.org/DevelopersPages/StefanKohl/factint/PackageInfo.g
+FactInt     https://stefan-kohl.github.io/factint/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
@@ -125,12 +125,12 @@ qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
-RCWA        http://www.gap-system.org/DevelopersPages/StefanKohl/rcwa/PackageInfo.g
+RCWA        https://stefan-kohl.github.io/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
 recogbase   https://gap-packages.github.io/recogbase/PackageInfo.g
 Repsn       http://www.sfu.ca/~vdabbagh/gap/PackageInfo.g
-ResClasses  http://www.gap-system.org/DevelopersPages/StefanKohl/resclasses/PackageInfo.g
+ResClasses  https://stefan-kohl.github.io/resclasses/PackageInfo.g
 RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         http://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
@@ -147,7 +147,7 @@ SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/PackageInfo.g
 TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
-toric MOVE  https://gap-packages.github.io/toric/PackageInfo.g
+toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
