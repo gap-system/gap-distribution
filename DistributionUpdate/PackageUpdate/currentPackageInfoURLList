@@ -62,7 +62,7 @@ Float       https://gap-packages.github.io/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       http://www.math.rwth-aachen.de/~Thomas.Breuer/fplsa/PackageInfo.g
-FR          https://gap-packages.github.io/fr/PackageInfo.g
+FR MOVE     https://gap-packages.github.io/fr/PackageInfo.g
 fwtree      http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
