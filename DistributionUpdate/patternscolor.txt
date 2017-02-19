@@ -17,6 +17,8 @@
 -*CVS/*
 -*.git/*
 -*.DS_Store
+-*.travis.yml
+-*.appveyor.yml
 # some problematic files which we need:
 # (in particular there are files with extension .o and .a)
 +small/*/*
