@@ -46,7 +46,10 @@ Tdoc/gapmacro-ps.tex
 Tdoc/gapmacrodoc.tex
 Tdoc/manualindex
 Tetc/README.tools
+Tetc/buildman.pe
 Tetc/convert.pl
+Tetc/packpack
+Tetc/unzoo.c
 Tetc/classifyfiles.py
 Tetc/patternscolor.txt
 Tetc/patternstextbinary.txt
