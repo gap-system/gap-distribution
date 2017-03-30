@@ -31,7 +31,7 @@ export WWW2Dir=${PREFIX}"/WWW2"
 
 # destination of the ftp server directory (can be remote), the one
 # containing the directories 'tar.gz', 'tar.bz2' and 'win.zip'
-export FtpServer="/ftp/pub/gap/gap48"
+export FtpServer="gap-web@gap-web.host.cs.st-andrews.ac.uk:www.gap-system.org/pub/gap/gap48"
 
 # destination of the directory containing package release repositories 
 # (that is, repositories to store released versions of the package to
