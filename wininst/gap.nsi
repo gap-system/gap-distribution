@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.6"
+StrCpy $GAP_VER "4.8.7"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.6"
-OutFile "gap4r8p6_2016_11_12-14_25.exe"
+Name "GAP 4.8.7"
+OutFile "gap4r8p7_2017_03_24-21_21.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -515,8 +515,8 @@ SectionEnd
 # Example
 #
 Section "Example" SecGAPpkg_example 
-SetOutPath $INSTDIR\pkg\example
-File /r gap4r8\pkg\example\*.* 
+SetOutPath $INSTDIR\pkg\Example-3.5.1
+File /r gap4r8\pkg\Example-3.5.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -525,8 +525,8 @@ SectionEnd
 # FactInt
 #
 Section "FactInt" SecGAPpkg_factint 
-SetOutPath $INSTDIR\pkg\factint
-File /r gap4r8\pkg\factint\*.* 
+SetOutPath $INSTDIR\pkg\factint-1.5.4
+File /r gap4r8\pkg\factint-1.5.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -625,8 +625,8 @@ SectionEnd
 # ResClasses
 #
 Section "ResClasses" SecGAPpkg_resclasses 
-SetOutPath $INSTDIR\pkg\resclasses-4.5.0
-File /r gap4r8\pkg\resclasses-4.5.0\*.* 
+SetOutPath $INSTDIR\pkg\resclasses-4.6.0
+File /r gap4r8\pkg\resclasses-4.6.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -675,8 +675,8 @@ SectionEnd
 # Utils
 #
 Section "Utils" SecGAPpkg_utils 
-SetOutPath $INSTDIR\pkg\utils-0.43
-File /r gap4r8\pkg\utils-0.43\*.* 
+SetOutPath $INSTDIR\pkg\utils-0.46
+File /r gap4r8\pkg\utils-0.46\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -704,8 +704,8 @@ SectionEnd
 # AutoDoc
 #
 Section "AutoDoc" SecGAPpkg_autodoc 
-SetOutPath $INSTDIR\pkg\AutoDoc-2016.03.08
-File /r gap4r8\pkg\AutoDoc-2016.03.08\*.* 
+SetOutPath $INSTDIR\pkg\AutoDoc-2016.12.04
+File /r gap4r8\pkg\AutoDoc-2016.12.04\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -861,11 +861,11 @@ SectionEnd
 
 #######################################################################
 #
-# fr
+# FR
 #
-Section "fr" SecGAPpkg_fr 
-SetOutPath $INSTDIR\pkg\fr-2.3.6
-File /r gap4r8\pkg\fr-2.3.6\*.* 
+Section "FR" SecGAPpkg_fr 
+SetOutPath $INSTDIR\pkg\FR-2.4.1
+File /r gap4r8\pkg\FR-2.4.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -904,8 +904,8 @@ SectionEnd
 # gpd
 #
 Section "gpd" SecGAPpkg_gpd 
-SetOutPath $INSTDIR\pkg\gpd-1.45
-File /r gap4r8\pkg\gpd-1.45\*.* 
+SetOutPath $INSTDIR\pkg\gpd-1.46
+File /r gap4r8\pkg\gpd-1.46\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1121,6 +1121,16 @@ SectionEnd
 
 #######################################################################
 #
+# lpres
+#
+Section "lpres" SecGAPpkg_lpres 
+SetOutPath $INSTDIR\pkg\lpres-0.4.1
+File /r gap4r8\pkg\lpres-0.4.1\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
 # MapClass
 #
 Section "MapClass" SecGAPpkg_mapclass 
@@ -1214,8 +1224,8 @@ SectionEnd
 # OpenMath
 #
 Section "OpenMath" SecGAPpkg_openmath 
-SetOutPath $INSTDIR\pkg\openmath
-File /r gap4r8\pkg\openmath\*.* 
+SetOutPath $INSTDIR\pkg\OpenMath-11.4.2
+File /r gap4r8\pkg\OpenMath-11.4.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1264,8 +1274,8 @@ SectionEnd
 # qaos
 #
 Section "qaos" SecGAPpkg_qaos 
-SetOutPath $INSTDIR\pkg\qaos-1.2
-File /r gap4r8\pkg\qaos-1.2\*.* 
+SetOutPath $INSTDIR\pkg\qaos-1.4
+File /r gap4r8\pkg\qaos-1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1294,8 +1304,8 @@ SectionEnd
 # RCWA
 #
 Section "RCWA" SecGAPpkg_rcwa 
-SetOutPath $INSTDIR\pkg\rcwa-4.4.1
-File /r gap4r8\pkg\rcwa-4.4.1\*.* 
+SetOutPath $INSTDIR\pkg\rcwa-4.5.1
+File /r gap4r8\pkg\rcwa-4.5.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1364,8 +1374,8 @@ SectionEnd
 # SCSCP
 #
 Section "SCSCP" SecGAPpkg_scscp 
-SetOutPath $INSTDIR\pkg\scscp
-File /r gap4r8\pkg\scscp\*.* 
+SetOutPath $INSTDIR\pkg\SCSCP-2.2.2
+File /r gap4r8\pkg\SCSCP-2.2.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1461,11 +1471,11 @@ SectionEnd
 
 #######################################################################
 #
-# toric
+# Toric
 #
-Section "toric" SecGAPpkg_toric 
-SetOutPath $INSTDIR\pkg\toric1.8
-File /r gap4r8\pkg\toric1.8\*.* 
+Section "Toric" SecGAPpkg_toric 
+SetOutPath $INSTDIR\pkg\Toric-1.9.4
+File /r gap4r8\pkg\Toric-1.9.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1514,8 +1524,8 @@ SectionEnd
 # XMod
 #
 Section "XMod" SecGAPpkg_xmod 
-SetOutPath $INSTDIR\pkg\XMod-2.58
-File /r gap4r8\pkg\XMod-2.58\*.* 
+SetOutPath $INSTDIR\pkg\XMod-2.59
+File /r gap4r8\pkg\XMod-2.59\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1583,8 +1593,8 @@ SectionEnd
 # Digraphs
 #
 Section "Digraphs" SecGAPpkg_digraphs 
-SetOutPath $INSTDIR\pkg\digraphs-0.5.2
-File /r gap4r8\pkg\digraphs-0.5.2\*.* 
+SetOutPath $INSTDIR\pkg\digraphs-0.7.1
+File /r gap4r8\pkg\digraphs-0.7.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1593,8 +1603,8 @@ SectionEnd
 # float
 #
 Section "float" SecGAPpkg_float 
-SetOutPath $INSTDIR\pkg\float-0.7.4
-File /r gap4r8\pkg\float-0.7.4\*.* 
+SetOutPath $INSTDIR\pkg\float-0.7.5
+File /r gap4r8\pkg\float-0.7.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1663,8 +1673,8 @@ SectionEnd
 # kbmag
 #
 Section "kbmag" SecGAPpkg_kbmag 
-SetOutPath $INSTDIR\pkg\kbmag-1.5.3
-File /r gap4r8\pkg\kbmag-1.5.3\*.* 
+SetOutPath $INSTDIR\pkg\kbmag-1.5.4
+File /r gap4r8\pkg\kbmag-1.5.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1713,8 +1723,8 @@ SectionEnd
 # profiling
 #
 Section "profiling" SecGAPpkg_profiling 
-SetOutPath $INSTDIR\pkg\profiling-1.1.0
-File /r gap4r8\pkg\profiling-1.1.0\*.* 
+SetOutPath $INSTDIR\pkg\profiling-1.3.0
+File /r gap4r8\pkg\profiling-1.3.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1818,6 +1828,7 @@ LangString DESC_SecGAPpkg_linboxing ${LANG_ENGLISH} "access to LinBox linear alg
 LangString DESC_SecGAPpkg_linearalgebraforcap ${LANG_ENGLISH} "Category of Matrices over a Field for CAP"
 LangString DESC_SecGAPpkg_localizeringforhomalg ${LANG_ENGLISH} "A Package for Localization of Polynomial Rings"
 LangString DESC_SecGAPpkg_loops ${LANG_ENGLISH} "Computing with quasigroups and loops in GAP"
+LangString DESC_SecGAPpkg_lpres ${LANG_ENGLISH} "Nilpotent Quotients of L-Presented Groups"
 LangString DESC_SecGAPpkg_mapclass ${LANG_ENGLISH} "A Package For Mapping Class Orbit Computation"
 LangString DESC_SecGAPpkg_matgrp ${LANG_ENGLISH} "Matric Group Interface Routines"
 LangString DESC_SecGAPpkg_matricesforhomalg ${LANG_ENGLISH} "Matrices for the homalg project"
@@ -1959,6 +1970,7 @@ LangString DESC_SecGAPpkg_xmodalg ${LANG_ENGLISH} "Crossed Modules and Cat1-Alge
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_linearalgebraforcap} $(DESC_SecGAPpkg_linearalgebraforcap)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_localizeringforhomalg} $(DESC_SecGAPpkg_localizeringforhomalg)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_loops} $(DESC_SecGAPpkg_loops)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_lpres} $(DESC_SecGAPpkg_lpres)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_mapclass} $(DESC_SecGAPpkg_mapclass)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_matgrp} $(DESC_SecGAPpkg_matgrp)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_matricesforhomalg} $(DESC_SecGAPpkg_matricesforhomalg)
