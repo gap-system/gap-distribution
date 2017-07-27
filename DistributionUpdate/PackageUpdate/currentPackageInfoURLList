@@ -115,7 +115,7 @@ NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
-PatternClass http://ruthhoffmann.github.io/PatternClass/PackageInfo.g
+PatternClass https://RuthHoffmann.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
 Polenta     http://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
@@ -123,7 +123,7 @@ PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Polymake
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 profiling   http://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
-QPA         http://www.math.ntnu.no/~oyvinso/QPA/PackageInfo.g
+QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
 RCWA        https://stefan-kohl.github.io/rcwa/PackageInfo.g
