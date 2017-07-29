@@ -12,6 +12,7 @@ echo $line
 $line 
 
 # build the documentation
+./autogen.sh
 ./configure
 make
 make manuals
