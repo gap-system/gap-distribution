@@ -6,10 +6,10 @@
 # master : to test with the head of the master branch
 
 pkg-update:
-	./mergePackages
+	./mergePackages semigroups=stable
 
 pkg-stable:
-	./mergePackages
+	./mergePackages semigroups=stable
 
 pkg-master:
 	./mergePackages
