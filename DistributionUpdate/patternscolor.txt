@@ -41,9 +41,11 @@ Tetc/patternstextbinary.txt
 +doc/ref/*
 +doc/tut/*
 +doc/changes/*
++doc/hpc/*
 +doc/versiondata
 +doc/manualbib.xml
 +doc/manual.css
++doc/make_doc.in
 +doc/test/mktestx.sh
 -doc/*
 +etc/emacs/*
