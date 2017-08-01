@@ -20,6 +20,9 @@ cd pkg/io-*
 make
 cd ../..
 make manuals
+cd pkg/io-*
+make clean
+cd ../..
 make clean
 
 exit 0
