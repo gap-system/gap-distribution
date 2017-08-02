@@ -17,7 +17,6 @@
 #after the release we will find the parent revision used to wrap the 
 # release and will tag it with an appropriate tag).
 ./updateversioninfo
-./fixpermissions
 ./zipgapcore
 ./updatemetainfo
 

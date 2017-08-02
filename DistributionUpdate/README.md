@@ -88,9 +88,6 @@ consists of three stages
   to wrap the release and will tag it with an appropriate tag). See comment in
   `updateversioninfo` for further details.
 
-* `fixpermissions`: sets `chmod 755` for directories and `chmod 644` for files.
-  Also enforces some executables by calling `chmod 755`.
-
 * `zipgapcore`: builds `gapmacrodoc.pdf`, then adds text and binary files to
   the archives of the core system and the tools archive.
 
