@@ -154,6 +154,7 @@ ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVariet
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
+uuid        https://gap-packages.github.io/uuid/PackageInfo.g
 Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
