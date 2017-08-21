@@ -159,4 +159,4 @@ Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
-zeromq      https://gap-packages.github.io/zeromq/PackageInfo.g
+ZeroMQInterface https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g
