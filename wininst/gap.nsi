@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.7"
+StrCpy $GAP_VER "4.8.8"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.7"
-OutFile "gap4r8p7_2017_03_24-21_21.exe"
+Name "GAP 4.8.8"
+OutFile "gap4r8p8_2017_08_20-15_12.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -396,8 +396,8 @@ SectionGroup "Needed packages" SecGAPpkgsNeeded
 #
 Section "GAPDoc" SecGAPpkg_gapdoc 
 SectionIn RO 
-SetOutPath $INSTDIR\pkg\GAPDoc-1.5.1
-File /r gap4r8\pkg\GAPDoc-1.5.1\*.* 
+SetOutPath $INSTDIR\pkg\GAPDoc-1.6
+File /r gap4r8\pkg\GAPDoc-1.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -575,8 +575,8 @@ SectionEnd
 # IRREDSOL
 #
 Section "IRREDSOL" SecGAPpkg_irredsol 
-SetOutPath $INSTDIR\pkg\irredsol-1.3.1
-File /r gap4r8\pkg\irredsol-1.3.1\*.* 
+SetOutPath $INSTDIR\pkg\irredsol-1.4
+File /r gap4r8\pkg\irredsol-1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -694,8 +694,8 @@ SectionGroup "Specialised  packages" SecGAPpkgsSpecial
 # 4ti2Interface
 #
 Section "4ti2Interface" SecGAPpkg_4ti2interface 
-SetOutPath $INSTDIR\pkg\4ti2Interface
-File /r gap4r8\pkg\4ti2Interface\*.* 
+SetOutPath $INSTDIR\pkg\4ti2Interface-2017.01.05
+File /r gap4r8\pkg\4ti2Interface-2017.01.05\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -734,8 +734,8 @@ SectionEnd
 # CAP
 #
 Section "CAP" SecGAPpkg_cap 
-SetOutPath $INSTDIR\pkg\CAP-2016.02.19
-File /r gap4r8\pkg\CAP-2016.02.19\*.* 
+SetOutPath $INSTDIR\pkg\CAP-2017.07.25
+File /r gap4r8\pkg\CAP-2017.07.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -804,8 +804,8 @@ SectionEnd
 # cvec
 #
 Section "cvec" SecGAPpkg_cvec 
-SetOutPath $INSTDIR\pkg\cvec-2.5.6
-File /r gap4r8\pkg\cvec-2.5.6\*.* 
+SetOutPath $INSTDIR\pkg\cvec-2.5.7
+File /r gap4r8\pkg\cvec-2.5.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -824,8 +824,8 @@ SectionEnd
 # ExamplesForHomalg
 #
 Section "ExamplesForHomalg" SecGAPpkg_examplesforhomalg 
-SetOutPath $INSTDIR\pkg\ExamplesForHomalg
-File /r gap4r8\pkg\ExamplesForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\ExamplesForHomalg-2017.05.25
+File /r gap4r8\pkg\ExamplesForHomalg-2017.05.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -884,8 +884,8 @@ SectionEnd
 # GeneralizedMorphismsForCAP
 #
 Section "GeneralizedMorphismsForCAP" SecGAPpkg_generalizedmorphismsforcap 
-SetOutPath $INSTDIR\pkg\GeneralizedMorphismsForCAP
-File /r gap4r8\pkg\GeneralizedMorphismsForCAP\*.* 
+SetOutPath $INSTDIR\pkg\GeneralizedMorphismsForCAP-2017.07.25
+File /r gap4r8\pkg\GeneralizedMorphismsForCAP-2017.07.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -901,21 +901,11 @@ SectionEnd
 
 #######################################################################
 #
-# gpd
-#
-Section "gpd" SecGAPpkg_gpd 
-SetOutPath $INSTDIR\pkg\gpd-1.46
-File /r gap4r8\pkg\gpd-1.46\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
 # GradedModules
 #
 Section "GradedModules" SecGAPpkg_gradedmodules 
-SetOutPath $INSTDIR\pkg\GradedModules
-File /r gap4r8\pkg\GradedModules\*.* 
+SetOutPath $INSTDIR\pkg\GradedModules-2017.05.10
+File /r gap4r8\pkg\GradedModules-2017.05.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -924,8 +914,18 @@ SectionEnd
 # GradedRingForHomalg
 #
 Section "GradedRingForHomalg" SecGAPpkg_gradedringforhomalg 
-SetOutPath $INSTDIR\pkg\GradedRingForHomalg
-File /r gap4r8\pkg\GradedRingForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\GradedRingForHomalg-2017.05.26
+File /r gap4r8\pkg\GradedRingForHomalg-2017.05.26\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# groupoids
+#
+Section "groupoids" SecGAPpkg_groupoids 
+SetOutPath $INSTDIR\pkg\groupoids-1.51
+File /r gap4r8\pkg\groupoids-1.51\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1004,8 +1004,8 @@ SectionEnd
 # homalg
 #
 Section "homalg" SecGAPpkg_homalg 
-SetOutPath $INSTDIR\pkg\homalg
-File /r gap4r8\pkg\homalg\*.* 
+SetOutPath $INSTDIR\pkg\homalg-2017.05.10
+File /r gap4r8\pkg\homalg-2017.05.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1014,8 +1014,8 @@ SectionEnd
 # HomalgToCAS
 #
 Section "HomalgToCAS" SecGAPpkg_homalgtocas 
-SetOutPath $INSTDIR\pkg\HomalgToCAS
-File /r gap4r8\pkg\HomalgToCAS\*.* 
+SetOutPath $INSTDIR\pkg\HomalgToCAS-2017.08.01
+File /r gap4r8\pkg\HomalgToCAS-2017.08.01\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1044,8 +1044,8 @@ SectionEnd
 # IO_ForHomalg
 #
 Section "IO_ForHomalg" SecGAPpkg_io_forhomalg 
-SetOutPath $INSTDIR\pkg\IO_ForHomalg
-File /r gap4r8\pkg\IO_ForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\IO_ForHomalg-2017.07.01
+File /r gap4r8\pkg\IO_ForHomalg-2017.07.01\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1094,8 +1094,8 @@ SectionEnd
 # LinearAlgebraForCAP
 #
 Section "LinearAlgebraForCAP" SecGAPpkg_linearalgebraforcap 
-SetOutPath $INSTDIR\pkg\LinearAlgebraForCAP
-File /r gap4r8\pkg\LinearAlgebraForCAP\*.* 
+SetOutPath $INSTDIR\pkg\LinearAlgebraForCAP-2017.07.25
+File /r gap4r8\pkg\LinearAlgebraForCAP-2017.07.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1104,8 +1104,8 @@ SectionEnd
 # LocalizeRingForHomalg
 #
 Section "LocalizeRingForHomalg" SecGAPpkg_localizeringforhomalg 
-SetOutPath $INSTDIR\pkg\LocalizeRingForHomalg
-File /r gap4r8\pkg\LocalizeRingForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\LocalizeRingForHomalg-2017.07.17
+File /r gap4r8\pkg\LocalizeRingForHomalg-2017.07.17\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1154,8 +1154,8 @@ SectionEnd
 # MatricesForHomalg
 #
 Section "MatricesForHomalg" SecGAPpkg_matricesforhomalg 
-SetOutPath $INSTDIR\pkg\MatricesForHomalg
-File /r gap4r8\pkg\MatricesForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\MatricesForHomalg-2017.08.02
+File /r gap4r8\pkg\MatricesForHomalg-2017.08.02\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1174,8 +1174,8 @@ SectionEnd
 # ModulePresentationsForCAP
 #
 Section "ModulePresentationsForCAP" SecGAPpkg_modulepresentationsforcap 
-SetOutPath $INSTDIR\pkg\ModulePresentationsForCAP
-File /r gap4r8\pkg\ModulePresentationsForCAP\*.* 
+SetOutPath $INSTDIR\pkg\ModulePresentationsForCAP-2017.07.25
+File /r gap4r8\pkg\ModulePresentationsForCAP-2017.07.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1184,8 +1184,8 @@ SectionEnd
 # Modules
 #
 Section "Modules" SecGAPpkg_modules 
-SetOutPath $INSTDIR\pkg\Modules
-File /r gap4r8\pkg\Modules\*.* 
+SetOutPath $INSTDIR\pkg\Modules-2017.07.17
+File /r gap4r8\pkg\Modules-2017.07.17\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1244,8 +1244,8 @@ SectionEnd
 # PatternClass
 #
 Section "PatternClass" SecGAPpkg_patternclass 
-SetOutPath $INSTDIR\pkg\PatternClass
-File /r gap4r8\pkg\PatternClass\*.* 
+SetOutPath $INSTDIR\pkg\PatternClass-2.3
+File /r gap4r8\pkg\PatternClass-2.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1274,8 +1274,8 @@ SectionEnd
 # qaos
 #
 Section "qaos" SecGAPpkg_qaos 
-SetOutPath $INSTDIR\pkg\qaos-1.4
-File /r gap4r8\pkg\qaos-1.4\*.* 
+SetOutPath $INSTDIR\pkg\qaos-1.5
+File /r gap4r8\pkg\qaos-1.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1284,8 +1284,8 @@ SectionEnd
 # QPA
 #
 Section "QPA" SecGAPpkg_qpa 
-SetOutPath $INSTDIR\pkg\QPA-1.25
-File /r gap4r8\pkg\QPA-1.25\*.* 
+SetOutPath $INSTDIR\pkg\QPA-1.26
+File /r gap4r8\pkg\QPA-1.26\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1354,8 +1354,8 @@ SectionEnd
 # RingsForHomalg
 #
 Section "RingsForHomalg" SecGAPpkg_ringsforhomalg 
-SetOutPath $INSTDIR\pkg\RingsForHomalg
-File /r gap4r8\pkg\RingsForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\RingsForHomalg-2017.08.02
+File /r gap4r8\pkg\RingsForHomalg-2017.08.02\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1444,8 +1444,8 @@ SectionEnd
 # Smallsemi
 #
 Section "Smallsemi" SecGAPpkg_smallsemi 
-SetOutPath $INSTDIR\pkg\smallsemi-0.6.10
-File /r gap4r8\pkg\smallsemi-0.6.10\*.* 
+SetOutPath $INSTDIR\pkg\smallsemi-0.6.11
+File /r gap4r8\pkg\smallsemi-0.6.11\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1464,8 +1464,8 @@ SectionEnd
 # ToolsForHomalg
 #
 Section "ToolsForHomalg" SecGAPpkg_toolsforhomalg 
-SetOutPath $INSTDIR\pkg\ToolsForHomalg
-File /r gap4r8\pkg\ToolsForHomalg\*.* 
+SetOutPath $INSTDIR\pkg\ToolsForHomalg-2017.05.10
+File /r gap4r8\pkg\ToolsForHomalg-2017.05.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1524,8 +1524,8 @@ SectionEnd
 # XMod
 #
 Section "XMod" SecGAPpkg_xmod 
-SetOutPath $INSTDIR\pkg\XMod-2.59
-File /r gap4r8\pkg\XMod-2.59\*.* 
+SetOutPath $INSTDIR\pkg\XMod-2.62
+File /r gap4r8\pkg\XMod-2.62\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1563,8 +1563,8 @@ SectionEnd
 # ANUPQ
 #
 Section "ANUPQ" SecGAPpkg_anupq 
-SetOutPath $INSTDIR\pkg\anupq-3.1.4
-File /r gap4r8\pkg\anupq-3.1.4\*.* 
+SetOutPath $INSTDIR\pkg\anupq-3.1.5
+File /r gap4r8\pkg\anupq-3.1.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1593,8 +1593,8 @@ SectionEnd
 # Digraphs
 #
 Section "Digraphs" SecGAPpkg_digraphs 
-SetOutPath $INSTDIR\pkg\digraphs-0.7.1
-File /r gap4r8\pkg\digraphs-0.7.1\*.* 
+SetOutPath $INSTDIR\pkg\digraphs-0.10.1
+File /r gap4r8\pkg\digraphs-0.10.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1603,8 +1603,8 @@ SectionEnd
 # float
 #
 Section "float" SecGAPpkg_float 
-SetOutPath $INSTDIR\pkg\float-0.7.5
-File /r gap4r8\pkg\float-0.7.5\*.* 
+SetOutPath $INSTDIR\pkg\float-0.7.6
+File /r gap4r8\pkg\float-0.7.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1633,8 +1633,8 @@ SectionEnd
 # Gauss
 #
 Section "Gauss" SecGAPpkg_gauss 
-SetOutPath $INSTDIR\pkg\Gauss
-File /r gap4r8\pkg\Gauss\*.* 
+SetOutPath $INSTDIR\pkg\Gauss-2017.06.14
+File /r gap4r8\pkg\Gauss-2017.06.14\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1797,10 +1797,10 @@ LangString DESC_SecGAPpkg_gaussforhomalg ${LANG_ENGLISH} "Gauss functionality fo
 LangString DESC_SecGAPpkg_gbnp ${LANG_ENGLISH} "computing Gröbner bases of noncommutative polynomials"
 LangString DESC_SecGAPpkg_generalizedmorphismsforcap ${LANG_ENGLISH} "Implementations of generalized morphisms for the CAP project"
 LangString DESC_SecGAPpkg_genss ${LANG_ENGLISH} "Generic Schreier-Sims"
-LangString DESC_SecGAPpkg_gpd ${LANG_ENGLISH} "Groupoids, graphs of groups, and graphs of groupoids"
 LangString DESC_SecGAPpkg_gradedmodules ${LANG_ENGLISH} "A homalg based package for the Abelian category of finitely presented graded modules over computable graded rings"
 LangString DESC_SecGAPpkg_gradedringforhomalg ${LANG_ENGLISH} "Endow Commutative Rings with an Abelian Grading"
 LangString DESC_SecGAPpkg_grape ${LANG_ENGLISH} "GRaph Algorithms using PErmutation groups"
+LangString DESC_SecGAPpkg_groupoids ${LANG_ENGLISH} "Groupoids, graphs of groups, and graphs of groupoids"
 LangString DESC_SecGAPpkg_grpconst ${LANG_ENGLISH} "Constructing the Groups of a Given Order"
 LangString DESC_SecGAPpkg_guarana ${LANG_ENGLISH} "Applications of Lie methods for computations with infinite polycyclic groups"
 LangString DESC_SecGAPpkg_guava ${LANG_ENGLISH} "a GAP package for computing with error-correcting codes"
@@ -1939,10 +1939,10 @@ LangString DESC_SecGAPpkg_xmodalg ${LANG_ENGLISH} "Crossed Modules and Cat1-Alge
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_gbnp} $(DESC_SecGAPpkg_gbnp)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_generalizedmorphismsforcap} $(DESC_SecGAPpkg_generalizedmorphismsforcap)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_genss} $(DESC_SecGAPpkg_genss)
-!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_gpd} $(DESC_SecGAPpkg_gpd)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_gradedmodules} $(DESC_SecGAPpkg_gradedmodules)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_gradedringforhomalg} $(DESC_SecGAPpkg_gradedringforhomalg)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_grape} $(DESC_SecGAPpkg_grape)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_groupoids} $(DESC_SecGAPpkg_groupoids)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_grpconst} $(DESC_SecGAPpkg_grpconst)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_guarana} $(DESC_SecGAPpkg_guarana)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_guava} $(DESC_SecGAPpkg_guava)
