@@ -63,7 +63,7 @@ Float       https://gap-packages.github.io/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       http://www.math.rwth-aachen.de/~Thomas.Breuer/fplsa/PackageInfo.g
-FR MOVE     https://gap-packages.github.io/fr/PackageInfo.g
+FR          https://gap-packages.github.io/fr/PackageInfo.g
 fwtree      http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
@@ -152,6 +152,7 @@ TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
+transgrp    http://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
 UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
