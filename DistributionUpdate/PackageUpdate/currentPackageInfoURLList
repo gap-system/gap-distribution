@@ -112,7 +112,7 @@ ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePres
 Nilmat MOVE http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
 nq          http://gap-packages.github.io/nq/PackageInfo.g
-NumericalSgps http://www.fc.up.pt/cmup/mdelgado/numericalsgps/PackageInfo.g
+NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
