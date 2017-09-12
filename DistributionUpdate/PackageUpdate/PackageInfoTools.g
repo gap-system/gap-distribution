@@ -335,7 +335,28 @@ UpdatePackageInfoFiles := function(pkgdir)
                 "\n  is not larger than the old version ", info.Version, 
                 "\n  This is not allowed, so the info file will not be changed\n");
           has_error := true;
-        fi;      
+        fi;
+        if IsBound(info.Date) then
+          date := info.Date;
+          if not IsString(date) and Length(date) = 10 and date{[3,6]} = "//" and
+            ForAll( x{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
+            Print("  ERROR (", info.PackageName, "): the date ", date,
+                  "should be a string of the form `dd/mm/yyyy'\n" );
+            has_error := true;
+          else
+            date := List( SplitString( date, "/" ), Int);
+            if not date[1] in [1..31] and
+                   date[2] in [1..12] and
+                   date[3] > 1999 and # GAP 4 appeared in 1999
+                   date[1] > DaysInMonth( date[2], date[3] ) then
+              Print("  ERROR (", info.PackageName, "): the date ", date,
+                    " is invalid\n" );
+              has_error := true;
+            fi;
+          fi;
+        else
+          Print("  ERROR (", info.PackageName, "): no date is bound\n" );
+        fi;
       fi;
     
       if update then
