@@ -429,6 +429,13 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
     fi;
     nam := nam[1];
     info := PACKAGE_INFOS.(nam);
+    # if there never been a successful import of the package, the PackageInfo.g
+    # will still be rudimentary, with the only components being `PackageName`,
+    # `PackageInfoURL` and `Status:="unknown"`.
+    if not IsBound(info.Version) then
+      Print( pkg, ": IGNORED (incomplete local version of PackageInfo.g)\n" );
+      continue;
+    fi;
     pkgdirname := LowercaseString( NormalizedWhitespace( info.PackageName ) );
     # we update to the tip before doing any other actions to ensure that 
     # in case of any errors the latest version of the package will be used
