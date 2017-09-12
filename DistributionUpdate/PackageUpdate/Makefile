@@ -6,10 +6,10 @@
 # master : to test with the head of the master branch
 
 pkg-update:
-	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable uuid=no ZeroMQInterface=no
+	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable transgrp=no uuid=no ZeroMQInterface=no
 
 pkg-stable:
-	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable uuid=no ZeroMQInterface=no
+	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable transgrp=no uuid=no ZeroMQInterface=no
 
 pkg-master:
 	./mergePackages gpd=no
