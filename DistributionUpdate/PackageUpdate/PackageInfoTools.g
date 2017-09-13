@@ -339,7 +339,7 @@ UpdatePackageInfoFiles := function(pkgdir)
         if IsBound(info.Date) then
           date := info.Date;
           if not IsString(date) and Length(date) = 10 and date{[3,6]} = "//" and
-            ForAll( x{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
+            ForAll( date{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
             Print("  ERROR (", info.PackageName, "): the date ", date,
                   "should be a string of the form `dd/mm/yyyy'\n" );
             has_error := true;
