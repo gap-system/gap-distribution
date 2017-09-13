@@ -545,6 +545,8 @@ UpdatePackageArchives := function(pkgdir, pkgreposdir, webdir)
                            ".tar.bz2 |tar xpf - "));
       elif fmt = "-win.zip" then
         Exec(Concatenation("cd ", pkgtmp, ";unzip -a ", fname, "-win.zip"));
+      elif fmt = ".zip" then
+        Exec(Concatenation("cd ", pkgtmp, ";unzip -a ", fname, ".zip"));
       else
         Print("ERROR (", info.PackageName, "): no recognized archive format ", fmt, "\n");
         continue;
