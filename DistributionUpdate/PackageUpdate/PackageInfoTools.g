@@ -336,8 +336,8 @@ UpdatePackageInfoFiles := function(pkgdir)
                 "\n  This is not allowed, so the info file will not be changed\n");
           has_error := true;
         fi;
-        if IsBound(info.Date) then
-          date := info.Date;
+        if IsBound(infon.Date) then
+          date := infon.Date;
           if not IsString(date) and Length(date) = 10 and date{[3,6]} = "//" and
             ForAll( date{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
             Print("  ERROR (", info.PackageName, "): the date ", date,
