@@ -9,7 +9,7 @@ pkg-update:
 	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable transgrp=no uuid=no ZeroMQInterface=no
 
 pkg-stable:
-	./mergePackages crypting=no gpd=no primgrp=no semigroups=stable transgrp=no uuid=no ZeroMQInterface=no
+	./mergePackages crypting=no gpd=no hap=stable primgrp=no semigroups=stable transgrp=no uuid=no ZeroMQInterface=no
 
 pkg-master:
-	./mergePackages gpd=no
+	./mergePackages gpd=no hap=stable
