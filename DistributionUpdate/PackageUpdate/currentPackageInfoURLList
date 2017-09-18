@@ -86,7 +86,7 @@ HeLP        http://homepages.vub.ac.be/abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       https://gap-packages.github.io/idrel/PackageInfo.g
-IntPic      http://www.fc.up.pt/cmup/mdelgado/intpic/PackageInfo.g
+IntPic      https://gap-packages.github.io/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
@@ -139,7 +139,7 @@ SCO         http://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
 Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
 SglPPow     http://www.icm.tu-bs.de/~beick/soft/sglppow/PackageInfo.g
-SgpViz      http://www.fc.up.pt/cmup/mdelgado/sgpviz/PackageInfo.g
+SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
 singular    http://www.gap-system.org/HostedGapPackages/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
