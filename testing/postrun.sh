@@ -66,6 +66,37 @@ else
 exit 1
 fi
 ;;
+bugfix)
+/bin/echo '=========OUTPUT START: testbugfix without packages========='
+cat `ls dev/log/testbugfix1_*|tail -1`
+/bin/echo '=========OUTPUT END: testbugfix without packages========='
+/bin/echo '=========OUTPUT START: testbugfix with packages========='
+cat `ls dev/log/testbugfix2_*|tail -1`
+/bin/echo '=========OUTPUT END: testbugfix with packages========='
+cat `ls dev/log/testbugfix1_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/testbugfix1_pass.txt
+export GAPTOTAL=`cat dev/log/testbugfix1_pass.txt `
+if [ $GAPTOTAL != 'total' ]
+then
+/bin/echo "test was not completed"
+exit 1
+fi
+cat `ls dev/log/testbugfix2_*|tail -1` | tail -4 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/testbugfix2_pass.txt
+export GAPTOTAL=`cat dev/log/testbugfix2_pass.txt`
+if [ $GAPTOTAL != 'total' ]
+then
+/bin/echo "test was not completed"
+exit 1
+fi
+#
+export NUMFAILS=`cat dev/log/testbugfix* | grep -c "########> Diff"`
+/bin/echo %%% Number of diffs: $NUMFAILS
+if [ $NUMFAILS = '0' ]
+then
+/bin/echo '=========No differences found========='
+else
+exit 1
+fi
+;;
 standard)
 /bin/echo '=========OUTPUT START: teststandard without packages========='
 cat `ls dev/log/teststandard1_*|tail -1`
