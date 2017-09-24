@@ -38,9 +38,9 @@ AutPGrp     http://www.icm.tu-bs.de/~beick/soft/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 Carat       http://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
-Circle      http://www.cs.st-andrews.ac.uk/~alexk/circle/PackageInfo.g
+Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
-Congruence  http://www.cs.st-andrews.ac.uk/~alexk/congruence/PackageInfo.g
+Congruence  https://alex-konovalov.github.io/congruence/PackageInfo.g
 Convex      http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Convex/PackageInfo.g
 CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
 Crime       http://math.uic.edu/~marcus/Crime/PackageInfo.g
@@ -94,7 +94,7 @@ ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        http://gap-packages.github.io/json/PackageInfo.g
 kan         https://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
-LAGUNA      http://www.cs.st-andrews.ac.uk/~alexk/laguna/PackageInfo.g
+LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
 LiePRing    http://www.icm.tu-bs.de/~beick/soft/liepring/PackageInfo.g
 LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
@@ -155,10 +155,10 @@ toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 transgrp    http://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
 unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
-UnitLib     http://www.cs.st-andrews.ac.uk/~alexk/unitlib/PackageInfo.g
+UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
 uuid        https://gap-packages.github.io/uuid/PackageInfo.g
-Wedderga    http://www.cs.st-andrews.ac.uk/~alexk/wedderga/PackageInfo.g
+Wedderga    https://gap-packages.github.io/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
 XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
