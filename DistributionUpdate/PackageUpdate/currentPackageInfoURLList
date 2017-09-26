@@ -40,7 +40,7 @@ CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 Carat       http://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
-Congruence  https://alex-konovalov.github.io/congruence/PackageInfo.g
+Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
 Convex      http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Convex/PackageInfo.g
 CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
 Crime       http://math.uic.edu/~marcus/Crime/PackageInfo.g
