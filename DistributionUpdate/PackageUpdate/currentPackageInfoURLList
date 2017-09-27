@@ -109,14 +109,14 @@ MatricesForHomalg http://homalg-project.github.io/homalg_project/MatricesForHoma
 ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
 Modules     http://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
-Nilmat MOVE http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
+Nilmat      http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
 nq          http://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
-PatternClass MOVE https://gap-packages.github.io/PatternClass/PackageInfo.g
+PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
 Polenta     http://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
