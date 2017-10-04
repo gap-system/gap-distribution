@@ -31,9 +31,9 @@ and `setvarupdate`. Most important are:
 * Paths: `MERGEDPKGLOC` specifies the location of the merged packages archive
   (assumed to be on the same machine) and `DISTROOT` specifies where to put the
   temporary directory tree and resulting archives. Currently these paths start
-  with `/data/gap-jenkins/workspace/` because this is the path used by Jenkins.
+  with `/circa/home/gap-jenkins/workspace/` because this is the path used by Jenkins.
   Do not change them as this will break Jenkins jobs. The best way to test the
-  release wrapping tools locally is to create the `/data/gap-jenkins/workspace/`
+  release wrapping tools locally is to create the `/circa/home/gap-jenkins/workspace/`
   directory on your computer.
 
 
