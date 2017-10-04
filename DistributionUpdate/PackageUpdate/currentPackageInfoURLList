@@ -143,7 +143,7 @@ SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
 singular    http://www.gap-system.org/HostedGapPackages/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
-# smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
+smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
 SONATA      http://www.algebra.uni-linz.ac.at/Sonata/PackageInfo.g
 Sophus      http://www.sztaki.hu/~schneider/Research/Sophus/PackageInfo.g
