@@ -7,10 +7,10 @@
 # "/mnt/raid/hudson-slave/..." is the path used by Jenkins continuous build 
 # system.
 
-export PREFIX="/data/gap-jenkins/pkgadmin"
+export PREFIX="/circa/home/gap-jenkins/pkgadmin"
 
 # how to call GAP, e.g. "/gap/bin/gapL", "gap" or "gap45"
-export GAP="/data/gap-jenkins/bin/gap"
+export GAP="/circa/home/gap-jenkins/bin/gap"
 
 # path to directory for caching PackageInfo.g, archive and unpacked
 # package documentation
@@ -37,4 +37,4 @@ export FtpServer="gap-web@gap-web.host.cs.st-andrews.ac.uk:www.gap-system.org/pu
 # (that is, repositories to store released versions of the package to
 # use in the GAP package update mechanism; NOT to store development 
 # versions of packages
-export PkgReposDir="/data/gap-jenkins/gap-packages-archive"
+export PkgReposDir="/circa/home/gap-jenkins/gap-packages-archive"
