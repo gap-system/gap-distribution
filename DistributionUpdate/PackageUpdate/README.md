@@ -22,16 +22,16 @@ the next package release will be picked up.
 * Environment variables should be set in `setvarpkg`. Usually you need to
   do this only once while setting up the system.
 
-* Currently paths specified there start  with `/circa/home/gap-jenkins/workspace/`
+* Currently paths specified there start  with `/circa/scratch/gap-jenkins/workspace/`
   because this is the path used by Jenkins. Do not change them as this will
   break Jenkins jobs. The best way to test the package update tools locally
-  is to create the `/circa/home/gap-jenkins/workspace/` directory on your computer.
+  is to create the `/circa/scratch/gap-jenkins/workspace/` directory on your computer.
 
 * package release repositories (i.e. repositories to store released versions
   of GAP packages; NOT their development repositories) are located in the
   `/circa/home/gap-jenkins/gap-packages-archive` directory on the Jenkins slave.
-  If you clone them to use and test the system locally, the best way to do
-  it is to create the `/circa/home/gap-jenkins/workspace/` directory on your computer.
+  If you clone them to use and test thDistributionUpdate/README.mde system locally, the best way to do
+  it is to create the `/circa/scratch/gap-jenkins/workspace/` directory on your computer.
 
 
 # Adding new package for the redistribution
