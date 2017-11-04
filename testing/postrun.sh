@@ -59,6 +59,10 @@ fi
 #
 export NUMFAILS=`cat dev/log/testinstall* | grep -c "########> Diff"`
 /bin/echo %%% Number of diffs: $NUMFAILS
+export NUMFAILS1=`cat dev/log/testinstall1* | grep -c "########> Diff"`
+/bin/echo %%% Diffs without packages : $NUMFAILS1
+export NUMFAILS2=`cat dev/log/testinstall2* | grep -c "########> Diff"`
+/bin/echo %%% Diffs with all packages: $NUMFAILS2
 if [ $NUMFAILS = '0' ]
 then
 /bin/echo '=========No differences found========='
@@ -90,6 +94,10 @@ fi
 #
 export NUMFAILS=`cat dev/log/testbugfix* | grep -c "########> Diff"`
 /bin/echo %%% Number of diffs: $NUMFAILS
+export NUMFAILS1=`cat dev/log/testbugfix1* | grep -c "########> Diff"`
+/bin/echo %%% Diffs with no packages : $NUMFAILS1
+export NUMFAILS2=`cat dev/log/testbugfix2* | grep -c "########> Diff"`
+/bin/echo %%% Diffs with all packages: $NUMFAILS2
 if [ $NUMFAILS = '0' ]
 then
 /bin/echo '=========No differences found========='
@@ -155,6 +163,10 @@ fi
 #
 export NUMFAILS=`cat dev/log/teststandard* | grep -c "########> Diff"`
 /bin/echo %%% Number of diffs: $NUMFAILS
+export NUMFAILS1=`cat dev/log/teststandard1* | grep -c "########> Diff"`
+/bin/echo %%% Diffs without packages : $NUMFAILS1
+export NUMFAILS2=`cat dev/log/teststandard2* | grep -c "########> Diff"`
+/bin/echo %%% Diffs with all packages: $NUMFAILS2
 if [ $NUMFAILS = '0' ]
 then
 /bin/echo '=========No differences found========='
@@ -195,6 +207,10 @@ wc -l `ls dev/log/testmanuals2_*|tail -1` | cut -f $CUTWIDTH -d ' ' >> dev/log/p
 #
 export NUMFAILS=`cat dev/log/testmanualsA* | grep -c "########> Diff"`
 /bin/echo %%% Number of diffs with default packages: $NUMFAILS
+export NUMFAILS1=`cat dev/log/testmanuals1* | grep -c "########> Diff"`
+/bin/echo %%% Number of diffs without packages     : $NUMFAILS1
+export NUMFAILS2=`cat dev/log/testmanuals2* | grep -c "########> Diff"`
+/bin/echo %%% Number of diffs with all packages    : $NUMFAILS2
 if [ $NUMFAILS = '0' ]
 then
 export NUMMANUALTESTS=`cat dev/log/testmanuals* | grep -c "Checking ref, Chapter 87"`
