@@ -1000,10 +1000,13 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
       continue;
     fi;
 
+    # Touch all files to update their modification time
+    Exec(Concatenation("cd ", pkg, " ; find pkg -exec touch -r \"listtextfiles.txt\" {} \\;" ) );
+
     # To copy the package from the repository to the destination, use
     Exec(Concatenation("cd ", pkg, " ; cp -p -r pkg/* ", mergedir ));
     # TODO: on Linux, use hard links instead of copying all files
-    
+
     # and copy files with lists of text files and binary files
     Exec( Concatenation("cp -p ", pkg, "/listtextfiles.txt ", mergedir, nam, ".txtfiles"));
     Exec( Concatenation("cp -p ", pkg, "/listbinaryfiles.txt ", mergedir, nam, ".binfiles"));
