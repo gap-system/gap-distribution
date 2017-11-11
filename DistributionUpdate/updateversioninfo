@@ -1,24 +1,9 @@
 #!/bin/sh -ex
 #############################################################################
 ##
+## Update version-related information and release date.
 ##
-## Updates version number and release date. 
-## The following information should be changed for *every* release:
-## 1) lib/system.g: 'Version' and 'Date' in lines
-##    Version := "4.dev",
-##    Date := "today",
-##    NeedKernelVersion := "4.dev",
-## 2) src/system.c: 'SyKernelVersion' in line
-##    const Char * SyKernelVersion = "4.dev";
-##                  'SyWindowsPath' in line
-##    const Char * SyWindowsPath = "/cygdrive/c/gap4dev";
-## 3) doc/versiondata: 'VERSIONNUMBER', 'VERSIONSUFFIX', 'RELEASEDAY', 
-##    'RELEASEYEAR' in lines
-##  <!ENTITY VERSIONNUMBER "4.dev">
-##  <!ENTITY VERSIONSUFFIX "4r5dev">
-##  <!ENTITY RELEASEDAY "today">
-##  <!ENTITY RELEASEYEAR "this year">
-
+#############################################################################
 
 if [ ${DISTROOT}X==X ]; then
   echo 'Loading environment settings'
@@ -32,18 +17,41 @@ $line
 source ./core_checkout_time.txt
 
 cd ${DISTNAME}
+
+# Update suggestions how to cite GAP
 sed -i -e "s/4.dev/4.$FULLVERSION/g" CITATION
 sed -i -e "s/this year/$COREYEAR/g" CITATION
 
 cd lib/
+## Adjusting 'Version', 'NeedKernelVersion' and 'Date' in the library
+##    Version := MakeImmutable("4.dev"),
+##    Date := MakeImmutable("today"),
+##    NeedKernelVersion := MakeImmutable("4.dev"),
 sed -i -e "s/4.dev/4.$FULLVERSION/g" system.g
 sed -i -e "s/today/$COREDATE/g" system.g
 
 cd ../src/
+## Adjusting 'SyKernelVersion', 'SyBuildDateTime'
+## and 'SyWindowsPath' in the kernel
+## const Char * SyKernelVersion = "4.dev";
+## const Char * SyBuildDateTime = "today";
+## const Char * SyWindowsPath = "/cygdrive/c/gap4dev";
+sed -i -e "s/today/$COREDATE/g" gap_version.c.in
 sed -i -e "s/4.dev/4.$FULLVERSION/g" system.c
 sed -i -e "s/gap4dev/$DISTNAME/g" system.c
 
+cd ../cnf
+# Adjusting the script the generates a version string for GAP
+# DEF_VER=v4.dev
+sed -i -e "s/4.dev/4.$FULLVERSION/g" GAP-VERSION-GEN
+
 cd ../doc/
+## Setting up version number, release date, release year and
+## GAP directory name as entities to be used in GAP manuals
+## <!ENTITY VERSIONNUMBER "4.dev">
+## <!ENTITY RELEASEDAY "today">
+## <!ENTITY RELEASEYEAR "this year">
+## <!ENTITY GAPDIRNAME "gap4dev">
 sed -i -e "s/4.dev/4.$FULLVERSION/g" versiondata
 sed -i -e "s/today/$COREDATE/g" versiondata
 sed -i -e "s/this year/$COREYEAR/g" versiondata
