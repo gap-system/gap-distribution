@@ -15,9 +15,6 @@
 # files and directories we never include
 -*.git/*
 -*.DS_Store
-# some problematic files which we need:
-# (in particular there are files with extension .o and .a)
-+small/*/*
 # files we never include
 -*.o
 # excluded directories

@@ -13,7 +13,6 @@
 # *** DIRECTORIES CONTANING ONLY TEXT FILES (IN ALPHABETICAL ORDER) ***
 #
 Tlib/*
-Tsmall/*
 Tsrc/*
 #
 # *** TEXT FILES ***
