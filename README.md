@@ -2,21 +2,23 @@
 
 ## Core GAP system tests
 
-[![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) GAP master branch tests
-
-[![Build Status](https://travis-ci.org/gap-system/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-master-testsuite) Package integration tests for the master branch
+| for branch | tests | code coverage |
+|------------|-------|---------------|
+| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) |  [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
+| `stable-4.8` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-master-testsuite) | |
 
 ## Packages ready for the next releases
-
-[![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master) for major release
-
-[![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable) for minor release
+| for branch | tests |
+|-------|----|
+| `master` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master) |
+| `stable-4.8` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable) |
 
 ## Packages requiring inspection
 
-[![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging) for major release
-
-[![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-staging) for minor release
+| for branch | status |
+|------------|--------|
+| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging) |
+| `stable-4.8` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-staging) |
 
 ---
 
