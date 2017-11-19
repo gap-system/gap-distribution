@@ -16,10 +16,8 @@ $line
 source ./core_checkout_time.txt
 
 ziparchive=${ARCHNAME}_core${CORETIME}.zip
-toolsarchive=tools.tar.gz
 # we clean previous attempts to wrap the same checkout
 rm -f ${ziparchive}
-rm -f ${toolsarchive}
 echo 'Creating the GAP core archive '${GAPCORE}/$ziparchive
 
 pre=${DISTNAME}
@@ -27,27 +25,8 @@ cd $pre/doc
 pdftex gapmacrodoc.tex
 pdftex gapmacrodoc.tex
 cd ../..
-echo $pre/doc/gapmacrodoc.pdf >> listbinaryfilesfortools.txt
-cp listtextfilesfortools.txt $pre/
-cp listbinaryfilesfortools.txt $pre/
+echo $pre/doc/gapmacrodoc.pdf >> listbinaryfiles.txt
 
-cd $pre
-
-echo 's,'$pre'/,,g' > sedfile
-sed -f sedfile listtextfilesfortools.txt > listtextfilesfortools.rel
-sed -f sedfile listbinaryfilesfortools.txt > listbinaryfilesfortools.rel
-
-cat listtextfilesfortools.rel listbinaryfilesfortools.rel > listallfilesfortools.txt
-
-echo 'Adding text and binary tools files to the archive '${GAPCORE}/$toolsarchive
-tar cfz ${toolsarchive} -T listallfilesfortools.txt
-
-mv ${toolsarchive} etc/
-
-cd ..
-
-echo $pre/etc/${toolsarchive} >> listbinaryfiles.txt
-       
 echo 'Adding text files to the archive '${GAPCORE}/$ziparchive
 cat listtextfiles.txt | zip -q ${ziparchive} -@
 

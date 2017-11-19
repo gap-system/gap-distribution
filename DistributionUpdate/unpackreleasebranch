@@ -28,7 +28,6 @@ unzip -q `ls ${RELEASEBRANCH}/metainfo*|tail -1`
 source ./core_checkout_time.txt
 
 unzip -q ${RELEASEBRANCH}/${ARCHNAME}_release_branch${CORETIME}.zip
-unzip -q ${RELEASEBRANCH}/tools${ARCHNAME}_release_branch${CORETIME}.zip
 
 exit 0
 

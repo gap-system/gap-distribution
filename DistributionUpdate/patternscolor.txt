@@ -10,7 +10,8 @@
 # patterns for files not to be shipped, lines starting with +
 # are patterns files to be shipped with the main archive and
 # lines starting with a T are patterns for files to be shipped
-# with the tools archive. The first match decides about the class.
+# with the tools archive (this archive had been deprecated).
+# The first match decides about the class.
 #
 # files and directories we never include
 -*.git/*
@@ -21,34 +22,22 @@
 -benchmark/*
 -dev/*
 #
-# *** TOOLS ***
-#
-Tdoc/gapmacro.tex
-Tdoc/gapmacro-ps.tex
-Tdoc/gapmacrodoc.tex
-Tdoc/manualindex
-Tetc/README.tools
-Tetc/convert.pl
-Tetc/classifyfiles.py
-Tetc/patternscolor.txt
-Tetc/patternstextbinary.txt
-#
-# *** MAIN ARCHIVE ***
+# files and directories included in the main archive
 #
 +doc/ref/*
 +doc/tut/*
 +doc/changes/*
 +doc/hpc/*
-+doc/versiondata
++doc/gapmacro.tex
++doc/gapmacrodoc.tex
 +doc/manualbib.xml
-+doc/manual.css
++doc/manualindex
 +doc/make_doc.in
-+doc/test/mktestx.sh
++doc/versiondata
 -doc/*
 +etc/emacs/*
 +etc/vim/*
-+etc/GPL
-+etc/install-tools.sh
++etc/convert.pl
 -etc/*
 # everything else is included
 +*

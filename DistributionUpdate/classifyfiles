@@ -18,7 +18,7 @@ $line
 
 pre=${DISTNAME}
 
-echo 'Classifying files into {text,binary}x{main_archive,tools} or not shipped'
+echo 'Classifying files into text/binary for main archive or not shipped'
 
 python ./classifyfiles.py $pre
              

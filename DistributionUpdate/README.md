@@ -67,12 +67,12 @@ consists of three stages
   now on, the rest of the procedure is completely VCS-agnostic.
 
 * `classifyfiles`: Uses `classifyfiles.py` script and specifications from
-  `patternscolor` and `patternstextbinary.txt` to classify files into
-  {text,binary} x {main_archive,tools} or not shipped (there is also a file
+  `patternscolor` and `patternstextbinary.txt` to classify files into text or
+  binary to be included in the main archives or not shipped (there is also a file
   `patternscolorpkg.txt` which is used to do the same for packages).
 
-* `zipreleasebranch`: adds text and binary files to the archives of the core
-  system and the tools archive.
+* `zipreleasebranch`: adds text and binary files to the archive of the core
+  system.
 
 * `zipmetainfo`: records what has been archived in the meta-information archive.
 
@@ -89,7 +89,7 @@ consists of three stages
   `updateversioninfo` for further details.
 
 * `zipgapcore`: builds `gapmacrodoc.pdf`, then adds text and binary files to
-  the archives of the core system and the tools archive.
+  the archive of the core system.
 
 * `updatemetainfo`: records what has been archived in the meta-information archive.
 
