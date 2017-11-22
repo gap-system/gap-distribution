@@ -62,7 +62,7 @@ FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
 FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
-FPLSA       https://gap-packages.github.io/fplsa/PackageInfo.g
+FPLSA       https://gap-packages.github.io/FPLSA/PackageInfo.g
 FR          https://gap-packages.github.io/fr/PackageInfo.g
 fwtree      http://www.maths.nuigalway.ie/~tobias/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
