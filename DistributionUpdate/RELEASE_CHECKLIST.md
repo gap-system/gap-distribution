@@ -129,7 +129,7 @@ The following files should be collected:
 * full distributions in `tar.bz2`, `tar.gz` and `zip` archives for Linux and macOS
 * full distributions in `-win.zip`, `-noreadline-win.zip` and `-win64.zip` archives for Windows
 * GAP installer for Windows (`.exe` file)
-* core GAP system archive named in `gap4rXpY_nopackages.zip` format in the `www.gap-system.org/pub/gap/gap4core` directory (for GAP developers and for maintainers of alternative GAP distributions)
+* core GAP system archive named in `gap-4.X.Y-core.zip` format in the `www.gap-system.org/pub/gap/gap4core` directory (for GAP developers and for maintainers of alternative GAP distributions)
 
 * `tar.bz2`, `tar.gz` and `zip` archives:
   - For the minor release from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release/ 
@@ -178,14 +178,13 @@ mv *.tar.bz2 ../www.gap-system.org/pub/gap/gap48/tar.bz2/
 mv *.tar.gz ../www.gap-system.org/pub/gap/gap48/tar.gz/
 mv *-win.zip ../www.gap-system.org/pub/gap/gap48/win.zip/
 mv *-win64.zip ../www.gap-system.org/pub/gap/gap48/win.zip/
-mv gap4rXpY_coreTIMESTAMP.zip gap4rXpY_nopackages.zip
-mv gap4rXpY_nopackages.zip ../www.gap-system.org/pub/gap/gap4core/
+mv gap-4.X.Y-core.zip ../www.gap-system.org/pub/gap/gap4core/
 mv *.zip ../www.gap-system.org/pub/gap/gap48/zip/
 ```
 
 Check that everything (locations, permissions etc.) look right with
 ```
-ls -la ../www.gap-system.org/pub/gap/gap48/*/gap4rXpY* 
+ls -la ../www.gap-system.org/pub/gap/gap48/*/gap-4.X.Y* 
 ```
 
 ### Publish package archives
@@ -240,10 +239,10 @@ Finally, check with `ls -la` that everything looks fine (consistent file sizes, 
 
 * For the GAP Docker container: on the host server, navigate to `www.gap-system.org/Manuals` and then call (adjusting version number as appropriate):
 ```
-tar -cvzf gap4r8pX_manuals.tar.gz doc/
-mv gap4r8pX_manuals.tar.gz doc/
+tar -cvzf gap-4.X.Y-manuals.tar.gz doc/
+mv gap-4.X.Y-manuals.tar.gz doc/
 ```
-This archive will be available under `www.gap-system.org/Manuals/doc/gap4r8pX_manuals.tar.gz` and will be retrieved and placed into the GAP Docker container.
+This archive will be available under `www.gap-system.org/Manuals/doc/gap-4.X.Y-manuals.tar.gz` and will be retrieved and placed into the GAP Docker container.
 
 ### Make updated website live
 

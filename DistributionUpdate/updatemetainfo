@@ -16,7 +16,7 @@ $line
 source ./core_checkout_time.txt
 
 pre=${DISTNAME}
-metainfoarchive=metainfo${ARCHNAME}_core${CORETIME}.zip
+metainfoarchive=metainfo${ARCHNAME}-core.zip
 rm -f $metainfoarchive
 
 echo 'Adding meta-information to '${GAPCORE}/$metainfoarchive

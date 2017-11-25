@@ -15,7 +15,7 @@ $line
 
 source ./core_checkout_time.txt
 
-ziparchive=${ARCHNAME}_release_branch${CORETIME}.zip
+ziparchive=${ARCHNAME}-release-branch.zip
 # we clean previous attempts to wrap the same checkout
 rm -f ${ziparchive}
 

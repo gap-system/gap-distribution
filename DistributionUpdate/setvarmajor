@@ -21,11 +21,11 @@ export FULLVERSION="$MAJORVERSION.$MINORVERSION"
 #   the new packages archive, use corresponding tag, e.g. "v4.5.6" 
 export GAPGITVERSION="master"
 
-# directory name (e.g. "gap4r5")
-export DISTNAME="gap4r$MAJORVERSION"
+# directory name (e.g. "gap-4.9.0")
+export DISTNAME="gap-4.${FULLVERSION}"
 
-# archive name (e.g. "gap4r5p6")
-export ARCHNAME="gap4r${MAJORVERSION}p${MINORVERSION}"
+# archive name (e.g. "gap-4.9.0")
+export ARCHNAME="gap-4.${FULLVERSION}"
 
 # location of the merged packages archive (assumed to be on the same machine)
 export MERGEDPKGLOC="/circa/scratch/gap-jenkins/workspace/GAP-pkg-merge-master/DistributionUpdate/PackageUpdate"

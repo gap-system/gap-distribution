@@ -15,11 +15,11 @@ $line
 
 source ./core_checkout_time.txt
 
-ziparchive=${ARCHNAME}_${CORETIME}.zip
-winziparchive=${ARCHNAME}_${CORETIME}-nobin-win.zip
-tararchive=${ARCHNAME}_${CORETIME}.tar
-targzarchive=${ARCHNAME}_${CORETIME}.tar.gz
-tarbz2archive=${ARCHNAME}_${CORETIME}.tar.bz2
+ziparchive=${ARCHNAME}.zip
+winziparchive=${ARCHNAME}-nobin-win.zip
+tararchive=${ARCHNAME}.tar
+targzarchive=${ARCHNAME}.tar.gz
+tarbz2archive=${ARCHNAME}.tar.bz2
 rm -f $ziparchive
 rm -f $winziparchive
 rm -f $tararchive

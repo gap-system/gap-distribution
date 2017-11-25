@@ -16,7 +16,7 @@ $line
 source ./core_checkout_time.txt
 
 pre=${DISTNAME}
-metainfoarchive=metainfo${ARCHNAME}_release_branch${CORETIME}.zip
+metainfoarchive=metainfo${ARCHNAME}-release-branch.zip
 rm -f $metainfoarchive
 
 echo 'Adding meta-information to '${RELEASEBRANCH}/$metainfoarchive
