@@ -92,7 +92,7 @@ IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/Package
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC         http://www.math.rwth-aachen.de/~Volkmar.Felsch/itc/PackageInfo.g
 json        https://gap-packages.github.io/json/PackageInfo.g
-kan         https://gap-packages.github.io/kan/PackageInfo.g
+kan         http://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
@@ -118,7 +118,7 @@ orb         https://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
 PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
-Polenta     http://gap-packages.github.io/polenta/PackageInfo.g
+Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
