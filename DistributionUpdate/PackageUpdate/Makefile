@@ -6,10 +6,10 @@
 # master : to test with the head of the master branch
 
 pkg-update:
-	./mergePackages cohomolo=stable crypting=no gpd=no loops=stable NormalizInterface=stable primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no wedderga=stable ZeroMQInterface=no
+	./mergePackages cohomolo=stable crypting=no gpd=no hap=stable loops=stable primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no wedderga=stable ZeroMQInterface=no
 
 pkg-stable:
-	./mergePackages cohomolo=stable crypting=no gpd=no loops=stable NormalizInterface=stable primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no wedderga=stable ZeroMQInterface=no
+	./mergePackages cohomolo=stable crypting=no gpd=no hap=stable loops=stable primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no wedderga=stable ZeroMQInterface=no
 
 pkg-master:
-	./mergePackages gpd=no loops=stable NormalizInterface=stable
+	./mergePackages gpd=no hap=stable loops=stable
