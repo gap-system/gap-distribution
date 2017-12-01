@@ -1247,7 +1247,7 @@ end;
 
 
 ReportPackageVersions:=function( pkgreposdir )
-local pkgs, pkgdir, info, getInfo, res, ver, i, j, m, x;
+local pkgs, pkgdir, info, getInfo, res, ver, i, j, m, x, outstr, out, proc;
 
 getInfo:=function( pkgdir )
 local nam;
@@ -1277,21 +1277,43 @@ Print("*** Checking ", pkgdir, "\n" );
 
   ver := [ info.PackageName, info.Version, info.Date ];
   
-  Print("# checking out the stable version ... \n");
-  Exec( Concatenation( "cd ", pkgdir, " ; hg update -r stable" ));
-  info := getInfo( pkgdir );
-  Print("* stable version ", info.Version, " (", info.Date, ")\n");
+  # checking if the stable bookmark is not yet set
+  # (in which case there should be no bookmarks set at all)
+  outstr := "";
+  out := OutputTextString(outstr,false);
+  proc := Process(
+    Directory( pkgdir ),
+    Filename( DirectoriesSystemPrograms(), "hg" ),
+    InputTextNone(),
+    out,
+    ["bookmarks"] );
+  CloseStream(out);
 
-  Exec( Concatenation( "cd ", pkgdir, " ; hg update -r tip" ));
+  # This is quite fragile, since it depends on this output from Mercurial.
+  # If this will be changed, packages without stable bookmarks may appear
+  # to be stable
+  if NormalizedWhitespace(outstr) <> "no bookmarks set" then
 
-  if info.Version <> ver[2] then
-    Append( ver, [ info.Version, info.Date ] );
+    Print("# checking out the stable version ... \n");
+    Exec( Concatenation( "cd ", pkgdir, " ; hg update -r stable" ));
+    info := getInfo( pkgdir );
+    Print("* stable version ", info.Version, " (", info.Date, ")\n");
+
+    # return back to the tip of the repository
+    Exec( Concatenation( "cd ", pkgdir, " ; hg update -r tip" ));
+
+    if info.Version <> ver[2] then
+      Append( ver, [ info.Version, info.Date ] );
+    else
+      Append( ver, [ "*", " " ] );
+    fi;
+
   else
-    Append( ver, [ "*", " " ] );
-  fi;
-  
+    Append( ver, [ "---", " " ] );
+  fi;    
+
   Add( res, ShallowCopy( ver ) );  
-  
+
 od;
 
 # post-processing for pretty-printing
