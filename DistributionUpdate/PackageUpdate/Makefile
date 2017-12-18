@@ -12,4 +12,4 @@ pkg-stable:
 	./mergePackages cohomolo=stable crypting=no example=stable float=stable gpd=no hap=stable loops=stable primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no ZeroMQInterface=no
 
 pkg-master:
-	./mergePackages float=0.8.0 gpd=no loops=stable
+	./mergePackages gpd=no loops=stable
