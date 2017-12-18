@@ -31,14 +31,11 @@ sed -i -e "s/4.dev/4.$FULLVERSION/g" system.g
 sed -i -e "s/today/$COREDATE/g" system.g
 
 cd ../src/
-## Adjusting 'SyKernelVersion', 'SyBuildDateTime'
-## and 'SyWindowsPath' in the kernel
+## Adjusting 'SyKernelVersion' and 'SyBuildDateTime' in the kernel
 ## const Char * SyKernelVersion = "4.dev";
 ## const Char * SyBuildDateTime = "today";
-## const Char * SyWindowsPath = "/cygdrive/c/gap4dev";
 sed -i -e "s/today/$COREDATE/g" gap_version.c.in
 sed -i -e "s/4.dev/4.$FULLVERSION/g" system.c
-sed -i -e "s/gap4dev/$DISTNAME/g" system.c
 
 cd ../cnf
 # Adjusting the script the generates a version string for GAP
