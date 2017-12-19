@@ -199,34 +199,8 @@ First, move the archive to the required directory and rename it accordingly to t
 ```
 mv packages-2017_03_23-22_46_UTC.tar.gz ../www.gap-system.org/pub/gap/gap4pkgs/packages-v4.8.X.tar.gz
 ```
-Now change to that directory and copy it to archives used with tips of the stable and master branches
-```
-cd ../www.gap-system.org/pub/gap/gap4pkgs/
-cp packages-v4.8.X.tar.gz packages-master.tar.gz
-cp packages-v4.8.X.tar.gz packages-stable-4.8.tar.gz
-```
-Here we assume that there are no disruptive changes and the latest versions of released packages can be used with tips of the stable and master branches. If this will not be the case, we may need to prepare different versions of `packages-master.tar.gz` and `packages-stable-4.8.tar.gz` archives.
+You may also need to update the archive of the required packages
 
-Finally, update the symbolic link for `bootstrap-pkg-full.tar.gz`:
-```
-rm bootstrap-pkg-full.tar.gz 
-ln -s packages-v4.8.X.tar.gz bootstrap-pkg-full.tar.gz
-```
-
-You may also need to update the archive of the required packages. It currently contains only GAPDoc package. If there was no new release of GAPDoc, it is sufficient to duplicate the archive, incrementing the version number:
-```
-cp packages-required-stable-v4.8.N.tar.gz packages-required-stable-v4.8.N+1.tar.gz 
-```
-Otherwise, you need to produce new `packages-required-stable-v4.8.X.tar.gz` (as long as we have only one required package, just renaming the GAPDoc package archive suffices). Then call:
-```
-cp packages-required-stable-v4.8.X.tar.gz packages-required-stable-4.8.tar.gz
-cp packages-required-stable-4.8.tar.gz packages-required-master.tar.gz
-```
-and then update the symbolic link
-```
-rm bootstrap-pkg-minimal.tar.gz 
-ln -s packages-required-stable-v4.8.X.tar.gz bootstrap-pkg-minimal.tar.gz
-```
 Finally, check with `ls -la` that everything looks fine (consistent file sizes, permissions, symbolic links, etc.)
 
 * **Publish individual package archives**
