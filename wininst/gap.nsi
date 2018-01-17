@@ -37,12 +37,12 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.8.9"
+StrCpy $GAP_VER "4.8.10"
 SectionEnd
 
 #Name and file
-Name "GAP 4.8.9"
-OutFile "gap4r8p9_2017_12_18-23_44.exe"
+Name "GAP 4.8.10"
+OutFile "gap4r8p10_2018_01_15-13_02.exe"
 
 #Default installation folder
 InstallDir "C:\gap4r8"
@@ -565,8 +565,8 @@ SectionEnd
 # IO
 #
 Section "IO" SecGAPpkg_io 
-SetOutPath $INSTDIR\pkg\io-4.5.0
-File /r gap4r8\pkg\io-4.5.0\*.* 
+SetOutPath $INSTDIR\pkg\io-4.5.1
+File /r gap4r8\pkg\io-4.5.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -625,8 +625,8 @@ SectionEnd
 # ResClasses
 #
 Section "ResClasses" SecGAPpkg_resclasses 
-SetOutPath $INSTDIR\pkg\resclasses-4.7.0
-File /r gap4r8\pkg\resclasses-4.7.0\*.* 
+SetOutPath $INSTDIR\pkg\resclasses-4.7.1
+File /r gap4r8\pkg\resclasses-4.7.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -954,8 +954,8 @@ SectionEnd
 # HAP
 #
 Section "HAP" SecGAPpkg_hap 
-SetOutPath $INSTDIR\pkg\Hap1.11
-File /r gap4r8\pkg\Hap1.11\*.* 
+SetOutPath $INSTDIR\pkg\Hap1.12
+File /r gap4r8\pkg\Hap1.12\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1154,8 +1154,8 @@ SectionEnd
 # MatricesForHomalg
 #
 Section "MatricesForHomalg" SecGAPpkg_matricesforhomalg 
-SetOutPath $INSTDIR\pkg\MatricesForHomalg-2017.11.03
-File /r gap4r8\pkg\MatricesForHomalg-2017.11.03\*.* 
+SetOutPath $INSTDIR\pkg\MatricesForHomalg-2018.01.07
+File /r gap4r8\pkg\MatricesForHomalg-2018.01.07\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1184,8 +1184,8 @@ SectionEnd
 # Modules
 #
 Section "Modules" SecGAPpkg_modules 
-SetOutPath $INSTDIR\pkg\Modules-2017.09.10
-File /r gap4r8\pkg\Modules-2017.09.10\*.* 
+SetOutPath $INSTDIR\pkg\Modules-2018.01.07
+File /r gap4r8\pkg\Modules-2018.01.07\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1234,8 +1234,8 @@ SectionEnd
 # orb
 #
 Section "orb" SecGAPpkg_orb 
-SetOutPath $INSTDIR\pkg\orb-4.8.0
-File /r gap4r8\pkg\orb-4.8.0\*.* 
+SetOutPath $INSTDIR\pkg\orb-4.7.6
+File /r gap4r8\pkg\orb-4.7.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1304,8 +1304,8 @@ SectionEnd
 # RCWA
 #
 Section "RCWA" SecGAPpkg_rcwa 
-SetOutPath $INSTDIR\pkg\rcwa-4.6.0
-File /r gap4r8\pkg\rcwa-4.6.0\*.* 
+SetOutPath $INSTDIR\pkg\rcwa-4.6.1
+File /r gap4r8\pkg\rcwa-4.6.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1354,8 +1354,8 @@ SectionEnd
 # RingsForHomalg
 #
 Section "RingsForHomalg" SecGAPpkg_ringsforhomalg 
-SetOutPath $INSTDIR\pkg\RingsForHomalg-2017.11.03
-File /r gap4r8\pkg\RingsForHomalg-2017.11.03\*.* 
+SetOutPath $INSTDIR\pkg\RingsForHomalg-2018.01.07
+File /r gap4r8\pkg\RingsForHomalg-2018.01.07\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1376,6 +1376,16 @@ SectionEnd
 Section "SCSCP" SecGAPpkg_scscp 
 SetOutPath $INSTDIR\pkg\SCSCP-2.2.3
 File /r gap4r8\pkg\SCSCP-2.2.3\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# Semigroups
+#
+Section "Semigroups" SecGAPpkg_semigroups 
+SetOutPath $INSTDIR\pkg\semigroups-2.8.0
+File /r gap4r8\pkg\semigroups-2.8.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1720,16 +1730,6 @@ SectionEnd
 
 #######################################################################
 #
-# Semigroups
-#
-Section "Semigroups" SecGAPpkg_semigroups 
-SetOutPath $INSTDIR\pkg\semigroups-3.0.7
-File /r gap4r8\pkg\semigroups-3.0.7\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
 # XGAP
 #
 Section "XGAP" SecGAPpkg_xgap 
@@ -1862,7 +1862,7 @@ LangString DESC_SecGAPpkg_resclasses ${LANG_ENGLISH} "Set-Theoretic Computations
 LangString DESC_SecGAPpkg_ringsforhomalg ${LANG_ENGLISH} "Dictionaries of external rings"
 LangString DESC_SecGAPpkg_sco ${LANG_ENGLISH} "SCO - Simplicial Cohomology of Orbifolds"
 LangString DESC_SecGAPpkg_scscp ${LANG_ENGLISH} "Symbolic Computation Software Composability Protocol in GAP"
-LangString DESC_SecGAPpkg_semigroups ${LANG_ENGLISH} "A package for semigroups and monoids"
+LangString DESC_SecGAPpkg_semigroups ${LANG_ENGLISH} ""
 LangString DESC_SecGAPpkg_sglppow ${LANG_ENGLISH} "Database of groups of prime-power order for some prime-powers"
 LangString DESC_SecGAPpkg_sgpviz ${LANG_ENGLISH} "A package for semigroup visualization"
 LangString DESC_SecGAPpkg_simpcomp ${LANG_ENGLISH} "A GAP toolbox for simplicial complexes"
