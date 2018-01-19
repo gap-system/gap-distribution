@@ -4,9 +4,9 @@
 # version to wrap - adjust major and minor numbers as needed
 #
 # major release number (i.e. the last number in GAP 4.4, 4.5, 4.6)
-export MAJORVERSION="8"
+export MAJORVERSION="9"
 # minor release number (i.e. the last number in GAP 4.4.12, 4.5.5, 4.5.17)
-export MINORVERSION="10"
+export MINORVERSION="0"
 
 #-----------------------------------------------------------------------------
 # everything below normally need not to be changed.
@@ -21,11 +21,11 @@ export FULLVERSION="$MAJORVERSION.$MINORVERSION"
 #   the new packages archive, use corresponding tag, e.g. "v4.5.6" 
 export GAPGITVERSION="stable-4.$MAJORVERSION"
 
-# directory name (e.g. "gap4r5")
-export DISTNAME="gap4r$MAJORVERSION"
+# directory name (e.g. "gap-4.9.0")
+export DISTNAME="gap-4.${FULLVERSION}"
 
-# archive name (e.g. "gap4r5p6")
-export ARCHNAME="gap4r${MAJORVERSION}p${MINORVERSION}"
+# archive name (e.g. "gap-4.9.0")
+export ARCHNAME="gap-4.${FULLVERSION}"
 
 # location of the merged packages archive (assumed to be on the same machine)
 export MERGEDPKGLOC="/circa/scratch/gap-jenkins/workspace/GAP-pkg-merge-stable/DistributionUpdate/PackageUpdate"

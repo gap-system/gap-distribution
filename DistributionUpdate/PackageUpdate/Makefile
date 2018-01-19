@@ -5,7 +5,7 @@
 # master : to test with the head of the master branch
 
 pkg-stable:
-	./mergePackages CAP=stable cohomolo=stable crypting=no example=stable float=stable GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable loops=stable ModulePresentationsForCAP=stable orb=4.7.6 primgrp=no semigroups=stable smallgrp=no transgrp=no uuid=no ZeroMQInterface=no
+	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable loops=stable ModulePresentationsForCAP=stable
 
 pkg-master:
 	./mergePackages loops=stable
