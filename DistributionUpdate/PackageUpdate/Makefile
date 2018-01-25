@@ -5,7 +5,7 @@
 # master : to test with the head of the master branch
 
 pkg-stable:
-	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable ModulePresentationsForCAP=stable
+	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable loops=stable ModulePresentationsForCAP=stable
 
 pkg-master:
-	./mergePackages
+	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable loops=stable ModulePresentationsForCAP=stable
