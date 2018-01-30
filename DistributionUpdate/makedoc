@@ -11,19 +11,40 @@ line='cd '${DISTROOT}'/gapsourcedistro/'${DISTNAME}''
 echo $line
 $line 
 
-# build the documentation
+# produce `configure` and `src/config.h.in`
 ./autogen.sh
+if [[ -f configure ]]
+then
+  echo ${DISTNAME}'/configure' >> ../listtextfiles.txt
+else
+  echo 'no configure` file found!'
+  exit 1
+fi
+
+if [[ -f src/config.h.in ]]
+then
+  echo ${DISTNAME}'/src/config.h.in' >> ../listtextfiles.txt
+else
+  echo 'no src/config.h.in` file found!'
+  exit 1
+fi
+
+# build the GAP kernel
 ./configure
 make
-cd pkg/io-*
-./configure
-make
-cd ../..
+
+# check that all packages match the version being wrapped
+bin/gap.sh -r -A -q <<GAPInput
+    mismatches := Filtered( SortedList( RecNames( GAPInfo.PackagesInfo ) ),
+      s-> not CompareVersionNumbers( GAPInfo.Version,
+                                     GAPInfo.PackagesInfo.(s)[1].Dependencies.GAP) );;
+    if Length(mismatches) > 0 then
+      Print("*** Packages requiring GAP version higher then being wrapped:\n", mismatches, "\n");
+      QUIT_GAP(1);
+    fi;
+GAPInput
+
+# produce documentation and clean the build
 make manuals
-cd pkg/io-*
 make clean
-cd ../..
-make clean
-
 exit 0
-
