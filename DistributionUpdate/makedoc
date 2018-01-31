@@ -15,7 +15,7 @@ $line
 ./autogen.sh
 if [[ -f configure ]]
 then
-  echo ${DISTNAME}'/configure' >> ../listtextfiles.txt
+  echo ${DISTNAME}'/configure' >> ../listbinaryfiles.txt
 else
   echo 'no configure` file found!'
   exit 1
