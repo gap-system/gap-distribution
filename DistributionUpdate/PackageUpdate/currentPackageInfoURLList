@@ -28,7 +28,7 @@
 4ti2Interface http://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
 ACE         https://gap-packages.github.io/ace/PackageInfo.g
 AClib       http://www.icm.tu-bs.de/~beick/soft/aclib/PackageInfo.g
-Alnuth MOVE https://gap-packages.github.io/alnuth/PackageInfo.g
+Alnuth      https://gap-packages.github.io/alnuth/PackageInfo.g
 ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
 AutoDoc     https://gap-packages.github.io/AutoDoc/PackageInfo.g
@@ -161,5 +161,5 @@ uuid        https://gap-packages.github.io/uuid/PackageInfo.g
 Wedderga    https://gap-packages.github.io/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
-XModAlg     http://fef.ogu.edu.tr/matbil/aodabas/xmodalg/PackageInfo.g
+XModAlg     https://gap-packages.github.io/xmodalg/PackageInfo.g
 ZeroMQInterface https://gap-packages.github.io/ZeroMQInterface/PackageInfo.g
