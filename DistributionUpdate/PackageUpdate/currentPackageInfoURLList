@@ -118,7 +118,7 @@ OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
 ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
 PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
-permut      http://www.uv.es/permut/gap/permut/PackageInfo.g
+permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
