@@ -27,17 +27,17 @@
 
 4ti2Interface http://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
 ACE         https://gap-packages.github.io/ace/PackageInfo.g
-AClib       http://www.icm.tu-bs.de/~beick/soft/aclib/PackageInfo.g
+AClib       https://gap-packages.github.io/aclib/PackageInfo.g
 Alnuth      https://gap-packages.github.io/alnuth/PackageInfo.g
 ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
 AutoDoc     https://gap-packages.github.io/AutoDoc/PackageInfo.g
 Automata    http://www.fc.up.pt/cmup/mdelgado/automata/PackageInfo.g
 AutomGrp    http://finautom.sourceforge.net/automgrp/PackageInfo.g
-AutPGrp     http://www.icm.tu-bs.de/~beick/soft/autpgrp/PackageInfo.g
+AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
-Carat       http://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
+Carat       https://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
@@ -61,7 +61,7 @@ FactInt     https://gap-packages.github.io/FactInt/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
-FORMAT      http://www.uoregon.edu/~wright/RESEARCH/format/PackageInfo.g
+FORMAT      https://gap-packages.github.io/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       https://gap-packages.github.io/FPLSA/PackageInfo.g
 FR          https://gap-packages.github.io/fr/PackageInfo.g
@@ -75,7 +75,7 @@ genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
 GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
-GrpConst    http://www.icm.tu-bs.de/~beick/soft/grpconst/PackageInfo.g
+GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
 GUAVA       http://osj1961.github.io/guava/PackageInfo.g
@@ -97,7 +97,7 @@ kan         https://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    http://www.sztaki.hu/~schneider/Research/LieAlgDB/PackageInfo.g
-LiePRing    http://www.icm.tu-bs.de/~beick/soft/liepring/PackageInfo.g
+LiePRing    https://gap-packages.github.io/liepring/PackageInfo.g
 LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
 linboxing   http://www.cs.st-andrews.ac.uk/~pas/linboxing/PackageInfo.g
 LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
@@ -120,7 +120,7 @@ ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
 PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
-Polycyclic  http://www.icm.tu-bs.de/ag_algebra/software/polycyclic/PackageInfo.g
+Polycyclic   https://gap-packages.github.io/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
@@ -139,7 +139,7 @@ RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/Pac
 SCO         http://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
 Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
-SglPPow     http://www.icm.tu-bs.de/~beick/soft/sglppow/PackageInfo.g
+SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
 singular    http://www.gap-system.org/HostedGapPackages/singular/PackageInfo.g
@@ -149,7 +149,7 @@ Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo
 SONATA      http://www.algebra.uni-linz.ac.at/Sonata/PackageInfo.g
 Sophus      http://www.sztaki.hu/~schneider/Research/Sophus/PackageInfo.g
 SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
-SymbCompCC  http://www.icm.tu-bs.de/ag_algebra/software/feichten/SymbCompCC/PackageInfo.g
+SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
 TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
