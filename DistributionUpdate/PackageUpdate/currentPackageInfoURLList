@@ -155,7 +155,7 @@ ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/Pac
 toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
 transgrp    http://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
-unipot      http://www.sergei-haller.de/unipot/PackageInfo.g
+unipot MOVE https://gap-packages.github.io/unipot/PackageInfo.g
 UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
 uuid        https://gap-packages.github.io/uuid/PackageInfo.g
