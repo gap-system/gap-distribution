@@ -112,7 +112,7 @@ Modules     http://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 Nilmat      http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
-nq          http://gap-packages.github.io/nq/PackageInfo.g
+nq          https://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
@@ -124,7 +124,7 @@ Polycyclic   https://gap-packages.github.io/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
-profiling   http://gap-packages.github.io/profiling/PackageInfo.g
+profiling   https://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
