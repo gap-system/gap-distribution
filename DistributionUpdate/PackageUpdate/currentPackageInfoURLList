@@ -147,7 +147,7 @@ SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
 SONATA      http://www.algebra.uni-linz.ac.at/Sonata/PackageInfo.g
-Sophus MOVE https://gap-packages.github.io/liealgdb/PackageInfo.g
+Sophus MOVE https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
 TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
