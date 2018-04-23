@@ -81,7 +81,6 @@ Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageI
 GUAVA       http://osj1961.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
-HAPprime    http://www.cs.st-andrews.ac.uk/~pas/HAPprime/PackageInfo.g
 hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
 HeLP        http://homepages.vub.ac.be/abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
@@ -116,7 +115,6 @@ nq          http://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
-ParGAP      http://www.gap-system.org/HostedGapPackages/pargap/PackageInfo.g
 PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
