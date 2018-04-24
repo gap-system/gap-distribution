@@ -122,11 +122,11 @@ Polycyclic   https://gap-packages.github.io/polycyclic/PackageInfo.g
 PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
-profiling   http://gap-packages.github.io/profiling/PackageInfo.g
+profiling   https://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
-RadiRoot    http://www.icm.tu-bs.de/ag_algebra/software/radiroot/PackageInfo.g
+RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
 RCWA        https://stefan-kohl.github.io/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
