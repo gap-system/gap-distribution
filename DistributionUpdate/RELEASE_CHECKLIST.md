@@ -214,9 +214,8 @@ Finally, check with `ls -la` that everything looks fine (consistent file sizes, 
 * For the GAP Docker container: on the host server, navigate to `www.gap-system.org/Manuals` and then call (adjusting version number as appropriate):
 ```
 tar -cvzf gap-4.X.Y-manuals.tar.gz doc/
-mv gap-4.X.Y-manuals.tar.gz doc/
 ```
-This archive will be available under `www.gap-system.org/Manuals/doc/gap-4.X.Y-manuals.tar.gz` and will be retrieved and placed into the GAP Docker container.
+This archive will be available under `www.gap-system.org/Manuals/gap-4.X.Y-manuals.tar.gz` and will be retrieved and placed into the GAP Docker container.
 
 ### Make updated website live
 
