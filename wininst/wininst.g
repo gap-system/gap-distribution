@@ -21,8 +21,9 @@ pkgs:=SortedList(ShallowCopy(RecNames(pkgs)));
 recommended:=[ "atlasrep", "design", "grape", "guava", "example" ];
 
 # Hints for (some) packages that do not work under Windows 
-nowindows:=["ace", "anupq", "carat", "cohomolo", "digraphs", "float", "fplsa", "gauss",
-"json", "kbmag", "linboxing", "nq", "polymakeinterface", "profiling", "xgap" ];
+nowindows:=["ace", "anupq", "carat", "float", "fwtree", "help", "itc",
+"json", "linboxing", "normalizinterface", "polymakeinterface",
+"profiling", "semigroups", "xgap", "zeromqinterface" ];
 
 Print("=============================================================\n");
 # Packages needed by GAP
