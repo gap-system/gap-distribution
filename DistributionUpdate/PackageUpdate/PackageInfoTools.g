@@ -1486,7 +1486,7 @@ AddHTMLPackageInfo := function(arg)
   # directory name
   nam := NormalizedWhitespace(LowercaseString(info.PackageName));
   
-  res := Concatenation("<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>\n",
+  res := Concatenation("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n",
          "<mixer template=\"gw.tmpl\">\n");
   # header line with link to package home page
   Append(res, Concatenation("<mixertitle><mixer var=\"GAP\"/> package ", 
@@ -1806,7 +1806,7 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
   pkgstaticfile := OutputTextFile(pkgstaticfile, false);
   SetPrintFormattingStatus(pkgconffile, false);
   SetPrintFormattingStatus(pkgstaticfile, false);
-  PrintTo(pkgconffile, "# -*- coding: ISO-8859-1 -*-\n");
+  PrintTo(pkgconffile, "# -*- coding: utf-8 -*-\n");
   PrintTo(pkgstaticfile, "<table class=\"par\">\n");
   # a function to escape "'''" in python readable strings
   esc := function(s)
