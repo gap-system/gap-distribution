@@ -1753,31 +1753,41 @@ AddHTMLPackageInfo := function(arg)
   return res;
 end;
 
-EnsureLatin1Strings := function(r)
+EnsureUTF8Strings := function(r)
   local uni, res, a, i;
   if LoadPackage("GAPDoc", "1.0") <> true then
     Error("Please install GAPDoc version >= 1.0 ...\n");
   fi;
   if IsString(r) then
     # heuristic: assume that encoding is UTF-8 if string is valid UTF-8
-    # otherwise assume latin1 and do nothing
+    # otherwise assume latin1 and convert
     uni := Unicode(r, "UTF-8");
-    if uni = fail then 
+    if uni <> fail then 
       return r;
     else
-      return Encode(uni, "latin1");
+      res:="";
+      for a in r do
+       i:=IntChar(a);
+       if i < 128 then
+         Add(res, a);
+       else
+         Add(res, CharInt(192 + Int(i/64)));
+         Add(res, CharInt(128 + (i mod 64)));
+       fi;
+     od;
+     return res;
     fi;
   elif IsRecord(r) then
     res := rec();
     for a in RecFields(r) do
-      res.(a) := EnsureLatin1Strings(r.(a));
+      res.(a) := EnsureUTF8Strings(r.(a));
     od;
     return res;
   elif IsList(r) then
     res := [];
     for i in [1..Length(r)] do
       if IsBound(r[i]) then
-        res[i] := EnsureLatin1Strings(r[i]);
+        res[i] := EnsureUTF8Strings(r[i]);
       fi;
     od;
     return res;
@@ -1834,17 +1844,12 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
   # the 'tree' file and manual overview lines and SuggestUpgrade args
   manualslinks := rec();
   suggestupgradeslines := rec();
-  pi := EnsureLatin1Strings(pi);
+  pi := EnsureUTF8Strings(pi);
   for a in SortedList( NamesOfComponents(pi) ) do
     Print( a, "\n" );
     nam := pi.(a).PackageName;
     lnam := LowercaseString(pi.(a).PackageName);
     pkgmix := AddHTMLPackageInfo(pi.(a), webdir);
-    # heuristics in case PackageInfoFile is in UTF-8
-    uc := Unicode(pkgmix, "UTF-8");
-    if uc <> fail then
-      pkgmix := Encode(uc, "XML");
-    fi;
     mixfile := "";
     # line for 'tree' file
     #Append(mixfile, "");
