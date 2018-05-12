@@ -1879,7 +1879,7 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
     fi;
     for pers in pi.(a).Persons do
       s := List(SplitString(pers.FirstNames, "", " "), x-> 
-                Concatenation(x{[1]}, ". "));
+                Concatenation(InitialSubstringUTF8String(x,1), ". "));
       Add(ss, Concatenation(Concatenation(s), pers.LastName)); 
     od;
     Append(linkentry, JoinStringsWithSeparator(ss, ", "));
