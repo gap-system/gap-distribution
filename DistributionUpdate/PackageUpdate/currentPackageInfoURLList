@@ -78,7 +78,7 @@ GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
-GUAVA       http://osj1961.github.io/guava/PackageInfo.g
+GUAVA       MOVE https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
