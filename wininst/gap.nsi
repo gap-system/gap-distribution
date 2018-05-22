@@ -48,8 +48,6 @@ OutFile "gap-4.9.1.exe"
 InstallDir "C:\gap-4.9.1"
 
 #######################################################################
-# Get installation folder from registry if available
-InstallDirRegKey HKCU "Software\GAP" ""
 
 # Request application privileges for Windows Vista
 RequestExecutionLevel user
@@ -210,7 +208,9 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "10"
 
   # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
-  FileWrite $GAP_BAT "set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%"
+  FileWrite $GAP_BAT "set PATH="
+  FileWrite $GAP_BAT $INSTDIR
+  FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
@@ -224,7 +224,7 @@ Section "Core GAP system" SecGAPcore
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
-  FileWrite $GAP_BAT "/bin/gap.exe -l /proc/cygdrive/"
+  FileWrite $GAP_BAT "/gap.exe -l /proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT " %*"
     FileWriteByte $GAP_BAT "13"
@@ -269,9 +269,9 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "10"
 
   # set LANG=en_US.ISO-8859-1
-  FileWrite $GAP_BAT "set LANG=en_US.ISO-8859-1"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"     
+  FileWrite $GAPRXVT_BAT "set LANG=en_US.ISO-8859-1"
+    FileWriteByte $GAPRXVT_BAT "13"
+    FileWriteByte $GAPRXVT_BAT "10"     
 
   # set HOME=%HOMEDRIVE%%HOMEPATH%
   FileWrite $GAPRXVT_BAT "set HOME=%HOMEDRIVE%%HOMEPATH%"
@@ -279,9 +279,11 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "10"
 
   # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
-  FileWrite $GAP_BAT "set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"
+  FileWrite $GAPRXVT_BAT "set PATH="
+  FileWrite $GAPRXVT_BAT $INSTDIR 
+  FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
+    FileWriteByte $GAPRXVT_BAT "13"
+    FileWriteByte $GAPRXVT_BAT "10"
 
   # cd %HOME%
   FileWrite $GAPRXVT_BAT "cd %HOME%"
@@ -300,9 +302,9 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "10"
 
   # if NOT ["%errorlevel%"]==["0"] timeout 15
-  FileWrite $GAP_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"
+  FileWrite $GAPRXVT_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
+    FileWriteByte $GAPRXVT_BAT "13"
+    FileWriteByte $GAPRXVT_BAT "10"
 
   # exit
   FileWrite $GAPRXVT_BAT "exit"
@@ -337,9 +339,9 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "10"
 
   # set LANG=en_US.UTF-8
-  FileWrite $GAP_BAT "set LANG=en_US.UTF-8"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"   
+  FileWrite $GAPCMD_BAT "set LANG=en_US.UTF-8"
+    FileWriteByte $GAPCMD_BAT "13"
+    FileWriteByte $GAPCMD_BAT "10"   
 
   # set HOME=%HOMEDRIVE%%HOMEPATH%
   FileWrite $GAPCMD_BAT "set HOME=%HOMEDRIVE%%HOMEPATH%"
@@ -347,9 +349,11 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "10"
 
   # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
-  FileWrite $GAP_BAT "set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"
+  FileWrite $GAPCMD_BAT "set PATH="
+  FileWrite $GAPCMD_BAT $INSTDIR
+  FileWrite $GAPCMD_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
+    FileWriteByte $GAPCMD_BAT "13"
+    FileWriteByte $GAPCMD_BAT "10"
 
   # cd %HOME%
   FileWrite $GAPCMD_BAT "cd %HOME%"
@@ -366,9 +370,9 @@ Section "Core GAP system" SecGAPcore
 
 
   # if NOT ["%errorlevel%"]==["0"] timeout 15
-  FileWrite $GAP_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
-    FileWriteByte $GAP_BAT "13"
-    FileWriteByte $GAP_BAT "10"
+  FileWrite $GAPCMD_BAT "if NOT [$\"%errorlevel%$\"]==[$\"0$\"] timeout 15"
+    FileWriteByte $GAPCMD_BAT "13"
+    FileWriteByte $GAPCMD_BAT "10"
 
   # exit
   FileWrite $GAPCMD_BAT "exit"
