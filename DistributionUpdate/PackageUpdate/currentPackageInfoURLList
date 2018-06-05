@@ -74,11 +74,11 @@ GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/Generaliz
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
-GRAPE       http://www.maths.qmul.ac.uk/~leonard/grape/grape4r7/PackageInfo.g
+GRAPE MOVE  http://www.maths.qmul.ac.uk/~lsoicher/grape/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
-GUAVA       MOVE https://gap-packages.github.io/guava/PackageInfo.g
+GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 hecke       http://home.in.tum.de/~traytel/hecke/PackageInfo.g
