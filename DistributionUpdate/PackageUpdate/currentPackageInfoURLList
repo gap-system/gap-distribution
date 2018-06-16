@@ -92,6 +92,7 @@ IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/Package
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
 ITC MOVE https://gap-packages.github.io/itc/PackageInfo.g
 json        https://gap-packages.github.io/json/PackageInfo.g
+JupyterKernel https://gap-packages.github.io/JupyterKernel/PackageInfo.g
 kan         https://gap-packages.github.io/kan/PackageInfo.g
 kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
