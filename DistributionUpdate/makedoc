@@ -11,24 +11,6 @@ line='cd '${DISTROOT}'/gapsourcedistro/'${DISTNAME}''
 echo $line
 $line 
 
-# produce `configure` and `src/config.h.in`
-./autogen.sh
-if [[ -f configure ]]
-then
-  echo ${DISTNAME}'/configure' >> ../listbinaryfiles.txt
-else
-  echo 'no configure` file found!'
-  exit 1
-fi
-
-if [[ -f src/config.h.in ]]
-then
-  echo ${DISTNAME}'/src/config.h.in' >> ../listtextfiles.txt
-else
-  echo 'no src/config.h.in` file found!'
-  exit 1
-fi
-
 # build the GAP kernel
 ./configure
 make
