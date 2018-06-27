@@ -128,7 +128,7 @@ qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
-RCWA        https://stefan-kohl.github.io/rcwa/PackageInfo.g
+RCWA MOVE   https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
 recogbase   https://gap-packages.github.io/recogbase/PackageInfo.g
