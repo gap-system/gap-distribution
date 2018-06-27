@@ -5,9 +5,9 @@
 # master : to test with the head of the master branch
 
 pkg-stable:
-	./mergePackages only gapdoc=latest primgrp=latest smallgrp=latest transgrp=latest
+	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 	./mergePackages CAP=stable DeepThought=no GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable loops=stable ModulePresentationsForCAP=stable
 
 pkg-master:
-	./mergePackages only gapdoc=latest primgrp=latest smallgrp=latest transgrp=latest
+	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 	./mergePackages CAP=stable DeepThought=no GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable liepring=no loops=stable ModulePresentationsForCAP=stable SONATA=no SymbCompCC=no

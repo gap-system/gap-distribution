@@ -982,8 +982,10 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
       continue;
     fi;  
     
-    if revision in ["tip","latest","stable"] then
+    if revision = "stable" then
       tag := revision;
+    elif revision in ["tip","latest"] then
+      tag := "tip";
     else # assuming that explicit version number is specificed
       tag := Concatenation( "Version-", revision );
     fi;  
