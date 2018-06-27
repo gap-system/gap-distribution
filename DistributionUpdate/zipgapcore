@@ -20,12 +20,31 @@ ziparchive=${ARCHNAME}-core.zip
 rm -f ${ziparchive}
 echo 'Creating the GAP core archive '${GAPCORE}/$ziparchive
 
-pre=${DISTNAME}
-cd $pre/doc
+cd ${DISTNAME}
+
+# produce `configure` and `src/config.h.in`
+./autogen.sh
+if [[ -f configure ]]
+then
+  echo ${DISTNAME}'/configure' >> ../listbinaryfiles.txt
+else
+  echo 'no configure` file found!'
+  exit 1
+fi
+
+if [[ -f src/config.h.in ]]
+then
+  echo ${DISTNAME}'/src/config.h.in' >> ../listtextfiles.txt
+else
+  echo 'no src/config.h.in` file found!'
+  exit 1
+fi
+
+cd doc
 pdftex gapmacrodoc.tex
 pdftex gapmacrodoc.tex
 cd ../..
-echo $pre/doc/gapmacrodoc.pdf >> listbinaryfiles.txt
+echo ${DISTNAME}'/doc/gapmacrodoc.pdf' >> listbinaryfiles.txt
 
 echo 'Adding text files to the archive '${GAPCORE}/$ziparchive
 cat listtextfiles.txt | zip -q ${ziparchive} -@
