@@ -872,29 +872,39 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
 # PkgCacheDir, PkgReposDir, PkgMergeTmpDir, PkgMergedArchiveDir, PkgWebFtpDir, true
   local mergedir, pkgs, basepkgs, textfilesmerge, nam, info, tf, 
         fname, fun, allfiles, allformats, pkg, timestamp, fmt, fn_targzArch,
-        default, specific, t, s, revision, tag, old, fn;
+        default, specific, t, s, revision, tag, old, fn, onlyneeded, suffix;
 
   # Parsing parameters of packages combination to be assembled
  
-  default := "tip";
-  allformats := false;
-  specific := [];
+  default := "tip";    # by default, take latest version of each package
+  allformats := false; # by default, do not wrap individual package archives
+  onlyneeded :=false;  # by default, wrap all packages
+  specific := [];      # list to collect specific requirements for packages
   if Length( parameters ) > 0 then
+    # package update mechanism uses lowercase names for directories
     parameters := LowercaseString( parameters );
+    # spaces only to split keywords and different packages
+    # DO NOT put spaces around '=' specifying requirements
     parameters := SplitString( parameters, " ", " ");
-    if not ForAll( parameters, s -> s in [ "all", "tip", "latest", "stable"] or '=' in s ) then
+    # we allow either keywords or specifying package version explicitly
+    if not ForAll( parameters, s -> s in [ "all", "only", "tip", "latest", "stable"] or '=' in s ) then
       Print("ERROR: mergePackages must be called in one of the following ways:\n",
             "1) without arguments\n",
-            "2) with the word 'all' to wrap individual package archives in all formats\n",
-            "3) with one of words 'tip', 'latest' (synonym of 'tip') or 'stable'\n",
+            "2) with keyword 'all' to wrap individual package archives in all formats\n",
+            "3) with one of keywords 'tip', 'latest' (synonym of 'tip') or 'stable'\n",
             "4) with specifications of the form pkgname=tip|latest|stable|version|no\n",
-            "5) with a combination of arguments as in (2) and (3) above\n\n");
+            "5) with keyword 'only' to wrap merged archive only with packages specified as in (4)\n",
+            "6) with a combination of arguments as in (2) and (3) above\n\n");
       return;
     fi;
     if "all" in parameters then
       allformats := true;
     fi;
-    t := Filtered( parameters, s -> not '=' in s and s<>"all" );
+    if "only" in parameters then
+      onlyneeded := true;
+    fi;
+    # check the use of keywords
+    t := Filtered( parameters, s -> not '=' in s and not s in ["all","only"] );
     if Length( t ) > 1 then
       Print("ERROR: only one of 'stable', 'tip' or 'latest' (synonym of 'tip') \n",
             "       may be specified as default \n\n");
@@ -907,12 +917,16 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     fi;
     t := Filtered( parameters, s -> '=' in s);
     specific := List( t, s -> SplitString( s, "=" ) );
+    # now `specific` is a list of pairs [<packagename>,<requirement>]
   fi;
 
   Print("Preparing to wrap package archive with the following settings:\n",
-        "Default package version: ", default, "\n",
-        "Specific requirements  : ", specific, "\n");
+        "Wrap individual package archives : ", allformats, "\n",
+        "Use only specified packages      : ", onlyneeded, "\n",
+        "Default package version          : ", default, "\n",
+        "Specific requirements            : ", specific, "\n");
  
+  # get the list of packages which are known to the package update system
   pkgs := Difference(FilesDir(pkgreposdir, "d", 1), [pkgreposdir]);
   basepkgs := List( pkgs, Basename );
   
@@ -938,9 +952,8 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
   
   textfilesmerge := [];
 
-  for pkg in pkgs do
+  for pkg in pkgs do # enumerate all packages
 
-    Print("*** Updating ", pkg, " ... \n");
     # we update to the tip before doing any other actions to ensure that 
     # in case of any errors the latest version of the package will be used
     Exec( Concatenation( "cd ", pkg, " ; hg update -r tip" ));
@@ -964,7 +977,7 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
       fi;        
     fi;    
     
-    if revision="no" then
+    if revision="no" or ( onlyneeded and not Basename(pkg) in List( specific, s -> s[1] ) ) then
       Print("Skipping ", pkg, "\n");
       continue;
     fi;  
@@ -1087,15 +1100,22 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
     Unbind(timestamp[Length(timestamp)]);
   od;
 
+  if onlyneeded then
+    suffix := "required-";
+  else
+    suffix := "";
+  fi;
+
+  Print("Wrapping metainformation archive ...\n");
    
   Exec( Concatenation( 
     "cd ", mergedir, " ; ", 
-    "cat *.txtfiles > metainfotxtfiles-", timestamp, ".txt ; ",
-    "cat *.binfiles > metainfobinfiles-", timestamp, ".txt ; ",
+    "cat *.txtfiles > metainfotxtfiles-", suffix, timestamp, ".txt ; ",
+    "cat *.binfiles > metainfobinfiles-", suffix, timestamp, ".txt ; ",
     "rm *.txtfiles ; ",
     "rm *.binfiles ; ",
     "rm -rf *.tar.gz *.tar.bz2 *.zip ; ",
-    "ls metainfo* | zip -q metainfopackages", timestamp, " -@" ) );  
+    "ls metainfo* | zip -q metainfopackages-", suffix, timestamp, " -@" ) );  
     
   # move metainfo archive to the archive collection and then cleanup
   Exec(Concatenation("cd ", archdir, "; mkdir -p old; rm -rf old/* ; ",
@@ -1105,13 +1125,16 @@ MergePackages := function(pkgdir, pkgreposdir, tmpdir, archdir, webdir, paramete
        "; rm -f ", webdir, "/ftpdir/*/metainfo*"));
  
   Print("Wrapping merged packages archive ...\n");
-  fun(pkgdir, mergedir, Concatenation("packages-", timestamp), textfilesmerge);
+  fun(pkgdir, mergedir, Concatenation("packages-", suffix, timestamp), textfilesmerge);
 
   # TODO: change the location of the merged archive - it's not going public
 
+  Print("Archiving/deleting older merged package archives...\n");
   Exec(Concatenation("cd ", archdir, "; mkdir -p old; ",
        "touch packages-*; mv packages-* old; cp -f ", tmpdir, "/packages-* ",
        archdir, "; rm -f ", webdir, "/ftpdir/*/packages-*"));
+
+  Print("Copying new merged package archive ...\n");
   for fmt in [ ".tar.gz" ] do # no merged ".tar.bz2", "-win.zip"
     Exec(Concatenation("mv -f ", tmpdir, "/packages-*", fmt, " ", webdir, 
          "/ftpdir/", fmt{[2..Length(fmt)]}, "/"));
