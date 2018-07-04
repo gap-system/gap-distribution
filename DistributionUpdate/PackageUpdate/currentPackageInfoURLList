@@ -51,6 +51,7 @@ CrystCat    https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInf
 CTblLib     http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g
 Cubefree    http://users.monash.edu.au/~heikod/cubefree/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
+datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
 DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
 DESIGN      http://www.maths.qmul.ac.uk/~leonard/design/design1r6/PackageInfo.g
 Digraphs    https://gap-packages.github.io/Digraphs/PackageInfo.g
