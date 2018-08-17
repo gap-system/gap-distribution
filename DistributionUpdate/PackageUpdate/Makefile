@@ -8,4 +8,4 @@ pkg-stable:
 	./mergePackages CAP=stable DeepThought=no GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable ModulePresentationsForCAP=stable
 
 pkg-master:
-	./mergePackages CAP=stable DeepThought=no GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable liepring=no ModulePresentationsForCAP=stable SONATA=no
+	./mergePackages CAP=stable DeepThought=no GeneralizedMorphismsForCAP=stable LinearAlgebraForCAP=stable ModulePresentationsForCAP=stable SONATA=no
