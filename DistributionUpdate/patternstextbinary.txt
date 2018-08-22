@@ -27,6 +27,10 @@ T*README*
 TTODO
 TVERSION
 #
+# file used in a test - do not convert its line endings to Windows style
+#
+Btst/testinstall/files/example.txt
+#
 # extensions pointing out that the file is text, in alphabetical order
 #
 T*.bat
