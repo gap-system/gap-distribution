@@ -8,18 +8,11 @@
 | `master` (package integration test) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-master-testsuite) | |
 | `stable-4.9` (package integration test) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite) | |
 
-## Packages ready for the next releases
-| for branch | status |
-|-------|----|
-| `master` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master) |
-| `stable-4.9` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9) |
-
-## Packages requiring inspection
-
-| for branch | status |
-|------------|--------|
-| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging) |
-| `stable-4.9` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9-staging) |
+## Tests of latest package releases for their readiness for the next GAP release
+| for branch | ready for the next GAP release | requires inspection |
+|------------|--------------------------------|---------------------|
+| `master` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-master-staging) |
+| `stable-4.9` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9-staging.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests-stable-4.9-staging) |
 
 ---
 
