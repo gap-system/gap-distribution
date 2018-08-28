@@ -18,7 +18,11 @@ releases := [];
 
 for name in pkgnames do
   r := PackageInfo( name )[1];
-  Add( dates, List( SplitString( r.Date, "/" ), Int ) ); 
+  d := List( SplitString( r.Date, "/" ), Int );
+  if d = [ fail ] then
+    d := List( SplitString( r.Date, "." ), Int );
+  fi;
+  Add( dates, d );
   Add( releases, [ r.Date, r.PackageName, r.Version ] );
 od;
 Print("\n");
@@ -69,10 +73,14 @@ nocss    := [ ];
 for name in pkgnames do  
   d := PackageInfo( name )[1].PackageDoc;
   for book in d do
-    if EndsWith(book.HTMLStart, "/chapters.htm") then
-      Add (nogapdoc, name);
-    elif Filename(DirectoriesPackageLibrary( name,"" ),"doc/manual.css") = fail then
-      Add (nocss, name);
+    if IsBound(book.HTMLStart) then
+      if EndsWith(book.HTMLStart, "/chapters.htm") then
+        Add (nogapdoc, name);
+      elif Filename(DirectoriesPackageLibrary( name,"" ),"doc/manual.css") = fail then
+        Add (nocss, name);
+      fi;
+    else
+      Print("No HTML version for book ", book.BookName, " in " , name," package\n");
     fi;
   od;  
 od;
