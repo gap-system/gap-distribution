@@ -75,7 +75,7 @@ GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/Generaliz
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
-GRAPE MOVE  http://www.maths.qmul.ac.uk/~lsoicher/grape/PackageInfo.g
+GRAPE       http://www.maths.qmul.ac.uk/~lsoicher/grape/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
@@ -91,7 +91,7 @@ IntPic      https://gap-packages.github.io/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
 IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
-ITC MOVE https://gap-packages.github.io/itc/PackageInfo.g
+ITC         https://gap-packages.github.io/itc/PackageInfo.g
 json        https://gap-packages.github.io/json/PackageInfo.g
 JupyterKernel https://gap-packages.github.io/JupyterKernel/PackageInfo.g
 kan         https://gap-packages.github.io/kan/PackageInfo.g
@@ -129,7 +129,7 @@ qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
-RCWA MOVE   https://gap-packages.github.io/rcwa/PackageInfo.g
+RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
 recogbase   https://gap-packages.github.io/recogbase/PackageInfo.g
