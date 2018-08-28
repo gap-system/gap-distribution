@@ -50,6 +50,7 @@ Cryst       https://www.math.uni-bielefeld.de/~gaehler/gap45/Cryst/PackageInfo.g
 CrystCat    https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInfo.g
 CTblLib     http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g
 Cubefree    http://users.monash.edu.au/~heikod/cubefree/PackageInfo.g
+curlInterface https://gap-packages.github.io/curlInterface/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
 DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
