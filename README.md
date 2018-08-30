@@ -26,6 +26,10 @@ Status of standard tests for development versions of packages from the [gap-pack
 | `master` | [![Build Status](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-master-devel.svg?branch=master)](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-master-devel) |
 | `stable-4.9` | [![Build Status](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-stable-4.9-devel.svg?branch=master)](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-stable-4.9-devel) |
 
+## Further links:
+* [AppVeyor builds for the core GAP system](https://ci.appveyor.com/project/gap-system/gap)
+* [Code coverage for GAP packages](https://codecov.io/gh/gap-packages/)
+
 ---
 
 This is the repository for various tools needed for GAP releases
