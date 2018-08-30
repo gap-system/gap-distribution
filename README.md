@@ -29,6 +29,7 @@ Status of standard tests for development versions of packages from the [gap-pack
 ## Further links:
 * [AppVeyor builds for the core GAP system](https://ci.appveyor.com/project/gap-system/gap)
 * [Code coverage for GAP packages](https://codecov.io/gh/gap-packages/)
+* [GAP Docker containers on Docker Hub](https://hub.docker.com/r/gapsystem/)
 
 ---
 
