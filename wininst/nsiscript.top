@@ -24,8 +24,8 @@
 #
 # Declaring user variables - 
 #
-var GAP_VER       # GAP version in format 4.9.1
-var RXVT_PATH     # Install path in the form C:\gap-4.9.1
+var GAP_VER       # GAP version in format 4.9.3
+var RXVT_PATH     # Install path in the form C:\gap-4.9.3
 var GAP_BAT       # to write gap.bat file
 var GAPRXVT_BAT   # to write gaprxvt.bat file
 var GAPCMD_BAT   # to write gapmintty.bat file
@@ -37,15 +37,15 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.9.1"
+StrCpy $GAP_VER "4.9.3"
 SectionEnd
 
 #Name and file
-Name "GAP 4.9.1"
-OutFile "gap-4.9.1.exe"
+Name "GAP 4.9.3"
+OutFile "gap-4.9.3.exe"
 
 #Default installation folder
-InstallDir "C:\gap-4.9.1"
+InstallDir "C:\gap-4.9.3"
 
 #######################################################################
 
@@ -110,53 +110,53 @@ Section "Core GAP system" SecGAPcore
   # Set output path to the installation directory
   SetOutPath $INSTDIR
   # Put files there
-  File gap-4.9.1\*.*
+  File gap-4.9.3\*.*
 
   SetOutPath $INSTDIR\.libs
-  File /r gap-4.9.1\.libs\*.*
+  File /r gap-4.9.3\.libs\*.*
 
   SetOutPath $INSTDIR\autom4te.cache
-  File /r gap-4.9.1\autom4te.cache\*.*
+  File /r gap-4.9.3\autom4te.cache\*.*
 
   SetOutPath $INSTDIR\bin
-  File /r gap-4.9.1\bin\*.*
+  File /r gap-4.9.3\bin\*.*
   File gapicon.ico
 
   SetOutPath $INSTDIR\cnf
-  File /r gap-4.9.1\cnf\*.*
+  File /r gap-4.9.3\cnf\*.*
 
   SetOutPath $INSTDIR\doc
-  File /r gap-4.9.1\doc\*.*
+  File /r gap-4.9.3\doc\*.*
 
   SetOutPath $INSTDIR\etc
-  File /r gap-4.9.1\etc\*.*
+  File /r gap-4.9.3\etc\*.*
 
   SetOutPath $INSTDIR\extern
-  File /r gap-4.9.1\extern\*.*
+  File /r gap-4.9.3\extern\*.*
 
   SetOutPath $INSTDIR\gen
-  File /r gap-4.9.1\gen\*.*
+  File /r gap-4.9.3\gen\*.*
 
   SetOutPath $INSTDIR\grp
-  File /r gap-4.9.1\grp\*.*
+  File /r gap-4.9.3\grp\*.*
 
   SetOutPath $INSTDIR\hpcgap
-  File /r gap-4.9.1\hpcgap\*.*
+  File /r gap-4.9.3\hpcgap\*.*
 
   SetOutPath $INSTDIR\lib
-  File /r gap-4.9.1\lib\*.*
+  File /r gap-4.9.3\lib\*.*
 
   SetOutPath $INSTDIR\obj
-  File /r gap-4.9.1\obj\*.*
+  File /r gap-4.9.3\obj\*.*
 
   SetOutPath $INSTDIR\src
-  File /r gap-4.9.1\src\*.*
+  File /r gap-4.9.3\src\*.*
 
   SetOutPath $INSTDIR\terminfo
-  File /r gap-4.9.1\terminfo\*.*
+  File /r gap-4.9.3\terminfo\*.*
 
   SetOutPath $INSTDIR\tst
-  File /r gap-4.9.1\tst\*.*
+  File /r gap-4.9.3\tst\*.*
 
   # restore initial output path
   SetOutPath $INSTDIR 
@@ -167,25 +167,25 @@ Section "Core GAP system" SecGAPcore
   # Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  # rewriting install path in format /cygdrive/c/gap-4.9.1
+  # rewriting install path in format /cygdrive/c/gap-4.9.3
   StrCpy $RXVT_PATH $INSTDIR
   ${WordReplace} $RXVT_PATH ":" ""  "+" $RXVT_PATH
   ${WordReplace} $RXVT_PATH "\" "/" "+" $RXVT_PATH
 
   # Write gap.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap-4.9.1\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.9.1/bin/gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # start "GAP" C:\gap-4.9.3\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.9.3/bin/gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   FileWrite $GAP_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT "/terminfo"
@@ -207,7 +207,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAP_BAT "set PATH="
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -219,7 +219,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # start "GAP" C:\gap-4.9.1\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.9.1/gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # start "GAP" C:\gap-4.9.3\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.9.3/gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   FileWrite $GAP_BAT "start $\"GAP$\" " 
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/"
@@ -244,19 +244,19 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gaprxvt.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.ISO-8859-1
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap-4.9.1\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.9.1/gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # start "GAP" C:\gap-4.9.3\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.9.3/gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPRXVT_BAT $INSTDIR\bin\gaprxvt.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   FileWrite $GAPRXVT_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
   FileWrite $GAPRXVT_BAT "/terminfo"
@@ -278,7 +278,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
 
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAPRXVT_BAT "set PATH="
   FileWrite $GAPRXVT_BAT $INSTDIR 
   FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -290,7 +290,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
 
-  # start "GAP" C:\gap-4.9.1\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.9.1/gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # start "GAP" C:\gap-4.9.3\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.9.3/gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   FileWrite $GAPRXVT_BAT "start $\"GAP$\" " 
   FileWrite $GAPRXVT_BAT $INSTDIR
   FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/"
@@ -314,19 +314,19 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gapcmd.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # C:\gap-4.9.1\gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # C:\gap-4.9.3\gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.9.1/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.9.3/terminfo
   FileWrite $GAPCMD_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH
   FileWrite $GAPCMD_BAT "/terminfo"
@@ -348,7 +348,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # set PATH=C:\gap-4.9.1\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.9.3\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAPCMD_BAT "set PATH="
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -360,7 +360,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # C:\gap-4.9.1\gap.exe -l /proc/cygdrive/C/gap-4.9.1 %*
+  # C:\gap-4.9.3\gap.exe -l /proc/cygdrive/C/gap-4.9.3 %*
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\gap.exe -l /proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH 

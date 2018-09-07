@@ -46,7 +46,7 @@ and edit the initial section of `gap.nsi` to set up GAP version, archive
 timestamp and default installation directory. Commit `gap.nsi` when ready.
 
 To make the GAP installer for Windows:
-* unpack GAP source distribution to the subdirectory `gap4r8` in the same
+* unpack GAP source distribution to the subdirectory `gap-4.X.Y` in the same
   directory with this script
 * put gapicon.ico` in the same directory with this script
 * put a copy of `etc/CPL` renamed to `copyright.txt` in the same directory 
