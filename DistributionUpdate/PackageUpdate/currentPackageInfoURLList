@@ -143,7 +143,7 @@ Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
-singular    http://www.gap-system.org/HostedGapPackages/singular/PackageInfo.g
+singular  MOVE https://gap-packages.github.io/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
