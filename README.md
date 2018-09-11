@@ -3,10 +3,15 @@
 ## Core GAP system tests
 
 | for branch | status | code coverage |
-|------------|-------|---------------|
-| `master` (core system test)  | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) |  [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
-| `master` (package integration test) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-master-testsuite) | |
-| `stable-4.9` (package integration test) | [![Build Status](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite) | |
+|------------|--------|---------------|
+| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) |  [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
+
+## Package integration tests
+
+| for branch | status |
+|------------|--------|
+| `master`  | [![Build Status](https://travis-ci.org/gap-system/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-master-testsuite) |
+| `stable-4.9` | [![Build Status](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-stable-4.9-testsuite) |
 
 ## Tests of approved official package releases for their readiness for the next GAP release
 
