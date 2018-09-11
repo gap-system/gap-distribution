@@ -4,9 +4,9 @@
 
 | for branch | status | code coverage |
 |------------|--------|---------------|
-| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) |  [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
-| `stable-4.10` | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.10)](https://travis-ci.org/gap-system/gap) | |
-| `stable-4.9`  | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.9)](https://travis-ci.org/gap-system/gap) | |
+| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
+| `stable-4.10` | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.10)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=stable-4.10&token=)](https://codecov.io/gh/gap-system/gap) |
+| `stable-4.9`  | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.9)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=stable-4.9&token=)](https://codecov.io/gh/gap-system/gap) |
 
 ## Package integration tests
 
