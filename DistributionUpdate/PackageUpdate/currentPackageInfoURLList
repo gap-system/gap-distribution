@@ -79,7 +79,7 @@ GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingFor
 GRAPE       http://www.maths.qmul.ac.uk/~lsoicher/grape/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
-Guarana     http://www-circa.mcs.st-andrews.ac.uk/~jjm/software/Guarana/PackageInfo.g
+Guarana  MOVE https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
