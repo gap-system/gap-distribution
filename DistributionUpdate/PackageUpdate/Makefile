@@ -8,7 +8,7 @@
 #
 
 pkg-stable:
-	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable groupoids=stable LinearAlgebraForCAP=stable ModulePresentationsForCAP=stable semigroups=stable
+	./mergePackages CAP=stable GeneralizedMorphismsForCAP=stable groupoids=stable LinearAlgebraForCAP=stable ModulePresentationsForCAP=stable SONATA=no
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
