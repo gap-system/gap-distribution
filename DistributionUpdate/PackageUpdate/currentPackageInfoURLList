@@ -79,11 +79,11 @@ GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingFor
 GRAPE       http://www.maths.qmul.ac.uk/~lsoicher/grape/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
-Guarana  MOVE https://gap-packages.github.io/guarana/PackageInfo.g
+Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
-hecke  MOVE https://gap-packages.github.io/hecke/PackageInfo.g
+hecke       https://gap-packages.github.io/hecke/PackageInfo.g
 HeLP        http://homepages.vub.ac.be/abachle/help/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
@@ -143,7 +143,7 @@ Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
-singular  MOVE https://gap-packages.github.io/singular/PackageInfo.g
+singular    https://gap-packages.github.io/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
