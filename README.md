@@ -28,7 +28,7 @@ Status of standard tests for packages updates that were picked up, passed intern
 
 ## Tests of package development versions for their compatibility with the GAP development version
 
-Status of standard tests for development versions of packages from the [gap-packages](https://github.com/gap-packages) organisation. 
+Status of standard tests for [development versions of GAP packages having a public repository on GitHub](https://gap-packages.github.io/). 
 
 | for branch | Click on the badge to see the status for each package |
 |------------|-------------------------------------------------------|
@@ -37,6 +37,7 @@ Status of standard tests for development versions of packages from the [gap-pack
 | `stable-4.9` | [![Build Status](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-stable-4.9-devel.svg?branch=master)](https://travis-ci.org/gap-packages/gap-docker-pkg-tests-stable-4.9-devel) |
 
 ## Further links:
+* Status of standard tests of GAP packages from the latest public release of GAP: [![Build Status](https://travis-ci.org/gap-system/gap-docker-pkg-tests.svg?branch=master)](https://travis-ci.org/gap-system/gap-docker-pkg-tests)
 * [AppVeyor builds for the core GAP system](https://ci.appveyor.com/project/gap-system/gap)
 * [Code coverage for GAP packages](https://codecov.io/gh/gap-packages/)
 * [GAP Docker containers on Docker Hub](https://hub.docker.com/r/gapsystem/)
