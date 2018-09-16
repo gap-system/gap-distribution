@@ -109,7 +109,7 @@ lpres       https://gap-packages.github.io/lpres/PackageInfo.g
 MapClass    https://gap-packages.github.io/MapClass/PackageInfo.g
 Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg http://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g
-ModIsom     http://www.icm.tu-bs.de/~beick/soft/modisom/PackageInfo.g
+ModIsom MOVE https://gap-packages.github.io/modisom/PackageInfo.g
 Modules     http://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 Nilmat      http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
