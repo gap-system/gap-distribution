@@ -8,13 +8,13 @@
 #
 
 pkg-stable:
-	./mergePackages recogbase=no SONATA=no
+	./mergePackages recogbase=no
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 
 pkg-master:
-	./mergePackages recogbase=no SONATA=no
+	./mergePackages recogbase=no
 
 pkg-required-master:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
