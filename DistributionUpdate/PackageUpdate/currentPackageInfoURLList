@@ -32,7 +32,7 @@ Alnuth      https://gap-packages.github.io/alnuth/PackageInfo.g
 ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
 AutoDoc     https://gap-packages.github.io/AutoDoc/PackageInfo.g
-Automata  MOVE  https://gap-packages.github.io/automata/PackageInfo.g
+Automata    https://gap-packages.github.io/automata/PackageInfo.g
 AutomGrp    http://finautom.sourceforge.net/automgrp/PackageInfo.g
 AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
@@ -147,7 +147,7 @@ singular    https://gap-packages.github.io/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
-SONATA MOVE https://gap-packages.github.io/sonata/PackageInfo.g
+SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
