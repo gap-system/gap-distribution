@@ -101,7 +101,6 @@ LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    https://gap-packages.github.io/liealgdb/PackageInfo.g
 LiePRing    https://gap-packages.github.io/liepring/PackageInfo.g
 LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
-linboxing   http://www.cs.st-andrews.ac.uk/~pas/linboxing/PackageInfo.g
 LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       http://www.math.du.edu/loops/PackageInfo.g
@@ -133,7 +132,6 @@ RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
 RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
-recogbase   https://gap-packages.github.io/recogbase/PackageInfo.g
 Repsn       http://www.sfu.ca/~vdabbagh/gap/PackageInfo.g
 ResClasses  https://stefan-kohl.github.io/resclasses/PackageInfo.g
 RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
