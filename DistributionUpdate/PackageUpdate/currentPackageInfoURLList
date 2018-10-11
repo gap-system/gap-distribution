@@ -43,7 +43,7 @@ cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
 Convex      http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Convex/PackageInfo.g
 CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
-Crime       http://math.uic.edu/~marcus/Crime/PackageInfo.g
+Crime  MOVE https://gap-packages.github.io/crime/PackageInfo.g
 CRISP       http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g
 crypting    https://gap-packages.github.io/crypting/PackageInfo.g
 Cryst       https://www.math.uni-bielefeld.de/~gaehler/gap45/Cryst/PackageInfo.g
