@@ -41,7 +41,7 @@ Carat       https://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
-Convex      http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/Convex/PackageInfo.g
+Convex MOVE http://homalg-project.github.io/homalg_project/Convex/PackageInfo.g
 CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
 Crime  MOVE https://gap-packages.github.io/crime/PackageInfo.g
 CRISP       http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g
@@ -121,7 +121,7 @@ PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic   https://gap-packages.github.io/polycyclic/PackageInfo.g
-PolymakeInterface http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/PolymakeInterface/PackageInfo.g
+PolymakeInterface MOVE http://homalg-project.github.io/homalg_project/PolymakeInterface/PackageInfo.g
 polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
 profiling   https://gap-packages.github.io/profiling/PackageInfo.g
@@ -152,7 +152,7 @@ SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
 TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
-ToricVarieties http://wwwb.math.rwth-aachen.de/~gutsche/gap_packages/ToricVarieties/PackageInfo.g
+ToricVarieties MOVE http://homalg-project.github.io/homalg_project/ToricVarieties/PackageInfo.g
 transgrp    http://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
 unipot      https://gap-packages.github.io/unipot/PackageInfo.g
 UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
