@@ -283,7 +283,12 @@ do
             fi
         fi
     done
-/bin/echo $PKGNAME '|' $PASSA '|' $PASS1 '|' $PASS2
+if [ "${PASS1}" != 'PASS' ] || [ "${PASS2}" != 'PASS' ] || [ "${PASSA}" != 'PASS' ]
+then
+/bin/echo '    - PKG_NAME='$PKGNAME '# default' $PASSA '| no pkg' $PASS1 '| all pkg' $PASS2
+else
+/bin/echo '    - PKG_NAME='$PKGNAME
+fi
 done
 #
 /bin/echo -n "YVALUE=" > dev/log/plotpackages1_count.txt
