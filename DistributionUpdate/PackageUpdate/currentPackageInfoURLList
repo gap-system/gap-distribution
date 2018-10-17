@@ -67,6 +67,7 @@ FORMAT      https://gap-packages.github.io/format/PackageInfo.g
 Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
 FPLSA       https://gap-packages.github.io/FPLSA/PackageInfo.g
 FR          https://gap-packages.github.io/fr/PackageInfo.g
+Francy      https://gap-packages.github.io/francy/PackageInfo.g
 fwtree      https://gap-packages.github.io/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       http://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
