@@ -1298,6 +1298,10 @@ Print("*** Checking ", pkgdir, "\n" );
   Print("# checking out the latest version ...\n");
   Exec( Concatenation( "cd ", pkgdir, " ; hg update -r tip" ));
   info := getInfo( pkgdir );
+  if info = fail then
+    Print("# Skipping ", pkgdir, "\n");
+    continue;
+  fi;
   Print("* latest version ", info.Version, " (", info.Date, ")\n");
 
   ver := [ info.PackageName, info.Version, info.Date ];
