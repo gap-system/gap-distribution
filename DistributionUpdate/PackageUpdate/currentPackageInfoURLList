@@ -141,7 +141,7 @@ SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
 Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
-simpcomp    http://raw.githubusercontent.com/simpcomp-team/simpcomp/master/web/PackageInfo.g
+simpcomp MOVE https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 singular    https://gap-packages.github.io/singular/PackageInfo.g
 SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
