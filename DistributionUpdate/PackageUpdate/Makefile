@@ -8,7 +8,7 @@
 #
 
 pkg-stable:
-	./mergePackages ToricVarieties=stable
+	./mergePackages francy=no ToricVarieties=stable
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
