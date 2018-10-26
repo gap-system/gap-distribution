@@ -150,7 +150,7 @@ SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
-TomLib      http://schmidt.nuigalway.ie/tomlib/PackageInfo.g
+TomLib MOVE https://gap-packages.github.io/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://homalg-project.github.io/homalg_project/ToricVarieties/PackageInfo.g
