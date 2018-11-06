@@ -77,7 +77,7 @@ GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/Generaliz
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules http://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg http://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
-GRAPE MOVE  https://gap-packages.github.io/grape/PackageInfo.g
+GRAPE       https://gap-packages.github.io/grape/PackageInfo.g
 GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
@@ -105,7 +105,7 @@ LiePRing    https://gap-packages.github.io/liepring/PackageInfo.g
 LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
 LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
-loops MOVE  https://gap-packages.github.io/loops/PackageInfo.g
+loops       https://gap-packages.github.io/loops/PackageInfo.g
 lpres       https://gap-packages.github.io/lpres/PackageInfo.g
 MapClass    https://gap-packages.github.io/MapClass/PackageInfo.g
 Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
@@ -151,7 +151,7 @@ SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
 SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
-TomLib MOVE https://gap-packages.github.io/tomlib/PackageInfo.g
+TomLib      https://gap-packages.github.io/tomlib/PackageInfo.g
 ToolsForHomalg http://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties http://homalg-project.github.io/homalg_project/ToricVarieties/PackageInfo.g
