@@ -1,5 +1,5 @@
 # Adjust the path for the release
-gappath:="gap-4.9.3";
+gappath:="gap-4.10.0";
 
 Basename := function(str)
   local len;
@@ -21,9 +21,9 @@ pkgs:=SortedList(ShallowCopy(RecNames(pkgs)));
 recommended:=[ "atlasrep", "design", "grape", "guava", "example" ];
 
 # Hints for (some) packages that do not work under Windows 
-nowindows:=["ace", "anupq", "carat", "float", "fwtree", "help", "itc",
-"json", "linboxing", "normalizinterface", "polymakeinterface",
-"profiling", "semigroups", "xgap", "zeromqinterface" ];
+nowindows:=["ace", "anupq", "carat", "digraphs", "float", "francy", "fwtree",
+"help", "itc", "json", "jupyterkernel", "jupyterviz", "normalizinterface",
+"polymakeinterface", "profiling", "semigroups", "xgap", "zeromqinterface" ];
 
 Print("=============================================================\n");
 # Packages needed by GAP
