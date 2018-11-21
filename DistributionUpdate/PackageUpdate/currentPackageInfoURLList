@@ -107,6 +107,7 @@ LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraFor
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       https://gap-packages.github.io/loops/PackageInfo.g
 lpres       https://gap-packages.github.io/lpres/PackageInfo.g
+MajoranaAlgebras https://mwhybrow92.github.io/MajoranaAlgebras/PackageInfo.g
 MapClass    https://gap-packages.github.io/MapClass/PackageInfo.g
 Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg http://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g
