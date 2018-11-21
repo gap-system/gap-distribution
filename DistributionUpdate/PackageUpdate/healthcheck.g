@@ -93,7 +93,7 @@ for name in nogapdoc do
 od;
 Print("\n");
 
-Print("*** ", Length(nocss), " GAPDoc-based manuals miss ccs files:\n");
+Print("*** ", Length(nocss), " GAPDoc-based manuals miss css files:\n");
 for name in nocss do
   Print("- [ ] ", name, "\n");
 od;
