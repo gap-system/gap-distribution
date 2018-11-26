@@ -85,7 +85,7 @@ GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
-HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
+HeLP MOVE   https://gap-packages.github.io/HeLP/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       https://gap-packages.github.io/idrel/PackageInfo.g
