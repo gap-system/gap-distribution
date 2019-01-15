@@ -85,7 +85,7 @@ GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         http://hamilton.nuigalway.ie/Hap/PackageInfo.g
 HAPcryst    http://csserver.evansville.edu/~mroeder/HAPcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
-HeLP MOVE   https://gap-packages.github.io/HeLP/PackageInfo.g
+HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       https://gap-packages.github.io/idrel/PackageInfo.g
@@ -107,7 +107,7 @@ LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraFor
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       https://gap-packages.github.io/loops/PackageInfo.g
 lpres       https://gap-packages.github.io/lpres/PackageInfo.g
-MajoranaAlgebras https://mwhybrow92.github.io/MajoranaAlgebras/PackageInfo.g
+MajoranaAlgebras https://MWhybrow92.github.io/MajoranaAlgebras/PackageInfo.g
 MapClass    https://gap-packages.github.io/MapClass/PackageInfo.g
 Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg http://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g
