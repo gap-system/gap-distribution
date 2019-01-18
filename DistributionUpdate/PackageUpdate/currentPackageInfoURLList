@@ -60,6 +60,7 @@ EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg http://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
 FactInt     https://gap-packages.github.io/FactInt/PackageInfo.g
+ferret      http://gap-packages.github.io/ferret/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
