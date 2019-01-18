@@ -89,6 +89,7 @@ HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       https://gap-packages.github.io/idrel/PackageInfo.g
+images      http://gap-packages.github.io/images/PackageInfo.g
 IntPic      https://gap-packages.github.io/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
