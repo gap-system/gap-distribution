@@ -163,6 +163,7 @@ unipot      https://gap-packages.github.io/unipot/PackageInfo.g
 UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
 uuid        https://gap-packages.github.io/uuid/PackageInfo.g
+walrus      https://gap-packages.github.io/walrus/PackageInfo.g
 Wedderga    https://gap-packages.github.io/wedderga/PackageInfo.g
 XGAP        https://gap-packages.github.io/xgap/PackageInfo.g
 XMod        https://gap-packages.github.io/xmod/PackageInfo.g
