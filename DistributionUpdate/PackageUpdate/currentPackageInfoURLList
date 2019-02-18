@@ -60,7 +60,7 @@ EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg http://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
 FactInt     https://gap-packages.github.io/FactInt/PackageInfo.g
-ferret      http://gap-packages.github.io/ferret/PackageInfo.g
+ferret      https://gap-packages.github.io/ferret/PackageInfo.g
 FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
@@ -90,7 +90,7 @@ HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
 homalg      http://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
 HomalgToCAS http://homalg-project.github.io/homalg_project/HomalgToCAS/PackageInfo.g
 idrel       https://gap-packages.github.io/idrel/PackageInfo.g
-images      http://gap-packages.github.io/images/PackageInfo.g
+images      https://gap-packages.github.io/images/PackageInfo.g
 IntPic      https://gap-packages.github.io/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg http://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
