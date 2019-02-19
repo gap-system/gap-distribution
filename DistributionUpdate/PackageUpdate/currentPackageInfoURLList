@@ -122,6 +122,7 @@ nq          https://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
 OpenMath    https://gap-packages.github.io/openmath/PackageInfo.g
 orb         https://gap-packages.github.io/orb/PackageInfo.g
+PackageManager https://gap-packages.github.io/PackageManager/PackageInfo.g
 PatternClass https://gap-packages.github.io/PatternClass/PackageInfo.g
 permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
