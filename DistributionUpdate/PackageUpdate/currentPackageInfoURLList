@@ -136,9 +136,9 @@ QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
 RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
-RDS         http://csserver.evansville.edu/~mroeder/rds/gap4_5/PackageInfo.g
+RDS         MOVE https://gap-packages.github.io/rds/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
-Repsn       http://www.sfu.ca/~vdabbagh/gap/PackageInfo.g
+Repsn       MOVE https://gap-packages.github.io/repsn/PackageInfo.g
 ResClasses  https://stefan-kohl.github.io/resclasses/PackageInfo.g
 RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         http://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
