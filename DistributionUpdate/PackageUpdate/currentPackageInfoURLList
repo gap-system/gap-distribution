@@ -128,7 +128,7 @@ permut      https://gap-packages.github.io/permut/PackageInfo.g
 Polenta     https://gap-packages.github.io/polenta/PackageInfo.g
 Polycyclic   https://gap-packages.github.io/polycyclic/PackageInfo.g
 PolymakeInterface http://homalg-project.github.io/homalg_project/PolymakeInterface/PackageInfo.g
-polymaking  http://csserver.evansville.edu/~mroeder/polymaking/PackageInfo.g
+polymaking  MOVE https://gap-packages.github.io/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
 profiling   https://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
