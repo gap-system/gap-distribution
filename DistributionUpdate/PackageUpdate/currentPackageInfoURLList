@@ -104,7 +104,7 @@ kbmag       https://gap-packages.github.io/kbmag/PackageInfo.g
 LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    https://gap-packages.github.io/liealgdb/PackageInfo.g
 LiePRing    https://gap-packages.github.io/liepring/PackageInfo.g
-LieRing     http://www.science.unitn.it/~degraaf/liering/PackageInfo.g
+LieRing     MOVE https://gap-packages.github.io/liering/PackageInfo.g
 LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg http://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       https://gap-packages.github.io/loops/PackageInfo.g
@@ -133,7 +133,7 @@ PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
 profiling   https://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
-QuaGroup    http://www.science.unitn.it/~degraaf/PackageInfo.g
+QuaGroup    MOVE https://gap-packages.github.io/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
 RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         MOVE https://gap-packages.github.io/rds/PackageInfo.g
@@ -148,7 +148,7 @@ SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 singular    https://gap-packages.github.io/singular/PackageInfo.g
-SLA         http://www.science.unitn.it/~degraaf/sla/PackageInfo.g
+SLA         MOVE https://gap-packages.github.io/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
 SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
