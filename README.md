@@ -38,6 +38,7 @@ Status of standard tests for [development versions of GAP packages having a publ
 
 ## Further links:
 * Status of standard tests of GAP packages from the latest public release of GAP: [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests)
+* [Travis CI builds of GAP packages](https://travis-ci.org/gap-packages/)
 * [AppVeyor builds for the core GAP system](https://ci.appveyor.com/project/gap-system/gap)
 * [Code coverage for GAP packages](https://codecov.io/gh/gap-packages/)
 * [GAP Docker containers on Docker Hub](https://hub.docker.com/r/gapsystem/)
