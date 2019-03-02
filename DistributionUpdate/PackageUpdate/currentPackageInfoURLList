@@ -153,7 +153,7 @@ smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
 Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
 SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
-SpinSym     http://www.uni-due.de/~s400304/spinsym/PackageInfo.g
+SpinSym     MOVE https://gap-packages.github.io/spinsym/PackageInfo.g
 SymbCompCC  https://gap-packages.github.io/SymbCompCC/PackageInfo.g
 Thelma      https://gap-packages.github.io/Thelma/PackageInfo.g
 TomLib      https://gap-packages.github.io/tomlib/PackageInfo.g
