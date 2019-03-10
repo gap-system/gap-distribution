@@ -49,7 +49,7 @@ InstallDir "C:\gap-4.10.1"
 
 #######################################################################
 
-# Request application privileges for Windows Vista
+# A user without admin privileges should be able to install GAP
 RequestExecutionLevel user
 
 # Set compressing method (for test compiling may be commented out)
