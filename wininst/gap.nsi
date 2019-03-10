@@ -24,8 +24,8 @@
 #
 # Declaring user variables - 
 #
-var GAP_VER       # GAP version in format 4.10.0
-var RXVT_PATH     # Install path in the form C:\gap-4.10.0
+var GAP_VER       # GAP version in format 4.10.1
+var RXVT_PATH     # Install path in the form C:\gap-4.10.1
 var GAP_BAT       # to write gap.bat file
 var GAPRXVT_BAT   # to write gaprxvt.bat file
 var GAPCMD_BAT   # to write gapmintty.bat file
@@ -37,15 +37,15 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.10.0"
+StrCpy $GAP_VER "4.10.1"
 SectionEnd
 
 #Name and file
-Name "GAP 4.10.0"
-OutFile "gap-4.10.0.exe"
+Name "GAP 4.10.1"
+OutFile "gap-4.10.1.exe"
 
 #Default installation folder
-InstallDir "C:\gap-4.10.0"
+InstallDir "C:\gap-4.10.1"
 
 #######################################################################
 
@@ -110,53 +110,53 @@ Section "Core GAP system" SecGAPcore
   # Set output path to the installation directory
   SetOutPath $INSTDIR
   # Put files there
-  File gap-4.10.0\*.*
+  File gap-4.10.1\*.*
 
   SetOutPath $INSTDIR\.libs
-  File /r gap-4.10.0\.libs\*.*
+  File /r gap-4.10.1\.libs\*.*
 
   SetOutPath $INSTDIR\autom4te.cache
-  File /r gap-4.10.0\autom4te.cache\*.*
+  File /r gap-4.10.1\autom4te.cache\*.*
 
   SetOutPath $INSTDIR\bin
-  File /r gap-4.10.0\bin\*.*
+  File /r gap-4.10.1\bin\*.*
   File gapicon.ico
 
   SetOutPath $INSTDIR\cnf
-  File /r gap-4.10.0\cnf\*.*
+  File /r gap-4.10.1\cnf\*.*
 
   SetOutPath $INSTDIR\doc
-  File /r gap-4.10.0\doc\*.*
+  File /r gap-4.10.1\doc\*.*
 
   SetOutPath $INSTDIR\etc
-  File /r gap-4.10.0\etc\*.*
+  File /r gap-4.10.1\etc\*.*
 
   SetOutPath $INSTDIR\extern
-  File /r gap-4.10.0\extern\*.*
+  File /r gap-4.10.1\extern\*.*
 
   SetOutPath $INSTDIR\gen
-  File /r gap-4.10.0\gen\*.*
+  File /r gap-4.10.1\gen\*.*
 
   SetOutPath $INSTDIR\grp
-  File /r gap-4.10.0\grp\*.*
+  File /r gap-4.10.1\grp\*.*
 
   SetOutPath $INSTDIR\hpcgap
-  File /r gap-4.10.0\hpcgap\*.*
+  File /r gap-4.10.1\hpcgap\*.*
 
   SetOutPath $INSTDIR\lib
-  File /r gap-4.10.0\lib\*.*
+  File /r gap-4.10.1\lib\*.*
 
   SetOutPath $INSTDIR\obj
-  File /r gap-4.10.0\obj\*.*
+  File /r gap-4.10.1\obj\*.*
 
   SetOutPath $INSTDIR\src
-  File /r gap-4.10.0\src\*.*
+  File /r gap-4.10.1\src\*.*
 
   SetOutPath $INSTDIR\terminfo
-  File /r gap-4.10.0\terminfo\*.*
+  File /r gap-4.10.1\terminfo\*.*
 
   SetOutPath $INSTDIR\tst
-  File /r gap-4.10.0\tst\*.*
+  File /r gap-4.10.1\tst\*.*
 
   # restore initial output path
   SetOutPath $INSTDIR 
@@ -167,25 +167,25 @@ Section "Core GAP system" SecGAPcore
   # Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  # rewriting install path in format /cygdrive/c/gap-4.10.0
+  # rewriting install path in format /cygdrive/c/gap-4.10.1
   StrCpy $RXVT_PATH $INSTDIR
   ${WordReplace} $RXVT_PATH ":" ""  "+" $RXVT_PATH
   ${WordReplace} $RXVT_PATH "\" "/" "+" $RXVT_PATH
 
   # Write gap.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap-4.10.0\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.10.0/bin/gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # start "GAP" C:\gap-4.10.1\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.10.1/bin/gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   FileWrite $GAP_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAP_BAT $RXVT_PATH
   FileWrite $GAP_BAT "/terminfo"
@@ -207,7 +207,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAP_BAT "set PATH="
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -219,7 +219,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # start "GAP" C:\gap-4.10.0\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.10.0/gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # start "GAP" C:\gap-4.10.1\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.10.1/gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   FileWrite $GAP_BAT "start $\"GAP$\" " 
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\i686-pc-cygwin-default32\mintty.exe -s 120,40 /proc/cygdrive/"
@@ -244,19 +244,19 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gaprxvt.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.ISO-8859-1
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap-4.10.0\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.10.0/gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # start "GAP" C:\gap-4.10.1\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.10.1/gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPRXVT_BAT $INSTDIR\bin\gaprxvt.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   FileWrite $GAPRXVT_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPRXVT_BAT $RXVT_PATH
   FileWrite $GAPRXVT_BAT "/terminfo"
@@ -278,7 +278,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
 
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAPRXVT_BAT "set PATH="
   FileWrite $GAPRXVT_BAT $INSTDIR 
   FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -290,7 +290,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPRXVT_BAT "13"
     FileWriteByte $GAPRXVT_BAT "10"
 
-  # start "GAP" C:\gap-4.10.0\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.10.0/gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # start "GAP" C:\gap-4.10.1\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/C/gap-4.10.1/gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   FileWrite $GAPRXVT_BAT "start $\"GAP$\" " 
   FileWrite $GAPRXVT_BAT $INSTDIR
   FileWrite $GAPRXVT_BAT "\bin\i686-pc-cygwin-default32\rxvt.exe -fn fixedsys -sl 1000 -e /proc/cygdrive/"
@@ -314,19 +314,19 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gapcmd.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   # cd %HOME%
-  # C:\gap-4.10.0\gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # C:\gap-4.10.1\gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.10.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.10.1/terminfo
   FileWrite $GAPCMD_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH
   FileWrite $GAPCMD_BAT "/terminfo"
@@ -348,7 +348,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # set PATH=C:\gap-4.10.0\bin\i686-pc-cygwin-default32;%PATH%
+  # set PATH=C:\gap-4.10.1\bin\i686-pc-cygwin-default32;%PATH%
   FileWrite $GAPCMD_BAT "set PATH="
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\bin\i686-pc-cygwin-default32;%PATH%"
@@ -360,7 +360,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # C:\gap-4.10.0\gap.exe -l /proc/cygdrive/C/gap-4.10.0 %*
+  # C:\gap-4.10.1\gap.exe -l /proc/cygdrive/C/gap-4.10.1 %*
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\gap.exe -l /proc/cygdrive/"
   FileWrite $GAPCMD_BAT $RXVT_PATH 
@@ -407,7 +407,7 @@ SectionGroup "Needed packages" SecGAPpkgsNeeded
 Section "GAPDoc" SecGAPpkg_gapdoc 
 SectionIn RO 
 SetOutPath $INSTDIR\pkg\GAPDoc-1.6.2
-File /r gap-4.10.0\pkg\GAPDoc-1.6.2\*.* 
+File /r gap-4.10.1\pkg\GAPDoc-1.6.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -418,7 +418,7 @@ SectionEnd
 Section "PrimGrp" SecGAPpkg_primgrp 
 SectionIn RO 
 SetOutPath $INSTDIR\pkg\primgrp-3.3.2
-File /r gap-4.10.0\pkg\primgrp-3.3.2\*.* 
+File /r gap-4.10.1\pkg\primgrp-3.3.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -429,7 +429,7 @@ SectionEnd
 Section "SmallGrp" SecGAPpkg_smallgrp 
 SectionIn RO 
 SetOutPath $INSTDIR\pkg\SmallGrp-1.3
-File /r gap-4.10.0\pkg\SmallGrp-1.3\*.* 
+File /r gap-4.10.1\pkg\SmallGrp-1.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -440,7 +440,7 @@ SectionEnd
 Section "TransGrp" SecGAPpkg_transgrp 
 SectionIn RO 
 SetOutPath $INSTDIR\pkg\transgrp
-File /r gap-4.10.0\pkg\transgrp\*.* 
+File /r gap-4.10.1\pkg\transgrp\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -459,7 +459,7 @@ SectionGroup "Default packages" SecGAPpkgsDefault
 #
 Section "AClib" SecGAPpkg_aclib 
 SetOutPath $INSTDIR\pkg\aclib-1.3.1
-File /r gap-4.10.0\pkg\aclib-1.3.1\*.* 
+File /r gap-4.10.1\pkg\aclib-1.3.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -469,7 +469,7 @@ SectionEnd
 #
 Section "Alnuth" SecGAPpkg_alnuth 
 SetOutPath $INSTDIR\pkg\alnuth-3.1.0
-File /r gap-4.10.0\pkg\alnuth-3.1.0\*.* 
+File /r gap-4.10.1\pkg\alnuth-3.1.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -479,7 +479,7 @@ SectionEnd
 #
 Section "AtlasRep" SecGAPpkg_atlasrep 
 SetOutPath $INSTDIR\pkg\atlasrep
-File /r gap-4.10.0\pkg\atlasrep\*.* 
+File /r gap-4.10.1\pkg\atlasrep\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -488,8 +488,8 @@ SectionEnd
 # AutoDoc
 #
 Section "AutoDoc" SecGAPpkg_autodoc 
-SetOutPath $INSTDIR\pkg\AutoDoc-2018.09.20
-File /r gap-4.10.0\pkg\AutoDoc-2018.09.20\*.* 
+SetOutPath $INSTDIR\pkg\AutoDoc-2019.02.22
+File /r gap-4.10.1\pkg\AutoDoc-2019.02.22\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -499,7 +499,7 @@ SectionEnd
 #
 Section "AutPGrp" SecGAPpkg_autpgrp 
 SetOutPath $INSTDIR\pkg\autpgrp-1.10
-File /r gap-4.10.0\pkg\autpgrp-1.10\*.* 
+File /r gap-4.10.1\pkg\autpgrp-1.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -509,7 +509,7 @@ SectionEnd
 #
 Section "Browse" SecGAPpkg_browse 
 SetOutPath $INSTDIR\pkg\Browse
-File /r gap-4.10.0\pkg\Browse\*.* 
+File /r gap-4.10.1\pkg\Browse\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -519,7 +519,7 @@ SectionEnd
 #
 Section "CRISP" SecGAPpkg_crisp 
 SetOutPath $INSTDIR\pkg\crisp-1.4.4
-File /r gap-4.10.0\pkg\crisp-1.4.4\*.* 
+File /r gap-4.10.1\pkg\crisp-1.4.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -529,7 +529,7 @@ SectionEnd
 #
 Section "Cryst" SecGAPpkg_cryst 
 SetOutPath $INSTDIR\pkg\cryst
-File /r gap-4.10.0\pkg\cryst\*.* 
+File /r gap-4.10.1\pkg\cryst\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -539,7 +539,7 @@ SectionEnd
 #
 Section "CrystCat" SecGAPpkg_crystcat 
 SetOutPath $INSTDIR\pkg\crystcat
-File /r gap-4.10.0\pkg\crystcat\*.* 
+File /r gap-4.10.1\pkg\crystcat\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -549,7 +549,7 @@ SectionEnd
 #
 Section "CTblLib" SecGAPpkg_ctbllib 
 SetOutPath $INSTDIR\pkg\ctbllib
-File /r gap-4.10.0\pkg\ctbllib\*.* 
+File /r gap-4.10.1\pkg\ctbllib\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -559,7 +559,7 @@ SectionEnd
 #
 Section "DESIGN" SecGAPpkg_design 
 SetOutPath $INSTDIR\pkg\design
-File /r gap-4.10.0\pkg\design\*.* 
+File /r gap-4.10.1\pkg\design\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -569,7 +569,7 @@ SectionEnd
 #
 Section "Example" SecGAPpkg_example 
 SetOutPath $INSTDIR\pkg\Example-4.1.1
-File /r gap-4.10.0\pkg\Example-4.1.1\*.* 
+File /r gap-4.10.1\pkg\Example-4.1.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -579,7 +579,7 @@ SectionEnd
 #
 Section "FactInt" SecGAPpkg_factint 
 SetOutPath $INSTDIR\pkg\FactInt-1.6.2
-File /r gap-4.10.0\pkg\FactInt-1.6.2\*.* 
+File /r gap-4.10.1\pkg\FactInt-1.6.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -589,7 +589,7 @@ SectionEnd
 #
 Section "FGA" SecGAPpkg_fga 
 SetOutPath $INSTDIR\pkg\fga
-File /r gap-4.10.0\pkg\fga\*.* 
+File /r gap-4.10.1\pkg\fga\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -599,7 +599,7 @@ SectionEnd
 #
 Section "GRAPE" SecGAPpkg_grape 
 SetOutPath $INSTDIR\pkg\grape-4.8.1
-File /r gap-4.10.0\pkg\grape-4.8.1\*.* 
+File /r gap-4.10.1\pkg\grape-4.8.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -609,7 +609,7 @@ SectionEnd
 #
 Section "GUAVA" SecGAPpkg_guava 
 SetOutPath $INSTDIR\pkg\guava-3.14
-File /r gap-4.10.0\pkg\guava-3.14\*.* 
+File /r gap-4.10.1\pkg\guava-3.14\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -619,7 +619,7 @@ SectionEnd
 #
 Section "IO" SecGAPpkg_io 
 SetOutPath $INSTDIR\pkg\io-4.5.4
-File /r gap-4.10.0\pkg\io-4.5.4\*.* 
+File /r gap-4.10.1\pkg\io-4.5.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -629,7 +629,7 @@ SectionEnd
 #
 Section "IRREDSOL" SecGAPpkg_irredsol 
 SetOutPath $INSTDIR\pkg\irredsol-1.4
-File /r gap-4.10.0\pkg\irredsol-1.4\*.* 
+File /r gap-4.10.1\pkg\irredsol-1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -638,8 +638,8 @@ SectionEnd
 # LAGUNA
 #
 Section "LAGUNA" SecGAPpkg_laguna 
-SetOutPath $INSTDIR\pkg\laguna-3.9.0
-File /r gap-4.10.0\pkg\laguna-3.9.0\*.* 
+SetOutPath $INSTDIR\pkg\laguna-3.9.2
+File /r gap-4.10.1\pkg\laguna-3.9.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -649,7 +649,7 @@ SectionEnd
 #
 Section "Polenta" SecGAPpkg_polenta 
 SetOutPath $INSTDIR\pkg\polenta-1.3.8
-File /r gap-4.10.0\pkg\polenta-1.3.8\*.* 
+File /r gap-4.10.1\pkg\polenta-1.3.8\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -659,7 +659,7 @@ SectionEnd
 #
 Section "Polycyclic" SecGAPpkg_polycyclic 
 SetOutPath $INSTDIR\pkg\polycyclic-2.14
-File /r gap-4.10.0\pkg\polycyclic-2.14\*.* 
+File /r gap-4.10.1\pkg\polycyclic-2.14\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -669,7 +669,7 @@ SectionEnd
 #
 Section "RadiRoot" SecGAPpkg_radiroot 
 SetOutPath $INSTDIR\pkg\radiroot-2.8
-File /r gap-4.10.0\pkg\radiroot-2.8\*.* 
+File /r gap-4.10.1\pkg\radiroot-2.8\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -679,7 +679,7 @@ SectionEnd
 #
 Section "ResClasses" SecGAPpkg_resclasses 
 SetOutPath $INSTDIR\pkg\resclasses-4.7.1
-File /r gap-4.10.0\pkg\resclasses-4.7.1\*.* 
+File /r gap-4.10.1\pkg\resclasses-4.7.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -689,7 +689,7 @@ SectionEnd
 #
 Section "SONATA" SecGAPpkg_sonata 
 SetOutPath $INSTDIR\pkg\sonata-2.9.1
-File /r gap-4.10.0\pkg\sonata-2.9.1\*.* 
+File /r gap-4.10.1\pkg\sonata-2.9.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -699,7 +699,7 @@ SectionEnd
 #
 Section "Sophus" SecGAPpkg_sophus 
 SetOutPath $INSTDIR\pkg\sophus-1.24
-File /r gap-4.10.0\pkg\sophus-1.24\*.* 
+File /r gap-4.10.1\pkg\sophus-1.24\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -709,7 +709,7 @@ SectionEnd
 #
 Section "SpinSym" SecGAPpkg_spinsym 
 SetOutPath $INSTDIR\pkg\spinsym
-File /r gap-4.10.0\pkg\spinsym\*.* 
+File /r gap-4.10.1\pkg\spinsym\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -719,7 +719,7 @@ SectionEnd
 #
 Section "TomLib" SecGAPpkg_tomlib 
 SetOutPath $INSTDIR\pkg\tomlib-1.2.7
-File /r gap-4.10.0\pkg\tomlib-1.2.7\*.* 
+File /r gap-4.10.1\pkg\tomlib-1.2.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -728,8 +728,8 @@ SectionEnd
 # utils
 #
 Section "utils" SecGAPpkg_utils 
-SetOutPath $INSTDIR\pkg\utils-0.59
-File /r gap-4.10.0\pkg\utils-0.59\*.* 
+SetOutPath $INSTDIR\pkg\utils-0.61
+File /r gap-4.10.1\pkg\utils-0.61\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -748,7 +748,7 @@ SectionGroup "Specialised  packages" SecGAPpkgsSpecial
 #
 Section "4ti2Interface" SecGAPpkg_4ti2interface 
 SetOutPath $INSTDIR\pkg\4ti2Interface-2018.07.06
-File /r gap-4.10.0\pkg\4ti2Interface-2018.07.06\*.* 
+File /r gap-4.10.1\pkg\4ti2Interface-2018.07.06\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -758,7 +758,7 @@ SectionEnd
 #
 Section "Automata" SecGAPpkg_automata 
 SetOutPath $INSTDIR\pkg\automata-1.14
-File /r gap-4.10.0\pkg\automata-1.14\*.* 
+File /r gap-4.10.1\pkg\automata-1.14\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -768,7 +768,7 @@ SectionEnd
 #
 Section "AutomGrp" SecGAPpkg_automgrp 
 SetOutPath $INSTDIR\pkg\automgrp
-File /r gap-4.10.0\pkg\automgrp\*.* 
+File /r gap-4.10.1\pkg\automgrp\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -778,7 +778,7 @@ SectionEnd
 #
 Section "CAP" SecGAPpkg_cap 
 SetOutPath $INSTDIR\pkg\CAP-2018.08.31
-File /r gap-4.10.0\pkg\CAP-2018.08.31\*.* 
+File /r gap-4.10.1\pkg\CAP-2018.08.31\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -788,7 +788,7 @@ SectionEnd
 #
 Section "Circle" SecGAPpkg_circle 
 SetOutPath $INSTDIR\pkg\circle-1.6.1
-File /r gap-4.10.0\pkg\circle-1.6.1\*.* 
+File /r gap-4.10.1\pkg\circle-1.6.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -798,7 +798,7 @@ SectionEnd
 #
 Section "cohomolo" SecGAPpkg_cohomolo 
 SetOutPath $INSTDIR\pkg\cohomolo-1.6.7
-File /r gap-4.10.0\pkg\cohomolo-1.6.7\*.* 
+File /r gap-4.10.1\pkg\cohomolo-1.6.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -808,7 +808,7 @@ SectionEnd
 #
 Section "Congruence" SecGAPpkg_congruence 
 SetOutPath $INSTDIR\pkg\congruence-1.2.2
-File /r gap-4.10.0\pkg\congruence-1.2.2\*.* 
+File /r gap-4.10.1\pkg\congruence-1.2.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -818,7 +818,7 @@ SectionEnd
 #
 Section "Convex" SecGAPpkg_convex 
 SetOutPath $INSTDIR\pkg\Convex
-File /r gap-4.10.0\pkg\Convex\*.* 
+File /r gap-4.10.1\pkg\Convex\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -828,7 +828,7 @@ SectionEnd
 #
 Section "CoReLG" SecGAPpkg_corelg 
 SetOutPath $INSTDIR\pkg\corelg
-File /r gap-4.10.0\pkg\corelg\*.* 
+File /r gap-4.10.1\pkg\corelg\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -838,7 +838,7 @@ SectionEnd
 #
 Section "CRIME" SecGAPpkg_crime 
 SetOutPath $INSTDIR\pkg\crime-1.5
-File /r gap-4.10.0\pkg\crime-1.5\*.* 
+File /r gap-4.10.1\pkg\crime-1.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -848,7 +848,7 @@ SectionEnd
 #
 Section "crypting" SecGAPpkg_crypting 
 SetOutPath $INSTDIR\pkg\crypting-0.9
-File /r gap-4.10.0\pkg\crypting-0.9\*.* 
+File /r gap-4.10.1\pkg\crypting-0.9\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -858,7 +858,7 @@ SectionEnd
 #
 Section "Cubefree" SecGAPpkg_cubefree 
 SetOutPath $INSTDIR\pkg\cubefree
-File /r gap-4.10.0\pkg\cubefree\*.* 
+File /r gap-4.10.1\pkg\cubefree\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -868,7 +868,7 @@ SectionEnd
 #
 Section "curlInterface" SecGAPpkg_curlinterface 
 SetOutPath $INSTDIR\pkg\curlInterface-2.1.1
-File /r gap-4.10.0\pkg\curlInterface-2.1.1\*.* 
+File /r gap-4.10.1\pkg\curlInterface-2.1.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -877,8 +877,8 @@ SectionEnd
 # cvec
 #
 Section "cvec" SecGAPpkg_cvec 
-SetOutPath $INSTDIR\pkg\cvec-2.6.1
-File /r gap-4.10.0\pkg\cvec-2.6.1\*.* 
+SetOutPath $INSTDIR\pkg\cvec-2.7.1
+File /r gap-4.10.1\pkg\cvec-2.7.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -887,8 +887,8 @@ SectionEnd
 # datastructures
 #
 Section "datastructures" SecGAPpkg_datastructures 
-SetOutPath $INSTDIR\pkg\datastructures-0.2.2
-File /r gap-4.10.0\pkg\datastructures-0.2.2\*.* 
+SetOutPath $INSTDIR\pkg\datastructures-0.2.3
+File /r gap-4.10.1\pkg\datastructures-0.2.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -898,7 +898,7 @@ SectionEnd
 #
 Section "DeepThought" SecGAPpkg_deepthought 
 SetOutPath $INSTDIR\pkg\DeepThought-1.0.2
-File /r gap-4.10.0\pkg\DeepThought-1.0.2\*.* 
+File /r gap-4.10.1\pkg\DeepThought-1.0.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -908,7 +908,7 @@ SectionEnd
 #
 Section "EDIM" SecGAPpkg_edim 
 SetOutPath $INSTDIR\pkg\EDIM-1.3.3
-File /r gap-4.10.0\pkg\EDIM-1.3.3\*.* 
+File /r gap-4.10.1\pkg\EDIM-1.3.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -918,7 +918,7 @@ SectionEnd
 #
 Section "ExamplesForHomalg" SecGAPpkg_examplesforhomalg 
 SetOutPath $INSTDIR\pkg\ExamplesForHomalg-2018.05.29
-File /r gap-4.10.0\pkg\ExamplesForHomalg-2018.05.29\*.* 
+File /r gap-4.10.1\pkg\ExamplesForHomalg-2018.05.29\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -928,7 +928,7 @@ SectionEnd
 #
 Section "FinInG" SecGAPpkg_fining 
 SetOutPath $INSTDIR\pkg\fining
-File /r gap-4.10.0\pkg\fining\*.* 
+File /r gap-4.10.1\pkg\fining\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -938,7 +938,7 @@ SectionEnd
 #
 Section "FORMAT" SecGAPpkg_format 
 SetOutPath $INSTDIR\pkg\format-1.4a
-File /r gap-4.10.0\pkg\format-1.4a\*.* 
+File /r gap-4.10.1\pkg\format-1.4a\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -948,7 +948,7 @@ SectionEnd
 #
 Section "Forms" SecGAPpkg_forms 
 SetOutPath $INSTDIR\pkg\forms
-File /r gap-4.10.0\pkg\forms\*.* 
+File /r gap-4.10.1\pkg\forms\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -958,7 +958,7 @@ SectionEnd
 #
 Section "FPLSA" SecGAPpkg_fplsa 
 SetOutPath $INSTDIR\pkg\FPLSA-1.2.2
-File /r gap-4.10.0\pkg\FPLSA-1.2.2\*.* 
+File /r gap-4.10.1\pkg\FPLSA-1.2.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -967,8 +967,18 @@ SectionEnd
 # FR
 #
 Section "FR" SecGAPpkg_fr 
-SetOutPath $INSTDIR\pkg\fr-2.4.5
-File /r gap-4.10.0\pkg\fr-2.4.5\*.* 
+SetOutPath $INSTDIR\pkg\fr-2.4.6
+File /r gap-4.10.1\pkg\fr-2.4.6\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# Francy
+#
+Section "Francy" SecGAPpkg_francy 
+SetOutPath $INSTDIR\pkg\francy-1.0.4
+File /r gap-4.10.1\pkg\francy-1.0.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -978,7 +988,7 @@ SectionEnd
 #
 Section "Gauss" SecGAPpkg_gauss 
 SetOutPath $INSTDIR\pkg\Gauss-2018.09.08
-File /r gap-4.10.0\pkg\Gauss-2018.09.08\*.* 
+File /r gap-4.10.1\pkg\Gauss-2018.09.08\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -988,7 +998,7 @@ SectionEnd
 #
 Section "GaussForHomalg" SecGAPpkg_gaussforhomalg 
 SetOutPath $INSTDIR\pkg\GaussForHomalg-2018.06.01
-File /r gap-4.10.0\pkg\GaussForHomalg-2018.06.01\*.* 
+File /r gap-4.10.1\pkg\GaussForHomalg-2018.06.01\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -998,7 +1008,7 @@ SectionEnd
 #
 Section "GBNP" SecGAPpkg_gbnp 
 SetOutPath $INSTDIR\pkg\gbnp
-File /r gap-4.10.0\pkg\gbnp\*.* 
+File /r gap-4.10.1\pkg\gbnp\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1008,7 +1018,7 @@ SectionEnd
 #
 Section "GeneralizedMorphismsForCAP" SecGAPpkg_generalizedmorphismsforcap 
 SetOutPath $INSTDIR\pkg\GeneralizedMorphismsForCAP-2018.06.15
-File /r gap-4.10.0\pkg\GeneralizedMorphismsForCAP-2018.06.15\*.* 
+File /r gap-4.10.1\pkg\GeneralizedMorphismsForCAP-2018.06.15\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1018,7 +1028,7 @@ SectionEnd
 #
 Section "genss" SecGAPpkg_genss 
 SetOutPath $INSTDIR\pkg\genss-1.6.5
-File /r gap-4.10.0\pkg\genss-1.6.5\*.* 
+File /r gap-4.10.1\pkg\genss-1.6.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1028,7 +1038,7 @@ SectionEnd
 #
 Section "GradedModules" SecGAPpkg_gradedmodules 
 SetOutPath $INSTDIR\pkg\GradedModules-2018.02.04
-File /r gap-4.10.0\pkg\GradedModules-2018.02.04\*.* 
+File /r gap-4.10.1\pkg\GradedModules-2018.02.04\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1038,7 +1048,7 @@ SectionEnd
 #
 Section "GradedRingForHomalg" SecGAPpkg_gradedringforhomalg 
 SetOutPath $INSTDIR\pkg\GradedRingForHomalg-2018.02.04
-File /r gap-4.10.0\pkg\GradedRingForHomalg-2018.02.04\*.* 
+File /r gap-4.10.1\pkg\GradedRingForHomalg-2018.02.04\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1048,7 +1058,7 @@ SectionEnd
 #
 Section "groupoids" SecGAPpkg_groupoids 
 SetOutPath $INSTDIR\pkg\groupoids-1.63
-File /r gap-4.10.0\pkg\groupoids-1.63\*.* 
+File /r gap-4.10.1\pkg\groupoids-1.63\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1058,7 +1068,7 @@ SectionEnd
 #
 Section "GrpConst" SecGAPpkg_grpconst 
 SetOutPath $INSTDIR\pkg\grpconst-2.6.1
-File /r gap-4.10.0\pkg\grpconst-2.6.1\*.* 
+File /r gap-4.10.1\pkg\grpconst-2.6.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1067,8 +1077,8 @@ SectionEnd
 # Guarana
 #
 Section "Guarana" SecGAPpkg_guarana 
-SetOutPath $INSTDIR\pkg\guarana-0.96.1
-File /r gap-4.10.0\pkg\guarana-0.96.1\*.* 
+SetOutPath $INSTDIR\pkg\guarana-0.96.2
+File /r gap-4.10.1\pkg\guarana-0.96.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1077,8 +1087,8 @@ SectionEnd
 # HAP
 #
 Section "HAP" SecGAPpkg_hap 
-SetOutPath $INSTDIR\pkg\Hap1.15
-File /r gap-4.10.0\pkg\Hap1.15\*.* 
+SetOutPath $INSTDIR\pkg\Hap1.19
+File /r gap-4.10.1\pkg\Hap1.19\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1088,7 +1098,7 @@ SectionEnd
 #
 Section "HAPcryst" SecGAPpkg_hapcryst 
 SetOutPath $INSTDIR\pkg\HAPcryst
-File /r gap-4.10.0\pkg\HAPcryst\*.* 
+File /r gap-4.10.1\pkg\HAPcryst\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1097,8 +1107,8 @@ SectionEnd
 # hecke
 #
 Section "hecke" SecGAPpkg_hecke 
-SetOutPath $INSTDIR\pkg\hecke-1.5
-File /r gap-4.10.0\pkg\hecke-1.5\*.* 
+SetOutPath $INSTDIR\pkg\hecke-1.5.2
+File /r gap-4.10.1\pkg\hecke-1.5.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1108,7 +1118,7 @@ SectionEnd
 #
 Section "homalg" SecGAPpkg_homalg 
 SetOutPath $INSTDIR\pkg\homalg-2017.10.26
-File /r gap-4.10.0\pkg\homalg-2017.10.26\*.* 
+File /r gap-4.10.1\pkg\homalg-2017.10.26\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1118,7 +1128,7 @@ SectionEnd
 #
 Section "HomalgToCAS" SecGAPpkg_homalgtocas 
 SetOutPath $INSTDIR\pkg\HomalgToCAS-2018.06.15
-File /r gap-4.10.0\pkg\HomalgToCAS-2018.06.15\*.* 
+File /r gap-4.10.1\pkg\HomalgToCAS-2018.06.15\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1128,7 +1138,7 @@ SectionEnd
 #
 Section "idrel" SecGAPpkg_idrel 
 SetOutPath $INSTDIR\pkg\idrel-2.42
-File /r gap-4.10.0\pkg\idrel-2.42\*.* 
+File /r gap-4.10.1\pkg\idrel-2.42\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1138,7 +1148,7 @@ SectionEnd
 #
 Section "IntPic" SecGAPpkg_intpic 
 SetOutPath $INSTDIR\pkg\IntPic-0.2.3
-File /r gap-4.10.0\pkg\IntPic-0.2.3\*.* 
+File /r gap-4.10.1\pkg\IntPic-0.2.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1148,7 +1158,37 @@ SectionEnd
 #
 Section "IO_ForHomalg" SecGAPpkg_io_forhomalg 
 SetOutPath $INSTDIR\pkg\IO_ForHomalg-2017.09.02
-File /r gap-4.10.0\pkg\IO_ForHomalg-2017.09.02\*.* 
+File /r gap-4.10.1\pkg\IO_ForHomalg-2017.09.02\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# json
+#
+Section "json" SecGAPpkg_json 
+SetOutPath $INSTDIR\pkg\json-2.0.0
+File /r gap-4.10.1\pkg\json-2.0.0\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# JupyterKernel
+#
+Section "JupyterKernel" SecGAPpkg_jupyterkernel 
+SetOutPath $INSTDIR\pkg\JupyterKernel-1.3
+File /r gap-4.10.1\pkg\JupyterKernel-1.3\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# JupyterViz
+#
+Section "JupyterViz" SecGAPpkg_jupyterviz 
+SetOutPath $INSTDIR\pkg\jupyterviz-1.4.0
+File /r gap-4.10.1\pkg\jupyterviz-1.4.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1158,7 +1198,7 @@ SectionEnd
 #
 Section "kan" SecGAPpkg_kan 
 SetOutPath $INSTDIR\pkg\kan-1.28
-File /r gap-4.10.0\pkg\kan-1.28\*.* 
+File /r gap-4.10.1\pkg\kan-1.28\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1167,8 +1207,8 @@ SectionEnd
 # kbmag
 #
 Section "kbmag" SecGAPpkg_kbmag 
-SetOutPath $INSTDIR\pkg\kbmag-1.5.6
-File /r gap-4.10.0\pkg\kbmag-1.5.6\*.* 
+SetOutPath $INSTDIR\pkg\kbmag-1.5.8
+File /r gap-4.10.1\pkg\kbmag-1.5.8\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1178,7 +1218,7 @@ SectionEnd
 #
 Section "LieAlgDB" SecGAPpkg_liealgdb 
 SetOutPath $INSTDIR\pkg\liealgdb-2.2
-File /r gap-4.10.0\pkg\liealgdb-2.2\*.* 
+File /r gap-4.10.1\pkg\liealgdb-2.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1188,7 +1228,7 @@ SectionEnd
 #
 Section "LiePRing" SecGAPpkg_liepring 
 SetOutPath $INSTDIR\pkg\liepring-1.9.2
-File /r gap-4.10.0\pkg\liepring-1.9.2\*.* 
+File /r gap-4.10.1\pkg\liepring-1.9.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1197,8 +1237,8 @@ SectionEnd
 # LieRing
 #
 Section "LieRing" SecGAPpkg_liering 
-SetOutPath $INSTDIR\pkg\liering
-File /r gap-4.10.0\pkg\liering\*.* 
+SetOutPath $INSTDIR\pkg\liering-2.4
+File /r gap-4.10.1\pkg\liering-2.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1208,7 +1248,7 @@ SectionEnd
 #
 Section "LinearAlgebraForCAP" SecGAPpkg_linearalgebraforcap 
 SetOutPath $INSTDIR\pkg\LinearAlgebraForCAP-2018.02.07
-File /r gap-4.10.0\pkg\LinearAlgebraForCAP-2018.02.07\*.* 
+File /r gap-4.10.1\pkg\LinearAlgebraForCAP-2018.02.07\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1218,7 +1258,7 @@ SectionEnd
 #
 Section "LocalizeRingForHomalg" SecGAPpkg_localizeringforhomalg 
 SetOutPath $INSTDIR\pkg\LocalizeRingForHomalg-2018.02.04
-File /r gap-4.10.0\pkg\LocalizeRingForHomalg-2018.02.04\*.* 
+File /r gap-4.10.1\pkg\LocalizeRingForHomalg-2018.02.04\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1227,8 +1267,8 @@ SectionEnd
 # loops
 #
 Section "loops" SecGAPpkg_loops 
-SetOutPath $INSTDIR\pkg\loops
-File /r gap-4.10.0\pkg\loops\*.* 
+SetOutPath $INSTDIR\pkg\loops-3.4.1
+File /r gap-4.10.1\pkg\loops-3.4.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1237,8 +1277,18 @@ SectionEnd
 # lpres
 #
 Section "lpres" SecGAPpkg_lpres 
-SetOutPath $INSTDIR\pkg\lpres-1.0.0
-File /r gap-4.10.0\pkg\lpres-1.0.0\*.* 
+SetOutPath $INSTDIR\pkg\lpres-1.0.1
+File /r gap-4.10.1\pkg\lpres-1.0.1\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# MajoranaAlgebras
+#
+Section "MajoranaAlgebras" SecGAPpkg_majoranaalgebras 
+SetOutPath $INSTDIR\pkg\MajoranaAlgebras-1.4
+File /r gap-4.10.1\pkg\MajoranaAlgebras-1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1247,8 +1297,8 @@ SectionEnd
 # MapClass
 #
 Section "MapClass" SecGAPpkg_mapclass 
-SetOutPath $INSTDIR\pkg\MapClass-1.4.3
-File /r gap-4.10.0\pkg\MapClass-1.4.3\*.* 
+SetOutPath $INSTDIR\pkg\MapClass-1.4.4
+File /r gap-4.10.1\pkg\MapClass-1.4.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1258,7 +1308,7 @@ SectionEnd
 #
 Section "matgrp" SecGAPpkg_matgrp 
 SetOutPath $INSTDIR\pkg\matgrp
-File /r gap-4.10.0\pkg\matgrp\*.* 
+File /r gap-4.10.1\pkg\matgrp\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1268,7 +1318,7 @@ SectionEnd
 #
 Section "MatricesForHomalg" SecGAPpkg_matricesforhomalg 
 SetOutPath $INSTDIR\pkg\MatricesForHomalg-2018.08.25
-File /r gap-4.10.0\pkg\MatricesForHomalg-2018.08.25\*.* 
+File /r gap-4.10.1\pkg\MatricesForHomalg-2018.08.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1277,8 +1327,8 @@ SectionEnd
 # ModIsom
 #
 Section "ModIsom" SecGAPpkg_modisom 
-SetOutPath $INSTDIR\pkg\modisom-2.4.0
-File /r gap-4.10.0\pkg\modisom-2.4.0\*.* 
+SetOutPath $INSTDIR\pkg\modisom-2.5.0
+File /r gap-4.10.1\pkg\modisom-2.5.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1288,7 +1338,7 @@ SectionEnd
 #
 Section "ModulePresentationsForCAP" SecGAPpkg_modulepresentationsforcap 
 SetOutPath $INSTDIR\pkg\ModulePresentationsForCAP-2018.02.02
-File /r gap-4.10.0\pkg\ModulePresentationsForCAP-2018.02.02\*.* 
+File /r gap-4.10.1\pkg\ModulePresentationsForCAP-2018.02.02\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1298,7 +1348,7 @@ SectionEnd
 #
 Section "Modules" SecGAPpkg_modules 
 SetOutPath $INSTDIR\pkg\Modules-2018.08.24
-File /r gap-4.10.0\pkg\Modules-2018.08.24\*.* 
+File /r gap-4.10.1\pkg\Modules-2018.08.24\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1308,7 +1358,7 @@ SectionEnd
 #
 Section "Nilmat" SecGAPpkg_nilmat 
 SetOutPath $INSTDIR\pkg\nilmat-1.3
-File /r gap-4.10.0\pkg\nilmat-1.3\*.* 
+File /r gap-4.10.1\pkg\nilmat-1.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1317,8 +1367,8 @@ SectionEnd
 # nq
 #
 Section "nq" SecGAPpkg_nq 
-SetOutPath $INSTDIR\pkg\nq-2.5.3
-File /r gap-4.10.0\pkg\nq-2.5.3\*.* 
+SetOutPath $INSTDIR\pkg\nq-2.5.4
+File /r gap-4.10.1\pkg\nq-2.5.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1327,8 +1377,8 @@ SectionEnd
 # NumericalSgps
 #
 Section "NumericalSgps" SecGAPpkg_numericalsgps 
-SetOutPath $INSTDIR\pkg\NumericalSgps-1.1.8
-File /r gap-4.10.0\pkg\NumericalSgps-1.1.8\*.* 
+SetOutPath $INSTDIR\pkg\NumericalSgps-1.1.10
+File /r gap-4.10.1\pkg\NumericalSgps-1.1.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1338,7 +1388,7 @@ SectionEnd
 #
 Section "OpenMath" SecGAPpkg_openmath 
 SetOutPath $INSTDIR\pkg\OpenMath-11.4.2
-File /r gap-4.10.0\pkg\OpenMath-11.4.2\*.* 
+File /r gap-4.10.1\pkg\OpenMath-11.4.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1347,8 +1397,18 @@ SectionEnd
 # orb
 #
 Section "orb" SecGAPpkg_orb 
-SetOutPath $INSTDIR\pkg\orb-4.8.1
-File /r gap-4.10.0\pkg\orb-4.8.1\*.* 
+SetOutPath $INSTDIR\pkg\orb-4.8.2
+File /r gap-4.10.1\pkg\orb-4.8.2\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# PackageManager
+#
+Section "PackageManager" SecGAPpkg_packagemanager 
+SetOutPath $INSTDIR\pkg\PackageManager-0.2.3
+File /r gap-4.10.1\pkg\PackageManager-0.2.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1358,7 +1418,7 @@ SectionEnd
 #
 Section "PatternClass" SecGAPpkg_patternclass 
 SetOutPath $INSTDIR\pkg\PatternClass-2.4.2
-File /r gap-4.10.0\pkg\PatternClass-2.4.2\*.* 
+File /r gap-4.10.1\pkg\PatternClass-2.4.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1368,7 +1428,7 @@ SectionEnd
 #
 Section "permut" SecGAPpkg_permut 
 SetOutPath $INSTDIR\pkg\permut-2.0.3
-File /r gap-4.10.0\pkg\permut-2.0.3\*.* 
+File /r gap-4.10.1\pkg\permut-2.0.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1377,8 +1437,18 @@ SectionEnd
 # polymaking
 #
 Section "polymaking" SecGAPpkg_polymaking 
-SetOutPath $INSTDIR\pkg\polymaking
-File /r gap-4.10.0\pkg\polymaking\*.* 
+SetOutPath $INSTDIR\pkg\polymaking-0.8.2
+File /r gap-4.10.1\pkg\polymaking-0.8.2\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# profiling
+#
+Section "profiling" SecGAPpkg_profiling 
+SetOutPath $INSTDIR\pkg\profiling-2.0.1
+File /r gap-4.10.1\pkg\profiling-2.0.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1388,7 +1458,7 @@ SectionEnd
 #
 Section "qaos" SecGAPpkg_qaos 
 SetOutPath $INSTDIR\pkg\qaos-1.6
-File /r gap-4.10.0\pkg\qaos-1.6\*.* 
+File /r gap-4.10.1\pkg\qaos-1.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1398,7 +1468,7 @@ SectionEnd
 #
 Section "QPA" SecGAPpkg_qpa 
 SetOutPath $INSTDIR\pkg\qpa-version-1.29
-File /r gap-4.10.0\pkg\qpa-version-1.29\*.* 
+File /r gap-4.10.1\pkg\qpa-version-1.29\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1408,7 +1478,7 @@ SectionEnd
 #
 Section "QuaGroup" SecGAPpkg_quagroup 
 SetOutPath $INSTDIR\pkg\quagroup
-File /r gap-4.10.0\pkg\quagroup\*.* 
+File /r gap-4.10.1\pkg\quagroup\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1417,8 +1487,8 @@ SectionEnd
 # RCWA
 #
 Section "RCWA" SecGAPpkg_rcwa 
-SetOutPath $INSTDIR\pkg\rcwa-4.6.2
-File /r gap-4.10.0\pkg\rcwa-4.6.2\*.* 
+SetOutPath $INSTDIR\pkg\rcwa-4.6.3
+File /r gap-4.10.1\pkg\rcwa-4.6.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1427,8 +1497,8 @@ SectionEnd
 # RDS
 #
 Section "RDS" SecGAPpkg_rds 
-SetOutPath $INSTDIR\pkg\rds
-File /r gap-4.10.0\pkg\rds\*.* 
+SetOutPath $INSTDIR\pkg\rds-1.7
+File /r gap-4.10.1\pkg\rds-1.7\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1438,7 +1508,7 @@ SectionEnd
 #
 Section "recog" SecGAPpkg_recog 
 SetOutPath $INSTDIR\pkg\recog-1.3.1
-File /r gap-4.10.0\pkg\recog-1.3.1\*.* 
+File /r gap-4.10.1\pkg\recog-1.3.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1447,8 +1517,8 @@ SectionEnd
 # Repsn
 #
 Section "Repsn" SecGAPpkg_repsn 
-SetOutPath $INSTDIR\pkg\repsn
-File /r gap-4.10.0\pkg\repsn\*.* 
+SetOutPath $INSTDIR\pkg\repsn-3.1.0
+File /r gap-4.10.1\pkg\repsn-3.1.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1458,7 +1528,7 @@ SectionEnd
 #
 Section "RingsForHomalg" SecGAPpkg_ringsforhomalg 
 SetOutPath $INSTDIR\pkg\RingsForHomalg-2018.04.04
-File /r gap-4.10.0\pkg\RingsForHomalg-2018.04.04\*.* 
+File /r gap-4.10.1\pkg\RingsForHomalg-2018.04.04\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1468,7 +1538,7 @@ SectionEnd
 #
 Section "SCO" SecGAPpkg_sco 
 SetOutPath $INSTDIR\pkg\SCO-2017.09.10
-File /r gap-4.10.0\pkg\SCO-2017.09.10\*.* 
+File /r gap-4.10.1\pkg\SCO-2017.09.10\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1478,7 +1548,7 @@ SectionEnd
 #
 Section "SCSCP" SecGAPpkg_scscp 
 SetOutPath $INSTDIR\pkg\SCSCP-2.2.3
-File /r gap-4.10.0\pkg\SCSCP-2.2.3\*.* 
+File /r gap-4.10.1\pkg\SCSCP-2.2.3\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1488,7 +1558,7 @@ SectionEnd
 #
 Section "SglPPow" SecGAPpkg_sglppow 
 SetOutPath $INSTDIR\pkg\sglppow-2.1
-File /r gap-4.10.0\pkg\sglppow-2.1\*.* 
+File /r gap-4.10.1\pkg\sglppow-2.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1498,7 +1568,7 @@ SectionEnd
 #
 Section "SgpViz" SecGAPpkg_sgpviz 
 SetOutPath $INSTDIR\pkg\SgpViz-0.999.4
-File /r gap-4.10.0\pkg\SgpViz-0.999.4\*.* 
+File /r gap-4.10.1\pkg\SgpViz-0.999.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1508,7 +1578,7 @@ SectionEnd
 #
 Section "simpcomp" SecGAPpkg_simpcomp 
 SetOutPath $INSTDIR\pkg\simpcomp
-File /r gap-4.10.0\pkg\simpcomp\*.* 
+File /r gap-4.10.1\pkg\simpcomp\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1517,8 +1587,8 @@ SectionEnd
 # singular
 #
 Section "singular" SecGAPpkg_singular 
-SetOutPath $INSTDIR\pkg\singular-2018.09.10
-File /r gap-4.10.0\pkg\singular-2018.09.10\*.* 
+SetOutPath $INSTDIR\pkg\singular-2019.02.22
+File /r gap-4.10.1\pkg\singular-2019.02.22\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1527,8 +1597,8 @@ SectionEnd
 # SLA
 #
 Section "SLA" SecGAPpkg_sla 
-SetOutPath $INSTDIR\pkg\sla
-File /r gap-4.10.0\pkg\sla\*.* 
+SetOutPath $INSTDIR\pkg\sla-1.5.1
+File /r gap-4.10.1\pkg\sla-1.5.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1538,7 +1608,7 @@ SectionEnd
 #
 Section "Smallsemi" SecGAPpkg_smallsemi 
 SetOutPath $INSTDIR\pkg\smallsemi-0.6.11
-File /r gap-4.10.0\pkg\smallsemi-0.6.11\*.* 
+File /r gap-4.10.1\pkg\smallsemi-0.6.11\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1548,7 +1618,17 @@ SectionEnd
 #
 Section "SymbCompCC" SecGAPpkg_symbcompcc 
 SetOutPath $INSTDIR\pkg\SymbCompCC-1.3
-File /r gap-4.10.0\pkg\SymbCompCC-1.3\*.* 
+File /r gap-4.10.1\pkg\SymbCompCC-1.3\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# Thelma
+#
+Section "Thelma" SecGAPpkg_thelma 
+SetOutPath $INSTDIR\pkg\Thelma-1.02
+File /r gap-4.10.1\pkg\Thelma-1.02\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1558,7 +1638,7 @@ SectionEnd
 #
 Section "ToolsForHomalg" SecGAPpkg_toolsforhomalg 
 SetOutPath $INSTDIR\pkg\ToolsForHomalg-2018.05.22
-File /r gap-4.10.0\pkg\ToolsForHomalg-2018.05.22\*.* 
+File /r gap-4.10.1\pkg\ToolsForHomalg-2018.05.22\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1568,7 +1648,7 @@ SectionEnd
 #
 Section "Toric" SecGAPpkg_toric 
 SetOutPath $INSTDIR\pkg\Toric-1.9.4
-File /r gap-4.10.0\pkg\Toric-1.9.4\*.* 
+File /r gap-4.10.1\pkg\Toric-1.9.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1578,7 +1658,7 @@ SectionEnd
 #
 Section "ToricVarieties" SecGAPpkg_toricvarieties 
 SetOutPath $INSTDIR\pkg\ToricVarieties
-File /r gap-4.10.0\pkg\ToricVarieties\*.* 
+File /r gap-4.10.1\pkg\ToricVarieties\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1588,7 +1668,7 @@ SectionEnd
 #
 Section "Unipot" SecGAPpkg_unipot 
 SetOutPath $INSTDIR\pkg\unipot-1.4
-File /r gap-4.10.0\pkg\unipot-1.4\*.* 
+File /r gap-4.10.1\pkg\unipot-1.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1598,7 +1678,7 @@ SectionEnd
 #
 Section "UnitLib" SecGAPpkg_unitlib 
 SetOutPath $INSTDIR\pkg\unitlib-4.0.0
-File /r gap-4.10.0\pkg\unitlib-4.0.0\*.* 
+File /r gap-4.10.1\pkg\unitlib-4.0.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1608,7 +1688,7 @@ SectionEnd
 #
 Section "uuid" SecGAPpkg_uuid 
 SetOutPath $INSTDIR\pkg\uuid-0.6
-File /r gap-4.10.0\pkg\uuid-0.6\*.* 
+File /r gap-4.10.1\pkg\uuid-0.6\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1617,8 +1697,8 @@ SectionEnd
 # Wedderga
 #
 Section "Wedderga" SecGAPpkg_wedderga 
-SetOutPath $INSTDIR\pkg\wedderga-4.9.4
-File /r gap-4.10.0\pkg\wedderga-4.9.4\*.* 
+SetOutPath $INSTDIR\pkg\wedderga-4.9.5
+File /r gap-4.10.1\pkg\wedderga-4.9.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1628,7 +1708,7 @@ SectionEnd
 #
 Section "XMod" SecGAPpkg_xmod 
 SetOutPath $INSTDIR\pkg\XMod-2.72
-File /r gap-4.10.0\pkg\XMod-2.72\*.* 
+File /r gap-4.10.1\pkg\XMod-2.72\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1638,7 +1718,27 @@ SectionEnd
 #
 Section "XModAlg" SecGAPpkg_xmodalg 
 SetOutPath $INSTDIR\pkg\XModAlg-1.17
-File /r gap-4.10.0\pkg\XModAlg-1.17\*.* 
+File /r gap-4.10.1\pkg\XModAlg-1.17\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# YangBaxter
+#
+Section "YangBaxter" SecGAPpkg_yangbaxter 
+SetOutPath $INSTDIR\pkg\YangBaxter-0.7.0
+File /r gap-4.10.1\pkg\YangBaxter-0.7.0\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# ZeroMQInterface
+#
+Section "ZeroMQInterface" SecGAPpkg_zeromqinterface 
+SetOutPath $INSTDIR\pkg\ZeroMQInterface-0.11
+File /r gap-4.10.1\pkg\ZeroMQInterface-0.11\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1657,7 +1757,7 @@ SectionGroup "Packages requiring UNIX/Linux" SecGAPpkgsNoWindows
 #
 Section "ACE" SecGAPpkg_ace 
 SetOutPath $INSTDIR\pkg\ace-5.2
-File /r gap-4.10.0\pkg\ace-5.2\*.* 
+File /r gap-4.10.1\pkg\ace-5.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1667,7 +1767,7 @@ SectionEnd
 #
 Section "ANUPQ" SecGAPpkg_anupq 
 SetOutPath $INSTDIR\pkg\anupq-3.2
-File /r gap-4.10.0\pkg\anupq-3.2\*.* 
+File /r gap-4.10.1\pkg\anupq-3.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1677,7 +1777,7 @@ SectionEnd
 #
 Section "Carat" SecGAPpkg_carat 
 SetOutPath $INSTDIR\pkg\carat
-File /r gap-4.10.0\pkg\carat\*.* 
+File /r gap-4.10.1\pkg\carat\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1686,8 +1786,8 @@ SectionEnd
 # Digraphs
 #
 Section "Digraphs" SecGAPpkg_digraphs 
-SetOutPath $INSTDIR\pkg\digraphs-0.13.0
-File /r gap-4.10.0\pkg\digraphs-0.13.0\*.* 
+SetOutPath $INSTDIR\pkg\digraphs-0.15.0
+File /r gap-4.10.1\pkg\digraphs-0.15.0\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1697,17 +1797,7 @@ SectionEnd
 #
 Section "float" SecGAPpkg_float 
 SetOutPath $INSTDIR\pkg\float-0.9.1
-File /r gap-4.10.0\pkg\float-0.9.1\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# Francy
-#
-Section "Francy" SecGAPpkg_francy 
-SetOutPath $INSTDIR\pkg\francy-1.0.4
-File /r gap-4.10.0\pkg\francy-1.0.4\*.* 
+File /r gap-4.10.1\pkg\float-0.9.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1717,7 +1807,7 @@ SectionEnd
 #
 Section "fwtree" SecGAPpkg_fwtree 
 SetOutPath $INSTDIR\pkg\fwtree-1.1
-File /r gap-4.10.0\pkg\fwtree-1.1\*.* 
+File /r gap-4.10.1\pkg\fwtree-1.1\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1726,8 +1816,8 @@ SectionEnd
 # HeLP
 #
 Section "HeLP" SecGAPpkg_help 
-SetOutPath $INSTDIR\pkg\help
-File /r gap-4.10.0\pkg\help\*.* 
+SetOutPath $INSTDIR\pkg\HeLP-3.4
+File /r gap-4.10.1\pkg\HeLP-3.4\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1737,37 +1827,7 @@ SectionEnd
 #
 Section "ITC" SecGAPpkg_itc 
 SetOutPath $INSTDIR\pkg\itc-1.5
-File /r gap-4.10.0\pkg\itc-1.5\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# json
-#
-Section "json" SecGAPpkg_json 
-SetOutPath $INSTDIR\pkg\json-2.0.0
-File /r gap-4.10.0\pkg\json-2.0.0\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# JupyterKernel
-#
-Section "JupyterKernel" SecGAPpkg_jupyterkernel 
-SetOutPath $INSTDIR\pkg\JupyterKernel-1.0
-File /r gap-4.10.0\pkg\JupyterKernel-1.0\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# JupyterViz
-#
-Section "JupyterViz" SecGAPpkg_jupyterviz 
-SetOutPath $INSTDIR\pkg\jupyterviz-1.2.0
-File /r gap-4.10.0\pkg\jupyterviz-1.2.0\*.* 
+File /r gap-4.10.1\pkg\itc-1.5\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1777,7 +1837,7 @@ SectionEnd
 #
 Section "NormalizInterface" SecGAPpkg_normalizinterface 
 SetOutPath $INSTDIR\pkg\NormalizInterface-1.0.2
-File /r gap-4.10.0\pkg\NormalizInterface-1.0.2\*.* 
+File /r gap-4.10.1\pkg\NormalizInterface-1.0.2\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1787,17 +1847,7 @@ SectionEnd
 #
 Section "PolymakeInterface" SecGAPpkg_polymakeinterface 
 SetOutPath $INSTDIR\pkg\PolymakeInterface-2018.09.25
-File /r gap-4.10.0\pkg\PolymakeInterface-2018.09.25\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# profiling
-#
-Section "profiling" SecGAPpkg_profiling 
-SetOutPath $INSTDIR\pkg\profiling-2.0.1
-File /r gap-4.10.0\pkg\profiling-2.0.1\*.* 
+File /r gap-4.10.1\pkg\PolymakeInterface-2018.09.25\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1806,8 +1856,18 @@ SectionEnd
 # Semigroups
 #
 Section "Semigroups" SecGAPpkg_semigroups 
-SetOutPath $INSTDIR\pkg\semigroups-3.0.20
-File /r gap-4.10.0\pkg\semigroups-3.0.20\*.* 
+SetOutPath $INSTDIR\pkg\semigroups-3.1.1
+File /r gap-4.10.1\pkg\semigroups-3.1.1\*.* 
+SetOutPath $INSTDIR 
+SectionEnd 
+
+#######################################################################
+#
+# walrus
+#
+Section "walrus" SecGAPpkg_walrus 
+SetOutPath $INSTDIR\pkg\walrus-0.99
+File /r gap-4.10.1\pkg\walrus-0.99\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1816,18 +1876,8 @@ SectionEnd
 # XGAP
 #
 Section "XGAP" SecGAPpkg_xgap 
-SetOutPath $INSTDIR\pkg\xgap-4.28
-File /r gap-4.10.0\pkg\xgap-4.28\*.* 
-SetOutPath $INSTDIR 
-SectionEnd 
-
-#######################################################################
-#
-# ZeroMQInterface
-#
-Section "ZeroMQInterface" SecGAPpkg_zeromqinterface 
-SetOutPath $INSTDIR\pkg\ZeroMQInterface-0.10
-File /r gap-4.10.0\pkg\ZeroMQInterface-0.10\*.* 
+SetOutPath $INSTDIR\pkg\xgap-4.29
+File /r gap-4.10.1\pkg\xgap-4.29\*.* 
 SetOutPath $INSTDIR 
 SectionEnd 
 
@@ -1916,17 +1966,18 @@ LangString DESC_SecGAPpkg_irredsol ${LANG_ENGLISH} "A library of irreducible sol
 LangString DESC_SecGAPpkg_itc ${LANG_ENGLISH} "Interactive Todd-Coxeter"
 LangString DESC_SecGAPpkg_json ${LANG_ENGLISH} "Reading and Writing JSON"
 LangString DESC_SecGAPpkg_jupyterkernel ${LANG_ENGLISH} "Jupyter kernel written in GAP"
-LangString DESC_SecGAPpkg_jupyterviz ${LANG_ENGLISH} "Jupyter Notebook Visualization Tools"
+LangString DESC_SecGAPpkg_jupyterviz ${LANG_ENGLISH} "Visualization Tools for Jupyter and the GAP REPL"
 LangString DESC_SecGAPpkg_kan ${LANG_ENGLISH} "including double coset rewriting systems"
 LangString DESC_SecGAPpkg_kbmag ${LANG_ENGLISH} "Knuth-Bendix on Monoids and Automatic Groups"
 LangString DESC_SecGAPpkg_laguna ${LANG_ENGLISH} "Lie AlGebras and UNits of group Algebras"
 LangString DESC_SecGAPpkg_liealgdb ${LANG_ENGLISH} "A database of Lie algebras"
 LangString DESC_SecGAPpkg_liepring ${LANG_ENGLISH} "Database and algorithms for Lie p-rings"
-LangString DESC_SecGAPpkg_liering ${LANG_ENGLISH} "finitely presented Lie rings"
+LangString DESC_SecGAPpkg_liering ${LANG_ENGLISH} "Computing with finitely presented Lie rings"
 LangString DESC_SecGAPpkg_linearalgebraforcap ${LANG_ENGLISH} "Category of Matrices over a Field for CAP"
 LangString DESC_SecGAPpkg_localizeringforhomalg ${LANG_ENGLISH} "A Package for Localization of Polynomial Rings"
 LangString DESC_SecGAPpkg_loops ${LANG_ENGLISH} "Computing with quasigroups and loops in GAP"
 LangString DESC_SecGAPpkg_lpres ${LANG_ENGLISH} "Nilpotent Quotients of L-Presented Groups"
+LangString DESC_SecGAPpkg_majoranaalgebras ${LANG_ENGLISH} "A package for constructing Majorana algebras and representations"
 LangString DESC_SecGAPpkg_mapclass ${LANG_ENGLISH} "A Package For Mapping Class Orbit Computation"
 LangString DESC_SecGAPpkg_matgrp ${LANG_ENGLISH} "Matric Group Interface Routines"
 LangString DESC_SecGAPpkg_matricesforhomalg ${LANG_ENGLISH} "Matrices for the homalg project"
@@ -1939,6 +1990,7 @@ LangString DESC_SecGAPpkg_nq ${LANG_ENGLISH} "Nilpotent Quotients of Finitely Pr
 LangString DESC_SecGAPpkg_numericalsgps ${LANG_ENGLISH} "A package for numerical semigroups"
 LangString DESC_SecGAPpkg_openmath ${LANG_ENGLISH} "OpenMath functionality in GAP"
 LangString DESC_SecGAPpkg_orb ${LANG_ENGLISH} "Methods to enumerate orbits"
+LangString DESC_SecGAPpkg_packagemanager ${LANG_ENGLISH} "Easily download and install GAP packages"
 LangString DESC_SecGAPpkg_patternclass ${LANG_ENGLISH} "A permutation pattern class package"
 LangString DESC_SecGAPpkg_permut ${LANG_ENGLISH} "A package to deal with permutability in finite groups"
 LangString DESC_SecGAPpkg_polenta ${LANG_ENGLISH} "Polycyclic presentations for matrix groups"
@@ -1954,7 +2006,7 @@ LangString DESC_SecGAPpkg_radiroot ${LANG_ENGLISH} "Roots of a Polynomial as Rad
 LangString DESC_SecGAPpkg_rcwa ${LANG_ENGLISH} "Residue-Class-Wise Affine Groups"
 LangString DESC_SecGAPpkg_rds ${LANG_ENGLISH} "A package for searching relative difference sets"
 LangString DESC_SecGAPpkg_recog ${LANG_ENGLISH} "A collection of group recognition methods"
-LangString DESC_SecGAPpkg_repsn ${LANG_ENGLISH} "A GAP4 Package for constructing representations of finite groups"
+LangString DESC_SecGAPpkg_repsn ${LANG_ENGLISH} "Constructing representations of finite groups"
 LangString DESC_SecGAPpkg_resclasses ${LANG_ENGLISH} "Set-Theoretic Computations with Residue Classes"
 LangString DESC_SecGAPpkg_ringsforhomalg ${LANG_ENGLISH} "Dictionaries of external rings"
 LangString DESC_SecGAPpkg_sco ${LANG_ENGLISH} "SCO - Simplicial Cohomology of Orbifolds"
@@ -1964,13 +2016,14 @@ LangString DESC_SecGAPpkg_sglppow ${LANG_ENGLISH} "Database of groups of prime-p
 LangString DESC_SecGAPpkg_sgpviz ${LANG_ENGLISH} "A package for semigroup visualization"
 LangString DESC_SecGAPpkg_simpcomp ${LANG_ENGLISH} "A GAP toolbox for simplicial complexes"
 LangString DESC_SecGAPpkg_singular ${LANG_ENGLISH} "A GAP interface to Singular"
-LangString DESC_SecGAPpkg_sla ${LANG_ENGLISH} "a package for doing computations with simple Lie algebras"
+LangString DESC_SecGAPpkg_sla ${LANG_ENGLISH} "Computing with simple Lie algebras"
 LangString DESC_SecGAPpkg_smallgrp ${LANG_ENGLISH} "The GAP Small Groups Library"
 LangString DESC_SecGAPpkg_smallsemi ${LANG_ENGLISH} "A library of small semigroups"
 LangString DESC_SecGAPpkg_sonata ${LANG_ENGLISH} "System of nearrings and their applications"
 LangString DESC_SecGAPpkg_sophus ${LANG_ENGLISH} "Computing in nilpotent Lie algebras"
 LangString DESC_SecGAPpkg_spinsym ${LANG_ENGLISH} "Brauer tables of spin-symmetric groups"
 LangString DESC_SecGAPpkg_symbcompcc ${LANG_ENGLISH} "Computing with parametrised presentations for p-groups of fixed coclass"
+LangString DESC_SecGAPpkg_thelma ${LANG_ENGLISH} "A package on threshold elements"
 LangString DESC_SecGAPpkg_tomlib ${LANG_ENGLISH} "The GAP Library of Tables of Marks"
 LangString DESC_SecGAPpkg_toolsforhomalg ${LANG_ENGLISH} "Special methods and knowledge propagation tools"
 LangString DESC_SecGAPpkg_toric ${LANG_ENGLISH} "toric varieties and some combinatorial geometry computations"
@@ -1980,10 +2033,12 @@ LangString DESC_SecGAPpkg_unipot ${LANG_ENGLISH} "Computing with elements of uni
 LangString DESC_SecGAPpkg_unitlib ${LANG_ENGLISH} "Library of normalized unit groups of modular group algebras"
 LangString DESC_SecGAPpkg_utils ${LANG_ENGLISH} "Utility functions in GAP"
 LangString DESC_SecGAPpkg_uuid ${LANG_ENGLISH} "RFC 4122 UUIDs"
+LangString DESC_SecGAPpkg_walrus ${LANG_ENGLISH} "A new approach to proving hyperbolicity"
 LangString DESC_SecGAPpkg_wedderga ${LANG_ENGLISH} "Wedderburn Decomposition of Group Algebras"
 LangString DESC_SecGAPpkg_xgap ${LANG_ENGLISH} "a graphical user interface for GAP"
 LangString DESC_SecGAPpkg_xmod ${LANG_ENGLISH} "Crossed Modules and Cat1-Groups"
 LangString DESC_SecGAPpkg_xmodalg ${LANG_ENGLISH} "Crossed Modules and Cat1-Algebras"
+LangString DESC_SecGAPpkg_yangbaxter ${LANG_ENGLISH} "Combinatorial Solutions for the Yang-Baxter equation"
 LangString DESC_SecGAPpkg_zeromqinterface ${LANG_ENGLISH} "ZeroMQ bindings for GAP"
 
 # Assign language strings to sections
@@ -2077,6 +2132,7 @@ LangString DESC_SecGAPpkg_zeromqinterface ${LANG_ENGLISH} "ZeroMQ bindings for G
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_localizeringforhomalg} $(DESC_SecGAPpkg_localizeringforhomalg)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_loops} $(DESC_SecGAPpkg_loops)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_lpres} $(DESC_SecGAPpkg_lpres)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_majoranaalgebras} $(DESC_SecGAPpkg_majoranaalgebras)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_mapclass} $(DESC_SecGAPpkg_mapclass)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_matgrp} $(DESC_SecGAPpkg_matgrp)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_matricesforhomalg} $(DESC_SecGAPpkg_matricesforhomalg)
@@ -2089,6 +2145,7 @@ LangString DESC_SecGAPpkg_zeromqinterface ${LANG_ENGLISH} "ZeroMQ bindings for G
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_numericalsgps} $(DESC_SecGAPpkg_numericalsgps)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_openmath} $(DESC_SecGAPpkg_openmath)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_orb} $(DESC_SecGAPpkg_orb)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_packagemanager} $(DESC_SecGAPpkg_packagemanager)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_patternclass} $(DESC_SecGAPpkg_patternclass)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_permut} $(DESC_SecGAPpkg_permut)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_polenta} $(DESC_SecGAPpkg_polenta)
@@ -2121,6 +2178,7 @@ LangString DESC_SecGAPpkg_zeromqinterface ${LANG_ENGLISH} "ZeroMQ bindings for G
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_sophus} $(DESC_SecGAPpkg_sophus)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_spinsym} $(DESC_SecGAPpkg_spinsym)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_symbcompcc} $(DESC_SecGAPpkg_symbcompcc)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_thelma} $(DESC_SecGAPpkg_thelma)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_tomlib} $(DESC_SecGAPpkg_tomlib)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_toolsforhomalg} $(DESC_SecGAPpkg_toolsforhomalg)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_toric} $(DESC_SecGAPpkg_toric)
@@ -2130,10 +2188,12 @@ LangString DESC_SecGAPpkg_zeromqinterface ${LANG_ENGLISH} "ZeroMQ bindings for G
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_unitlib} $(DESC_SecGAPpkg_unitlib)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_utils} $(DESC_SecGAPpkg_utils)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_uuid} $(DESC_SecGAPpkg_uuid)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_walrus} $(DESC_SecGAPpkg_walrus)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_wedderga} $(DESC_SecGAPpkg_wedderga)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_xgap} $(DESC_SecGAPpkg_xgap)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_xmod} $(DESC_SecGAPpkg_xmod)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_xmodalg} $(DESC_SecGAPpkg_xmodalg)
+!insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_yangbaxter} $(DESC_SecGAPpkg_yangbaxter)
 !insertmacro MUI_DESCRIPTION_TEXT ${SecGAPpkg_zeromqinterface} $(DESC_SecGAPpkg_zeromqinterface)
 
 !insertmacro MUI_FUNCTION_DESCRIPTION_END
