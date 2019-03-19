@@ -133,7 +133,7 @@ PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
 profiling   https://gap-packages.github.io/profiling/PackageInfo.g
 qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
-QuaGroup    https://gap-packages.github.io/PackageInfo.g
+QuaGroup    https://gap-packages.github.io/quagroup/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
 RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         https://gap-packages.github.io/rds/PackageInfo.g
