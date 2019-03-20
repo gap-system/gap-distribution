@@ -336,23 +336,65 @@ UpdatePackageInfoFiles := function(pkgdir)
                 "\n  This is not allowed, so the info file will not be changed\n");
           has_error := true;
         fi;
-        if IsBound(infon.Date) then
-          date := infon.Date;
-          if not IsString(date) and Length(date) = 10 and date{[3,6]} = "//" and
-            ForAll( date{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
-            Print("  ERROR (", info.PackageName, "): the date ", date,
-                  "should be a string of the form `dd/mm/yyyy'\n" );
-            has_error := true;
-          else
-            date := List( SplitString( date, "/" ), Int);
-            if not date[1] in [1..31] and
-                   date[2] in [1..12] and
-                   date[3] > 1999 and # GAP 4 appeared in 1999
-                   date[1] > DaysInMonth( date[2], date[3] ) then
-              Print("  ERROR (", info.PackageName, "): the date ", date,
-                    " is invalid\n" );
+
+        # function to check wheter a date given as a list of three integers
+        # [day, month, year] is a plausible date
+        IsPlausibleDate := date -> date[1] in [1..31] and
+	                   date[2] in [1..12] and
+	                   date[1] in [ 1..DaysInMonth( date[2], date[3] ) ];
+
+        if IsBound( infon.Date ) then
+          # look for date in format mm/dd/yyyy
+          if IsString( infon.Date ) and Length( infon.Date ) = 10 
+            and infon.Date{ [3,6] } = "//" 
+            and ForAll( infon.Date{ [1,2,4,5,7,8,9,10] }, IsDigitChar ) then
+            date := List( SplitString( infon.Date, "/" ), Int ); 
+            # here date=[dd,mm,yyyy]
+            # the format dd/mm/yyyy is ambigous and can be confused with mm/dd/yyyy 
+            # if it is clear from the date that the format is mm/dd/yyyy 
+            # print a message hinting at that mistake and to tell the user 
+            # what the correct format is.
+            if date[2] in [13..31] and date[1] in [1..12] then
+              Print("  ERROR (", info.PackageName, "): it seems that in the",
+                " given package release date ", infon.Date,
+                " day and month are switched.",
+                " The date should be of the form `yyyy-mm-dd`",
+                " or `dd/mm/yyyy`\n" );
               has_error := true;
+              # unbind date so that we can check later whether an error 
+              # was found by checking if date is bound
+              Unbind( date );
             fi;
+          # look for date in ISO-8601 format yyyy-mm-dd
+          elif IsString( infon.Date ) and Length( infon.Date ) = 10 
+            and infon.Date{ [5,8] } = "--" 
+            and ForAll( infon.Date{ [1,2,3,4,6,7,9,10] }, IsDigitChar ) then
+            date := List( SplitString( infon.Date, "-" ), Int);
+            date := date{ [3,2,1] }; # sort such that date=[dd,mm,yyyy]
+          else
+            Print("  ERROR (", info.PackageName, "): the given package release",
+              " date should be a string of the form `yyyy-mm-dd`",
+              " or `dd/mm/yyyy' representing a date since 1999 but the",
+              " given date ", infon.Date, " is not\n" );
+            has_error := true;
+            # unbind date so that we can check later whether an error 
+            # was found by checking if date is bound
+            Unbind( date ); 
+          fi;
+          if IsBound( date ) and not IsPlausibleDate( date ) then
+            Print("  ERROR (", info.PackageName, "): the given package release",
+              " date ", infon.Date,
+              " seems not to be a valid date\n" );
+            has_error := true;
+          fi;
+          # GAP 4 appeared in 1999 thus any package release date before 1999
+          # cannot be valid
+          if IsBound( date ) and date[3] < 1999 then
+            Print("  ERROR (", info.PackageName, "): the package",
+              " release date must be in 1999 or later but the given date ", 
+              infon.Date,
+              " is not\n");
+            has_error := true;
           fi;
         else
           Print("  ERROR (", info.PackageName, "): no date is bound\n" );
