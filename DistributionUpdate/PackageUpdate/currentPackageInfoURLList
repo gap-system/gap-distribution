@@ -54,7 +54,7 @@ curlInterface https://gap-packages.github.io/curlInterface/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
 DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
-DESIGN      http://www.maths.qmul.ac.uk/~leonard/design/design1r6/PackageInfo.g
+DESIGN      MOVE https://gap-packages.github.io/design/PackageInfo.g
 Digraphs    https://gap-packages.github.io/Digraphs/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     https://gap-packages.github.io/example/PackageInfo.g
