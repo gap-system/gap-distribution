@@ -131,7 +131,6 @@ PolymakeInterface http://homalg-project.github.io/homalg_project/PolymakeInterfa
 polymaking  https://gap-packages.github.io/polymaking/PackageInfo.g
 PrimGrp     https://gap-packages.github.io/primgrp/PackageInfo.g
 profiling   https://gap-packages.github.io/profiling/PackageInfo.g
-qaos        https://gap-packages.github.io/qaos/PackageInfo.g
 QPA         https://folk.ntnu.no/oyvinso/QPA/PackageInfo.g
 QuaGroup    MOVE https://gap-packages.github.io/quagroup/PackageInfo.g
 RadiRoot    https://gap-packages.github.io/radiroot/PackageInfo.g
