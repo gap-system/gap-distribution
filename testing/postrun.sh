@@ -174,6 +174,75 @@ else
 exit 1
 fi
 ;;
+extra)
+/bin/echo '=========OUTPUT START: testextra without packages========='
+cat `ls dev/log/testextra1_*|tail -1`
+/bin/echo '=========OUTPUT END: testextra without packages========='
+/bin/echo '=========OUTPUT START: testextra with packages========='
+cat `ls dev/log/testextra2_*|tail -1`
+/bin/echo '=========OUTPUT END: testextra with packages========='
+/bin/echo -n "YVALUE=" > dev/log/plotextra1_count.txt
+wc -l `ls dev/log/testextra1_*|tail -1` | cut -f $CUTWIDTH -d ' ' >> dev/log/plotextra1_count.txt
+/bin/echo -n "URL=" >> dev/log/plotextra1_count.txt
+/bin/echo -n $BUILD_URL >> dev/log/plotextra1_count.txt
+#
+/bin/echo -n "YVALUE=" > dev/log/plotextra2_count.txt
+wc -l `ls dev/log/testextra2_*|tail -1` | cut -f $CUTWIDTH -d ' ' >> dev/log/plotextra2_count.txt
+/bin/echo -n "URL=" >> dev/log/plotextra2_count.txt
+/bin/echo -n $BUILD_URL >> dev/log/plotextra2_count.txt
+#
+for GTEST in arithlst hash2 primsan xgap grppcnrm grpmat grpperm matrix grplatt bugfix grpprmcs grpconst 
+do
+/bin/echo -n "YVALUE=" > dev/log/plot${GTEST}1.txt
+grep "^${GTEST}" `ls dev/log/testextra1_*` | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plot${GTEST}1.txt
+/bin/echo -n "URL=" >> dev/log/plot${GTEST}1.txt
+/bin/echo -n $BUILD_URL >> dev/log/plot${GTEST}1.txt
+#
+/bin/echo -n "YVALUE=" > dev/log/plot${GTEST}2.txt
+grep "^${GTEST}" `ls dev/log/testextra2_*` | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plot${GTEST}2.txt
+/bin/echo -n "URL=" >> dev/log/plot${GTEST}2.txt
+/bin/echo -n $BUILD_URL >> dev/log/plot${GTEST}2.txt
+#
+done
+#
+cat `ls dev/log/testextra1_*|tail -1` | tail -5 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotextra1_total.txt
+export GAPTOTAL=`cat dev/log/plotextra1_total.txt`
+if [ $GAPTOTAL = 'total' ]
+then
+/bin/echo -n "YVALUE=" > dev/log/plotextra1_time.txt
+cat `ls dev/log/testextra1_*|tail -1` | tail -5 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotextra1_time.txt
+/bin/echo -n "URL=" >> dev/log/plotextra1_time.txt
+/bin/echo -n $BUILD_URL >> dev/log/plotextra1_time.txt
+else
+/bin/echo "test was not completed"
+exit 1
+fi
+cat `ls dev/log/testextra2_*|tail -1` | tail -5 | head -1 | sed -e 's/  */ /g' | cut -f 1 -d ' ' > dev/log/plotextra2_total.txt
+export GAPTOTAL=`cat dev/log/plotextra2_total.txt`
+if [ $GAPTOTAL = 'total' ]
+then
+/bin/echo -n "YVALUE=" > dev/log/plotextra2_time.txt
+cat `ls dev/log/testextra2_*|tail -1` | tail -5 | head -1 | sed -e 's/  */ /g' | cut -f 3 -d ' ' >> dev/log/plotextra2_time.txt
+/bin/echo -n "URL=" >> dev/log/plotextra2_time.txt
+/bin/echo -n $BUILD_URL >> dev/log/plotextra2_time.txt
+else
+/bin/echo "test was not completed"
+exit 1
+fi
+#
+export NUMFAILS=`cat dev/log/testextra* | grep -c "########> Diff"`
+/bin/echo %%% Number of diffs: $NUMFAILS
+export NUMFAILS1=`cat dev/log/testextra1* | grep -c "########> Diff"`
+/bin/echo %%% Diffs without packages : $NUMFAILS1
+export NUMFAILS2=`cat dev/log/testextra2* | grep -c "########> Diff"`
+/bin/echo %%% Diffs with all packages: $NUMFAILS2
+if [ $NUMFAILS = '0' ]
+then
+/bin/echo '=========No differences found========='
+else
+exit 1
+fi
+;;
 manuals)
 /bin/echo '=========OUTPUT START: making tutorial========='
 cat doc/tut/make_manuals.out
