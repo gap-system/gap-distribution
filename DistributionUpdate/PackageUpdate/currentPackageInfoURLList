@@ -138,7 +138,7 @@ RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         https://gap-packages.github.io/rds/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
 Repsn       https://gap-packages.github.io/repsn/PackageInfo.g
-ResClasses  https://stefan-kohl.github.io/resclasses/PackageInfo.g
+ResClasses  MOVE https://gap-packages.github.io/resclasses/PackageInfo.g
 RingsForHomalg http://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         http://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
