@@ -1591,6 +1591,15 @@ AddHTMLPackageInfo := function(arg)
   # SuggestUpgrades  entry
   info.SuggestUpgradesEntry := Concatenation("[ \"", info.PackageName,
        "\", \"", info.Version, "\" ], ");
+
+  # license ...
+  if IsBound(info.License) then
+    Append(res, Concatenation("<h4>License</h4>\n<p>",
+                   "<p><a href='https://spdx.org/licenses/",
+                   info.License,".html'>", info.License,
+                   "</a></p>\n"));
+  fi;
+
   # status
   Append(res, Concatenation("<h4>Status</h4>\n<p>",
               info.Status, "\n"));
