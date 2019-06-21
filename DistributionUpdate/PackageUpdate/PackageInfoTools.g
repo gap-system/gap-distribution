@@ -1595,7 +1595,7 @@ AddHTMLPackageInfo := function(arg)
   # license ...
   if IsBound(info.License) then
     Append(res, Concatenation("<h4>License</h4>\n<p>",
-                   "<p><a href='https://spdx.org/licenses/",
+                   "<a href='https://spdx.org/licenses/",
                    info.License,".html'>", info.License,
                    "</a></p>\n"));
   fi;
