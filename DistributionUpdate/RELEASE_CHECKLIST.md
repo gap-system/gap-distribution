@@ -235,7 +235,7 @@ to regenerate updated pages.
 
 ## Post-release actions
 
-* tag corresponding revision in appropriate release branch in the git repository for the core GAP system with the tag in the format `v4.X.Y`. You should use annotated tags: use `git tag -a v4.X.Y` and then enter a tag message; or do it on the command line with `git tag -a v4.X.Y -m "Version 4.X.Y"`. Remember to push the tag afterwards.
+* tag corresponding revision in appropriate release branch in the git repository for the core GAP system with the tag in the format `v4.X.Y`. You should use annotated tags: use `git tag -a v4.X.Y` and then enter a tag message; or do it on the command line with `git tag -a v4.X.Y -m "Version 4.X.Y"`. Remember to push the tag afterwards using `git push --tags`.
 
 * Create a new milestone for the next release (if not yet created) at https://github.com/gap-system/gap/milestones
 
