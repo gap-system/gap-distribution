@@ -1,5 +1,5 @@
 # Adjust the path for the release
-gappath:="gap-4.10.1";
+gappath:="gap-4.10.2";
 
 Basename := function(str)
   local len;
@@ -23,9 +23,8 @@ recommended:=[ "atlasrep", "design", "grape", "guava", "example" ];
 # Hints for (some) packages that do not work under Windows 
 # Use this to get a list of packages that are not loadable:
 # SortedList(Filtered( RecNames(GAPInfo.PackagesInfo), n -> LoadPackage(n)=fail));
-nowindows:=[ "ace", "anupq", "carat", "digraphs", "float", "fwtree",
-"help", "itc", "normalizinterface",
-"polymakeinterface", "semigroups", "walrus", "xgap" ];
+nowindows:=[ "ace", "anupq", "carat", "curlinterface", "deepthought", "float", "fwtree",
+"help", "itc", "normalizinterface", "polymakeinterface", "xgap" ];
 
 Print("=============================================================\n");
 # Packages needed by GAP
@@ -83,8 +82,8 @@ repeat
   suggested:=Filtered( suggested, x -> not x in nowindows and not x in default and not x in needed );
   
   new := Union ( required, suggested );
-  # tweaking to exclude GAP 3.4.4 package "chevie"
-  new := Filtered(new, x -> x <> "chevie" );
+  # tweaking to exclude packages not redistributed with GAP
+  new := Filtered(new, x -> not x in [ "chevie", "ctblocks", "mfer" ] );
   Print("Adding ", new, "\n"); 
   default:=Union(default,new);
 until Length(default)=n;  
