@@ -173,18 +173,18 @@ To be able to publish all archives, up-to-date documentation and new version of 
 Assuming you've copied all main distribution archives into some new directory (say, `~/distro`) in the pseudo-user's account on the host server, you can perform the following commands in that directory to move them to their final locations (adjust file names with release numbers and timestamps as needed):
 
 ```
-mv *.exe ../www.gap-system.org/pub/gap/gap48/exe/
-mv *.tar.bz2 ../www.gap-system.org/pub/gap/gap48/tar.bz2/
-mv *.tar.gz ../www.gap-system.org/pub/gap/gap48/tar.gz/
-mv *-win.zip ../www.gap-system.org/pub/gap/gap48/win.zip/
-mv *-win64.zip ../www.gap-system.org/pub/gap/gap48/win.zip/
-mv gap-4.X.Y-core.zip ../www.gap-system.org/pub/gap/gap4core/
+mv *.exe ../www.gap-system.org/pub/gap/gap-4.10/exe/
+mv *.tar.bz2 ../www.gap-system.org/pub/gap/gap-4.10/tar.bz2/
+mv *.tar.gz ../www.gap-system.org/pub/gap/gap-4.10/tar.gz/
+mv *-win.zip ../www.gap-system.org/pub/gap/gap-4.10/win.zip/
+mv *-win64.zip ../www.gap-system.org/pub/gap/gap-4.10/win.zip/
+mv *-core.zip ../www.gap-system.org/pub/gap/gap4core/
 mv *.zip ../www.gap-system.org/pub/gap/gap48/zip/
 ```
 
 Check that everything (locations, permissions etc.) look right with
 ```
-ls -la ../www.gap-system.org/pub/gap/gap48/*/gap-4.X.Y* 
+ls -la ../www.gap-system.org/pub/gap/gap-4.10/*/gap-4.X.Y* 
 ```
 
 ### Publish package archives
