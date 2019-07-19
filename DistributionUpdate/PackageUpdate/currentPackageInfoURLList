@@ -42,7 +42,7 @@ Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
 Convex      http://homalg-project.github.io/homalg_project/Convex/PackageInfo.g
-CoReLG      http://users.monash.edu/~heikod/corelg/PackageInfo.g
+CoReLG MOVE https://gap-packages.github.io/corelg/PackageInfo.g
 Crime       https://gap-packages.github.io/crime/PackageInfo.g
 CRISP       http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g
 crypting    https://gap-packages.github.io/crypting/PackageInfo.g
