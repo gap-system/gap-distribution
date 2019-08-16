@@ -150,7 +150,7 @@ simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 singular    https://gap-packages.github.io/singular/PackageInfo.g
 SLA         https://gap-packages.github.io/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
-Smallsemi   http://www-groups.mcs.st-andrews.ac.uk/~jamesm/smallsemi/PackageInfo.g
+Smallsemi   MOVE https://gap-packages.github.io/smallsemi/PackageInfo.g
 SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     https://gap-packages.github.io/spinsym/PackageInfo.g
