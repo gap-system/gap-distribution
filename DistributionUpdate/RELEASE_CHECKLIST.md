@@ -20,7 +20,7 @@ Evaluate weekly and nightly Jenkins CI tests (the following links are accessible
 
 Minimal requirements for the test suite to pass:
 
-* no diffs in `testinstall` and `teststandard` with and without packages (checked automatically)
+* no diffs in `testinstall`, `teststandard` and `testbugfix` with and without packages (checked automatically)
 * no diffs in `testmanuals` with default packages loaded (checked automatically) and no break loops or crashes in other two variants of the test (checked manually)
 * no errors and warnings when GAP is loaded (checked manually)
 * `testpackagesload` should be able to load all packages in all 4 configurations (checked automatically)
