@@ -3,9 +3,6 @@
 # PackageInfo.g file for some package is changed. The automated package
 # update system will use this file before running further package update
 # scripts to get notification about any new packages or changed URLs.
-# Before changing URLs, validates them using the form available here:
-#
-# https://www.gap-system.org/Packages/validator.html
 #
 # Each non commented out line of this file must have format
 # <package-name> <PackageInfoURL>
