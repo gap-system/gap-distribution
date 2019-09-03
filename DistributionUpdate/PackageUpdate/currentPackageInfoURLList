@@ -39,7 +39,7 @@ Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
 Convex      https://homalg-project.github.io/homalg_project/Convex/PackageInfo.g
-CoReLG MOVE https://gap-packages.github.io/corelg/PackageInfo.g
+CoReLG      https://gap-packages.github.io/corelg/PackageInfo.g
 Crime       https://gap-packages.github.io/crime/PackageInfo.g
 CRISP       http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g
 crypting    https://gap-packages.github.io/crypting/PackageInfo.g
@@ -136,7 +136,7 @@ RCWA        https://gap-packages.github.io/rcwa/PackageInfo.g
 RDS         https://gap-packages.github.io/rds/PackageInfo.g
 recog       https://gap-packages.github.io/recog/PackageInfo.g
 Repsn       https://gap-packages.github.io/repsn/PackageInfo.g
-ResClasses  MOVE https://gap-packages.github.io/resclasses/PackageInfo.g
+ResClasses  https://gap-packages.github.io/resclasses/PackageInfo.g
 RingsForHomalg https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         https://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
@@ -147,7 +147,7 @@ simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
 singular    https://gap-packages.github.io/singular/PackageInfo.g
 SLA         https://gap-packages.github.io/sla/PackageInfo.g
 smallgrp    https://gap-packages.github.io/smallgrp/PackageInfo.g
-Smallsemi   MOVE https://gap-packages.github.io/smallsemi/PackageInfo.g
+Smallsemi   https://gap-packages.github.io/smallsemi/PackageInfo.g
 SONATA      https://gap-packages.github.io/sonata/PackageInfo.g
 Sophus      https://gap-packages.github.io/sophus/PackageInfo.g
 SpinSym     https://gap-packages.github.io/spinsym/PackageInfo.g
