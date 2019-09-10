@@ -4,15 +4,17 @@
 
 | for branch | status | code coverage |
 |------------|--------|---------------|
-| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=master&token=)](https://codecov.io/gh/gap-system/gap) |
-| `stable-4.10` | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.10)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=stable-4.10&token=)](https://codecov.io/gh/gap-system/gap) |
-| `stable-4.9`  | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.9)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg?branch=stable-4.9&token=)](https://codecov.io/gh/gap-system/gap) |
+| `master`   | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=master)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/github/gap-system/gap/coverage.svg)](https://codecov.io/gh/gap-system/gap) |
+| `stable-4.11` | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.11)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/gh/gap-system/gap/branch/stable-4.11/graphs/badge.svg)](https://codecov.io/gh/gap-system/gap/branch/stable-4.11) |
+| `stable-4.10` | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.10)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/gh/gap-system/gap/branch/stable-4.10/graphs/badge.svg)](https://codecov.io/gh/gap-system/gap/branch/stable-4.10) |
+| `stable-4.9`  | [![Build Status](https://travis-ci.org/gap-system/gap.svg?branch=stable-4.9)](https://travis-ci.org/gap-system/gap) | [![Code Coverage](https://codecov.io/gh/gap-system/gap/branch/stable-4.9/graphs/badge.svg)](https://codecov.io/gh/gap-system/gap/branch/stable-4.9) |
 
 ## Package integration tests
 
 | for branch | status |
 |------------|--------|
 | `master`  | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-master-testsuite.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-master-testsuite) |
+| `stable-4.11` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-stable-4.11-testsuite.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-stable-4.11-testsuite) |
 | `stable-4.10` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-stable-4.10-testsuite.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-stable-4.10-testsuite) |
 | `stable-4.9` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-stable-4.9-testsuite.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-stable-4.9-testsuite) |
 
@@ -23,6 +25,7 @@ Status of standard tests for packages updates that were picked up, passed intern
 | for branch | packages archive | ready for the next GAP release | require inspection |
 |------------|-----------------------------------|---------------|---------------------|
 | `master` | [packages-master.tar.gz](https://www.gap-system.org/pub/gap/gap4pkgs/packages-master.tar.gz) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master-staging.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master-staging) |
+| `stable-4.11` | [packages-stable-4.11.tar.gz](https://www.gap-system.org/pub/gap/gap4pkgs/packages-stable-4.11.tar.gz) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11-staging.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11-staging) |
 | `stable-4.10` | [packages-stable-4.10.tar.gz](https://www.gap-system.org/pub/gap/gap4pkgs/packages-stable-4.10.tar.gz) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10-staging.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10-staging) |
 | `stable-4.9` | [packages-stable-4.9.tar.gz](https://www.gap-system.org/pub/gap/gap4pkgs/packages-stable-4.9.tar.gz) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9) | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9-staging.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9-staging) |
 
@@ -33,6 +36,7 @@ Status of standard tests for [development versions of GAP packages having a publ
 | for branch | Click on the badge to see the status for each package |
 |------------|-------------------------------------------------------|
 | `master` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master-devel.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-master-devel) |
+| `stable-4.11` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11-devel.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.11-devel) |
 | `stable-4.10` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10-devel.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.10-devel) |
 | `stable-4.9` | [![Build Status](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9-devel.svg?branch=master)](https://travis-ci.org/gap-infra/gap-docker-pkg-tests-stable-4.9-devel) |
 
