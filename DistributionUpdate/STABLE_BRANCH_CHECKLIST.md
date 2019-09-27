@@ -47,19 +47,19 @@ to use `stable-X.Y` branch of the GAP repository
 to build from the master branch of the gap-distribution repository (if need be,
 we will switch it to build from `stable-X.Y` later).
 
-* Create new repository gap-system/gap-docker-stable-X.Y by importing
-https://github.com/gap-system/gap-docker-pkg-tests-master (to preserve the 
+* Create new repository gap-infra/gap-docker-stable-X.Y by importing
+https://github.com/gap-infra/gap-docker-pkg-tests-master (to preserve the 
 history) and set up builds for the Docker container 
 gapsystem/gap-docker-stable-X.Y at https://hub.docker.com/u/gapsystem/
 
-* Create new repository gap-system/gap-docker-stable-X.Y-testsuite by importing
-https://github.com/gap-system/gap-docker-master-testsuite (to preserve the history)
+* Create new repository gap-infra/gap-docker-stable-X.Y-testsuite by importing
+https://github.com/gap-infra/gap-docker-master-testsuite (to preserve the history)
 and set up Travis builds for this repository to run package integration tests.
 
 * Similarly, set up the following repositories and travis builds to run standard tests for GAP packages:
-  - gap-system/gap-docker-pkg-tests-stable-4.X from https://github.com/gap-system/gap-docker-pkg-tests-master
-  - gap-system/gap-docker-pkg-tests-stable-4.X-staging from https://github.com/gap-system/gap-docker-pkg-tests-master-staging 
-  - gap-packages/gap-docker-pkg-tests-stable-4.X-devel from https://github.com/gap-packages/gap-docker-pkg-tests-master-devel
+  - gap-infra/gap-docker-pkg-tests-stable-4.X from https://github.com/gap-infra/gap-docker-pkg-tests-master
+  - gap-infra/gap-docker-pkg-tests-stable-4.X-staging from https://github.com/gap-infra/gap-docker-pkg-tests-master-staging 
+  - gap-infra/gap-docker-pkg-tests-stable-4.X-devel from https://github.com/gap-infra/gap-docker-pkg-tests-master-devel
 
 * Add badges for corresponding Travis CI builds to
 https://github.com/gap-system/gap-distribution/blob/master/README.md
