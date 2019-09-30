@@ -30,7 +30,7 @@ ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
 AutoDoc     https://gap-packages.github.io/AutoDoc/PackageInfo.g
 Automata    https://gap-packages.github.io/automata/PackageInfo.g
-AutomGrp    http://finautom.sourceforge.net/automgrp/PackageInfo.g
+AutomGrp  MOVE https://gap-packages.github.io/automgrp/PackageInfo.g
 AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
