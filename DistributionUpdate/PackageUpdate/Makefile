@@ -8,7 +8,7 @@
 #
 
 pkg-stable:
-	./mergePackages ferret=no images=no ToricVarieties=stable
+	./mergePackages ToricVarieties=stable
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
