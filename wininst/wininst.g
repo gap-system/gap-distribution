@@ -196,8 +196,14 @@ for pkg in pkgs do
 od;
 AppendTo(nsisout,"\n!insertmacro MUI_FUNCTION_DESCRIPTION_END\n\n\n");
 
-name := Filename( DirectoryCurrent(), "nsiscript.mid" ); 
-output := OutputTextFile( name, false );
-WriteAll( output, nsisstr );
-CloseStream(output);
 
+# now compose everything together
+
+data := StringFile("nsiscript.top");
+data := ReplacedString(data, "@GAP_VER@", GAPInfo.Version);
+data := ReplacedString(data, "@GAP_ARCH@", GAPInfo.Architecture);
+Append(data, nsisstr);
+Append(data, StringFile("nsiscript.bottom"));
+FileString("gap.nsi", data, false);
+
+QUIT;

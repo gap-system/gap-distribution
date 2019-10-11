@@ -39,8 +39,8 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.10.2"
-StrCpy $GAP_ARCH "i686-pc-cygwin-default32-kv3"
+StrCpy $GAP_VER "@GAP_VER@"
+StrCpy $GAP_ARCH "@GAP_ARCH@"
 StrCpy $GAP_DIR "gap-$GAP_VER"
 SectionEnd
 
