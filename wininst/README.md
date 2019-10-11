@@ -13,9 +13,9 @@ distribution.
 
 
 
-The second stage is to compile the script. The most convenient wasy of doing
+The second stage is to compile the script. The most convenient ways of doing
 this to use MakeNSISW - a graphical user interface to NSIS. To compile the 
-script, you shoud do one of the following:
+script, you should do one of the following:
 
  - Select "Load Script" in the "File" menu
 
@@ -32,7 +32,7 @@ This directory contains the following files:
 * `gap.nsi`
 * `wininst.g`
 
-The gap.nsi sctipt may be updated on any machine. Install there the GAP
+The `gap.nsi` script may be updated on any machine. Install there the GAP
 release which you would like to wrap into the Windows installer, and read
 `wininst.g` using this GAP installation (remember to call GAP with `-r`
 option to avoid adding locally installed packages from your `.gap/pkg`
@@ -48,7 +48,7 @@ timestamp and default installation directory. Commit `gap.nsi` when ready.
 To make the GAP installer for Windows:
 * unpack GAP source distribution to the subdirectory `gap-4.X.Y` in the same
   directory with this script
-* put gapicon.ico` in the same directory with this script
+* put `gapicon.ico` in the same directory with this script
 * put a copy of `etc/CPL` renamed to `copyright.txt` in the same directory 
   with this script
 * compile the script
