@@ -1,6 +1,3 @@
-# Adjust the path for the release
-gappath:="gap-4.10.2";
-
 Basename := function(str)
   local len;
   len := Length(str);
@@ -40,14 +37,12 @@ repeat
   for pkg in pkgs do
     if not pkg in nowindows then
       neededpkg:=GAPInfo.PackagesInfo.(pkg)[1].Dependencies.NeededOtherPackages;
-      if Length(neededpkg) > 0 then
         new := Filtered( neededpkg, x -> LowercaseString(x[1]) in nowindows );
           if Length( new ) > 0 then
           AddSet( nowindows, pkg );
           Print("Package ", pkg, 
                 " does not work under Windows since it requires \n  ", new, "\n"); 
         fi;
-      fi;
     fi;  
   od;
 until Length(nowindows)=n;
@@ -61,7 +56,7 @@ Print("=============================================================\n");
 # As on Feb 18th 2012 in GAP.dev the list is
 # [ "autpgrp", "alnuth", "crisp", "factint", "fga", "irredsol", 
 # "laguna", "polenta", "polycyclic", "resclasses", "sophus" ]
-default:=SortedList(ShallowCopy( GAPInfo.UserPreferences.gap.PackagesToLoad ));
+default:=SortedList(GAPInfo.UserPreferences.gap.PackagesToLoad);
 
 default := Union( default, recommended ); 
      
@@ -130,7 +125,7 @@ if mandatory then
   AppendTo(nsisout,"SectionIn RO \n");
 fi;
 AppendTo(nsisout,"SetOutPath $INSTDIR\\pkg\\", dirname, "\n");
-AppendTo(nsisout,"File /r ", gappath, "\\pkg\\", dirname, "\\*.* \n");
+AppendTo(nsisout,"File /r $GAP_DIR\\pkg\\", dirname, "\\*.* \n");
 AppendTo(nsisout,"SetOutPath $INSTDIR \n");
 AppendTo(nsisout,"SectionEnd \n\n");
 end;
@@ -153,7 +148,7 @@ AppendTo(nsisout,"SectionGroup \"Default packages\" SecGAPpkgsDefault\n\n");
 AppendTo(nsisout,"SectionGroupEnd \n");
 AppendTo(nsisout,"# Default packages end here\n\n");
 
-PrintHeader("Specialised  packages");
+PrintHeader("Specialised packages");
 AppendTo(nsisout,"SectionGroup \"Specialised  packages\" SecGAPpkgsSpecial\n\n");
   for pkg in special do
     PrintSection( pkg, false );
