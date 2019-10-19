@@ -46,6 +46,20 @@ for x in  Collected(List(dates,x->x[3])) do
 od;
 Print("\n");
 
+# SPDX license identifier in PackageInfo.g
+
+haveSPDXinfo := Filtered( pkgnames, n -> IsBound( GAPInfo.PackagesInfo.(n)[1].License));
+lackSPDXinfo := Filtered( pkgnames, n -> not IsBound( GAPInfo.PackagesInfo.(n)[1].License));
+
+Print("*** ", Length(haveSPDXinfo), " packages have SPDX license identifier in PackageInfo.g\n");
+Print("*** ", Length(lackSPDXinfo), " packages have no SPDX license identifier in PackageInfo.g\n\n");
+
+Print("*** Licence types, when SPDX license identifier provided:\n");
+for x in  Collected( List( haveSPDXinfo, n -> GAPInfo.PackagesInfo.(n)[1].License) ) do
+  Print(x[2], " : ", x[1], "\n");
+od;
+Print("\n");
+
 # Test files
 
 havetests := Filtered( pkgnames, n -> IsBound( GAPInfo.PackagesInfo.(n)[1].TestFile));
