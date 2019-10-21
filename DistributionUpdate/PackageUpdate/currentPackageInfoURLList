@@ -116,6 +116,7 @@ Modules     https://homalg-project.github.io/homalg_project/Modules/PackageInfo.
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 MonoidalCategories http://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g
 Nilmat      http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
+NoCK        https://pjastr.github.io/NoCK/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
 nq          https://gap-packages.github.io/nq/PackageInfo.g
 NumericalSgps https://gap-packages.github.io/numericalsgps/PackageInfo.g
