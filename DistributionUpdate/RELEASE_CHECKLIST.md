@@ -14,9 +14,9 @@
 
 Evaluate weekly and nightly Jenkins CI tests (the following links are accessible only within University of St Andrews network).
 
-* For the minor release: https://gap-ci.cs.st-andrews.ac.uk/job/GAP-minor-release/ and its downstream projects
+* For the minor release: <https://gap-ci.cs.st-andrews.ac.uk/job/GAP-minor-release/> and its downstream projects
 
-* For the major release: https://gap-ci.cs.st-andrews.ac.uk/job/GAP-major-release/ and its downstream projects
+* For the major release: <https://gap-ci.cs.st-andrews.ac.uk/job/GAP-major-release/> and its downstream projects
 
 Minimal requirements for the test suite to pass:
 
@@ -30,18 +30,18 @@ Minimal requirements for the test suite to pass:
 
 ## Is there anything else to be released?
 
-* Are there any outstanding issues and/or pull requests under the GitHub milestone for the coming release (see https://github.com/gap-system/gap/milestones)? Should they be resolved/merged or left for another release?
+* Are there any outstanding issues and/or pull requests under the [GitHub milestone](https://github.com/gap-system/gap/milestones) for the coming release? Should they be resolved/merged or left for another release?
 
-* Are there any issues with updated packages that should be resolved either by picking up their next updates? In case package updates are delayed, but it is necessary to proceed with the release, follow instructions at https://github.com/gap-system/gap-distribution/tree/master/DistributionUpdate/PackageUpdate to use their previous releases.
+* Are there any issues with updated packages that should be resolved either by picking up their next updates? In case package updates are delayed, but it is necessary to proceed with the release, follow instructions at <https://github.com/gap-system/gap-distribution/tree/master/DistributionUpdate/PackageUpdate> to use their previous releases.
 
 
 ## What should be highlighted in the overview of changes in this release?
 
 * Add an overview of the coming release to the Changes manual, either as a new section for a minor release or a new chapter for a major release.
 
-* For a minor release, use appropriate milestone at https://github.com/gap-system/gap/milestones, but also check the release branch for any obvious omissions.
+* For a minor release, use appropriate milestone at <https://github.com/gap-system/gap/milestones>, but also check the release branch for any obvious omissions.
 
-* For a major release, use appropriate milestone at https://github.com/gap-system/gap/milestones, and also check https://github.com/gap-system/gap/wiki/Changes-between-GAP-4.8-and-GAP-4.9 (or another similarly named page) which may be a better place to work on a draft of a high level overview of changes and new features in a major release.
+* For a major release, use appropriate milestone at <https://github.com/gap-system/gap/milestones>, and also check <https://github.com/gap-system/gap/wiki/Changes-between-GAP-4.8-and-GAP-4.9> (or another similarly named page) which may be a better place to work on a draft of a high level overview of changes and new features in a major release.
 
 # Evaluating release candidate
 
@@ -49,9 +49,9 @@ Minimal requirements for the test suite to pass:
 
 Evaluate weekly and nightly Jenkins CI tests (the following links are accessible only within University of St Andrews network).
 
-* For the minor release: https://gap-ci.cs.st-andrews.ac.uk/job/GAP-minor-release/ and its downstream projects
+* For the minor release: <https://gap-ci.cs.st-andrews.ac.uk/job/GAP-minor-release/> and its downstream projects
 
-* For the major release: https://gap-ci.cs.st-andrews.ac.uk/job/GAP-major-release/ and its downstream projects
+* For the major release: <https://gap-ci.cs.st-andrews.ac.uk/job/GAP-major-release/> and its downstream projects
 
 Minimal requirements for the test suite to pass are the same as described above.
 
@@ -59,9 +59,9 @@ Minimal requirements for the test suite to pass are the same as described above.
 
 * For Linux and macOS, use `tar.bz2`, `tar.gz` or `zip` archives:
 
-  - For the minor release from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release/ 
+  - For the minor release from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release/>
  
-  - For the major release from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release/
+  - For the major release from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release/>
 
 * Install the core system and build packages with `bin/BuildPackages.sh`
 
@@ -83,12 +83,12 @@ Minimal requirements for the test suite to pass are the same as described above.
 For Windows, use `win.zip` archives.
 
 * For the minor release:
-  - 32-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/
-  - 32-bit without readline support from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-noreadline-build/
-  - 64-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-build64/
+  - 32-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/>
+  - 32-bit without readline support from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-noreadline-build/>
+  - 64-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-build64/>
 
 * For a major release:
-  - 32-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/
+  - 32-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/>
   - other builds will be added soon
 
 For a major release, one should perform these checks for each of the batch files `gap.bat`, `gapcmd.bat` and `gaprxvt.bat`, and also check the version built without readline support and experimental 64-bit version. For a minor release, one could perform more thorough checks with `gap.bat` and just check that the two other files also start GAP.
@@ -117,7 +117,7 @@ Additionally:
 
 ## Prepare and test Windows installer
 
-* See instructions in https://github.com/gap-system/gap-distribution/tree/master/wininst
+* See instructions in <https://github.com/gap-system/gap-distribution/tree/master/wininst>
 
 # Publishing release
 
@@ -132,16 +132,16 @@ The following files should be collected:
 * core GAP system archive named in `gap-4.X.Y-core.zip` format in the `www.gap-system.org/pub/gap/gap4core` directory (for GAP developers and for maintainers of alternative GAP distributions)
 
 * `tar.bz2`, `tar.gz` and `zip` archives:
-  - For the minor release from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release/ 
-  - For the major release from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release/
+  - For the minor release from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release/>
+  - For the major release from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release/>
 
 *  `-win.zip` archives for a minor release:
-  - 32-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/
-  - 32-bit without readline support from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-noreadline-build/
-  - 64-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-build64/
+  - 32-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/>
+  - 32-bit without readline support from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-noreadline-build/>
+  - 64-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-minor-release-win-build64/>
 
 *  `-win.zip` archives for a major release:
-  - 32-bit from https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/
+  - 32-bit from <https://gap-ci.cs.st-andrews.ac.uk/view/GAP-release/job/GAP-major-release-win-build/>
   - other builds will be added soon
 
 ### Prepare package archives
@@ -245,7 +245,7 @@ to regenerate updated pages.
 
 * Maintainers of alternative installers/distributions may now update them:
 
-  - Homebrew: https://github.com/Homebrew/homebrew-science/blob/master/gap.rb 
+  - Homebrew: <https://github.com/Homebrew/homebrew-science/blob/master/gap.rb>
 
-  - Docker: https://hub.docker.com/u/gapsystem/  
+  - Docker: <https://hub.docker.com/u/gapsystem/> 
  
