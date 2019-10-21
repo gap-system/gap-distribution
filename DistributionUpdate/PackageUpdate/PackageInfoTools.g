@@ -1518,7 +1518,7 @@ AddHTMLPackageInfo := function(arg)
   res := Concatenation("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n",
          "<mixer template=\"gw.tmpl\">\n");
   # header line with link to package home page
-  Append(res, Concatenation("<mixertitle><mixer var=\"GAP\"/> package ", 
+  Append(res, Concatenation("<mixertitle>GAP package ", 
          info.PackageName, 
          "</mixertitle>\n\n"));
 
