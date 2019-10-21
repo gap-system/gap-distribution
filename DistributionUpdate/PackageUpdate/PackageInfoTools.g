@@ -19,10 +19,6 @@
 ## setting global variable to store package infos
 PACKAGE_INFOS := rec();
 
-## should be told the 'mixer' directly
-GAPLibraryVersion := "unknown";
-GAPKernelVersion := "unknown";
-
 ## clear the global variable PACKAGE_INFOS
 ClearPACKAGE_INFOS := function()
   local a;
@@ -1956,8 +1952,8 @@ WritePackageWebPageInfos := function(webdir, pkgconffile, pkgstaticfile)
   Print("Preparing information for SuggestUpgrades ...\n");
   names := ShallowCopy(NamesOfComponents(suggestupgradeslines));
   Sort(names);
-  lines := [ "[ \"GAPKernel\", \"<mixer var='GAPKernelVersion'/>\" ], ",
-             "[ \"GAPLibrary\", \"<mixer var='GAPLibraryVersion'/>\" ], " ];
+  lines := [ "[ \"GAPKernel\", \"<mixer var='relversion'/>\" ], ",
+             "[ \"GAPLibrary\", \"<mixer var='relversion'/>\" ], " ];
   # now sort by package name and format for lines < 65 characters
   for a in names do
     Add(lines, suggestupgradeslines.(a));
