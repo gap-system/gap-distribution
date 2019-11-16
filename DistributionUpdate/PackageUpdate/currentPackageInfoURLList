@@ -34,7 +34,7 @@ AutomGrp  MOVE https://gap-packages.github.io/automgrp/PackageInfo.g
 AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
-Carat       https://www.math.uni-bielefeld.de/~gaehler/gap45/Carat/PackageInfo.g
+CaratInterface https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
