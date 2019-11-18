@@ -20,22 +20,19 @@ export FULLVERSION="$MAJORVERSION.$MINORVERSION"
 #   the branch you need, e.g. "stable-4.5", "default" or "integration"
 # - to get the state used for the previous release (e.g. to merge with 
 #   the new packages archive, use corresponding tag, e.g. "v4.5.6" 
-export GAPGITVERSION="master"
+export BRANCH="master"
 
 # directory name (e.g. "gap-4.9.0")
-export DISTNAME="gap-4.${FULLVERSION}"
+export DISTNAME="gap-$FULLVERSION"
 
 # archive name (e.g. "gap-4.9.0")
-export ARCHNAME="gap-4.${FULLVERSION}"
+export ARCHNAME="gap-$FULLVERSION"
 
 # location of the merged packages archive (assumed to be on the same machine)
 export MERGEDPKGLOC="/circa/scratch/gap-jenkins/workspace/GAP-pkg-merge-master/DistributionUpdate/PackageUpdate"
 
 # Where to put the temporary export tree and archives
 export DISTROOT="/circa/scratch/gap-jenkins/workspace/GAP-major-release/wrap/$DISTNAME"
-
-# the source repository (access must be configured in advance)
-export GITROOT="https://github.com/gap-system/gap.git"
 
 #-----------------------------------------------------------------------------
 # everything below should be system independent.
@@ -46,4 +43,4 @@ export LC_ALL="C"
 
 umask 022
 
-echo "*** Environment set for creating Version GAP 4."${FULLVERSION}
+echo "*** Environment set for creating Version GAP ${FULLVERSION}"

@@ -20,7 +20,7 @@ source ./core_checkout_time.txt
 cd ${DISTNAME}
 
 # Update suggestions how to cite GAP
-sed -i -e "s/4.dev/4.$FULLVERSION/g" CITATION
+sed -i -e "s/4.dev/$FULLVERSION/g" CITATION
 sed -i -e "s/this year/$COREYEAR/g" CITATION
 
 cd lib/
@@ -28,7 +28,7 @@ cd lib/
 ##    Version := MakeImmutable("4.dev"),
 ##    Date := MakeImmutable("today"),
 ##    NeedKernelVersion := MakeImmutable("4.dev"),
-sed -i -e "s/4.dev/4.$FULLVERSION/g" system.g
+sed -i -e "s/4.dev/$FULLVERSION/g" system.g
 sed -i -e "s/today/$COREDATE/g" system.g
 
 cd ../src/
@@ -36,12 +36,12 @@ cd ../src/
 ## const Char * SyKernelVersion = "4.dev";
 ## const Char * SyBuildDateTime = "today";
 sed -i -e "s/today/$COREDATE/g" gap_version.c.in
-sed -i -e "s/4.dev/4.$FULLVERSION/g" system.c
+sed -i -e "s/4.dev/$FULLVERSION/g" system.c
 
 cd ../cnf
 # Adjusting the script the generates a version string for GAP
 # DEF_VER=v4.dev
-sed -i -e "s/4.dev/4.$FULLVERSION/g" GAP-VERSION-GEN
+sed -i -e "s/4.dev/$FULLVERSION/g" GAP-VERSION-GEN
 
 cd ../doc/
 ## Setting up version number, release date, release year and
@@ -50,7 +50,7 @@ cd ../doc/
 ## <!ENTITY RELEASEDAY "today">
 ## <!ENTITY RELEASEYEAR "this year">
 ## <!ENTITY GAPDIRNAME "gap4dev">
-sed -i -e "s/4.dev/4.$FULLVERSION/g" versiondata
+sed -i -e "s/4.dev/$FULLVERSION/g" versiondata
 sed -i -e "s/today/$COREDATE/g" versiondata
 sed -i -e "s/this year/$COREYEAR/g" versiondata
 sed -i -e "s/gap4dev/$DISTNAME/g" versiondata

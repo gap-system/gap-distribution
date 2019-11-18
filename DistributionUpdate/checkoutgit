@@ -27,8 +27,8 @@ cd ${RELEASEBRANCH}
 rm -rf ${DISTNAME}
 
 # Clone the repository.
-echo "$0: cloning the repository for version 4.$FULLVERSION of $DATE"
-line='git clone --depth 1 -b '${GAPGITVERSION}' '${GITROOT}' '${DISTNAME}
+echo "$0: cloning the repository for version $FULLVERSION of $DATE"
+line="git clone --depth 1 -b ${BRANCH} https://github.com/gap-system/gap.git ${DISTNAME}"
 echo $line
 $line
 
@@ -41,11 +41,9 @@ fi
 # successful, recorded time of the checkout will be used to tag 
 # corresponding revisions as included in the particular release.
 export COREDATE=`date +"%d-%b-%Y"`
-export CORETIME=`date -u +"%Y_%m_%d-%H_%M"`
 export COREYEAR=`date +"%Y"`
 echo "export DISTNAME=\"$DISTNAME\"" > core_checkout_time.txt
 echo "export ARCHNAME=\"$ARCHNAME\"" >> core_checkout_time.txt
-echo "export CORETIME=\"$CORETIME\"" >> core_checkout_time.txt
 echo "export COREDATE=\"$COREDATE\"" >> core_checkout_time.txt
 echo "export COREYEAR=\"$COREYEAR\"" >> core_checkout_time.txt
 
