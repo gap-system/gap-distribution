@@ -8,7 +8,7 @@ if [ ${DISTROOT}X==X ]; then
   source ./setvar
 fi
 
-export RELEASEBRANCH=${DISTROOT}/releasebranch
+export RELEASEBRANCH=${DISTROOT}/gapcore
 
 # create and go to build directory
 if ! mkdir -p ${RELEASEBRANCH}; then

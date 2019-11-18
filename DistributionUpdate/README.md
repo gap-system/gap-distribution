@@ -71,16 +71,8 @@ consists of three stages
   binary to be included in the main archives or not shipped (there is also a file
   `patternscolorpkg.txt` which is used to do the same for packages).
 
-* `zipreleasebranch`: adds text and binary files to the archive of the core
-  system.
-
-* `zipmetainfo`: records what has been archived in the meta-information archive.
-
 
 ### Stage 2: make preparations in the GAP core
-
-* `unpackreleasebranch`: unpacks the core system archive and the meta-information
-  archive
 
 * `updateversioninfo`: uses `sed` to insert version number, release date and
   other details into the source (so these adjustments will never appear in the
