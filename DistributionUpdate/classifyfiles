@@ -8,12 +8,12 @@ if [ ${DISTROOT}X==X ]; then
   source ./setvar
 fi
 
-export RELEASEBRANCH=${DISTROOT}/gapcore
+export DIR=${DISTROOT}/gapcore
 
-cp ./classifyfiles.py ${RELEASEBRANCH}
-cp ./pattern* ${RELEASEBRANCH}
+cp ./classifyfiles.py ${DIR}
+cp ./pattern* ${DIR}
 
-line='cd '${RELEASEBRANCH}
+line='cd '${DIR}
 echo $line
 $line 
 

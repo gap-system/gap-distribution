@@ -8,22 +8,22 @@ if [ ${DISTROOT}X==X ]; then
   source ./setvar
 fi
 
-export RELEASEBRANCH=${DISTROOT}/gapcore
+export DIR=${DISTROOT}/gapcore
 
 # create and go to build directory
-if ! mkdir -p ${RELEASEBRANCH}; then
-  echo 'Cannot create temporary directory '${RELEASEBRANCH}
+if ! mkdir -p ${DIR}; then
+  echo 'Cannot create temporary directory '${DIR}
   exit 1
 fi
 
 # copying ./setvar to the build directory for the meta-information archive
 
-cp ./setvar ${RELEASEBRANCH}
+cp ./setvar ${DIR}
 
-echo 'Changing the directory to '${RELEASEBRANCH}
+echo 'Changing the directory to '${DIR}
   
-echo 'cd '${RELEASEBRANCH}
-cd ${RELEASEBRANCH}
+echo 'cd '${DIR}
+cd ${DIR}
 rm -rf ${DISTNAME}
 
 # Clone the repository.
@@ -55,7 +55,7 @@ echo 'The working directory is set to the following revision:'
 git log -1 > ../gitparent.log
 cd ..
 cat gitparent.log
-echo 'This revision is logged to '${RELEASEBRANCH}'/gitparent.log'
+echo 'This revision is logged to '${DIR}'/gitparent.log'
 
 # We do not use Git later so we may erase .git* files and .git directory
 echo 'Removing .git* files and .git directory'
