@@ -1581,7 +1581,7 @@ AddHTMLPackageInfo := function(arg)
   if not IsBound(info.Date) then
     info.Date := "unknown";
   fi;
-  Append(res, Concatenation("<h4>Version</h4>\n<p> Current version number ",
+  Append(res, Concatenation("<h4>Version</h4>\n<p> Current version shipped with GAP: ",
                  info.Version, 
                  " &nbsp;&nbsp;(Released  ", info.Date, ")\n</p>\n"));
   # SuggestUpgrades  entry
