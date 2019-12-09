@@ -35,6 +35,7 @@ AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 CaratInterface https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g
+CddInterface https://homalg-project.github.io/CddInterface/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
@@ -115,6 +116,7 @@ ModIsom     https://gap-packages.github.io/modisom/PackageInfo.g
 Modules     https://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 MonoidalCategories http://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g
+NConvex     https://homalg-project.github.io/NConvex/PackageInfo.g
 Nilmat      http://www.maths.nuigalway.ie/~dane/nilmat/PackageInfo.g
 NoCK        https://pjastr.github.io/NoCK/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
