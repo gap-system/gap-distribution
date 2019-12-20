@@ -1724,7 +1724,7 @@ AddHTMLPackageInfo := function(arg)
     fn := Concatenation(webdir, "/ftpdir/", ext{[2..Length(ext)]}, 
           "/packages/", bnam, ext);
     s := StringSizeFilename(fn);
-    Append(res, Concatenation("[<a href='{{gap4www}}", ext{[2..Length(ext)]}, 
+    Append(res, Concatenation("[<a href='{{gap4dist}}", ext{[2..Length(ext)]}, 
            "/packages/", bnam, ext, "'>", ext, 
            "&nbsp; (", s, ")</a>]&nbsp;&nbsp;\n"));
   od;
