@@ -83,7 +83,7 @@ groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
 HAP         https://gap-packages.github.io/hap/PackageInfo.g
-HAPcryst MOVE https://gap-packages.github.io/hapcryst/PackageInfo.g
+HAPcryst    https://gap-packages.github.io/hapcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
 HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
 homalg      https://homalg-project.github.io/homalg_project/homalg/PackageInfo.g
@@ -117,7 +117,7 @@ Modules     https://homalg-project.github.io/homalg_project/Modules/PackageInfo.
 ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
 MonoidalCategories http://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g
 NConvex     https://homalg-project.github.io/NConvex/PackageInfo.g
-Nilmat      MOVE  https://gap-packages.github.io/nilmat/PackageInfo.g
+Nilmat      https://gap-packages.github.io/nilmat/PackageInfo.g
 NoCK        https://pjastr.github.io/NoCK/PackageInfo.g
 NormalizInterface https://gap-packages.github.io/NormalizInterface/PackageInfo.g
 nq          https://gap-packages.github.io/nq/PackageInfo.g
