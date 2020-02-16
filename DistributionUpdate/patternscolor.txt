@@ -26,7 +26,6 @@
 #
 +doc/ref/*
 +doc/tut/*
-+doc/changes/*
 +doc/hpc/*
 +doc/gapmacro.tex
 +doc/gapmacrodoc.tex
