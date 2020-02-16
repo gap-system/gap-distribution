@@ -1,9 +1,9 @@
 # -limit 100000 
 # -doc   testlinks 
 # -index chap0.html chapters.htm 
-# /doc/changes/@ 
 # /doc/ref/@
 # /doc/tut/@
+# /doc/hpc/@
 # ...
 # ...
 
@@ -51,9 +51,9 @@ for s in indexnames do
   AppendTo("testlinks", s, " ");
 od;
 AppendTo("testlinks", "\n");
-AppendTo("testlinks", "/doc/changes/@\n");
 AppendTo("testlinks", "/doc/ref/@\n");
 AppendTo("testlinks", "/doc/tut/@\n");
+AppendTo("testlinks", "/doc/hpc/@\n");
 for s in dirlist do
   AppendTo("testlinks", "/pkg/", s, "@\n");
 od;
