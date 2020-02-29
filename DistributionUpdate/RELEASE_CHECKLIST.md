@@ -239,7 +239,7 @@ to regenerate updated pages.
 
 * Create a new milestone for the next release (if not yet created) at https://github.com/gap-system/gap/milestones
 
-* Increment version numbers in `setvarminor`, `setvarupdate` (and `setvarmajor`, if needed) files in https://github.com/gap-system/gap-distribution/tree/master/DistributionUpdate to specify version numbers for next minor/major releases (see an example in [this commit](https://github.com/gap-system/gap-distribution/commit/907c323a537857799ebda4743cd65587aecb12ac)).
+* Increment version numbers in `setvarminor` (and `setvarmajor`, if needed) files in https://github.com/gap-system/gap-distribution/tree/master/DistributionUpdate to specify version numbers for next minor/major releases (see an example in [this commit](https://github.com/gap-system/gap-distribution/commit/907c323a537857799ebda4743cd65587aecb12ac)).
 
 * Update corresponding release notes on [Wiki](https://github.com/gap-system/gap/wiki/) to collect changes for the next GAP release
 
