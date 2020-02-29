@@ -241,7 +241,7 @@ to regenerate updated pages.
 
 * Increment version numbers in `setvarminor`, `setvarupdate` (and `setvarmajor`, if needed) files in https://github.com/gap-system/gap-distribution/tree/master/DistributionUpdate to specify version numbers for next minor/major releases (see an example in [this commit](https://github.com/gap-system/gap-distribution/commit/907c323a537857799ebda4743cd65587aecb12ac)).
 
-* In case there are any entries in the [`dev/Updates` directory](https://github.com/gap-system/gap/tree/master/dev/Updates) in the relevant release branch, they should be moved to to another folder named accordingly to the released version.
+* Update corresponding release notes on [Wiki](https://github.com/gap-system/gap/wiki/) to collect changes for the next GAP release
 
 * Maintainers of alternative installers/distributions may now update them:
 
