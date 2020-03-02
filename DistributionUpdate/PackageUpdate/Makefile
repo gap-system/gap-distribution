@@ -8,13 +8,13 @@
 #
 
 pkg-stable:
-	./mergePackages convex=no
+	./mergePackages
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 
 pkg-master:
-	./mergePackages convex=no
+	./mergePackages
 
 pkg-required-master:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
