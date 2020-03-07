@@ -1,5 +1,5 @@
 # Adjust the path for the release
-gappath:="gap-4.10.2";
+gappath:="gap-4.11.0";
 
 Basename := function(str)
   local len;
@@ -23,7 +23,7 @@ recommended:=[ "atlasrep", "design", "grape", "guava", "example" ];
 # Hints for (some) packages that do not work under Windows 
 # Use this to get a list of packages that are not loadable:
 # SortedList(Filtered( RecNames(GAPInfo.PackagesInfo), n -> LoadPackage(n)=fail));
-nowindows:=[ "ace", "anupq", "carat", "curlinterface", "deepthought", "float", "fwtree",
+nowindows:=[ "anupq", "curlinterface", "float", "fwtree",
 "help", "itc", "normalizinterface", "polymakeinterface", "xgap" ];
 
 Print("=============================================================\n");
@@ -205,4 +205,7 @@ name := Filename( DirectoryCurrent(), "nsiscript.mid" );
 output := OutputTextFile( name, false );
 WriteAll( output, nsisstr );
 CloseStream(output);
+
+QUIT;
+
 
