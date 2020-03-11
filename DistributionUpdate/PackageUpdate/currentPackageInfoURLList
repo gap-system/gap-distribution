@@ -25,7 +25,7 @@
 4ti2Interface https://homalg-project.github.io/homalg_project/4ti2Interface/PackageInfo.g
 ACE         https://gap-packages.github.io/ace/PackageInfo.g
 AClib       https://gap-packages.github.io/aclib/PackageInfo.g
-AGT         https://gap-packages.github.io/agt/PackageInfo.g
+AGT MOVE    https://gap-packages.github.io/agt/PackageInfo.g
 Alnuth      https://gap-packages.github.io/alnuth/PackageInfo.g
 ANUPQ       https://gap-packages.github.io/anupq/PackageInfo.g
 AtlasRep    http://www.math.rwth-aachen.de/~Thomas.Breuer/atlasrep/PackageInfo.g
