@@ -162,7 +162,7 @@ TomLib      https://gap-packages.github.io/tomlib/PackageInfo.g
 ToolsForHomalg https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
 ToricVarieties https://homalg-project.github.io/homalg_project/ToricVarieties/PackageInfo.g
-transgrp    http://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
+transgrp    https://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
 unipot      https://gap-packages.github.io/unipot/PackageInfo.g
 UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
 Utils       https://gap-packages.github.io/utils/PackageInfo.g
