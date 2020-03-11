@@ -93,7 +93,7 @@ images      https://gap-packages.github.io/images/PackageInfo.g
 IntPic      https://gap-packages.github.io/intpic/PackageInfo.g
 IO          https://gap-packages.github.io/io/PackageInfo.g
 IO_ForHomalg https://homalg-project.github.io/homalg_project/IO_ForHomalg/PackageInfo.g
-IRREDSOL    http://www.icm.tu-bs.de/~bhoeflin/irredsol/PackageInfo.g
+IRREDSOL MOVE https://github.com/bh11/irredsol/releases/latest/download/PackageInfo.g
 ITC         https://gap-packages.github.io/itc/PackageInfo.g
 json        https://gap-packages.github.io/json/PackageInfo.g
 JupyterKernel https://gap-packages.github.io/JupyterKernel/PackageInfo.g
