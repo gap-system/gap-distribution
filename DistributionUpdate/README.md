@@ -1,7 +1,7 @@
 # Release wrapping scripts
 
 This directory contains scrips to prepare release candidates for the
-next minor, major and update releases. Its `PackageUpdate` subdirectory
+next minor and major releases. Its `PackageUpdate` subdirectory
 contains scripts for the package update mechanism. They are documented
 separately in `PackageUpdate/README.md`.
 
@@ -14,14 +14,11 @@ Assuming that the latest official GAP release has version 4.X.Y, we have:
 
 * Major release: version 4.X+1.0, based on the head of the master branch
 
-* Update release: version 4.X.Y, based on v4.X.Y tag in the stable-4.X branch
-  wrapped with updated packages
-
 
 ## Setup
 
-Environment variables are specified in the files  `setvarminor`, `setvarmajor`
-and `setvarupdate`. Most important are:
+Environment variables are specified in the files  `setvarminor` and 
+`setvarmajor`. Most important are:
 
 * Version numbers: `MAJORVERSION` and `MINORVERSION` are setting the major
   (i.e. the last number in GAP 4.4, 4.5, 4.6) and minor (i.e. the last number
@@ -39,10 +36,10 @@ and `setvarupdate`. Most important are:
 
 ## Making release
 
-There are three `make` targets to make corresponding releases:
+There are two `make` targets to make corresponding releases:
 
-* `make minor`, `make major`, `make update`: each of these targets copies
-  one of the `setvarupdate`, `setvarminor` or `setvarmajor` to `setvar`
+* `make minor`, `make major`: each of these targets copies
+  one of the `setvarminor` or `setvarmajor` to `setvar`
   script, and the calls the `doit` script which automates the full release
   wrapping procedure (see the description of `doit` and other scripts
   below)
@@ -60,7 +57,7 @@ consists of three stages
 ### Stage 1: Checkout and archive the release branch
 
 * `setvar`: set up environment variables as required (`make` with appropriate
-  target will use one of `setvarupdate`, `setvarminor` or `setvarmajor` files).
+  target will use one of `setvarminor` or `setvarmajor` files).
 
 * `checkoutgit`: makes a shallow clone of the appropriate branch of the repository.
   It records the revision and the time of cloning to use in the timestamp. From
