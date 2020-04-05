@@ -43,7 +43,7 @@ cat listignoredfiles.txt >> ../listignoredfiles.txt
 
 cd ${GAPSOURCE}/pkgnow/${DISTNAME}/pkg
 echo 'Unpacking packages archive'
-cp `ls ${MERGEDPKGLOC}/packages-*|tail -1` pkgnow.tar.gz
+cp `ls ${MERGEDPKGLOC}/packages-!(required*)|tail -1` pkgnow.tar.gz
 gzip -dc pkgnow.tar.gz | tar xp
 rm pkgnow.tar.gz
 
