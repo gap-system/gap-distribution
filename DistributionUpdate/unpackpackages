@@ -48,7 +48,7 @@ gzip -dc pkgnow.tar.gz | tar xp
 rm pkgnow.tar.gz
 
 echo 'Reading the metainformation about text/binary files'
-cp `ls ${MERGEDPKGLOC}/metainfopackages*.zip|tail -1` metainfo.zip
+cp `ls ${MERGEDPKGLOC}/metainfopackages-20*.zip|tail -1` metainfo.zip
 unzip metainfo.zip
 echo "s#^#"${DISTNAME}"/pkg/#" > sedfile
 sed -f sedfile metainfotxtfiles* > metainfotxtfileslong.txt
