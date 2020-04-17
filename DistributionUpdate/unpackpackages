@@ -43,9 +43,9 @@ cat listignoredfiles.txt >> ../listignoredfiles.txt
 
 cd ${GAPSOURCE}/pkgnow/${DISTNAME}/pkg
 echo 'Unpacking packages archive'
-cp `ls ${MERGEDPKGLOC}/packages-20*|tail -1` pkgnow.tar.gz
-gzip -dc pkgnow.tar.gz | tar xp
-rm pkgnow.tar.gz
+cp ${MERGEDPKGLOC}/packages-master.tar.gz .
+gzip -dc packages-master.tar.gz | tar xp
+rm packages-master.tar.gz
 
 echo 'Reading the metainformation about text/binary files'
 cp `ls ${MERGEDPKGLOC}/metainfopackages-20*.zip|tail -1` metainfo.zip
