@@ -33,6 +33,7 @@
 +doc/manualindex
 +doc/make_doc.in
 +doc/versiondata
++doc/versiondata.in
 -doc/*
 +etc/emacs/*
 +etc/vim/*

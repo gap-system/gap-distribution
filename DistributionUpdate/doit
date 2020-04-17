@@ -13,11 +13,6 @@ set -ex
 # STAGE 2 - make preparations in the GAP core
 # (note that the next script also unpacks the meta-information archive)
 ./unpackreleasebranch
-# Insert version number, release date and other depending information 
-# (so these adjustments will never appear in the repository; instead, 
-#after the release we will find the parent revision used to wrap the 
-# release and will tag it with an appropriate tag).
-./updateversioninfo
 ./zipgapcore
 ./updatemetainfo
 
