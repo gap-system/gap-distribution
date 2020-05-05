@@ -24,7 +24,7 @@ recommended:=[ "atlasrep", "design", "grape", "guava", "example" ];
 # Use this to get a list of packages that are not loadable:
 # SortedList(Filtered( RecNames(GAPInfo.PackagesInfo), n -> LoadPackage(n)=fail));
 nowindows:=[ "anupq", "curlinterface", "float", "fwtree",
-"help", "itc", "normalizinterface", "polymakeinterface", "xgap" ];
+"help", "itc", "normalizinterface", "xgap" ];
 
 Print("=============================================================\n");
 # Packages needed by GAP
