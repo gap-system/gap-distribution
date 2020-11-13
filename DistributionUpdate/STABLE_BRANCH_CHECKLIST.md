@@ -21,8 +21,18 @@ cp packages-master.tar.gz packages-stable-X.Y.tar.gz
 cp packages-required-master.tar.gz packages-required-stable-X.Y.tar.gz
 ```
 
-* In the stable-X.Y branch, change `PKG_BRANCH` from `master` to `stable-X.Y` 
-in order to point to bootstrapping package archives for the stable-X.Y branch.
+* In the `stable-X.Y` branch of the `gap-system/gap` repository, update some files:
+  - `Makefile.rules`: change `PKG_BRANCH` from `master` to `stable-X.Y` in order to point to bootstrapping package archives for the stable-X.Y branch.
+  - `README.md`: change the badges at the top to refer to `stable-X.Y`
+  - `configure.ac`: ensure `gap_version` is at `X.Ydev`
+  - finally, run `./configure && make` and commit any updated files (`CITATION`, `doc/versiondata`, ...)
+
+* In the `master` branch of the `gap-system/gap` repository, update some files:
+  - `configure.ac`: change `gap_version` to `X.(Y+1)dev`
+  - finally, run `./configure && make` and commit any updated files (`CITATION`, `doc/versiondata`, ...)
+
+* Once the changes to `master` are committed, create an annotated tag for that new commit, where Z is Y+1: `git tag -m "Start of work on GAP X.Z" vX.Zdev && git push`
+  This tag is then used by `git describe` and ensures that GAP development builds carry a suitable version number.
 
 * Update badges for the core system tests at
 https://github.com/gap-system/gap-distribution/blob/master/README.md
