@@ -34,7 +34,7 @@ Automata    https://gap-packages.github.io/automata/PackageInfo.g
 AutomGrp    https://gap-packages.github.io/automgrp/PackageInfo.g
 AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
 Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
-CAP         http://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
+CAP         https://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 CaratInterface https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g
 CddInterface https://homalg-project.github.io/CddInterface/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
@@ -73,7 +73,7 @@ GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
 GaussForHomalg https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g
 GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
-GeneralizedMorphismsForCAP http://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
+GeneralizedMorphismsForCAP https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
 GradedRingForHomalg https://homalg-project.github.io/homalg_project/GradedRingForHomalg/PackageInfo.g
@@ -82,7 +82,7 @@ GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
-HAP         https://gap-packages.github.io/hap/PackageInfo.g
+HAP         https://gap-packages.github.io/HAP/PackageInfo.g
 HAPcryst    https://gap-packages.github.io/hapcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
 HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
@@ -104,7 +104,7 @@ LAGUNA      https://gap-packages.github.io/laguna/PackageInfo.g
 liealgdb    https://gap-packages.github.io/liealgdb/PackageInfo.g
 LiePRing    https://gap-packages.github.io/liepring/PackageInfo.g
 LieRing     https://gap-packages.github.io/liering/PackageInfo.g
-LinearAlgebraForCAP http://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
+LinearAlgebraForCAP https://homalg-project.github.io/CAP_project/LinearAlgebraForCAP/PackageInfo.g
 LocalizeRingForHomalg https://homalg-project.github.io/homalg_project/LocalizeRingForHomalg/PackageInfo.g
 loops       https://gap-packages.github.io/loops/PackageInfo.g
 lpres       https://gap-packages.github.io/lpres/PackageInfo.g
@@ -114,8 +114,8 @@ Matgrp      http://www.math.colostate.edu/~hulpke/matgrp/PackageInfo.g
 MatricesForHomalg https://homalg-project.github.io/homalg_project/MatricesForHomalg/PackageInfo.g
 ModIsom     https://gap-packages.github.io/modisom/PackageInfo.g
 Modules     https://homalg-project.github.io/homalg_project/Modules/PackageInfo.g
-ModulePresentationsForCAP http://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
-MonoidalCategories http://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g
+ModulePresentationsForCAP https://homalg-project.github.io/CAP_project/ModulePresentationsForCAP/PackageInfo.g
+MonoidalCategories https://homalg-project.github.io/CAP_project/MonoidalCategories/PackageInfo.g
 NConvex     https://homalg-project.github.io/NConvex/PackageInfo.g
 Nilmat      https://gap-packages.github.io/nilmat/PackageInfo.g
 NoCK        https://pjastr.github.io/NoCK/PackageInfo.g
