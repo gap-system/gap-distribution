@@ -82,7 +82,7 @@ GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
-HAP         https://gap-packages.github.io/hap/PackageInfo.g
+HAP    MOVE https://gap-packages.github.io/hap/PackageInfo.g
 HAPcryst    https://gap-packages.github.io/hapcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
 HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
