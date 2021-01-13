@@ -54,7 +54,7 @@ datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
 DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
 DESIGN      https://gap-packages.github.io/design/PackageInfo.g
 DifSets     https://dylanpeifer.github.io/difsets/PackageInfo.g
-Digraphs    https://gap-packages.github.io/Digraphs/PackageInfo.g
+Digraphs    MOVE https://digraphs.github.io/Digraphs/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
@@ -144,7 +144,7 @@ ResClasses  https://gap-packages.github.io/resclasses/PackageInfo.g
 RingsForHomalg https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         https://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
-Semigroups  https://gap-packages.github.io/Semigroups/PackageInfo.g
+Semigroups  MOVE https://semigroups.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
