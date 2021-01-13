@@ -54,7 +54,7 @@ datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
 DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
 DESIGN      https://gap-packages.github.io/design/PackageInfo.g
 DifSets     https://dylanpeifer.github.io/difsets/PackageInfo.g
-Digraphs    MOVE https://digraphs.github.io/Digraphs/PackageInfo.g
+Digraphs    https://digraphs.github.io/Digraphs/PackageInfo.g
 EDIM        http://www.math.rwth-aachen.de/~Frank.Luebeck/EDIM/PackageInfo.g
 Example     https://gap-packages.github.io/example/PackageInfo.g
 ExamplesForHomalg https://homalg-project.github.io/homalg_project/ExamplesForHomalg/PackageInfo.g
@@ -82,7 +82,7 @@ GrpConst    https://gap-packages.github.io/grpconst/PackageInfo.g
 groupoids   https://gap-packages.github.io/groupoids/PackageInfo.g
 Guarana     https://gap-packages.github.io/guarana/PackageInfo.g
 GUAVA       https://gap-packages.github.io/guava/PackageInfo.g
-HAP    MOVE https://gap-packages.github.io/hap/PackageInfo.g
+HAP         https://gap-packages.github.io/hap/PackageInfo.g
 HAPcryst    https://gap-packages.github.io/hapcryst/PackageInfo.g
 hecke       https://gap-packages.github.io/hecke/PackageInfo.g
 HeLP        https://gap-packages.github.io/HeLP/PackageInfo.g
@@ -144,7 +144,7 @@ ResClasses  https://gap-packages.github.io/resclasses/PackageInfo.g
 RingsForHomalg https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         https://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
-Semigroups  MOVE https://semigroups.github.io/Semigroups/PackageInfo.g
+Semigroups  https://semigroups.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
@@ -160,7 +160,7 @@ Thelma      https://gap-packages.github.io/Thelma/PackageInfo.g
 TomLib      https://gap-packages.github.io/tomlib/PackageInfo.g
 ToolsForHomalg https://homalg-project.github.io/homalg_project/ToolsForHomalg/PackageInfo.g
 toric       https://gap-packages.github.io/toric/PackageInfo.g
-ToricVarieties MOVE https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/PackageInfo.g
+ToricVarieties https://homalg-project.github.io/ToricVarieties_project/ToricVarieties/PackageInfo.g
 transgrp    https://www.math.colostate.edu/~hulpke/transgrp/PackageInfo.g
 unipot      https://gap-packages.github.io/unipot/PackageInfo.g
 UnitLib     https://gap-packages.github.io/unitlib/PackageInfo.g
