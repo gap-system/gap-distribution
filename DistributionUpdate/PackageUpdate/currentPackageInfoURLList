@@ -144,7 +144,7 @@ ResClasses  https://gap-packages.github.io/resclasses/PackageInfo.g
 RingsForHomalg https://homalg-project.github.io/homalg_project/RingsForHomalg/PackageInfo.g
 SCO         https://homalg-project.github.io/homalg_project/SCO/PackageInfo.g
 SCSCP       https://gap-packages.github.io/scscp/PackageInfo.g
-Semigroups  MOVE https://semigroups.github.io/Semigroups/PackageInfo.g
+Semigroups  https://semigroups.github.io/Semigroups/PackageInfo.g
 SglPPow     https://gap-packages.github.io/sglppow/PackageInfo.g
 SgpViz      https://gap-packages.github.io/sgpviz/PackageInfo.g
 simpcomp    https://simpcomp-team.github.io/simpcomp/PackageInfo.g
