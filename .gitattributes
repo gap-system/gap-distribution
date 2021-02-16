@@ -1,0 +1,2 @@
+# Make sure shell scripts have linux line endings
+*.sh binary
