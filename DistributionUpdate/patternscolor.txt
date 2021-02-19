@@ -35,9 +35,5 @@
 +doc/versiondata
 +doc/versiondata.in
 -doc/*
-+etc/emacs/*
-+etc/vim/*
-+etc/convert.pl
--etc/*
 # everything else is included
 +*
