@@ -30,7 +30,7 @@ the next package release will be picked up.
 * package release repositories (i.e. repositories to store released versions
   of GAP packages; NOT their development repositories) are located in the
   `/circa/home/gap-jenkins/gap-packages-archive` directory on the Jenkins slave.
-  If you clone them to use and test thDistributionUpdate/README.mde system locally, the best way to do
+  If you clone them to use and test the system locally, the best way to do
   it is to create the `/circa/scratch/gap-jenkins/workspace/` directory on your computer.
 
 
