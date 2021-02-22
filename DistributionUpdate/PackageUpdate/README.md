@@ -59,8 +59,8 @@ this, it is sufficient to put the new `PackageInfo.g` file to the old location.
   `UpdatePackageInfoFiles` function from `PackageInfoTools.g`.
 
 * `./updatePackageArchives`: fetches new archives, validates them and imports
-  into the system in case the of the successful validation, using the function
-  `updatePackageArchives` from from `PackageInfoTools.g`.
+  into the system in the case of successful validation, using the function
+  `updatePackageArchives` from `PackageInfoTools.g`.
 
 
 # Wrapping package archives
