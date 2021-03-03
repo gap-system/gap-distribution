@@ -51,7 +51,7 @@ Cubefree    https://gap-packages.github.io/cubefree/PackageInfo.g
 curlInterface https://gap-packages.github.io/curlInterface/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
-DeepThought https://duskydolphin.github.io/DeepThoughtPackage/PackageInfo.g
+DeepThought MOVE  https://gap-packages.github.io/DeepThought/PackageInfo.g
 DESIGN      https://gap-packages.github.io/design/PackageInfo.g
 DifSets     https://dylanpeifer.github.io/difsets/PackageInfo.g
 Digraphs    https://digraphs.github.io/Digraphs/PackageInfo.g
