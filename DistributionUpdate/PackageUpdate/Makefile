@@ -8,13 +8,13 @@
 #
 
 pkg-stable:
-	./mergePackages normalizinterface=stable polycyclic=stable
+	./mergePackages
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 
 pkg-master:
-	./mergePackages normalizinterface=stable polycyclic=stable
+	./mergePackages
 
 pkg-required-master:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
