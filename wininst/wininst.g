@@ -1,5 +1,5 @@
 # Adjust the path for the release
-gappath:="gap-4.11.0";
+gappath:="gap-4.11.1";
 
 Basename := function(str)
   local len;

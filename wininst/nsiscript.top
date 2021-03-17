@@ -24,8 +24,8 @@
 #
 # Declaring user variables - 
 #
-var GAP_VER      # GAP version in format 4.11.0
-var INSTALL_PATH # Install path in the form C:\gap-4.11.0
+var GAP_VER      # GAP version in format 4.11.1
+var INSTALL_PATH # Install path in the form C:\gap-4.11.1
 var GAP_BAT      # to write gap.bat file
 var GAPCMD_BAT   # to write gapcmd.bat file
 var IndependentSectionState
@@ -36,15 +36,15 @@ var StartMenuFolder
 # User variables and other general settings: adjust them here as needed
 # 
 Section
-StrCpy $GAP_VER "4.11.0"
+StrCpy $GAP_VER "4.11.1"
 SectionEnd
 
 #Name and file
-Name "GAP 4.11.0"
-OutFile "gap-4.11.0.exe"
+Name "GAP 4.11.1"
+OutFile "gap-4.11.1.exe"
 
 #Default installation folder
-InstallDir "C:\gap-4.11.0"
+InstallDir "C:\gap-4.11.1"
 
 #######################################################################
 
@@ -109,53 +109,10 @@ Section "Core GAP system" SecGAPcore
   # Set output path to the installation directory
   SetOutPath $INSTDIR
   # Put files there
-  File gap-4.11.0\*.*
-
-  SetOutPath $INSTDIR\.libs
-  File /r gap-4.11.0\.libs\*.*
-
-  SetOutPath $INSTDIR\autom4te.cache
-  File /r gap-4.11.0\autom4te.cache\*.*
+  File /r gap-4.11.1\*.*
 
   SetOutPath $INSTDIR\bin
-  File /r gap-4.11.0\bin\*.*
   File gapicon.ico
-
-  SetOutPath $INSTDIR\cnf
-  File /r gap-4.11.0\cnf\*.*
-
-  SetOutPath $INSTDIR\doc
-  File /r gap-4.11.0\doc\*.*
-
-  SetOutPath $INSTDIR\etc
-  File /r gap-4.11.0\etc\*.*
-
-  SetOutPath $INSTDIR\extern
-  File /r gap-4.11.0\extern\*.*
-
-  SetOutPath $INSTDIR\gen
-  File /r gap-4.11.0\gen\*.*
-
-  SetOutPath $INSTDIR\grp
-  File /r gap-4.11.0\grp\*.*
-
-  SetOutPath $INSTDIR\hpcgap
-  File /r gap-4.11.0\hpcgap\*.*
-
-  SetOutPath $INSTDIR\lib
-  File /r gap-4.11.0\lib\*.*
-
-  SetOutPath $INSTDIR\obj
-  File /r gap-4.11.0\obj\*.*
-
-  SetOutPath $INSTDIR\src
-  File /r gap-4.11.0\src\*.*
-
-  SetOutPath $INSTDIR\terminfo
-  File /r gap-4.11.0\terminfo\*.*
-
-  SetOutPath $INSTDIR\tst
-  File /r gap-4.11.0\tst\*.*
 
   # restore initial output path
   SetOutPath $INSTDIR 
@@ -166,25 +123,25 @@ Section "Core GAP system" SecGAPcore
   # Create uninstaller
   WriteUninstaller "$INSTDIR\Uninstall.exe"
 
-  # rewriting install path in format /cygdrive/c/gap-4.11.0
+  # rewriting install path in format /cygdrive/c/gap-4.11.1
   StrCpy $INSTALL_PATH $INSTDIR
   ${WordReplace} $INSTALL_PATH ":" ""  "+" $INSTALL_PATH
   ${WordReplace} $INSTALL_PATH "\" "/" "+" $INSTALL_PATH
 
   # Write gap.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.11.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.11.1/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
+  # set PATH=C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
   # cd %HOME%
-  # start "GAP" C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.11.0/bin/gap.exe -l /proc/cygdrive/C/gap-4.11.0 %*
+  # start "GAP" C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.11.1/bin/gap.exe -l /proc/cygdrive/C/gap-4.11.1 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAP_BAT $INSTDIR\bin\gap.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.11.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.11.1/terminfo
   FileWrite $GAP_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAP_BAT $INSTALL_PATH
   FileWrite $GAP_BAT "/terminfo"
@@ -206,7 +163,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # set PATH=C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
+  # set PATH=C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
   FileWrite $GAP_BAT "set PATH="
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\x86_64-pc-cygwin-default64-kv7;%PATH%"
@@ -218,7 +175,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAP_BAT "13"
     FileWriteByte $GAP_BAT "10"
 
-  # start "GAP" C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.11.0/gap.exe -l /proc/cygdrive/C/gap-4.11.0 %*
+  # start "GAP" C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7\mintty.exe -s 120,40 /proc/cygdrive/C/gap-4.11.1/gap.exe -l /proc/cygdrive/C/gap-4.11.1 %*
   FileWrite $GAP_BAT "start $\"GAP$\" " 
   FileWrite $GAP_BAT $INSTDIR
   FileWrite $GAP_BAT "\bin\x86_64-pc-cygwin-default64-kv7\mintty.exe -s 120,40 /proc/cygdrive/"
@@ -243,19 +200,19 @@ Section "Core GAP system" SecGAPcore
 
 
   # Write gapcmd.bat file as follows:
-  # set TERMINFO=/proc/cygdrive/c/gap-4.11.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.11.1/terminfo
   # set CYGWIN=nodosfilewarning
   # set LANG=en_US.UTF-8
   # set HOME=%HOMEDRIVE%%HOMEPATH%
-  # set PATH=C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
+  # set PATH=C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
   # cd %HOME%
-  # C:\gap-4.11.0\gap.exe -l /proc/cygdrive/C/gap-4.11.0 %*
+  # C:\gap-4.11.1\gap.exe -l /proc/cygdrive/C/gap-4.11.1 %*
   # if NOT ["%errorlevel%"]==["0"] timeout 15
   # exit
 
   FileOpen $GAPCMD_BAT $INSTDIR\bin\gapcmd.bat w
 
-  # set TERMINFO=/proc/cygdrive/c/gap-4.11.0/terminfo
+  # set TERMINFO=/proc/cygdrive/c/gap-4.11.1/terminfo
   FileWrite $GAPCMD_BAT "set TERMINFO=/proc/cygdrive/"
   FileWrite $GAPCMD_BAT $INSTALL_PATH
   FileWrite $GAPCMD_BAT "/terminfo"
@@ -277,7 +234,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # set PATH=C:\gap-4.11.0\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
+  # set PATH=C:\gap-4.11.1\bin\x86_64-pc-cygwin-default64-kv7;%PATH%
   FileWrite $GAPCMD_BAT "set PATH="
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\bin\x86_64-pc-cygwin-default64-kv7;%PATH%"
@@ -289,7 +246,7 @@ Section "Core GAP system" SecGAPcore
     FileWriteByte $GAPCMD_BAT "13"
     FileWriteByte $GAPCMD_BAT "10"
 
-  # C:\gap-4.11.0\gap.exe -l /proc/cygdrive/C/gap-4.11.0 %*
+  # C:\gap-4.11.1\gap.exe -l /proc/cygdrive/C/gap-4.11.1 %*
   FileWrite $GAPCMD_BAT $INSTDIR
   FileWrite $GAPCMD_BAT "\gap.exe -l /proc/cygdrive/"
   FileWrite $GAPCMD_BAT $INSTALL_PATH 
