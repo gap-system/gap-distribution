@@ -72,7 +72,7 @@ fwtree      https://gap-packages.github.io/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
 GaussForHomalg https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g
-GBNP        http://mathdox.org/products/gbnp/PackageInfo.g
+GBNP    MOVE    https://gap-packages.github.io/gbnp/PackageInfo.g
 GeneralizedMorphismsForCAP https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
