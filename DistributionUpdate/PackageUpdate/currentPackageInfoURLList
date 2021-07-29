@@ -64,7 +64,7 @@ FGA         http://www.icm.tu-bs.de/ag_algebra/software/FGA/PackageInfo.g
 FinInG      http://cage.ugent.be/fining/PackageInfo.g
 Float       https://gap-packages.github.io/float/PackageInfo.g
 FORMAT      https://gap-packages.github.io/format/PackageInfo.g
-Forms       http://cage.ugent.be/geometry/software/forms/PackageInfo.g
+Forms   MOVE    https://gap-packages.github.io/forms/PackageInfo.g
 FPLSA       https://gap-packages.github.io/FPLSA/PackageInfo.g
 FR          https://gap-packages.github.io/fr/PackageInfo.g
 Francy      https://gap-packages.github.io/francy/PackageInfo.g
