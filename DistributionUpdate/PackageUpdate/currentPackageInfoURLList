@@ -33,7 +33,7 @@ AutoDoc     https://gap-packages.github.io/AutoDoc/PackageInfo.g
 Automata    https://gap-packages.github.io/automata/PackageInfo.g
 AutomGrp    https://gap-packages.github.io/automgrp/PackageInfo.g
 AutPGrp     https://gap-packages.github.io/autpgrp/PackageInfo.g
-Browse      http://www.math.rwth-aachen.de/~Browse/PackageInfo.g
+Browse      https://www.math.rwth-aachen.de/~Browse/PackageInfo.g
 CAP         https://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 CaratInterface https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g
 CddInterface https://homalg-project.github.io/CddInterface/PackageInfo.g
