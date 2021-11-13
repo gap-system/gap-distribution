@@ -38,6 +38,7 @@ CAP         https://homalg-project.github.io/CAP_project/CAP/PackageInfo.g
 CaratInterface https://www.math.uni-bielefeld.de/~gaehler/gap/CaratInterface/PackageInfo.g
 CddInterface https://homalg-project.github.io/CddInterface/PackageInfo.g
 Circle      https://gap-packages.github.io/circle/PackageInfo.g
+classicpres https://www.math.colostate.edu/~hulpke/classicpres/PackageInfo.g
 cohomolo    https://gap-packages.github.io/cohomolo/PackageInfo.g
 Congruence  https://gap-packages.github.io/congruence/PackageInfo.g
 CoReLG      https://gap-packages.github.io/corelg/PackageInfo.g
