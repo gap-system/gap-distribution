@@ -52,7 +52,7 @@ Cubefree    https://gap-packages.github.io/cubefree/PackageInfo.g
 curlInterface https://gap-packages.github.io/curlInterface/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
 datastructures https://gap-packages.github.io/datastructures/PackageInfo.g
-DeepThought MOVE  https://gap-packages.github.io/DeepThought/PackageInfo.g
+DeepThought https://gap-packages.github.io/DeepThought/PackageInfo.g
 DESIGN      https://gap-packages.github.io/design/PackageInfo.g
 DifSets     https://dylanpeifer.github.io/difsets/PackageInfo.g
 Digraphs    https://digraphs.github.io/Digraphs/PackageInfo.g
@@ -73,7 +73,7 @@ fwtree      https://gap-packages.github.io/fwtree/PackageInfo.g
 GAPDoc      http://www.math.rwth-aachen.de/~Frank.Luebeck/GAPDoc/PackageInfo.g
 Gauss       https://homalg-project.github.io/homalg_project/Gauss/PackageInfo.g
 GaussForHomalg https://homalg-project.github.io/homalg_project/GaussForHomalg/PackageInfo.g
-GBNP    MOVE    https://gap-packages.github.io/gbnp/PackageInfo.g
+GBNP        https://gap-packages.github.io/gbnp/PackageInfo.g
 GeneralizedMorphismsForCAP https://homalg-project.github.io/CAP_project/GeneralizedMorphismsForCAP/PackageInfo.g
 genss       https://gap-packages.github.io/genss/PackageInfo.g
 GradedModules https://homalg-project.github.io/homalg_project/GradedModules/PackageInfo.g
