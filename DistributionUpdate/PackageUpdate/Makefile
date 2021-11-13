@@ -11,10 +11,10 @@ pkg-stable:
 	./mergePackages
 
 pkg-required-stable:
-	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip ugaly=no
+	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 
 pkg-master:
 	./mergePackages
 
 pkg-required-master:
-	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip ugaly=no
+	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
