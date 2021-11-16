@@ -8,13 +8,13 @@
 #
 
 pkg-stable:
-	./mergePackages cap=stable digraphs=stable
+	./mergePackages cap=stable classicpres=no digraphs=stable ugaly=no
 
 pkg-required-stable:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
 
 pkg-master:
-	./mergePackages cap=stable digraphs=stable
+	./mergePackages cap=stable classicpres=no digraphs=stable ugaly=no
 
 pkg-required-master:
 	./mergePackages only gapdoc=tip primgrp=tip smallgrp=tip transgrp=tip
