@@ -47,7 +47,7 @@ CRISP       http://www.icm.tu-bs.de/~bhoeflin/crisp/PackageInfo.g
 crypting    https://gap-packages.github.io/crypting/PackageInfo.g
 Cryst       https://www.math.uni-bielefeld.de/~gaehler/gap/Cryst/PackageInfo.g
 CrystCat    https://www.math.uni-bielefeld.de/~gaehler/gap45/CrystCat/PackageInfo.g
-CTblLib     http://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g
+CTblLib     https://www.math.rwth-aachen.de/~Thomas.Breuer/ctbllib/PackageInfo.g
 Cubefree    https://gap-packages.github.io/cubefree/PackageInfo.g
 curlInterface https://gap-packages.github.io/curlInterface/PackageInfo.g
 cvec        https://gap-packages.github.io/cvec/PackageInfo.g
