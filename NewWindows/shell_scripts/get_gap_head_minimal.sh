@@ -13,4 +13,4 @@ cd gap
 ./configure
 # Clean out old package directory, if it exists
 rm -rf pkg
-make bootstrap-pkg-full
+make bootstrap-pkg-minimal
